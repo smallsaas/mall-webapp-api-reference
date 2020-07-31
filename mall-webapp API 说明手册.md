@@ -5,29 +5,29 @@
   可使用用户名/手机 注册。 使用手机时，验证码是必选的。
   获取验证码的API见下面。
 
-    {
+ {
     
-    \"username\": \"abc\",
+ \"username\": \"abc\",
 
-    \"password\": \"abc\",
+ \"password\": \"abc\",
 
-    \"phone\": \"13800000001\",
+ \"phone\": \"13800000001\",
 
-    \"captcha\": \"123456\",
+ \"captcha\": \"123456\",
 
-    \"invite\_code\": \"xfaEfw\" //optional
+ \"invite\_code\": \"xfaEfw\" //optional
 
-    }
+ }
 
-    Successful Return:
+ Successful Return:
 
-    {
+ {
 
-    \"message\": \"register.success\",
+ \"message\": \"register.success\",
 
-    \"status\_code\": 0
+ \"status\_code\": 0
 
-    }
+ }
 
 2.  **获取手机验证码**
 
