@@ -7,27 +7,18 @@
 ```json
 
  {
-   
    "username": "abc",
-   
    "password": "abc",
-   
    "phone": "13800000001",
-   
    "captcha": "123456",
-   
-   "invite_code": "xfaEfw"  ; ptional
-   
+   "invite_code": "xfaEfw"  `ptional`
  }
 
  Successful Return:
  
  {
-   
    "message": "register.success",
-   
    "status_code": 0
-   
  }
 ```
 
