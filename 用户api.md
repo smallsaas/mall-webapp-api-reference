@@ -5,7 +5,8 @@
   可使用用户名/手机 注册。 使用手机时，验证码是必选的。
   获取验证码的API见下面。
   
-  ptional: invite_code
+  optional: 
+    invite_code
 ```json
 
  {
@@ -29,24 +30,19 @@
 POST <http://112.74.26.228:10080/rest/pub/sms>
 
 会发送短信到填写的手机上。
-
+```json
 {
-
-"phone": "13800000001",
-
-"name": "verify" //指定不同的名字，可以拿到相应模版的消息
-
+  "phone": "13800000001",
+  "name": "verify" //指定不同的名字，可以拿到相应模版的消息
 }
 
 Return:
 
 {
-
-"message": "ok",
-
-"status_code": 0
-
+  "message": "ok",
+  "status_code": 0
 }
+```
 
 3.  **验证手机验证码**
 
