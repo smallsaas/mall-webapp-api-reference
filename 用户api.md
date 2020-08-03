@@ -8,7 +8,6 @@
   optional: invite_code
   
 ```json
-
  {
    "username": "abc",
    "password": "abc",
@@ -16,7 +15,8 @@
    "captcha": "123456",
    "invite_code": "xfaEfw" 
  }
-
+```
+```json
  Successful Return:
  
  {
