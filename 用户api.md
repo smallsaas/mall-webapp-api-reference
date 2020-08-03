@@ -1,0 +1,788 @@
+### 用户API
+
+  POST <http://112.74.26.228:10080/rest/register>
+
+  可使用用户名/手机 注册。 使用手机时，验证码是必选的。
+  获取验证码的API见下面。
+```json
+ {
+    
+ "username": "abc",
+
+ "password": "abc",
+
+ "phone": "13800000001",
+
+ "captcha": "123456",
+
+ "invite_code": "xfaEfw" --optional
+
+ }
+
+ Successful Return:
+
+ {
+
+ "message": "register.success",
+
+ "status_code": 0
+
+ }
+```
+
+2.  **获取手机验证码**
+
+POST <http://112.74.26.228:10080/rest/pub/sms>
+
+会发送短信到填写的手机上。
+
+{
+
+"phone": "13800000001",
+
+"name": "verify" //指定不同的名字，可以拿到相应模版的消息
+
+}
+
+Return:
+
+{
+
+"message": "ok",
+
+"status_code": 0
+
+}
+
+3.  **验证手机验证码**
+
+POST <http://112.74.26.228:10080/rest/pub/sms_verify>
+
+{
+
+"phone": "13800000001",
+
+"captcha": "1234"
+
+}
+
+Return:
+
+{
+
+"message": "ok",
+
+"status_code": 0
+
+}
+
+4.  **登录**
+
+POST <http://112.74.26.228:10080/rest/login>
+
+可以根据需要组合，如:
+
+username + password,
+
+phone + password,
+
+phone + captcha
+
+验证码获取API见上面。
+
+{
+
+"username": "abc",
+
+"password": "abc",
+
+"phone": "13800000001",
+
+"captcha": "134556"
+
+}
+
+Successful Return:
+
+{
+
+"status_code": 0,
+
+"data": {
+
+"access_token":
+"eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0="
+
+}
+
+}
+
+5.  **登出系统**
+
+GET <http://112.74.26.228:10080/rest/logout>
+
+Header: Authorization:
+eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0=
+
+Successful Return:
+
+{
+
+"message": "logout.success",
+
+"status_code": 0
+
+}
+
+6.  **修改密码**
+
+POST <http://112.74.26.228:10080/rest/password>
+
+Header: Authorization:
+eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0=
+
+Data:
+
+{
+
+"old_password": "abcdefg",
+
+"new_password": "123456"
+
+}
+
+Successful Return:
+
+{
+
+"message": "password.changed",
+
+"status_code": 0
+
+}
+
+Failure Return:
+
+{
+
+"message": "incorrect.old.password",
+
+"status_code": 1
+
+}
+
+窗体顶端
+
+编辑
+
+窗体底端
+
+7.  **忘记密码**
+
+POST <http://112.74.26.228:10080/rest/pub/forget_password>
+
+Header: Authorization:
+eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0=
+
+Data:
+
+{
+
+"phone": "13800000001",
+
+"captcha": "134566",
+
+"password": "123456"
+
+}
+
+Successful Return:
+
+{
+
+"message": "password.reset",
+
+"status_code": 0
+
+}
+
+Failure Return:
+
+{
+
+"message": "invalid.captcha",
+
+"status_code": 1
+
+}
+
+8.  **绑定手机**
+
+POST <http://112.74.26.228:10080/rest/phone>
+
+Header: Authorization:
+eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0=
+
+Data:
+
+{
+
+"phone": "13800000001",
+
+"captcha": "123456"
+
+}
+
+Successful Return:
+
+{
+
+"message": "phone.updated",
+
+"status_code": 0
+
+}
+
+Failure Return:
+
+{
+
+"message": "captcha.invalid",
+
+"status_code": 1
+
+}
+
+窗体顶端
+
+编辑
+
+窗体底端
+
+9.  **移动应用的微信登录**
+
+POST <http://112.74.26.228:10080/rest/login_wxapp>
+
+Param： code - app调起微信授权返回的code。
+
+Data:
+
+{
+
+"code": "abcdefg"
+
+}
+
+Successful Return:
+
+{
+
+"status_code": 0,
+
+"data": {
+
+"access_token":
+"eyJsb2dpbl9uYW1lIjoiMTM5MjIxMTIxMzAiLCJ0b2tlbiI6ImNlODM5M2NlNDQ0ZTViMTA5YzMyOWU4N2UyNjg4Yzk0ZDFjYzY4MzIifQ==",
+
+"openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w",
+
+"unionid": "o-nTCtw8c18ZTyOmzgSNjhbbJ67c"
+
+}
+
+}
+
+Failure Return:
+
+{
+
+"status_code": 1,
+
+"data": {
+
+"openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w",
+
+"unionid": "o-nTCtw8c18ZTyOmzgSNjhbbJ67c"
+
+},
+
+"message": "user.not.found"
+
+}
+
+10. **小程序登录**
+
+POST <http://112.74.26.228:10080/rest/login_wxa>
+
+进入小程序时先调用这个接口，如果返回 错误码 user.not.found，
+则弹出注册界面，让用户输入 手机/短信验证码，调用 /rest/register_wxa
+接口进行注册。
+
+Param： code - 小程序的wx.login返回的code。
+
+Data:
+
+{
+
+"code": "abcdefg"
+
+}
+
+Successful Return:
+
+{
+
+"status_code": 0,
+
+"data": {
+
+"access_token":
+"eyJsb2dpbl9uYW1lIjoiMTM5MjIxMTIxMzAiLCJ0b2tlbiI6ImNlODM5M2NlNDQ0ZTViMTA5YzMyOWU4N2UyNjg4Yzk0ZDFjYzY4MzIifQ==",
+
+"openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w",
+
+"unionid": "o-nTCtw8c18ZTyOmzgSNjhbbJ67c"
+
+}
+
+}
+
+Failure Return:
+
+{
+
+"status_code": 1,
+
+"data": {
+
+"openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w",
+
+"unionid": "o-nTCtw8c18ZTyOmzgSNjhbbJ67c"
+
+},
+
+"message": "user.not.found"
+
+}
+
+11. **小程序注册**
+
+POST <http://112.74.26.228:10080/rest/register_wxa>
+
+Param： phone - 手机号
+
+openid - login API返回的openid
+
+captcha - 短信验证码
+
+Data:
+
+{
+
+"phone": "13922112130",
+
+"openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w",
+
+"captcha":"123456"
+
+}
+
+Successful Return:
+
+{
+
+"status_code": 0,
+
+"data": {
+
+"access_token":
+"eyJsb2dpbl9uYW1lIjoiMTM5MjIxMTIxMzAiLCJ0b2tlbiI6ImNlODM5M2NlNDQ0ZTViMTA5YzMyOWU4N2UyNjg4Yzk0ZDFjYzY4MzIifQ==",
+
+"openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w"
+
+}
+
+}
+
+Failure Return:
+
+{
+
+"status_code": 1,
+
+"message": "phone.already.exist"
+
+}
+
+12. **查看个人Profile**
+
+GET <http://112.74.26.228:10080/rest/profile>
+
+Header: Authorization:
+eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0=
+
+Return:
+
+{
+
+"status_code": 0,
+
+"data": {
+
+"uid": "U00000069",
+
+"birthday": "1999-01-22", //生日
+
+"inviter_name": null, //邀请者名字
+
+"invitation_code": "ff705d15b67bba191f84943e4972d08a", //我的邀请码
+
+"invitation_qrcode_url": "http://host/image/abc.png",
+//邀请码二维码图片url
+
+"invitation_qrcode":
+"http://www.kequandian.net/app/app?invite_code=ff705d15b67bba191f84943e4972d08a",
+//我的邀请码URL
+
+"inviter_id": null, //邀请者ID
+
+"sex": 2, //性别： 0 保密， 1 男， 2 女
+
+"register_date": "2016-06-07 13:27:17",
+
+"avatar": null,//头像,默认使用微信的头像
+
+"last_login_date": "2016-06-07 13:28:07",
+
+"login_name": "abc",
+
+"weixin": "abc",
+
+"token_expired_date": "2016-07-07 13:28:07",
+
+"phone": "1390000000",
+
+"name": "abc",
+
+"real_name": "Huang",
+
+"details": "sffffaaaa",
+
+"id": 2,
+
+"email": "h\@a.com",
+
+"status": "NORMAL",
+
+"followed": 0, //是否关注公众号， 0 关注， 1 未关注
+
+"follow_time": "2016-06-04 21:00:00" //关注时间
+
+}
+
+}
+
+13. **更新个人Profile**
+
+POST <http://112.74.26.228:10080/rest/profile>
+
+Header: Authorization:
+eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0=
+
+DATA:
+
+{
+
+"phone": "1390000000",
+
+"sex": 2,
+
+"details": "sffffaaaa",
+
+"birthday": "1999/01/22",
+
+"email": "h\@a.com",
+
+"name": "axxvv",
+
+"real_name": "Huang"
+
+}
+
+Return:
+
+{
+
+"status_code": 0,
+
+"message": "profile.updated"
+
+}
+
+14. **根据userID列表查看用户头像等信息**
+
+POST <http://112.74.26.228:10080/rest/pub/user_info>
+
+data:
+
+{ "ids": [ 1, 2, 4 ] }
+
+Return:
+
+{
+
+"status_code": 0,
+
+"data": [
+
+{
+
+"sex": 0,
+
+"name": "Administrator",
+
+"id": 1,
+
+"avatar": "http://abc.com/1.jpg"
+
+},
+
+{
+
+"sex": 0,
+
+"name": "Administrator2",
+
+"id": 2,
+
+"avatar": null
+
+},
+
+{
+
+"sex": 0,
+
+"name": "Administrator4",
+
+"id": 4,
+
+"avatar": null
+
+}
+
+]
+
+}
+
+15. **省市区数据**
+
+GET <http://112.74.26.228:10080/rest/pcd?all=true&province=>广东&city=广州
+
+Para:
+
+1.  all - optinal, 一次性返回所有的数据
+
+2.  province - optional, 返回该省下面所有的城市。
+
+3.  city - optional, 返回该市下面所有的区。
+
+4.  不带任何参数，则返回所有的省。
+
+Header: Authorization:
+eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0=
+
+Return:
+
+{
+
+"status_code": 0,
+
+"data": [{
+
+"id": 30,
+
+"name": "广东",
+
+"type": "p",
+
+"parent_id": null
+
+}, {
+
+"id": 35,
+
+"name": "上海",
+
+"type": "p",
+
+"parent_id": null
+
+}]
+
+}
+
+有all参数时，return:
+
+{
+
+"status_code": 0,
+
+"data": [{
+
+"id": 2183,
+
+"area_list": [{
+
+"id": 2184,
+
+"area_list": [{
+
+"id": 2185,
+
+"name": "越秀区",
+
+"type": "d",
+
+"parent_id": 2184
+
+}, {
+
+"id": 2186,
+
+"name": "荔湾区",
+
+"type": "d",
+
+"parent_id": 2184
+
+}, {
+
+"id": 2187,
+
+"name": "海珠区",
+
+"type": "d",
+
+"parent_id": 2184
+
+}, {
+
+"id": 2188,
+
+"name": "天河区",
+
+"type": "d",
+
+"parent_id": 2184
+
+}, {
+
+"id": 2189,
+
+"name": "白云区",
+
+"type": "d",
+
+"parent_id": 2184
+
+}, {
+
+"id": 2190,
+
+"name": "黄埔区",
+
+"type": "d",
+
+"parent_id": 2184
+
+}, {
+
+"id": 2191,
+
+"name": "番禺区",
+
+"type": "d",
+
+"parent_id": 2184
+
+}, {
+
+"id": 2192,
+
+"name": "花都区",
+
+"type": "d",
+
+"parent_id": 2184
+
+}, {
+
+"id": 2193,
+
+"name": "南沙区",
+
+"type": "d",
+
+"parent_id": 2184
+
+}, {
+
+"id": 2194,
+
+"name": "萝岗区",
+
+"type": "d",
+
+"parent_id": 2184
+
+}, {
+
+"id": 2195,
+
+"name": "增城市",
+
+"type": "d",
+
+"parent_id": 2184
+
+}, {
+
+"id": 2196,
+
+"name": "从化市",
+
+"type": "d",
+
+"parent_id": 2184
+
+}, {
+
+"id": 2197,
+
+"name": "其他",
+
+"type": "d",
+
+"parent_id": 2184
+
+}],
+
+"name": "广州",
+
+"type": "c",
+
+"parent_id": 2183
+
+}],
+
+"name": "广东",
+
+"type": "p",
+
+"parent_id": null
+
+}]
+
+}
+
