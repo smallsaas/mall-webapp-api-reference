@@ -16,9 +16,8 @@
    "invite_code": "xfaEfw" 
  }
 ```
-```json
  Successful Return:
- 
+```json
  {
    "message": "register.success",
    "status_code": 0
@@ -38,9 +37,10 @@ name: 指定不同的名字，可以拿到相应模版的消息
   "phone": "13800000001",
   "name": "verify"
 }
+```
 
 Return:
-
+```json
 {
   "message": "ok",
   "status_code": 0
@@ -55,9 +55,9 @@ POST <http://112.74.26.228:10080/rest/pub/sms_verify
   "phone": "13800000001",
   "captcha": "1234"
 }
-
+```
 Return:
-
+```json
 {
   "message": "ok",
   "status_code": 0
@@ -84,9 +84,9 @@ POST <http://112.74.26.228:10080/rest/login>
   "phone": "13800000001",
   "captcha": "134556"
 }
-
+```
 Successful Return:
-
+```json
 {
   "status_code": 0,
   "data": {
@@ -99,7 +99,7 @@ Successful Return:
 
 GET <http://112.74.26.228:10080/rest/logout>
 
-Header: Authorization token
+Header: Authorization: token
 
 Successful Return:
 ```json
@@ -113,7 +113,7 @@ Successful Return:
 
 POST <http://112.74.26.228:10080/rest/password>
 
-Header: Authorization token
+Header: Authorization: token
 
 Data:
 ```json
@@ -121,16 +121,16 @@ Data:
   "old_password": "abcdefg",
   "new_password": "123456"
 }
-
+```
 Successful Return:
-
+```json
 {
   "message": "password.changed",
   "status_code": 0
 }
-
+```
 Failure Return:
-
+```json
 {
   "message": "incorrect.old.password",
   "status_code": 1
@@ -141,7 +141,7 @@ Failure Return:
 
 POST <http://112.74.26.228:10080/rest/pub/forget_password>
 
-Header: Authorization token
+Header: Authorization: token
 
 Data:
 ```json
@@ -150,27 +150,27 @@ Data:
   "captcha": "134566",
   "password": "123456"
 }
-
+```
 Successful Return:
-
+```json
 {
   "message": "password.reset",
   "status_code": 0
 }
-
+```
 Failure Return:
-
+```json
 {
   "message": "invalid.captcha",
   "status_code": 1
 }
 ```
 
-8.  **绑定手机**
+### 绑定手机
 
 POST <http://112.74.26.228:10080/rest/phone>
 
-Header: Authorization token
+Header: Authorization: token
 
 Data:
 ```json
@@ -178,16 +178,16 @@ Data:
   "phone": "13800000001",
   "captcha": "123456"
 }
-
+```
 Successful Return:
-
+```json
 {
   "message": "phone.updated",
   "status_code": 0
 }
-
+```
 Failure Return:
-
+```json
 {
   "message": "captcha.invalid",
   "status_code": 1
@@ -201,13 +201,13 @@ POST <http://112.74.26.228:10080/rest/login_wxapp>
 Param： code - app调起微信授权返回的code。
 
 Data:
-
+```json
 {
   "code": "abcdefg"
 }
-
+```
 Successful Return:
-
+```json
 {
   "status_code": 0,
   "data": {
@@ -216,9 +216,9 @@ Successful Return:
     "unionid": "o-nTCtw8c18ZTyOmzgSNjhbbJ67c"
   }
 }
-
+```
 Failure Return:
-
+```json
 {
   "status_code": 1,
   "data": {
@@ -227,8 +227,8 @@ Failure Return:
   },
   "message": "user.not.found"
 }
-
-10. **小程序登录**
+```
+### 小程序登录
 
 POST <http://112.74.26.228:10080/rest/login_wxa>
 
@@ -239,51 +239,34 @@ POST <http://112.74.26.228:10080/rest/login_wxa>
 Param： code - 小程序的wx.login返回的code。
 
 Data:
-
+```json
 {
-
-"code": "abcdefg"
-
+  "code": "abcdefg"
 }
-
+```
 Successful Return:
-
+```json
 {
-
-"status_code": 0,
-
-"data": {
-
-"access_token":
-"eyJsb2dpbl9uYW1lIjoiMTM5MjIxMTIxMzAiLCJ0b2tlbiI6ImNlODM5M2NlNDQ0ZTViMTA5YzMyOWU4N2UyNjg4Yzk0ZDFjYzY4MzIifQ==",
-
-"openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w",
-
-"unionid": "o-nTCtw8c18ZTyOmzgSNjhbbJ67c"
-
+  "status_code": 0,
+  "data": {
+    "access_token": "eyJsb2dpbl9uYW1lIjoiMTM5MjIxMTIxMzAiLCJ0b2tlbiI6ImNlODM5M2NlNDQ0ZTViMTA5YzMyOWU4N2UyNjg4Yzk0ZDFjYzY4MzIifQ==",
+    "openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w",
+    "unionid": "o-nTCtw8c18ZTyOmzgSNjhbbJ67c"
+  }
 }
-
-}
-
+```
 Failure Return:
-
+```json
 {
-
-"status_code": 1,
-
-"data": {
-
-"openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w",
-
-"unionid": "o-nTCtw8c18ZTyOmzgSNjhbbJ67c"
-
-},
-
-"message": "user.not.found"
-
+  "status_code": 1,
+  "data": {
+  "openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w",
+  "unionid": "o-nTCtw8c18ZTyOmzgSNjhbbJ67c"
+  },
+  "message": "user.not.found"
 }
-
-11. **小程序注册**
+```
+### 小程序注册
 
 POST <http://112.74.26.228:10080/rest/register_wxa>
 
@@ -294,112 +277,70 @@ openid - login API返回的openid
 captcha - 短信验证码
 
 Data:
-
+```json
 {
-
-"phone": "13922112130",
-
-"openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w",
-
-"captcha":"123456"
-
+  "phone": "13922112130",
+  "openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w",
+  "captcha":"123456"
 }
-
+```
 Successful Return:
-
+```json
 {
-
-"status_code": 0,
-
-"data": {
-
-"access_token":
-"eyJsb2dpbl9uYW1lIjoiMTM5MjIxMTIxMzAiLCJ0b2tlbiI6ImNlODM5M2NlNDQ0ZTViMTA5YzMyOWU4N2UyNjg4Yzk0ZDFjYzY4MzIifQ==",
-
-"openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w"
-
+  "status_code": 0,
+  "data": {
+    "access_token": "eyJsb2dpbl9uYW1lIjoiMTM5MjIxMTIxMzAiLCJ0b2tlbiI6ImNlODM5M2NlNDQ0ZTViMTA5YzMyOWU4N2UyNjg4Yzk0ZDFjYzY4MzIifQ==",
+    "openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w"
+  }
 }
-
-}
-
+```
 Failure Return:
-
+```json
 {
-
-"status_code": 1,
-
-"message": "phone.already.exist"
-
+  "status_code": 1,
+  "message": "phone.already.exist"
 }
-
-12. **查看个人Profile**
+```
+### 查看个人Profile
 
 GET <http://112.74.26.228:10080/rest/profile>
 
-Header: Authorization:
-eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0=
+Header: Authorization: token
 
 Return:
-
+```json
 {
-
-"status_code": 0,
-
-"data": {
-
-"uid": "U00000069",
-
-"birthday": "1999-01-22", //生日
-
-"inviter_name": null, //邀请者名字
-
-"invitation_code": "ff705d15b67bba191f84943e4972d08a", //我的邀请码
-
-"invitation_qrcode_url": "http://host/image/abc.png",
-//邀请码二维码图片url
-
-"invitation_qrcode":
-"http://www.kequandian.net/app/app?invite_code=ff705d15b67bba191f84943e4972d08a",
-//我的邀请码URL
-
-"inviter_id": null, //邀请者ID
-
-"sex": 2, //性别： 0 保密， 1 男， 2 女
-
-"register_date": "2016-06-07 13:27:17",
-
-"avatar": null,//头像,默认使用微信的头像
-
-"last_login_date": "2016-06-07 13:28:07",
-
-"login_name": "abc",
-
-"weixin": "abc",
-
-"token_expired_date": "2016-07-07 13:28:07",
-
-"phone": "1390000000",
-
-"name": "abc",
-
-"real_name": "Huang",
-
-"details": "sffffaaaa",
-
-"id": 2,
-
-"email": "h\@a.com",
-
-"status": "NORMAL",
-
-"followed": 0, //是否关注公众号， 0 关注， 1 未关注
-
-"follow_time": "2016-06-04 21:00:00" //关注时间
-
+  "status_code": 0,
+  "data": {
+    "uid": "U00000069",
+    "birthday": "1999-01-22", //生日
+    "inviter_name": null, //邀请者名字
+    "invitation_code": "ff705d15b67bba191f84943e4972d08a", //我的邀请码
+    "invitation_qrcode_url": "http://host/image/abc.png",
+    //邀请码二维码图片url
+    "invitation_qrcode":
+    "http://www.kequandian.net/app/app?invite_code=ff705d15b67bba191f84943e4972d08a",
+    //我的邀请码URL
+    "inviter_id": null, //邀请者ID
+    "sex": 2, //性别： 0 保密， 1 男， 2 女
+    "register_date": "2016-06-07 13:27:17",
+    "avatar": null,//头像,默认使用微信的头像
+    "last_login_date": "2016-06-07 13:28:07",
+    "login_name": "abc",
+    "weixin": "abc",
+    "token_expired_date": "2016-07-07 13:28:07",
+    "phone": "1390000000",
+    "name": "abc",
+    "real_name": "Huang",
+    "details": "sffffaaaa",
+    "id": 2,
+    "email": "h\@a.com",
+    "status": "NORMAL",
+    "followed": 0, //是否关注公众号， 0 关注， 1 未关注
+    "follow_time": "2016-06-04 21:00:00" //关注时间
+  }
 }
-
-}
-
+```
 13. **更新个人Profile**
 
 POST <http://112.74.26.228:10080/rest/profile>
