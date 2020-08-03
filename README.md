@@ -7,15 +7,15 @@
 
  {
     
- \"username\": \"abc\",
+ "username": "abc",
 
- \"password\": \"abc\",
+ "password": "abc",
 
- \"phone\": \"13800000001\",
+ "phone": "13800000001",
 
- \"captcha\": \"123456\",
+ "captcha": "123456",
 
- \"invite\_code\": \"xfaEfw\" //optional
+ "invite\_code": "xfaEfw" //optional
 
  }
 
@@ -23,9 +23,9 @@
 
  {
 
- \"message\": \"register.success\",
+ "message": "register.success",
 
- \"status\_code\": 0
+ "status\_code": 0
 
  }
 
@@ -37,9 +37,9 @@ POST <http://112.74.26.228:10080/rest/pub/sms>
 
 {
 
-\"phone\": \"13800000001\",
+"phone": "13800000001",
 
-\"name\": \"verify\" //指定不同的名字，可以拿到相应模版的消息
+"name": "verify" //指定不同的名字，可以拿到相应模版的消息
 
 }
 
@@ -47,9 +47,9 @@ Return:
 
 {
 
-\"message\": \"ok\",
+"message": "ok",
 
-\"status\_code\": 0
+"status\_code": 0
 
 }
 
@@ -59,9 +59,9 @@ POST <http://112.74.26.228:10080/rest/pub/sms_verify>
 
 {
 
-\"phone\": \"13800000001\",
+"phone": "13800000001",
 
-\"captcha\": \"1234\"
+"captcha": "1234"
 
 }
 
@@ -69,9 +69,9 @@ Return:
 
 {
 
-\"message\": \"ok\",
+"message": "ok",
 
-\"status\_code\": 0
+"status\_code": 0
 
 }
 
@@ -91,13 +91,13 @@ phone + captcha
 
 {
 
-\"username\": \"abc\",
+"username": "abc",
 
-\"password\": \"abc\",
+"password": "abc",
 
-\"phone\": \"13800000001\",
+"phone": "13800000001",
 
-\"captcha\": \"134556\"
+"captcha": "134556"
 
 }
 
@@ -105,12 +105,12 @@ Successful Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"access\_token\":
-\"eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0=\"
+"access\_token":
+"eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0="
 
 }
 
@@ -127,9 +127,9 @@ Successful Return:
 
 {
 
-\"message\": \"logout.success\",
+"message": "logout.success",
 
-\"status\_code\": 0
+"status\_code": 0
 
 }
 
@@ -144,9 +144,9 @@ Data:
 
 {
 
-\"old\_password\": \"abcdefg\",
+"old\_password": "abcdefg",
 
-\"new\_password\": \"123456\"
+"new\_password": "123456"
 
 }
 
@@ -154,9 +154,9 @@ Successful Return:
 
 {
 
-\"message\": \"password.changed\",
+"message": "password.changed",
 
-\"status\_code\": 0
+"status\_code": 0
 
 }
 
@@ -164,9 +164,9 @@ Failure Return:
 
 {
 
-\"message\": \"incorrect.old.password\",
+"message": "incorrect.old.password",
 
-\"status\_code\": 1
+"status\_code": 1
 
 }
 
@@ -187,11 +187,11 @@ Data:
 
 {
 
-\"phone\": \"13800000001\",
+"phone": "13800000001",
 
-\"captcha\": \"134566\",
+"captcha": "134566",
 
-\"password\": \"123456\"
+"password": "123456"
 
 }
 
@@ -199,9 +199,9 @@ Successful Return:
 
 {
 
-\"message\": \"password.reset\",
+"message": "password.reset",
 
-\"status\_code\": 0
+"status\_code": 0
 
 }
 
@@ -209,9 +209,9 @@ Failure Return:
 
 {
 
-\"message\": \"invalid.captcha\",
+"message": "invalid.captcha",
 
-\"status\_code\": 1
+"status\_code": 1
 
 }
 
@@ -226,9 +226,9 @@ Data:
 
 {
 
-\"phone\": \"13800000001\",
+"phone": "13800000001",
 
-\"captcha\": \"123456\"
+"captcha": "123456"
 
 }
 
@@ -236,9 +236,9 @@ Successful Return:
 
 {
 
-\"message\": \"phone.updated\",
+"message": "phone.updated",
 
-\"status\_code\": 0
+"status\_code": 0
 
 }
 
@@ -246,9 +246,9 @@ Failure Return:
 
 {
 
-\"message\": \"captcha.invalid\",
+"message": "captcha.invalid",
 
-\"status\_code\": 1
+"status\_code": 1
 
 }
 
@@ -268,7 +268,7 @@ Data:
 
 {
 
-\"code\": \"abcdefg\"
+"code": "abcdefg"
 
 }
 
@@ -276,16 +276,16 @@ Successful Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"access\_token\":
-\"eyJsb2dpbl9uYW1lIjoiMTM5MjIxMTIxMzAiLCJ0b2tlbiI6ImNlODM5M2NlNDQ0ZTViMTA5YzMyOWU4N2UyNjg4Yzk0ZDFjYzY4MzIifQ==\",
+"access\_token":
+"eyJsb2dpbl9uYW1lIjoiMTM5MjIxMTIxMzAiLCJ0b2tlbiI6ImNlODM5M2NlNDQ0ZTViMTA5YzMyOWU4N2UyNjg4Yzk0ZDFjYzY4MzIifQ==",
 
-\"openid\": \"o0\_gg0X2M7gnHmJUm71JzaKSYg8w\",
+"openid": "o0\_gg0X2M7gnHmJUm71JzaKSYg8w",
 
-\"unionid\": \"o-nTCtw8c18ZTyOmzgSNjhbbJ67c\"
+"unionid": "o-nTCtw8c18ZTyOmzgSNjhbbJ67c"
 
 }
 
@@ -295,17 +295,17 @@ Failure Return:
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"data\": {
+"data": {
 
-\"openid\": \"o0\_gg0X2M7gnHmJUm71JzaKSYg8w\",
+"openid": "o0\_gg0X2M7gnHmJUm71JzaKSYg8w",
 
-\"unionid\": \"o-nTCtw8c18ZTyOmzgSNjhbbJ67c\"
+"unionid": "o-nTCtw8c18ZTyOmzgSNjhbbJ67c"
 
 },
 
-\"message\": \"user.not.found\"
+"message": "user.not.found"
 
 }
 
@@ -323,7 +323,7 @@ Data:
 
 {
 
-\"code\": \"abcdefg\"
+"code": "abcdefg"
 
 }
 
@@ -331,16 +331,16 @@ Successful Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"access\_token\":
-\"eyJsb2dpbl9uYW1lIjoiMTM5MjIxMTIxMzAiLCJ0b2tlbiI6ImNlODM5M2NlNDQ0ZTViMTA5YzMyOWU4N2UyNjg4Yzk0ZDFjYzY4MzIifQ==\",
+"access\_token":
+"eyJsb2dpbl9uYW1lIjoiMTM5MjIxMTIxMzAiLCJ0b2tlbiI6ImNlODM5M2NlNDQ0ZTViMTA5YzMyOWU4N2UyNjg4Yzk0ZDFjYzY4MzIifQ==",
 
-\"openid\": \"o0\_gg0X2M7gnHmJUm71JzaKSYg8w\",
+"openid": "o0\_gg0X2M7gnHmJUm71JzaKSYg8w",
 
-\"unionid\": \"o-nTCtw8c18ZTyOmzgSNjhbbJ67c\"
+"unionid": "o-nTCtw8c18ZTyOmzgSNjhbbJ67c"
 
 }
 
@@ -350,17 +350,17 @@ Failure Return:
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"data\": {
+"data": {
 
-\"openid\": \"o0\_gg0X2M7gnHmJUm71JzaKSYg8w\",
+"openid": "o0\_gg0X2M7gnHmJUm71JzaKSYg8w",
 
-\"unionid\": \"o-nTCtw8c18ZTyOmzgSNjhbbJ67c\"
+"unionid": "o-nTCtw8c18ZTyOmzgSNjhbbJ67c"
 
 },
 
-\"message\": \"user.not.found\"
+"message": "user.not.found"
 
 }
 
@@ -378,11 +378,11 @@ Data:
 
 {
 
-\"phone\": \"13922112130\",
+"phone": "13922112130",
 
-\"openid\": \"o0\_gg0X2M7gnHmJUm71JzaKSYg8w\",
+"openid": "o0\_gg0X2M7gnHmJUm71JzaKSYg8w",
 
-\"captcha\":\"123456\"
+"captcha":"123456"
 
 }
 
@@ -390,14 +390,14 @@ Successful Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"access\_token\":
-\"eyJsb2dpbl9uYW1lIjoiMTM5MjIxMTIxMzAiLCJ0b2tlbiI6ImNlODM5M2NlNDQ0ZTViMTA5YzMyOWU4N2UyNjg4Yzk0ZDFjYzY4MzIifQ==\",
+"access\_token":
+"eyJsb2dpbl9uYW1lIjoiMTM5MjIxMTIxMzAiLCJ0b2tlbiI6ImNlODM5M2NlNDQ0ZTViMTA5YzMyOWU4N2UyNjg4Yzk0ZDFjYzY4MzIifQ==",
 
-\"openid\": \"o0\_gg0X2M7gnHmJUm71JzaKSYg8w\"
+"openid": "o0\_gg0X2M7gnHmJUm71JzaKSYg8w"
 
 }
 
@@ -407,9 +407,9 @@ Failure Return:
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"message\": \"phone.already.exist\"
+"message": "phone.already.exist"
 
 }
 
@@ -424,58 +424,58 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"uid\": \"U00000069\",
+"uid": "U00000069",
 
-\"birthday\": \"1999-01-22\", //生日
+"birthday": "1999-01-22", //生日
 
-\"inviter\_name\": null, //邀请者名字
+"inviter\_name": null, //邀请者名字
 
-\"invitation\_code\": \"ff705d15b67bba191f84943e4972d08a\", //我的邀请码
+"invitation\_code": "ff705d15b67bba191f84943e4972d08a", //我的邀请码
 
-\"invitation\_qrcode\_url\": \"http://host/image/abc.png\",
+"invitation\_qrcode\_url": "http://host/image/abc.png",
 //邀请码二维码图片url
 
-\"invitation\_qrcode\":
-\"http://www.kequandian.net/app/app?invite\_code=ff705d15b67bba191f84943e4972d08a\",
+"invitation\_qrcode":
+"http://www.kequandian.net/app/app?invite\_code=ff705d15b67bba191f84943e4972d08a",
 //我的邀请码URL
 
-\"inviter\_id\": null, //邀请者ID
+"inviter\_id": null, //邀请者ID
 
-\"sex\": 2, //性别： 0 保密， 1 男， 2 女
+"sex": 2, //性别： 0 保密， 1 男， 2 女
 
-\"register\_date\": \"2016-06-07 13:27:17\",
+"register\_date": "2016-06-07 13:27:17",
 
-\"avatar\": null,//头像,默认使用微信的头像
+"avatar": null,//头像,默认使用微信的头像
 
-\"last\_login\_date\": \"2016-06-07 13:28:07\",
+"last\_login\_date": "2016-06-07 13:28:07",
 
-\"login\_name\": \"abc\",
+"login\_name": "abc",
 
-\"weixin\": \"abc\",
+"weixin": "abc",
 
-\"token\_expired\_date\": \"2016-07-07 13:28:07\",
+"token\_expired\_date": "2016-07-07 13:28:07",
 
-\"phone\": \"1390000000\",
+"phone": "1390000000",
 
-\"name\": \"abc\",
+"name": "abc",
 
-\"real\_name\": \"Huang\",
+"real\_name": "Huang",
 
-\"details\": \"sffffaaaa\",
+"details": "sffffaaaa",
 
-\"id\": 2,
+"id": 2,
 
-\"email\": \"h\@a.com\",
+"email": "h\@a.com",
 
-\"status\": \"NORMAL\",
+"status": "NORMAL",
 
-\"followed\": 0, //是否关注公众号， 0 关注， 1 未关注
+"followed": 0, //是否关注公众号， 0 关注， 1 未关注
 
-\"follow\_time\": \"2016-06-04 21:00:00\" //关注时间
+"follow\_time": "2016-06-04 21:00:00" //关注时间
 
 }
 
@@ -492,19 +492,19 @@ DATA:
 
 {
 
-\"phone\": \"1390000000\",
+"phone": "1390000000",
 
-\"sex\": 2,
+"sex": 2,
 
-\"details\": \"sffffaaaa\",
+"details": "sffffaaaa",
 
-\"birthday\": \"1999/01/22\",
+"birthday": "1999/01/22",
 
-\"email\": \"h\@a.com\",
+"email": "h\@a.com",
 
-\"name\": \"axxvv\",
+"name": "axxvv",
 
-\"real\_name\": \"Huang\"
+"real\_name": "Huang"
 
 }
 
@@ -512,9 +512,9 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"message\": \"profile.updated\"
+"message": "profile.updated"
 
 }
 
@@ -524,49 +524,49 @@ POST <http://112.74.26.228:10080/rest/pub/user_info>
 
 data:
 
-{ \"ids\": \[ 1, 2, 4 \] }
+{ "ids": \[ 1, 2, 4 \] }
 
 Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[
+"data": \[
 
 {
 
-\"sex\": 0,
+"sex": 0,
 
-\"name\": \"Administrator\",
+"name": "Administrator",
 
-\"id\": 1,
+"id": 1,
 
-\"avatar\": \"http://abc.com/1.jpg\"
+"avatar": "http://abc.com/1.jpg"
 
 },
 
 {
 
-\"sex\": 0,
+"sex": 0,
 
-\"name\": \"Administrator2\",
+"name": "Administrator2",
 
-\"id\": 2,
+"id": 2,
 
-\"avatar\": null
+"avatar": null
 
 },
 
 {
 
-\"sex\": 0,
+"sex": 0,
 
-\"name\": \"Administrator4\",
+"name": "Administrator4",
 
-\"id\": 4,
+"id": 4,
 
-\"avatar\": null
+"avatar": null
 
 }
 
@@ -595,27 +595,27 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"id\": 30,
+"id": 30,
 
-\"name\": \"广东\",
+"name": "广东",
 
-\"type\": \"p\",
+"type": "p",
 
-\"parent\_id\": null
+"parent\_id": null
 
 }, {
 
-\"id\": 35,
+"id": 35,
 
-\"name\": \"上海\",
+"name": "上海",
 
-\"type\": \"p\",
+"type": "p",
 
-\"parent\_id\": null
+"parent\_id": null
 
 }\]
 
@@ -625,161 +625,161 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"id\": 2183,
+"id": 2183,
 
-\"area\_list\": \[{
+"area\_list": \[{
 
-\"id\": 2184,
+"id": 2184,
 
-\"area\_list\": \[{
+"area\_list": \[{
 
-\"id\": 2185,
+"id": 2185,
 
-\"name\": \"越秀区\",
+"name": "越秀区",
 
-\"type\": \"d\",
+"type": "d",
 
-\"parent\_id\": 2184
-
-}, {
-
-\"id\": 2186,
-
-\"name\": \"荔湾区\",
-
-\"type\": \"d\",
-
-\"parent\_id\": 2184
+"parent\_id": 2184
 
 }, {
 
-\"id\": 2187,
+"id": 2186,
 
-\"name\": \"海珠区\",
+"name": "荔湾区",
 
-\"type\": \"d\",
+"type": "d",
 
-\"parent\_id\": 2184
-
-}, {
-
-\"id\": 2188,
-
-\"name\": \"天河区\",
-
-\"type\": \"d\",
-
-\"parent\_id\": 2184
+"parent\_id": 2184
 
 }, {
 
-\"id\": 2189,
+"id": 2187,
 
-\"name\": \"白云区\",
+"name": "海珠区",
 
-\"type\": \"d\",
+"type": "d",
 
-\"parent\_id\": 2184
-
-}, {
-
-\"id\": 2190,
-
-\"name\": \"黄埔区\",
-
-\"type\": \"d\",
-
-\"parent\_id\": 2184
+"parent\_id": 2184
 
 }, {
 
-\"id\": 2191,
+"id": 2188,
 
-\"name\": \"番禺区\",
+"name": "天河区",
 
-\"type\": \"d\",
+"type": "d",
 
-\"parent\_id\": 2184
-
-}, {
-
-\"id\": 2192,
-
-\"name\": \"花都区\",
-
-\"type\": \"d\",
-
-\"parent\_id\": 2184
+"parent\_id": 2184
 
 }, {
 
-\"id\": 2193,
+"id": 2189,
 
-\"name\": \"南沙区\",
+"name": "白云区",
 
-\"type\": \"d\",
+"type": "d",
 
-\"parent\_id\": 2184
-
-}, {
-
-\"id\": 2194,
-
-\"name\": \"萝岗区\",
-
-\"type\": \"d\",
-
-\"parent\_id\": 2184
+"parent\_id": 2184
 
 }, {
 
-\"id\": 2195,
+"id": 2190,
 
-\"name\": \"增城市\",
+"name": "黄埔区",
 
-\"type\": \"d\",
+"type": "d",
 
-\"parent\_id\": 2184
-
-}, {
-
-\"id\": 2196,
-
-\"name\": \"从化市\",
-
-\"type\": \"d\",
-
-\"parent\_id\": 2184
+"parent\_id": 2184
 
 }, {
 
-\"id\": 2197,
+"id": 2191,
 
-\"name\": \"其他\",
+"name": "番禺区",
 
-\"type\": \"d\",
+"type": "d",
 
-\"parent\_id\": 2184
+"parent\_id": 2184
+
+}, {
+
+"id": 2192,
+
+"name": "花都区",
+
+"type": "d",
+
+"parent\_id": 2184
+
+}, {
+
+"id": 2193,
+
+"name": "南沙区",
+
+"type": "d",
+
+"parent\_id": 2184
+
+}, {
+
+"id": 2194,
+
+"name": "萝岗区",
+
+"type": "d",
+
+"parent\_id": 2184
+
+}, {
+
+"id": 2195,
+
+"name": "增城市",
+
+"type": "d",
+
+"parent\_id": 2184
+
+}, {
+
+"id": 2196,
+
+"name": "从化市",
+
+"type": "d",
+
+"parent\_id": 2184
+
+}, {
+
+"id": 2197,
+
+"name": "其他",
+
+"type": "d",
+
+"parent\_id": 2184
 
 }\],
 
-\"name\": \"广州\",
+"name": "广州",
 
-\"type\": \"c\",
+"type": "c",
 
-\"parent\_id\": 2183
+"parent\_id": 2183
 
 }\],
 
-\"name\": \"广东\",
+"name": "广东",
 
-\"type\": \"p\",
+"type": "p",
 
-\"parent\_id\": null
+"parent\_id": null
 
 }\]
 
@@ -795,15 +795,15 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"point\_exchange\_rate\": 100,
+"point\_exchange\_rate": 100,
 
-\"auto\_select\_coupon\": false,
+"auto\_select\_coupon": false,
 
-\"drawing\_condition\": 100
+"drawing\_condition": 100
 
 }
 
@@ -822,137 +822,137 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"id\": 1,
+"id": 1,
 
-\"cover\": null,
+"cover": null,
 
-\"sub\_categories\": \[{
+"sub\_categories": \[{
 
-\"id\": 2,
+"id": 2,
 
-\"cover\":
-\"http://112.74.26.228:8000/p/fb61f7180cb48a0d1bcff2a4edab9780.png\",
+"cover":
+"http://112.74.26.228:8000/p/fb61f7180cb48a0d1bcff2a4edab9780.png",
 
-\"sub\_categories\": \[\],
+"sub\_categories": \[\],
 
-\"description\": null,
+"description": null,
 
-\"name\": \"瓶装2.5L\",
+"name": "瓶装2.5L",
 
-\"parent\_id\": 1
+"parent\_id": 1
 
 }, {
 
-\"id\": 5,
+"id": 5,
 
-\"cover\":
-\"http://112.74.26.228:8000/p/aa92d03568a42607011ca55815d48368.png\",
+"cover":
+"http://112.74.26.228:8000/p/aa92d03568a42607011ca55815d48368.png",
 
-\"sub\_categories\": \[\],
+"sub\_categories": \[\],
 
-\"description\": null,
+"description": null,
 
-\"name\": \"旅行装(袋)\",
+"name": "旅行装(袋)",
 
-\"parent\_id\": 1
+"parent\_id": 1
 
 }\],
 
-\"description\": null,
+"description": null,
 
-\"name\": \"超效洁净\",
+"name": "超效洁净",
 
-\"parent\_id\": null,
+"parent\_id": null,
 
-\"is\_show\_products\": 1,
+"is\_show\_products": 1,
 //点击类别时是否进入该类别下第1个产品的详情页（1 是 0 否）,
 
-\"products\": \[{ //如果指定promoted时返回。
+"products": \[{ //如果指定promoted时返回。
 
-\"free\_shipping\": 0,
+"free\_shipping": 0,
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"last\_modified\_date\": \"2016-10-10 19:51:55\",
+"last\_modified\_date": "2016-10-10 19:51:55",
 
-\"promoted\": 1,
+"promoted": 1,
 
-\"stock\_balance\": 1000,
+"stock\_balance": 1000,
 
-\"sales\": 0,
+"sales": 0,
 
-\"cover\":
-\"http://o9ixtumvv.bkt.clouddn.com/20161010195121988-gFvkrsAZ.jpeg\",
+"cover":
+"http://o9ixtumvv.bkt.clouddn.com/20161010195121988-gFvkrsAZ.jpeg",
 
-\"unit\": \"a\",
+"unit": "a",
 
-\"category\_id\": 3,
+"category\_id": 3,
 
-\"price\": 33.00,
+"price": 33.00,
 
-\"suggested\_price\": 33.00,
+"suggested\_price": 33.00,
 
-\"name\": \"aaaa\",
+"name": "aaaa",
 
-\"short\_name\": \"aa\",
+"short\_name": "aa",
 
-\"id\": 1,
+"id": 1,
 
-\"created\_date\": \"2016-10-10 19:51:23\",
+"created\_date": "2016-10-10 19:51:23",
 
-\"fare\_id\": 1,
+"fare\_id": 1,
 
-\"sort\_order\": 100,
+"sort\_order": 100,
 
-\"partner\_level\_zone\": 1,
+"partner\_level\_zone": 1,
 
-\"barcode\": null,
+"barcode": null,
 
-\"view\_count\": 0,
+"view\_count": 0,
 
-\"store\_location\": null,
+"store\_location": null,
 
-\"status\": \"ONSELL\",
+"status": "ONSELL",
 
-\"cost\_price\": 33.00,
+"cost\_price": 33.00,
 
-\"weight\": 500, //重量， 单位克
+"weight": 500, //重量， 单位克
 
-\"bulk\": 100 //体积
+"bulk": 100 //体积
 
 }\]
 
 }, {
 
-\"id\": 3,
+"id": 3,
 
-\"cover\": null,
+"cover": null,
 
-\"sub\_categories\": \[\],
+"sub\_categories": \[\],
 
-\"description\": null,
+"description": null,
 
-\"name\": \"亮白增艳\",
+"name": "亮白增艳",
 
-\"parent\_id\": null
+"parent\_id": null
 
 }, {
 
-\"id\": 4,
+"id": 4,
 
-\"cover\": null,
+"cover": null,
 
-\"sub\_categories\": \[\],
+"sub\_categories": \[\],
 
-\"description\": null,
+"description": null,
 
-\"name\": \"活氧清洁剂\",
+"name": "活氧清洁剂",
 
-\"parent\_id\": null
+"parent\_id": null
 
 }\]
 
@@ -984,119 +984,119 @@ promoted - optional, 如果指定该参数，则分页查询该类别下的推�
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"id\": 2,
+"id": 2,
 
-\"cover\":
-\"http://112.74.26.228:8000/p/fb61f7180cb48a0d1bcff2a4edab9780.png\",
+"cover":
+"http://112.74.26.228:8000/p/fb61f7180cb48a0d1bcff2a4edab9780.png",
 
-\"description\": null,
+"description": null,
 
-\"name\": \"瓶装2.5L\",
+"name": "瓶装2.5L",
 
-\"is\_show\_products\": 1,
+"is\_show\_products": 1,
 //点击类别时是否进入该类别下第1个产品的详情页（1 是 0 否）,
 
-\"products\": \[{
+"products": \[{
 
-\"created\_date\": \"2016-04-22 09:30:53\",
+"created\_date": "2016-04-22 09:30:53",
 
-\"cost\_price\": 20.00,
+"cost\_price": 20.00,
 
-\"status\": \"ONSELL\",
+"status": "ONSELL",
 
-\"free\_shipping\": 1,
+"free\_shipping": 1,
 
-\"origin\": \"广东\",
+"origin": "广东",
 
-\"suggested\_price\": 50.00,
+"suggested\_price": 50.00,
 
-\"category\_id\": 2,
+"category\_id": 2,
 
-\"stock\_balance\": 10000,
+"stock\_balance": 10000,
 
-\"id\": 1,
+"id": 1,
 
-\"unit\": \"件\",
+"unit": "件",
 
-\"cover\":
-\"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png\",
+"cover":
+"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
-\"last\_modified\_date\": \"2016-04-23 12:27:59\",
+"last\_modified\_date": "2016-04-23 12:27:59",
 
-\"price\": 34.80,
+"price": 34.80,
 
-\"category\_name\": \"瓶装2.5L\",
+"category\_name": "瓶装2.5L",
 
-\"promoted\": 1,
+"promoted": 1,
 
-\"sales\": 0,
+"sales": 0,
 
-\"name\": \"超效洁净护理洗衣液2.5L【全国包邮】\",
+"name": "超效洁净护理洗衣液2.5L【全国包邮】",
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"brand\": \"大地\",
+"brand": "大地",
 
-\"sort\_order\": 100,
+"sort\_order": 100,
 
-\"weight\": 500, //重量， 单位克
+"weight": 500, //重量， 单位克
 
-\"bulk\": 200 //体积
+"bulk": 200 //体积
 
 }, {
 
-\"created\_date\": \"2016-04-22 11:16:14\",
+"created\_date": "2016-04-22 11:16:14",
 
-\"cost\_price\": 70.00,
+"cost\_price": 70.00,
 
-\"status\": \"ONSELL\",
+"status": "ONSELL",
 
-\"free\_shipping\": 1,
+"free\_shipping": 1,
 
-\"origin\": \"广州\",
+"origin": "广州",
 
-\"suggested\_price\": 88.00,
+"suggested\_price": 88.00,
 
-\"category\_id\": 2,
+"category\_id": 2,
 
-\"stock\_balance\": 600,
+"stock\_balance": 600,
 
-\"id\": 3,
+"id": 3,
 
-\"unit\": \"件\",
+"unit": "件",
 
-\"cover\":
-\"http://112.74.26.228:8000/p/2b3edeb3c3ca2a12b06893cb12286710.png\",
+"cover":
+"http://112.74.26.228:8000/p/2b3edeb3c3ca2a12b06893cb12286710.png",
 
-\"last\_modified\_date\": \"2016-04-22 14:22:04\",
+"last\_modified\_date": "2016-04-22 14:22:04",
 
-\"price\": 69.60,
+"price": 69.60,
 
-\"category\_name\": \"瓶装2.5L\",
+"category\_name": "瓶装2.5L",
 
-\"promoted\": 0,
+"promoted": 0,
 
-\"sales\": 0,
+"sales": 0,
 
-\"name\": \"超效洁净护理洗衣液2.5Lx2瓶【全国包邮】\",
+"name": "超效洁净护理洗衣液2.5Lx2瓶【全国包邮】",
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"brand\": \"大陆\",
+"brand": "大陆",
 
-\"sort\_order\": 100,
+"sort\_order": 100,
 
-\"weight\": 500, //重量， 单位克
+"weight": 500, //重量， 单位克
 
-\"bulk\": 200 //体积
+"bulk": 200 //体积
 
 }\],
 
-\"parent\_id\": 1
+"parent\_id": 1
 
 }
 
@@ -1110,17 +1110,17 @@ return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[
+"data": \[
 
 {
 
-\"id\": 1,
+"id": 1,
 
-\"hit\": 0,
+"hit": 0,
 
-\"name\": \"皂液\"
+"name": "皂液"
 
 }
 
@@ -1149,105 +1149,105 @@ orderBy and orderByDesc 可以用的值有： view\_count : 人气， price :
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\":\[
+"data":\[
 
 {
 
-\"created\_date\": \"2016-04-22 09:30:53\",
+"created\_date": "2016-04-22 09:30:53",
 
-\"cost\_price\": 20.00,
+"cost\_price": 20.00,
 
-\"status\": \"ONSELL\",
+"status": "ONSELL",
 
-\"free\_shipping\": 1,
+"free\_shipping": 1,
 
-\"origin\": \"广东\",
+"origin": "广东",
 
-\"suggested\_price\": 50.00,
+"suggested\_price": 50.00,
 
-\"category\_id\": 2,
+"category\_id": 2,
 
-\"stock\_balance\": 10000,
+"stock\_balance": 10000,
 
-\"id\": 1,
+"id": 1,
 
-\"unit\": \"件\",
+"unit": "件",
 
-\"cover\":
-\"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png\",
+"cover":
+"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
-\"last\_modified\_date\": \"2016-04-23 12:27:59\",
+"last\_modified\_date": "2016-04-23 12:27:59",
 
-\"price\": 34.80,
+"price": 34.80,
 
-\"category\_name\": \"瓶装2.5L\",
+"category\_name": "瓶装2.5L",
 
-\"promoted\": 1,
+"promoted": 1,
 
-\"sales\": 0,
+"sales": 0,
 
-\"name\": \"超效洁净护理洗衣液2.5L【全国包邮】\",
+"name": "超效洁净护理洗衣液2.5L【全国包邮】",
 
-\"short\_name\": \"aa\",
+"short\_name": "aa",
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"brand\": \"大地\",
+"brand": "大地",
 
-\"sort\_order\": 100,
+"sort\_order": 100,
 
-\"weight\": 500, //重量， 单位克
+"weight": 500, //重量， 单位克
 
-\"bulk\": 200 //体积
+"bulk": 200 //体积
 
 }, {
 
-\"created\_date\": \"2016-04-22 11:16:14\",
+"created\_date": "2016-04-22 11:16:14",
 
-\"cost\_price\": 70.00,
+"cost\_price": 70.00,
 
-\"status\": \"ONSELL\",
+"status": "ONSELL",
 
-\"free\_shipping\": 1,
+"free\_shipping": 1,
 
-\"origin\": \"广州\",
+"origin": "广州",
 
-\"suggested\_price\": 88.00,
+"suggested\_price": 88.00,
 
-\"category\_id\": 2,
+"category\_id": 2,
 
-\"stock\_balance\": 600,
+"stock\_balance": 600,
 
-\"id\": 3,
+"id": 3,
 
-\"unit\": \"件\",
+"unit": "件",
 
-\"cover\":
-\"http://112.74.26.228:8000/p/2b3edeb3c3ca2a12b06893cb12286710.png\",
+"cover":
+"http://112.74.26.228:8000/p/2b3edeb3c3ca2a12b06893cb12286710.png",
 
-\"last\_modified\_date\": \"2016-04-22 14:22:04\",
+"last\_modified\_date": "2016-04-22 14:22:04",
 
-\"price\": 69.60,
+"price": 69.60,
 
-\"category\_name\": \"瓶装2.5L\",
+"category\_name": "瓶装2.5L",
 
-\"promoted\": 0,
+"promoted": 0,
 
-\"sales\": 0,
+"sales": 0,
 
-\"name\": \"超效洁净护理洗衣液2.5Lx2瓶【全国包邮】\",
+"name": "超效洁净护理洗衣液2.5Lx2瓶【全国包邮】",
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"brand\": \"大陆\",
+"brand": "大陆",
 
-\"sort\_order\": 100,
+"sort\_order": 100,
 
-\"weight\": 500, //重量， 单位克
+"weight": 500, //重量， 单位克
 
-\"bulk\": 200 //体积
+"bulk": 200 //体积
 
 }
 
@@ -1265,58 +1265,58 @@ GET <http://112.74.26.228:10080/rest/product?all=true>
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"created\_date\": \"2016-04-22 09:30:53\",
+"created\_date": "2016-04-22 09:30:53",
 
-\"cost\_price\": 20.00,
+"cost\_price": 20.00,
 
-\"status\": \"ONSELL\",
+"status": "ONSELL",
 
-\"free\_shipping\": 1,
+"free\_shipping": 1,
 
-\"origin\": \"广东\",
+"origin": "广东",
 
-\"suggested\_price\": 50.00,
+"suggested\_price": 50.00,
 
-\"category\_id\": 2,
+"category\_id": 2,
 
-\"stock\_balance\": 10000,
+"stock\_balance": 10000,
 
-\"id\": 1,
+"id": 1,
 
-\"unit\": \"件\",
+"unit": "件",
 
-\"cover\":
-\"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png\",
+"cover":
+"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
-\"last\_modified\_date\": \"2016-04-23 12:27:59\",
+"last\_modified\_date": "2016-04-23 12:27:59",
 
-\"price\": 34.80,
+"price": 34.80,
 
-\"category\_name\": \"瓶装2.5L\",
+"category\_name": "瓶装2.5L",
 
-\"promoted\": 1,
+"promoted": 1,
 
-\"sales\": 0,
+"sales": 0,
 
-\"name\": \"超效洁净护理洗衣液2.5L【全国包邮】\",
+"name": "超效洁净护理洗衣液2.5L【全国包邮】",
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"brand\": \"大地\",
+"brand": "大地",
 
-\"sort\_order\": 100,
+"sort\_order": 100,
 
-\"weight\": 500, //重量， 单位克
+"weight": 500, //重量， 单位克
 
-\"bulk\": 200, //体积
+"bulk": 200, //体积
 
-\"allow\_coupon\": 0, //是否可以使用优惠券 0:不可以， 1:可以用
+"allow\_coupon": 0, //是否可以使用优惠券 0:不可以， 1:可以用
 
-\"credit\": 0, // 可用积分数量
+"credit": 0, // 可用积分数量
 
 }\]
 
@@ -1347,54 +1347,54 @@ orderBy and orderByDesc 可以用的值有： view\_count : 人气， price :
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"created\_date\": \"2016-04-22 09:30:53\",
+"created\_date": "2016-04-22 09:30:53",
 
-\"cost\_price\": 20.00,
+"cost\_price": 20.00,
 
-\"status\": \"ONSELL\",
+"status": "ONSELL",
 
-\"free\_shipping\": 1,
+"free\_shipping": 1,
 
-\"origin\": \"广东\",
+"origin": "广东",
 
-\"suggested\_price\": 50.00,
+"suggested\_price": 50.00,
 
-\"category\_id\": 2,
+"category\_id": 2,
 
-\"stock\_balance\": 10000,
+"stock\_balance": 10000,
 
-\"id\": 1,
+"id": 1,
 
-\"unit\": \"件\",
+"unit": "件",
 
-\"cover\":
-\"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png\",
+"cover":
+"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
-\"last\_modified\_date\": \"2016-04-23 12:27:59\",
+"last\_modified\_date": "2016-04-23 12:27:59",
 
-\"price\": 34.80,
+"price": 34.80,
 
-\"category\_name\": \"瓶装2.5L\",
+"category\_name": "瓶装2.5L",
 
-\"promoted\": 1,
+"promoted": 1,
 
-\"sales\": 0,
+"sales": 0,
 
-\"name\": \"超效洁净护理洗衣液2.5L【全国包邮】\",
+"name": "超效洁净护理洗衣液2.5L【全国包邮】",
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"brand\": \"大地\",
+"brand": "大地",
 
-\"sort\_order\": 100,
+"sort\_order": 100,
 
-\"weight\": 500, //重量， 单位克
+"weight": 500, //重量， 单位克
 
-\"bulk\": 200 //体积
+"bulk": 200 //体积
 
 }\]
 
@@ -1406,268 +1406,268 @@ GET <http://112.74.26.228:10080/rest/product/id>
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"created\_date\": \"2016-04-22 09:30:53\",
+"created\_date": "2016-04-22 09:30:53",
 
-\"cost\_price\": 20.00,
+"cost\_price": 20.00,
 
-\"status\": \"ONSELL\",
+"status": "ONSELL",
 
-\"free\_shipping\": 1,
+"free\_shipping": 1,
 
-\"origin\": \"广东\",
+"origin": "广东",
 
-\"suggested\_price\": 50.00,
+"suggested\_price": 50.00,
 
-\"category\_id\": 2,
+"category\_id": 2,
 
-\"stock\_balance\": 10000,
+"stock\_balance": 10000,
 
-\"id\": 1,
+"id": 1,
 
-\"unit\": \"件\",
+"unit": "件",
 
-\"cover\":
-\"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png\",
+"cover":
+"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
-\"last\_modified\_date\": \"2016-04-23 18:26:39\",
+"last\_modified\_date": "2016-04-23 18:26:39",
 
-\"price\": 34.80,
+"price": 34.80,
 
-\"promoted\": 1,
+"promoted": 1,
 
-\"sales\": 0,
+"sales": 0,
 
-\"description\": \"\<h1\>超优惠\<br/\>\</h1\>\<p\>\<img
-src=\\\"/upload/upload/image/20160601/1464767352927011775.png\\\"
-title=\\\"1464767352927011775.png\\\"
-alt=\\\"logo.png\\\"/\>\</p\>\<p\>\<br/\>\</p\>\",
+"description": "\<h1\>超优惠\<br/\>\</h1\>\<p\>\<img
+src=\\"/upload/upload/image/20160601/1464767352927011775.png\\"
+title=\\"1464767352927011775.png\\"
+alt=\\"logo.png\\"/\>\</p\>\<p\>\<br/\>\</p\>",
 
-\"name\": \"超效洁净护理洗衣液2.5L【全国包邮】\",
+"name": "超效洁净护理洗衣液2.5L【全国包邮】",
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"images\": \[\],
+"images": \[\],
 
-\"brand\": \"大地\",
+"brand": "大地",
 
-\"sort\_order\": 100,
+"sort\_order": 100,
 
-\"weight\": 500, //重量， 单位克
+"weight": 500, //重量， 单位克
 
-\"bulk\": 200, //体积
+"bulk": 200, //体积
 
-\"properties\": \[{
+"properties": \[{
 
-\"value\_type\": \"STRING\",
+"value\_type": "STRING",
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"id\": 1,
+"id": 1,
 
-\"property\_value\": \"a1\",
+"property\_value": "a1",
 
-\"display\_name\": \"a1\",
+"display\_name": "a1",
 
-\"property\_id\": 1
-
-}, {
-
-\"value\_type\": \"STRING\",
-
-\"product\_id\": 1,
-
-\"id\": 2,
-
-\"property\_value\": \"a2\",
-
-\"display\_name\": \"a2\",
-
-\"property\_id\": 2
-
-}\],
-
-\"covers\": \[{
-
-\"product\_id\": 1,
-
-\"id\": 1,
-
-\"type\": 0,
-
-\"url\":
-\"http://localhost:9990/p/6255a9dd831b89aa92ec1df49054603a.jpeg\"
+"property\_id": 1
 
 }, {
 
-\"product\_id\": 1,
+"value\_type": "STRING",
 
-\"id\": 2,
+"product\_id": 1,
 
-\"type\": 0,
+"id": 2,
 
-\"url\":
-\"http://localhost:9990/p/3b316bb6c6b939eb64c36d047a6c9d6e.jpg\"
+"property\_value": "a2",
+
+"display\_name": "a2",
+
+"property\_id": 2
 
 }\],
 
-\"specifications\":
+"covers": \[{
+
+"product\_id": 1,
+
+"id": 1,
+
+"type": 0,
+
+"url":
+"http://localhost:9990/p/6255a9dd831b89aa92ec1df49054603a.jpeg"
+
+}, {
+
+"product\_id": 1,
+
+"id": 2,
+
+"type": 0,
+
+"url":
+"http://localhost:9990/p/3b316bb6c6b939eb64c36d047a6c9d6e.jpg"
+
+}\],
+
+"specifications":
 \[{//产品规格，当购买产品时，弹出来的框提供的选择项。加入购物车和购买时需要把选择的项提交给后台，具体参考购物车和下单api的要求
 
-\"price\": 140, //售价
+"price": 140, //售价
 
-\"suggested\_price\": 140,
+"suggested\_price": 140,
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"name\": \"a2\", //规格名称
+"name": "a2", //规格名称
 
-\"id\": 1,
+"id": 1,
 
-\"stock\_balance\": 1000, //库存
+"stock\_balance": 1000, //库存
 
-\"cost\_price\": 100,
+"cost\_price": 100,
 
-\"weight\": 500, //重量， 单位克
+"weight": 500, //重量， 单位克
 
-\"bulk\": 200 //体积
-
-}, {
-
-\"price\": 120,
-
-\"suggested\_price\": 130,
-
-\"product\_id\": 1,
-
-\"name\": \"a1\",
-
-\"id\": 2,
-
-\"stock\_balance\": 1000,
-
-\"cost\_price\": 90,
-
-\"weight\": 500, //重量， 单位克
-
-\"bulk\": 200 //体积
-
-}\],
-
-\"fare\_template\": {
-
-\"is\_incl\_postage\_by\_if\": 0, // 1 条件包邮
-
-\"dispatch\_time\": \"24\",
-
-\"is\_incl\_postage\": 1, // 1 包邮
-
-\"name\": \"包邮\",
-
-\"title\": \"［省钱优惠］\",
-
-\"content\": \"满3KG更省钱哦。\",
-
-\"shop\_addr\": \"广东-广州\",
-
-\"last\_modified\_date\": \"2016-08-31 10:56:16\",
-
-\"id\": 1,
-
-\"valuation\_model\": 0,
-
-\"incl\_postage\_provisoes\": \[{ //条件包邮
-
-\"amount\": 100.00, // 满100包邮
-
-\"bulk\_no\": null,
-
-\"carry\_way\": 0,
-
-\"id\": 2,
-
-\"fare\_id\": 2,
-
-\"region\": null,
-
-\"type\": 3,
-
-\"piece\_no\": null,
-
-\"weight\_no\": null
-
-}\],
-
-\"carry\_modes\": \[{
-
-\"second\_piece\": 1,
-
-\"second\_amount\": 0.00,
-
-\"first\_bulk\": null,
-
-\"carry\_way\": 0,
-
-\"is\_default\": 0,
-
-\"first\_piece\": 1,
-
-\"first\_weight\": null,
-
-\"second\_bulk\": null,
-
-\"second\_weight\": null,
-
-\"id\": 3,
-
-\"fare\_id\": 2,
-
-\"region\": \"广东-广州\|广东-深圳\", //这些地区的使用这个运费
-
-\"first\_amount\": 8.00
+"bulk": 200 //体积
 
 }, {
 
-\"second\_piece\": 1,
+"price": 120,
 
-\"second\_amount\": 0.00, //续费
+"suggested\_price": 130,
 
-\"first\_bulk\": null,
+"product\_id": 1,
 
-\"carry\_way\": 0,
+"name": "a1",
 
-\"is\_default\": 1, //没有满足地区，使用这个默认运费
+"id": 2,
 
-\"first\_piece\": 1,
+"stock\_balance": 1000,
 
-\"first\_weight\": null,
+"cost\_price": 90,
 
-\"second\_bulk\": null,
+"weight": 500, //重量， 单位克
 
-\"second\_weight\": null,
+"bulk": 200 //体积
 
-\"id\": 2,
+}\],
 
-\"fare\_id\": 2,
+"fare\_template": {
 
-\"region\": null,
+"is\_incl\_postage\_by\_if": 0, // 1 条件包邮
 
-\"first\_amount\": 10.00 //首费
+"dispatch\_time": "24",
+
+"is\_incl\_postage": 1, // 1 包邮
+
+"name": "包邮",
+
+"title": "［省钱优惠］",
+
+"content": "满3KG更省钱哦。",
+
+"shop\_addr": "广东-广州",
+
+"last\_modified\_date": "2016-08-31 10:56:16",
+
+"id": 1,
+
+"valuation\_model": 0,
+
+"incl\_postage\_provisoes": \[{ //条件包邮
+
+"amount": 100.00, // 满100包邮
+
+"bulk\_no": null,
+
+"carry\_way": 0,
+
+"id": 2,
+
+"fare\_id": 2,
+
+"region": null,
+
+"type": 3,
+
+"piece\_no": null,
+
+"weight\_no": null
+
+}\],
+
+"carry\_modes": \[{
+
+"second\_piece": 1,
+
+"second\_amount": 0.00,
+
+"first\_bulk": null,
+
+"carry\_way": 0,
+
+"is\_default": 0,
+
+"first\_piece": 1,
+
+"first\_weight": null,
+
+"second\_bulk": null,
+
+"second\_weight": null,
+
+"id": 3,
+
+"fare\_id": 2,
+
+"region": "广东-广州\|广东-深圳", //这些地区的使用这个运费
+
+"first\_amount": 8.00
+
+}, {
+
+"second\_piece": 1,
+
+"second\_amount": 0.00, //续费
+
+"first\_bulk": null,
+
+"carry\_way": 0,
+
+"is\_default": 1, //没有满足地区，使用这个默认运费
+
+"first\_piece": 1,
+
+"first\_weight": null,
+
+"second\_bulk": null,
+
+"second\_weight": null,
+
+"id": 2,
+
+"fare\_id": 2,
+
+"region": null,
+
+"first\_amount": 10.00 //首费
 
 }\],
 
 },
 
-\"purchase\_strategy\": {
+"purchase\_strategy": {
 
-\"id\": 1,
+"id": 1,
 
-\"name\": \"关注公众号且限购1件\",
+"name": "关注公众号且限购1件",
 
-\"description\": \"请先关注公众号，关注后可以购买1件。\"
+"description": "请先关注公众号，关注后可以购买1件。"
 
 }
 
@@ -1720,125 +1720,125 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"phone\": \"1380000000\",
+"phone": "1380000000",
 
-\"contact\_user\": \"Mr Huang\",
+"contact\_user": "Mr Huang",
 
-\"province\": \"GD\",
+"province": "GD",
 
-\"city\": \"GZ\",
+"city": "GZ",
 
-\"district\": \"Tiahne\",
+"district": "Tiahne",
 
-\"street\": \"jianzhong road\",
+"street": "jianzhong road",
 
-\"detail\": \"6F\",
+"detail": "6F",
 
-\"trade\_number\": null,
+"trade\_number": null,
 
-\"deal\_date\": null,
+"deal\_date": null,
 
-\"express\_number\": \"1232323\",
+"express\_number": "1232323",
 
-\"express\_code\": \"24234\",
+"express\_code": "24234",
 
-\"express\_company\": \"abc\",
+"express\_company": "abc",
 
-\"coupon\_info\": null,
+"coupon\_info": null,
 
-\"zip\": \"510000\",
+"zip": "510000",
 
-\"id\": 3,
+"id": 3,
 
-\"cover\":
-\"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png\",
+"cover":
+"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
-\"confirm\_date\": null,
+"confirm\_date": null,
 
-\"description\": \"超效洁净护理洗衣液2.5L【全国包邮】 x 1. \",
+"description": "超效洁净护理洗衣液2.5L【全国包邮】 x 1. ",
 
-\"deliver\_date\": null,
+"deliver\_date": null,
 
-\"created\_date\": \"2016-04-26 10:27:56\",
+"created\_date": "2016-04-26 10:27:56",
 
-\"order\_number\": \"0000000101461637676506360\",
+"order\_number": "0000000101461637676506360",
 
-\"status\": \"CREATED\_PAY\_PENDING\",
+"status": "CREATED\_PAY\_PENDING",
 
-\"remark\": null,
+"remark": null,
 
-\"invoice\": 1,
+"invoice": 1,
 
-\"invoice\_title\": \"ABC company\",
+"invoice\_title": "ABC company",
 
-\"receiving\_time\": \"anytime\",
+"receiving\_time": "anytime",
 
-\"deliver\_order\_number\": null,
+"deliver\_order\_number": null,
 
-\"total\_price\": 34.80,
+"total\_price": 34.80,
 
-\"user\_name\": \"Administrator\",
+"user\_name": "Administrator",
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"pay\_date\": null,
+"pay\_date": null,
 
-\"payment\_type\": \"ALIPAY\",
+"payment\_type": "ALIPAY",
 
-\"point\_exchange\_rate\": 100,
+"point\_exchange\_rate": 100,
 
-\"pay\_expiry\_time\": \"2018-08-20 17:53:01\",//
+"pay\_expiry\_time": "2018-08-20 17:53:01",//
 待支付订单支付的超时时间
 
-\"order\_items\": \[
+"order\_items": \[
 
 {
 
-\"quantity\": 2,
+"quantity": 2,
 
-\"product\_specification\_id\": null,
+"product\_specification\_id": null,
 
-\"weight\": 500,
+"weight": 500,
 
-\"product\_specification\_name\": null,
+"product\_specification\_name": null,
 
-\"product\_name\": \"REJOICE飘柔家庭护理芦荟长效止痒滋润洗发露400ML\",
+"product\_name": "REJOICE飘柔家庭护理芦荟长效止痒滋润洗发露400ML",
 
-\"marketing\_description\": null,
+"marketing\_description": null,
 
-\"cover\": \"http://images.10mup.com/20161104102243958-v499XJvA.jpg\",
+"cover": "http://images.10mup.com/20161104102243958-v499XJvA.jpg",
 
-\"marketing\": null,
+"marketing": null,
 
-\"final\_price\": 25.8,
+"final\_price": 25.8,
 
-\"price\": 12.9,
+"price": 12.9,
 
-\"product\_id\": 335,
+"product\_id": 335,
 
-\"marketing\_id\": null,
+"marketing\_id": null,
 
-\"id\": 5920,
+"id": 5920,
 
-\"bulk\": 0,
+"bulk": 0,
 
-\"order\_id\": 3290,
+"order\_id": 3290,
 
-\"partner\_level\_zone\": 1,
+"partner\_level\_zone": 1,
 
-\"barcode\": \"6903148126660\",
+"barcode": "6903148126660",
 
-\"store\_location\": null,
+"store\_location": null,
 
-\"status\": \"CREATED\",
+"status": "CREATED",
 
-\"cost\_price\": 10.21
+"cost\_price": 10.21
 
 }
 
@@ -1865,609 +1865,609 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[
-
-{
-
-\"trade\_number\": \"test\_trade\_num\",
-
-\"pay\_date\": \"2016-12-14 13:42:33\",
-
-\"deliver\_order\_number\": null,
-
-\"order\_customer\_service\": { //售后单信息
-
-\"reason\": \"AFSFSF\",
-
-\"express\_code\": null,
-
-\"service\_type\": \"REFUND\",
-
-\"images\": \"\[\]\",
-
-\"log\": \"\[{\\\"time\\\":\\\"2016-12-14
-01:42:47\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"afaf\\\"}\]\",
-
-\"refund\_fee\": null, //退款金额
-
-\"id\": 5,
-
-\"created\_date\": \"2016-12-14 13:42:47\",
-
-\"express\_number\": null,
-
-\"order\_id\": 5,
-
-\"express\_company\": null,
-
-\"status\": \"CREATED\"
-
-},
-
-\"city\": \"GZ\",
-
-\"invoice\_title\": \"ABC company\",
-
-\"receiving\_time\": \"anytime\",
-
-\"user\_name\": \"Administrator\",
-
-\"order\_number\": \"1612141342218661\",
-
-\"freight\": 0,
-
-\"description\": \"aaaa x 2. \",
-
-\"remark\": null,
-
-\"express\_company\": null,
-
-\"cover\": \"/p/7fe63684ff08bb7cb6414742232776ac.jpeg\",
-
-\"express\_code\": null,
-
-\"is\_deleted\": 0,
-
-\"province\": \"GD\",
-
-\"street\": \"jianzhong road\",
-
-\"is\_deliver\_reminder\": 0,
-
-\"id\": 5,
-
-\"express\_number\": null,
-
-\"previous\_status\": \"CONFIRMED\_DELIVER\_PENDING\",
-
-\"delivered\_date\": null,
-
-\"zip\": \"510000\",
-
-\"deal\_date\": null,
-
-\"total\_price\": 66,
-
-\"contact\_user\": \"Mr Huang\",
-
-\"settled\": 0,
-
-\"coupon\_info\": null,
-
-\"payment\_type\": \"WECHAT\",
-
-\"user\_id\": 1,
-
-\"phone\": \"1380000000\",
-
-\"point\_exchange\_rate\": 100,
-
-\"deliver\_date\": null,
-
-\"confirm\_date\": \"2016-12-14 13:42:33\",
-
-\"district\": \"Tiahne\",
-
-\"created\_date\": \"2016-12-14 13:42:21\",
-
-\"invoice\": 1,
-
-\"detail\": \"6F\",
-
-\"status\": \"CANCELED\_REFUND\_PENDING\"
-
-},
+"data": \[
 
 {
 
-\"trade\_number\": \"test\_trade\_num\",
+"trade\_number": "test\_trade\_num",
 
-\"pay\_date\": \"2016-12-14 11:35:54\",
+"pay\_date": "2016-12-14 13:42:33",
 
-\"deliver\_order\_number\": null,
+"deliver\_order\_number": null,
 
-\"order\_customer\_service\": {
+"order\_customer\_service": { //售后单信息
 
-\"reason\": \"rrr\",
+"reason": "AFSFSF",
 
-\"express\_code\": null,
+"express\_code": null,
 
-\"service\_type\": \"RETURN\",
+"service\_type": "REFUND",
 
-\"images\": \"\[\]\",
+"images": "\[\]",
 
-\"log\": \"\[{\\\"time\\\":\\\"2016-12-14
-11:36:32\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"yyy\\\"},{\\\"time\\\":\\\"2016-12-14
-11:36:56\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"ok\\\"},{\\\"time\\\":\\\"2016-12-14
-11:37:00\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"同意\\\"},{\\\"time\\\":\\\"2016-12-14
-11:38:07\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"退货收到确认\\\"},{\\\"time\\\":\\\"2016-12-14
-01:10:24\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"退款失败,
-请稍后重试\\\"},{\\\"time\\\":\\\"2016-12-14
-01:11:08\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"已完成退款\\\"}\]\",
+"log": "\[{\\"time\\":\\"2016-12-14
+01:42:47\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"afaf\\"}\]",
 
-\"refund\_fee\": 66,
+"refund\_fee": null, //退款金额
 
-\"id\": 4,
+"id": 5,
 
-\"created\_date\": \"2016-12-14 11:36:32\",
+"created\_date": "2016-12-14 13:42:47",
 
-\"express\_number\": null,
+"express\_number": null,
 
-\"order\_id\": 4,
+"order\_id": 5,
 
-\"express\_company\": null,
+"express\_company": null,
 
-\"status\": \"REFUNDED\"
+"status": "CREATED"
 
 },
 
-\"city\": \"GZ\",
+"city": "GZ",
 
-\"invoice\_title\": \"ABC company\",
+"invoice\_title": "ABC company",
 
-\"receiving\_time\": \"anytime\",
+"receiving\_time": "anytime",
 
-\"user\_name\": \"Administrator\",
+"user\_name": "Administrator",
 
-\"order\_number\": \"1612141135416631\",
+"order\_number": "1612141342218661",
 
-\"freight\": 0,
+"freight": 0,
 
-\"description\": \"aaaa x 2. \",
+"description": "aaaa x 2. ",
 
-\"remark\": null,
+"remark": null,
 
-\"express\_company\": \"afa\",
+"express\_company": null,
 
-\"cover\": \"/p/7fe63684ff08bb7cb6414742232776ac.jpeg\",
+"cover": "/p/7fe63684ff08bb7cb6414742232776ac.jpeg",
 
-\"express\_code\": \"afsd\",
+"express\_code": null,
 
-\"is\_deleted\": 0,
+"is\_deleted": 0,
 
-\"province\": \"GD\",
+"province": "GD",
 
-\"street\": \"jianzhong road\",
+"street": "jianzhong road",
 
-\"is\_deliver\_reminder\": 0,
+"is\_deliver\_reminder": 0,
 
-\"id\": 4,
+"id": 5,
 
-\"express\_number\": \"rwrwe4\",
+"express\_number": null,
 
-\"previous\_status\": \"DELIVERED\_CONFIRM\_PENDING\",
+"previous\_status": "CONFIRMED\_DELIVER\_PENDING",
 
-\"delivered\_date\": \"2016-12-14 11:36:05\",
+"delivered\_date": null,
 
-\"zip\": \"510000\",
+"zip": "510000",
 
-\"deal\_date\": null,
+"deal\_date": null,
 
-\"total\_price\": 66,
+"total\_price": 66,
 
-\"contact\_user\": \"Mr Huang\",
+"contact\_user": "Mr Huang",
 
-\"settled\": 0,
+"settled": 0,
 
-\"coupon\_info\": null,
+"coupon\_info": null,
 
-\"payment\_type\": \"WECHAT\",
+"payment\_type": "WECHAT",
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"phone\": \"1380000000\",
+"phone": "1380000000",
 
-\"point\_exchange\_rate\": 100,
+"point\_exchange\_rate": 100,
 
-\"deliver\_date\": \"2016-12-14 11:36:03\",
+"deliver\_date": null,
 
-\"confirm\_date\": \"2016-12-14 11:35:54\",
+"confirm\_date": "2016-12-14 13:42:33",
 
-\"district\": \"Tiahne\",
+"district": "Tiahne",
 
-\"created\_date\": \"2016-12-14 11:35:41\",
+"created\_date": "2016-12-14 13:42:21",
 
-\"invoice\": 1,
+"invoice": 1,
 
-\"detail\": \"6F\",
+"detail": "6F",
 
-\"status\": \"CLOSED\_REFUNDED\"
+"status": "CANCELED\_REFUND\_PENDING"
 
 },
 
 {
 
-\"trade\_number\": \"test\_trade\_num\",
+"trade\_number": "test\_trade\_num",
 
-\"pay\_date\": \"2016-12-14 11:27:23\",
+"pay\_date": "2016-12-14 11:35:54",
 
-\"deliver\_order\_number\": null,
+"deliver\_order\_number": null,
 
-\"order\_customer\_service\": {
+"order\_customer\_service": {
 
-\"reason\": \"AFSFSF\",
+"reason": "rrr",
 
-\"express\_code\": null,
+"express\_code": null,
 
-\"service\_type\": \"REFUND\",
+"service\_type": "RETURN",
 
-\"images\": \"\[\]\",
+"images": "\[\]",
 
-\"log\": \"\[{\\\"time\\\":\\\"2016-12-14
-11:27:52\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"afaf\\\"},{\\\"time\\\":\\\"2016-12-14
-11:31:17\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"ok\\\"},{\\\"time\\\":\\\"2016-12-14
-11:31:19\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"同意\\\"},{\\\"time\\\":\\\"2016-12-14
-11:32:14\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"更新退款金额为
-58 元\\\"},{\\\"time\\\":\\\"2016-12-14
-11:33:08\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"已完成退款\\\"}\]\",
+"log": "\[{\\"time\\":\\"2016-12-14
+11:36:32\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"yyy\\"},{\\"time\\":\\"2016-12-14
+11:36:56\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"ok\\"},{\\"time\\":\\"2016-12-14
+11:37:00\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"同意\\"},{\\"time\\":\\"2016-12-14
+11:38:07\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"退货收到确认\\"},{\\"time\\":\\"2016-12-14
+01:10:24\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"退款失败,
+请稍后重试\\"},{\\"time\\":\\"2016-12-14
+01:11:08\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"已完成退款\\"}\]",
 
-\"refund\_fee\": 58,
+"refund\_fee": 66,
 
-\"id\": 3,
+"id": 4,
 
-\"created\_date\": \"2016-12-14 11:27:52\",
+"created\_date": "2016-12-14 11:36:32",
 
-\"express\_number\": null,
+"express\_number": null,
 
-\"order\_id\": 3,
+"order\_id": 4,
 
-\"express\_company\": null,
+"express\_company": null,
 
-\"status\": \"REFUNDED\"
+"status": "REFUNDED"
 
 },
 
-\"city\": \"GZ\",
+"city": "GZ",
 
-\"invoice\_title\": \"ABC company\",
+"invoice\_title": "ABC company",
 
-\"receiving\_time\": \"anytime\",
+"receiving\_time": "anytime",
 
-\"user\_name\": \"Administrator\",
+"user\_name": "Administrator",
 
-\"order\_number\": \"1612141127143691\",
+"order\_number": "1612141135416631",
 
-\"freight\": 0,
+"freight": 0,
 
-\"description\": \"aaaa x 2. \",
+"description": "aaaa x 2. ",
 
-\"remark\": null,
+"remark": null,
 
-\"express\_company\": null,
+"express\_company": "afa",
 
-\"cover\": \"/p/7fe63684ff08bb7cb6414742232776ac.jpeg\",
+"cover": "/p/7fe63684ff08bb7cb6414742232776ac.jpeg",
 
-\"express\_code\": null,
+"express\_code": "afsd",
 
-\"is\_deleted\": 0,
+"is\_deleted": 0,
 
-\"province\": \"GD\",
+"province": "GD",
 
-\"street\": \"jianzhong road\",
+"street": "jianzhong road",
 
-\"is\_deliver\_reminder\": 0,
+"is\_deliver\_reminder": 0,
 
-\"id\": 3,
+"id": 4,
 
-\"express\_number\": null,
+"express\_number": "rwrwe4",
 
-\"previous\_status\": \"CONFIRMED\_DELIVER\_PENDING\",
+"previous\_status": "DELIVERED\_CONFIRM\_PENDING",
 
-\"delivered\_date\": null,
+"delivered\_date": "2016-12-14 11:36:05",
 
-\"zip\": \"510000\",
+"zip": "510000",
 
-\"deal\_date\": null,
+"deal\_date": null,
 
-\"total\_price\": 66,
+"total\_price": 66,
 
-\"contact\_user\": \"Mr Huang\",
+"contact\_user": "Mr Huang",
 
-\"settled\": 0,
+"settled": 0,
 
-\"coupon\_info\": null,
+"coupon\_info": null,
 
-\"payment\_type\": \"WECHAT\",
+"payment\_type": "WECHAT",
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"phone\": \"1380000000\",
+"phone": "1380000000",
 
-\"point\_exchange\_rate\": 100,
+"point\_exchange\_rate": 100,
 
-\"deliver\_date\": null,
+"deliver\_date": "2016-12-14 11:36:03",
 
-\"confirm\_date\": \"2016-12-14 11:27:23\",
+"confirm\_date": "2016-12-14 11:35:54",
 
-\"district\": \"Tiahne\",
+"district": "Tiahne",
 
-\"created\_date\": \"2016-12-14 11:27:14\",
+"created\_date": "2016-12-14 11:35:41",
 
-\"invoice\": 1,
+"invoice": 1,
 
-\"detail\": \"6F\",
+"detail": "6F",
 
-\"status\": \"CLOSED\_REFUNDED\"
+"status": "CLOSED\_REFUNDED"
 
 },
 
 {
 
-\"trade\_number\": \"test\_trade\_num\",
+"trade\_number": "test\_trade\_num",
 
-\"pay\_date\": \"2016-12-13 15:35:06\",
+"pay\_date": "2016-12-14 11:27:23",
 
-\"deliver\_order\_number\": null,
+"deliver\_order\_number": null,
 
-\"order\_customer\_service\": {
+"order\_customer\_service": {
 
-\"reason\": \"AFSFSF\",
+"reason": "AFSFSF",
 
-\"express\_code\": null,
+"express\_code": null,
 
-\"service\_type\": \"RETURN\",
+"service\_type": "REFUND",
 
-\"images\": \"\[\]\",
+"images": "\[\]",
 
-\"log\": \"\[{\\\"time\\\":\\\"2016-12-13
-03:35:30\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"afaf\\\"},{\\\"time\\\":\\\"2016-12-13
-03:35:38\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"afd\\\"},{\\\"time\\\":\\\"2016-12-13
-03:35:46\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"同意\\\"},{\\\"time\\\":\\\"2016-12-13
-03:35:51\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"退货收到确认\\\"},{\\\"time\\\":\\\"2016-12-13
-03:35:55\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"更新退款金额为
-60 元\\\"},{\\\"time\\\":\\\"2016-12-13
-03:37:12\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"更新退款金额为
-61 元\\\"},{\\\"time\\\":\\\"2016-12-13
-03:48:57\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"a\\\"},{\\\"time\\\":\\\"2016-12-13
-03:52:01\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"com.jfeat.order.exception.RefundOrderException:
-order.refund.failure\\\"},{\\\"time\\\":\\\"2016-12-13
-03:52:55\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"java.lang.RuntimeException:
+"log": "\[{\\"time\\":\\"2016-12-14
+11:27:52\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"afaf\\"},{\\"time\\":\\"2016-12-14
+11:31:17\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"ok\\"},{\\"time\\":\\"2016-12-14
+11:31:19\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"同意\\"},{\\"time\\":\\"2016-12-14
+11:32:14\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"更新退款金额为
+58 元\\"},{\\"time\\":\\"2016-12-14
+11:33:08\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"已完成退款\\"}\]",
+
+"refund\_fee": 58,
+
+"id": 3,
+
+"created\_date": "2016-12-14 11:27:52",
+
+"express\_number": null,
+
+"order\_id": 3,
+
+"express\_company": null,
+
+"status": "REFUNDED"
+
+},
+
+"city": "GZ",
+
+"invoice\_title": "ABC company",
+
+"receiving\_time": "anytime",
+
+"user\_name": "Administrator",
+
+"order\_number": "1612141127143691",
+
+"freight": 0,
+
+"description": "aaaa x 2. ",
+
+"remark": null,
+
+"express\_company": null,
+
+"cover": "/p/7fe63684ff08bb7cb6414742232776ac.jpeg",
+
+"express\_code": null,
+
+"is\_deleted": 0,
+
+"province": "GD",
+
+"street": "jianzhong road",
+
+"is\_deliver\_reminder": 0,
+
+"id": 3,
+
+"express\_number": null,
+
+"previous\_status": "CONFIRMED\_DELIVER\_PENDING",
+
+"delivered\_date": null,
+
+"zip": "510000",
+
+"deal\_date": null,
+
+"total\_price": 66,
+
+"contact\_user": "Mr Huang",
+
+"settled": 0,
+
+"coupon\_info": null,
+
+"payment\_type": "WECHAT",
+
+"user\_id": 1,
+
+"phone": "1380000000",
+
+"point\_exchange\_rate": 100,
+
+"deliver\_date": null,
+
+"confirm\_date": "2016-12-14 11:27:23",
+
+"district": "Tiahne",
+
+"created\_date": "2016-12-14 11:27:14",
+
+"invoice": 1,
+
+"detail": "6F",
+
+"status": "CLOSED\_REFUNDED"
+
+},
+
+{
+
+"trade\_number": "test\_trade\_num",
+
+"pay\_date": "2016-12-13 15:35:06",
+
+"deliver\_order\_number": null,
+
+"order\_customer\_service": {
+
+"reason": "AFSFSF",
+
+"express\_code": null,
+
+"service\_type": "RETURN",
+
+"images": "\[\]",
+
+"log": "\[{\\"time\\":\\"2016-12-13
+03:35:30\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"afaf\\"},{\\"time\\":\\"2016-12-13
+03:35:38\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"afd\\"},{\\"time\\":\\"2016-12-13
+03:35:46\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"同意\\"},{\\"time\\":\\"2016-12-13
+03:35:51\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"退货收到确认\\"},{\\"time\\":\\"2016-12-13
+03:35:55\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"更新退款金额为
+60 元\\"},{\\"time\\":\\"2016-12-13
+03:37:12\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"更新退款金额为
+61 元\\"},{\\"time\\":\\"2016-12-13
+03:48:57\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"a\\"},{\\"time\\":\\"2016-12-13
+03:52:01\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"com.jfeat.order.exception.RefundOrderException:
+order.refund.failure\\"},{\\"time\\":\\"2016-12-13
+03:52:55\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"java.lang.RuntimeException:
 com.jfeat.order.exception.RefundOrderException:
-order.refund.failure\\\"},{\\\"time\\\":\\\"2016-12-13
-04:00:49\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"com.jfeat.order.exception.RefundOrderException:
-order.refund.failure\\\"},{\\\"time\\\":\\\"2016-12-13
-04:11:29\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"fsdas\\\"},{\\\"time\\\":\\\"2016-12-13
-04:11:36\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"更新退款金额为
-60 元\\\"},{\\\"time\\\":\\\"2016-12-13
-04:11:41\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"退款失败,
-请稍后重试\\\"},{\\\"time\\\":\\\"2016-12-13
-05:18:40\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"退款失败,
-请稍后重试\\\"},{\\\"time\\\":\\\"2016-12-14
-11:26:17\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"已完成退款\\\"}\]\",
+order.refund.failure\\"},{\\"time\\":\\"2016-12-13
+04:00:49\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"com.jfeat.order.exception.RefundOrderException:
+order.refund.failure\\"},{\\"time\\":\\"2016-12-13
+04:11:29\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"fsdas\\"},{\\"time\\":\\"2016-12-13
+04:11:36\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"更新退款金额为
+60 元\\"},{\\"time\\":\\"2016-12-13
+04:11:41\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"退款失败,
+请稍后重试\\"},{\\"time\\":\\"2016-12-13
+05:18:40\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"退款失败,
+请稍后重试\\"},{\\"time\\":\\"2016-12-14
+11:26:17\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"已完成退款\\"}\]",
 
-\"refund\_fee\": 60,
+"refund\_fee": 60,
 
-\"id\": 2,
+"id": 2,
 
-\"created\_date\": \"2016-12-13 15:35:30\",
+"created\_date": "2016-12-13 15:35:30",
 
-\"express\_number\": null,
+"express\_number": null,
 
-\"order\_id\": 2,
+"order\_id": 2,
 
-\"express\_company\": null,
+"express\_company": null,
 
-\"status\": \"REFUNDED\"
+"status": "REFUNDED"
 
 },
 
-\"city\": \"GZ\",
+"city": "GZ",
 
-\"invoice\_title\": \"ABC company\",
+"invoice\_title": "ABC company",
 
-\"receiving\_time\": \"anytime\",
+"receiving\_time": "anytime",
 
-\"user\_name\": \"Administrator\",
+"user\_name": "Administrator",
 
-\"order\_number\": \"1612131532015531\",
+"order\_number": "1612131532015531",
 
-\"freight\": 0,
+"freight": 0,
 
-\"description\": \"aaaa x 2. \",
+"description": "aaaa x 2. ",
 
-\"remark\": \"afafafafafafa\",
+"remark": "afafafafafafa",
 
-\"express\_company\": \"afa\",
+"express\_company": "afa",
 
-\"cover\": \"/p/7fe63684ff08bb7cb6414742232776ac.jpeg\",
+"cover": "/p/7fe63684ff08bb7cb6414742232776ac.jpeg",
 
-\"express\_code\": \"afsd\",
+"express\_code": "afsd",
 
-\"is\_deleted\": 0,
+"is\_deleted": 0,
 
-\"province\": \"GD\",
+"province": "GD",
 
-\"street\": \"jianzhong road\",
+"street": "jianzhong road",
 
-\"is\_deliver\_reminder\": 0,
+"is\_deliver\_reminder": 0,
 
-\"id\": 2,
+"id": 2,
 
-\"express\_number\": \"234\",
+"express\_number": "234",
 
-\"previous\_status\": \"DELIVERED\_CONFIRM\_PENDING\",
+"previous\_status": "DELIVERED\_CONFIRM\_PENDING",
 
-\"delivered\_date\": \"2016-12-13 15:35:16\",
+"delivered\_date": "2016-12-13 15:35:16",
 
-\"zip\": \"510000\",
+"zip": "510000",
 
-\"deal\_date\": null,
+"deal\_date": null,
 
-\"total\_price\": 66,
+"total\_price": 66,
 
-\"contact\_user\": \"Mr Huang\",
+"contact\_user": "Mr Huang",
 
-\"settled\": 0,
+"settled": 0,
 
-\"coupon\_info\": null,
+"coupon\_info": null,
 
-\"payment\_type\": \"WECHAT\",
+"payment\_type": "WECHAT",
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"phone\": \"1380000000\",
+"phone": "1380000000",
 
-\"point\_exchange\_rate\": 100,
+"point\_exchange\_rate": 100,
 
-\"deliver\_date\": \"2016-12-13 15:35:14\",
+"deliver\_date": "2016-12-13 15:35:14",
 
-\"confirm\_date\": \"2016-12-13 15:35:06\",
+"confirm\_date": "2016-12-13 15:35:06",
 
-\"district\": \"Tiahne\",
+"district": "Tiahne",
 
-\"created\_date\": \"2016-12-13 15:32:01\",
+"created\_date": "2016-12-13 15:32:01",
 
-\"invoice\": 1,
+"invoice": 1,
 
-\"detail\": \"6F\",
+"detail": "6F",
 
-\"status\": \"CLOSED\_REFUNDED\"
+"status": "CLOSED\_REFUNDED"
 
 },
 
 {
 
-\"trade\_number\": \"test\_trade\_num\",
+"trade\_number": "test\_trade\_num",
 
-\"pay\_date\": \"2016-12-13 14:01:47\",
+"pay\_date": "2016-12-13 14:01:47",
 
-\"deliver\_order\_number\": null,
+"deliver\_order\_number": null,
 
-\"order\_customer\_service\": {
+"order\_customer\_service": {
 
-\"reason\": \"AFSFSF\",
+"reason": "AFSFSF",
 
-\"express\_code\": null,
+"express\_code": null,
 
-\"service\_type\": \"RETURN\",
+"service\_type": "RETURN",
 
-\"images\": \"\[\]\",
+"images": "\[\]",
 
-\"log\": \"\[{\\\"time\\\":\\\"2016-12-13
-02:03:26\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"afaf\\\"},{\\\"time\\\":\\\"2016-12-13
-02:03:41\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"同意\\\"},{\\\"time\\\":\\\"2016-12-13
-02:03:44\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"退货收到确认\\\"},{\\\"time\\\":\\\"2016-12-13
-02:12:38\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"更新退款金额为
-{0} 元\\\"},{\\\"time\\\":\\\"2016-12-13
-02:13:42\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"更新退款金额为
-62 元\\\"},{\\\"time\\\":\\\"2016-12-13
-02:17:23\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"\\\"},{\\\"time\\\":\\\"2016-12-13
-02:24:43\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"更新退款金额为
-61 元\\\"},{\\\"time\\\":\\\"2016-12-13
-02:33:33\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"\\\"},{\\\"time\\\":\\\"2016-12-13
-02:34:49\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"更新退款金额为
-60 元\\\"},{\\\"time\\\":\\\"2016-12-13
-02:35:04\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"已完成退款\\\"}\]\",
+"log": "\[{\\"time\\":\\"2016-12-13
+02:03:26\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"afaf\\"},{\\"time\\":\\"2016-12-13
+02:03:41\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"同意\\"},{\\"time\\":\\"2016-12-13
+02:03:44\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"退货收到确认\\"},{\\"time\\":\\"2016-12-13
+02:12:38\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"更新退款金额为
+{0} 元\\"},{\\"time\\":\\"2016-12-13
+02:13:42\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"更新退款金额为
+62 元\\"},{\\"time\\":\\"2016-12-13
+02:17:23\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"\\"},{\\"time\\":\\"2016-12-13
+02:24:43\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"更新退款金额为
+61 元\\"},{\\"time\\":\\"2016-12-13
+02:33:33\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"\\"},{\\"time\\":\\"2016-12-13
+02:34:49\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"更新退款金额为
+60 元\\"},{\\"time\\":\\"2016-12-13
+02:35:04\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"已完成退款\\"}\]",
 
-\"refund\_fee\": 60,
+"refund\_fee": 60,
 
-\"id\": 1,
+"id": 1,
 
-\"created\_date\": \"2016-12-13 14:03:26\",
+"created\_date": "2016-12-13 14:03:26",
 
-\"express\_number\": null,
+"express\_number": null,
 
-\"order\_id\": 1,
+"order\_id": 1,
 
-\"express\_company\": null,
+"express\_company": null,
 
-\"status\": \"REFUNDED\"
+"status": "REFUNDED"
 
 },
 
-\"city\": \"GZ\",
+"city": "GZ",
 
-\"invoice\_title\": \"ABC company\",
+"invoice\_title": "ABC company",
 
-\"receiving\_time\": \"anytime\",
+"receiving\_time": "anytime",
 
-\"user\_name\": \"Administrator\",
+"user\_name": "Administrator",
 
-\"order\_number\": \"1612131401365671\",
+"order\_number": "1612131401365671",
 
-\"freight\": 0,
+"freight": 0,
 
-\"description\": \"aaaa x 2. \",
+"description": "aaaa x 2. ",
 
-\"remark\": null,
+"remark": null,
 
-\"express\_company\": \"afa\",
+"express\_company": "afa",
 
-\"cover\": \"/p/7fe63684ff08bb7cb6414742232776ac.jpeg\",
+"cover": "/p/7fe63684ff08bb7cb6414742232776ac.jpeg",
 
-\"express\_code\": \"afsd\",
+"express\_code": "afsd",
 
-\"is\_deleted\": 0,
+"is\_deleted": 0,
 
-\"province\": \"GD\",
+"province": "GD",
 
-\"street\": \"jianzhong road\",
+"street": "jianzhong road",
 
-\"is\_deliver\_reminder\": 0,
+"is\_deliver\_reminder": 0,
 
-\"id\": 1,
+"id": 1,
 
-\"express\_number\": \"324242\",
+"express\_number": "324242",
 
-\"previous\_status\": \"DELIVERED\_CONFIRM\_PENDING\",
+"previous\_status": "DELIVERED\_CONFIRM\_PENDING",
 
-\"delivered\_date\": \"2016-12-13 14:02:41\",
+"delivered\_date": "2016-12-13 14:02:41",
 
-\"zip\": \"510000\",
+"zip": "510000",
 
-\"deal\_date\": null,
+"deal\_date": null,
 
-\"total\_price\": 66,
+"total\_price": 66,
 
-\"contact\_user\": \"Mr Huang\",
+"contact\_user": "Mr Huang",
 
-\"settled\": 0,
+"settled": 0,
 
-\"coupon\_info\": null,
+"coupon\_info": null,
 
-\"payment\_type\": \"WECHAT\",
+"payment\_type": "WECHAT",
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"phone\": \"1380000000\",
+"phone": "1380000000",
 
-\"point\_exchange\_rate\": 100,
+"point\_exchange\_rate": 100,
 
-\"deliver\_date\": \"2016-12-13 14:02:15\",
+"deliver\_date": "2016-12-13 14:02:15",
 
-\"confirm\_date\": \"2016-12-13 14:01:47\",
+"confirm\_date": "2016-12-13 14:01:47",
 
-\"district\": \"Tiahne\",
+"district": "Tiahne",
 
-\"created\_date\": \"2016-12-13 14:01:36\",
+"created\_date": "2016-12-13 14:01:36",
 
-\"invoice\": 1,
+"invoice": 1,
 
-\"detail\": \"6F\",
+"detail": "6F",
 
-\"status\": \"CLOSED\_REFUNDED\"
+"status": "CLOSED\_REFUNDED"
 
 }
 
@@ -2488,121 +2488,121 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"detail\": \"6F\",
+"detail": "6F",
 
-\"phone\": \"1380000000\",
+"phone": "1380000000",
 
-\"contact\_user\": \"Mr Huang\",
+"contact\_user": "Mr Huang",
 
-\"remark\": null,
+"remark": null,
 
-\"invoice\": 1,
+"invoice": 1,
 
-\"street\": \"jianzhong road\",
+"street": "jianzhong road",
 
-\"trade\_number\": null,
+"trade\_number": null,
 
-\"deal\_date\": null, //收货成交时间
+"deal\_date": null, //收货成交时间
 
-\"city\": \"GZ\",
+"city": "GZ",
 
-\"id\": 3,
+"id": 3,
 
-\"cover\":
-\"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png\",
+"cover":
+"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
-\"confirm\_date\": null, //平台确认时间
+"confirm\_date": null, //平台确认时间
 
-\"description\": \"超效洁净护理洗衣液2.5L【全国包邮】 x 1. \",
+"description": "超效洁净护理洗衣液2.5L【全国包邮】 x 1. ",
 
-\"province\": \"GD\",
+"province": "GD",
 
-\"order\_items\": \[{
+"order\_items": \[{
 
-\"id\": 5,
+"id": 5,
 
-\"cover\":
-\"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png\",
+"cover":
+"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
-\"price\": 34.80,
+"price": 34.80,
 
-\"cost\_price\": 20.00,
+"cost\_price": 20.00,
 
-\"final\_price\": 34.80,
+"final\_price": 34.80,
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"status\": \"CREATED\",
+"status": "CREATED",
 
-\"product\_name\": \"超效洁净护理洗衣液2.5L【全国包邮】\",
+"product\_name": "超效洁净护理洗衣液2.5L【全国包邮】",
 
-\"quantity\": 1,
+"quantity": 1,
 
-\"order\_id\": 3,
+"order\_id": 3,
 
-\"product\_specification\_id\": 2,
+"product\_specification\_id": 2,
 
-\"product\_specification\_name\": \"a1\" //用户选择的规格
+"product\_specification\_name": "a1" //用户选择的规格
 
 }\],
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"district\": \"Tiahne\",
+"district": "Tiahne",
 
-\"deliver\_date\": null, //开始发货时间
+"deliver\_date": null, //开始发货时间
 
-\"delivered\_date\": null, //完成发货时间
+"delivered\_date": null, //完成发货时间
 
-\"created\_date\": \"2016-04-26 10:27:56\", //创建时间
+"created\_date": "2016-04-26 10:27:56", //创建时间
 
-\"order\_number\": \"0000000101461637676506360\",
+"order\_number": "0000000101461637676506360",
 
-\"zip\": \"510000\",
+"zip": "510000",
 
-\"status\": \"CREATED\_PAY\_PENDING\",
+"status": "CREATED\_PAY\_PENDING",
 
-\"invoice\_title\": \"ABC company\",
+"invoice\_title": "ABC company",
 
-\"receiving\_time\": \"anytime\",
+"receiving\_time": "anytime",
 
-\"deliver\_order\_number\": null,
+"deliver\_order\_number": null,
 
-\"total\_price\": 34.80,
+"total\_price": 34.80,
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"pay\_date\": null, //支付时间
+"pay\_date": null, //支付时间
 
-\"payment\_type\": \"ALIPAY\",
+"payment\_type": "ALIPAY",
 
-\"point\_exchange\_rate\": 100, //积分支付时的兑换率
+"point\_exchange\_rate": 100, //积分支付时的兑换率
 
-\"pay\_expiry\_time\": \"2018-08-20 17:53:01\",//
+"pay\_expiry\_time": "2018-08-20 17:53:01",//
 待支付订单支付的超时时间
 
-\"order\_customer\_service\": {
+"order\_customer\_service": {
 
-\"reason\": \"afaf\", //退货原因
+"reason": "afaf", //退货原因
 
-\"express\_code\": null,
+"express\_code": null,
 
-\"service\_type\": \"RETURN\", //售后类型： RETURN－退货退款，
+"service\_type": "RETURN", //售后类型： RETURN－退货退款，
 REFUND－仅退款
 
-\"id\": 1,
+"id": 1,
 
-\"created\_date\": \"2016-06-16 13:57:12\",
+"created\_date": "2016-06-16 13:57:12",
 
-\"express\_number\": \"23234324\", //快递单号
+"express\_number": "23234324", //快递单号
 
-\"order\_id\": 1,
+"order\_id": 1,
 
-\"express\_company\": \"ABC\" //快递公司名
+"express\_company": "ABC" //快递公司名
 
 }
 
@@ -2614,9 +2614,9 @@ Error Return:
 
 {
 
-\"message\": \"invalid.order.id\",
+"message": "invalid.order.id",
 
-\"status\_code\": 1
+"status\_code": 1
 
 }
 
@@ -2631,19 +2631,19 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\" {
+"data" {
 
-\"total\": 12, // 总订单
+"total": 12, // 总订单
 
-\"payPending\": 2, //待支付
+"payPending": 2, //待支付
 
-\"delivering\": 4, //待发货
+"delivering": 4, //待发货
 
-\"delivered\": 2, //待收货
+"delivered": 2, //待收货
 
-\"commentPending\": 2 //待评价
+"commentPending": 2 //待评价
 
 }
 
@@ -2662,9 +2662,9 @@ Return:
 
 {
 
-\"message\": \"order.deliver.reminded\",
+"message": "order.deliver.reminded",
 
-\"status\_code\": 0
+"status\_code": 0
 
 }
 
@@ -2679,15 +2679,15 @@ eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9u
 
 Data:
 
-{ \"comment\_id\": \"12345\" }
+{ "comment\_id": "12345" }
 
 Return:
 
 {
 
-\"message\": \"ok\",
+"message": "ok",
 
-\"status\_code\": 0
+"status\_code": 0
 
 }
 
@@ -2751,7 +2751,7 @@ SELF\_PICK-自提（当使用此方式时，必须同时指定store\_id和store\
 
 //SELF\_PICK和FLASH方式的线上订单，需要店员登录ipad端处理
 
-\"delivery\_type\": null,
+"delivery\_type": null,
 
 //订单来源
 
@@ -2760,51 +2760,51 @@ SELF\_PICK-自提（当使用此方式时，必须同时指定store\_id和store\
 //WPA（Wechat public account)-微信公众号 MINI-PROGRAM-小程序
 APP-手机应用程序 OTHER-其他
 
-\"origin\": \"APP\",
+"origin": "APP",
 
-\"pay\_credit\": 120, //使用积分抵扣
+"pay\_credit": 120, //使用积分抵扣
 
-\"store\_id\": \"123\", //门店id
+"store\_id": "123", //门店id
 
-\"store\_name\": \"门店1\", //门店名
+"store\_name": "门店1", //门店名
 
-\"payment\_type\": \"WECHAT\",
+"payment\_type": "WECHAT",
 
-\"remark\": null,
+"remark": null,
 
-\"receiving\_time\": \"anytime\", //收货时间
+"receiving\_time": "anytime", //收货时间
 
-\"invoice\": 1, //是否开发票
+"invoice": 1, //是否开发票
 
-\"invoice\_title\": \"ABC company\", //发票抬头
+"invoice\_title": "ABC company", //发票抬头
 
-\"contact\": {
+"contact": {
 
-\"contact\_user\": \"Mr Huang\",
+"contact\_user": "Mr Huang",
 
-\"phone\": \"1380000000\",
+"phone": "1380000000",
 
-\"zip\": \"510000\",
+"zip": "510000",
 
-\"province\": \"GD\",
+"province": "GD",
 
-\"city\": \"GZ\",
+"city": "GZ",
 
-\"district\": \"Tiahne\",
+"district": "Tiahne",
 
-\"street\": \"jianzhong road\",
+"street": "jianzhong road",
 
-\"detail\": \"6F\"
+"detail": "6F"
 
 },
 
-\"order\_items\": \[{
+"order\_items": \[{
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"quantity\": 2,
+"quantity": 2,
 
-\"product\_specification\_id\": 1 //optional，
+"product\_specification\_id": 1 //optional，
 用户选择的产品规格，如果没有则不需要这个项
 
 }\]
@@ -2815,83 +2815,83 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"created\_date\": \"2016-04-25\",
+"created\_date": "2016-04-25",
 
-\"order\_number\": \"0000000101461584134091428\",
+"order\_number": "0000000101461584134091428",
 
-\"status\": \"CREATED\_PAY\_PENDING\",
+"status": "CREATED\_PAY\_PENDING",
 
-\"remark\": null,
+"remark": null,
 
-\"total\_price\": 290.00,
+"total\_price": 290.00,
 
-\"id\": 2,
+"id": 2,
 
-\"cover\":
-\"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png\",
+"cover":
+"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
-\"description\": \"p1 x 2. \",
+"description": "p1 x 2. ",
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"province\": \"GD\",
+"province": "GD",
 
-\"city\": \"GZ\",
+"city": "GZ",
 
-\"district\": \"LW\",
+"district": "LW",
 
-\"street\": \"AX\",
+"street": "AX",
 
-\"detail\": null,
+"detail": null,
 
-\"zip\": \"510000\",
+"zip": "510000",
 
-\"phone\": \"1390000000\",
+"phone": "1390000000",
 
-\"contact\_user\": \"ABC\",
+"contact\_user": "ABC",
 
-\"receiving\_time\": \"anytime\",
+"receiving\_time": "anytime",
 
-\"invoice\": 1,
+"invoice": 1,
 
-\"invoice\_title\": \"ABC company\",
+"invoice\_title": "ABC company",
 
-\"order\_items\": \[{
+"order\_items": \[{
 
-\"id\": 1,
+"id": 1,
 
-\"cover\":
-\"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png\",
+"cover":
+"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
-\"price\": 145.00,
+"price": 145.00,
 
-\"final\_price\": 290.00,
+"final\_price": 290.00,
 
-\"cost\_price\": 0.00,
+"cost\_price": 0.00,
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"status\": \"CREATED\",
+"status": "CREATED",
 
-\"product\_name\": \"p1\",
+"product\_name": "p1",
 
-\"quantity\": 2,
+"quantity": 2,
 
-\"order\_id\": 2，
+"order\_id": 2，
 
-\"product\_specification\_id\": 2,
+"product\_specification\_id": 2,
 
-\"product\_specification\_name\": \"a1\" //用户选择的产品规格
+"product\_specification\_name": "a1" //用户选择的产品规格
 
 }\],
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"payment\_type\": null
+"payment\_type": null
 
 }
 
@@ -2910,17 +2910,17 @@ Data:
 
 //以下两个字段是店员新建订单api额外需要提供的
 
-\"store\_id\": 123, //required 店铺id
+"store\_id": 123, //required 店铺id
 
-\"store\_name\": \"龙门客栈\", //required 店铺名称
+"store\_name": "龙门客栈", //required 店铺名称
 
-//其他需要提供的域同\"新建订单api\"
+//其他需要提供的域同"新建订单api"
 
-\"payment\_type\": \"WECHAT\",
+"payment\_type": "WECHAT",
 
 // 使用积分抵扣
 
-\"pay\_credit\": 120,
+"pay\_credit": 120,
 
 //订单来源
 
@@ -2929,45 +2929,45 @@ Data:
 //WPA（Wechat public account)-微信公众号 MINI-PROGRAM-小程序
 APP-手机应用程序 OTHER-其他
 
-\"origin\": \"APP\",
+"origin": "APP",
 
-\"remark\": null,
+"remark": null,
 
-\"receiving\_time\": \"anytime\", //收货时间
+"receiving\_time": "anytime", //收货时间
 
-\"invoice\": 1, //是否开发票
+"invoice": 1, //是否开发票
 
-\"invoice\_title\": \"ABC company\", //发票抬头
+"invoice\_title": "ABC company", //发票抬头
 
-\"contact\": {
+"contact": {
 
-\"contact\_user\": \"Mr Huang\",
+"contact\_user": "Mr Huang",
 
-\"phone\": \"1380000000\",
+"phone": "1380000000",
 
-\"zip\": \"510000\",
+"zip": "510000",
 
-\"province\": \"GD\",
+"province": "GD",
 
-\"city\": \"GZ\",
+"city": "GZ",
 
-\"district\": \"Tiahne\",
+"district": "Tiahne",
 
-\"street\": \"jianzhong road\",
+"street": "jianzhong road",
 
-\"detail\": \"6F\"
+"detail": "6F"
 
 },
 
-\"order\_items\": \[
+"order\_items": \[
 
 {
 
-\"product\_id\": 1, //required, 产品id
+"product\_id": 1, //required, 产品id
 
-\"product\_specification\_id\": 1, //optional,产品规格id
+"product\_specification\_id": 1, //optional,产品规格id
 
-\"quantity\": 2 //数量
+"quantity": 2 //数量
 
 }\]
 
@@ -2989,10 +2989,10 @@ eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9u
 收银员调用 \`店员创建订单API\`
 下单，此API下单后会立刻返回此订单的信息，此订单的状态为"未支付"，配送方式为"自提"。
 
-稍后收银员收到钱之后，认为交易完成了，可以执行"完成(complete)\"操作
+稍后收银员收到钱之后，认为交易完成了，可以执行"完成(complete)"操作
 来完成交易。
 
-当然客户可以随时取消交易，此时收银员需执行 "取消(cancel)\"操作。
+当然客户可以随时取消交易，此时收银员需执行 "取消(cancel)"操作。
 
 2.终端用户下的线上订单。这种订单又可分为3种：
 
@@ -3034,9 +3034,9 @@ Data:
 
 {
 
-\"store\_id\": \"123\", //required，店铺id
+"store\_id": "123", //required，店铺id
 
-\"action\": \"complete\" //required, （complete-完成 cancel-取消
+"action": "complete" //required, （complete-完成 cancel-取消
 accept-受理 reject-拒绝 delivering-开始配送）
 
 }
@@ -3045,9 +3045,9 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"message\": \"更新订单成功\"
+"message": "更新订单成功"
 
 }
 
@@ -3089,128 +3089,128 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"totalRow\": 1,
+"totalRow": 1,
 
-\"pageNumber\": 1,
+"pageNumber": 1,
 
-\"firstPage\": true,
+"firstPage": true,
 
-\"lastPage\": true,
+"lastPage": true,
 
-\"totalPage\": 1,
+"totalPage": 1,
 
-\"pageSize\": 30,
+"pageSize": 30,
 
-\"list\": \[
+"list": \[
 
 {
 
-\"trade\_number\": null,
+"trade\_number": null,
 
-\"type\": \"STORE\_ORDER\",
+"type": "STORE\_ORDER",
 
-\"express\_company\": null,
+"express\_company": null,
 
-\"cover\":
-\"http://120.79.77.207:8080/images/p/0ea3308197aaccd2635c4b7d31717537.jpeg\",
+"cover":
+"http://120.79.77.207:8080/images/p/0ea3308197aaccd2635c4b7d31717537.jpeg",
 
-\"store\_user\_name\": \"user123\",
+"store\_user\_name": "user123",
 
-\"express\_code\": null,
+"express\_code": null,
 
-\"province\": \"\",
+"province": "",
 
-\"delivery\_type\": \"SELF\_PICK\",
+"delivery\_type": "SELF\_PICK",
 
-\"id\": 1,
+"id": 1,
 
-\"previous\_status\": null,
+"previous\_status": null,
 
-\"delivered\_date\": null,
+"delivered\_date": null,
 
-\"zip\": \"\",
+"zip": "",
 
-\"deal\_date\": null,
+"deal\_date": null,
 
-\"pay\_credit\": 0,
+"pay\_credit": 0,
 
-\"contact\_user\": \"\",
+"contact\_user": "",
 
-\"settled\": 0,
+"settled": 0,
 
-\"coupon\_info\": null,
+"coupon\_info": null,
 
-\"payment\_type\": \"STORE\",
+"payment\_type": "STORE",
 
-\"store\_user\_id\": \"2\",
+"store\_user\_id": "2",
 
-\"user\_id\": 2,
+"user\_id": 2,
 
-\"phone\": \"\",
+"phone": "",
 
-\"point\_exchange\_rate\": 100,
+"point\_exchange\_rate": 100,
 
-\"deliver\_date\": null,
+"deliver\_date": null,
 
-\"confirm\_date\": null,
+"confirm\_date": null,
 
-\"district\": \"\",
+"district": "",
 
-\"detail\": \"\",
+"detail": "",
 
-\"status\": \"CREATED\_PAY\_PENDING\",
+"status": "CREATED\_PAY\_PENDING",
 
-\"pay\_date\": null,
+"pay\_date": null,
 
-\"deliver\_order\_number\": null,
+"deliver\_order\_number": null,
 
-\"city\": \"\",
+"city": "",
 
-\"invoice\_title\": null,
+"invoice\_title": null,
 
-\"receiving\_time\": \"anytime\",
+"receiving\_time": "anytime",
 
-\"user\_name\": \"user123\",
+"user\_name": "user123",
 
-\"order\_number\": \"1807181114341472\",
+"order\_number": "1807181114341472",
 
-\"freight\": 0,
+"freight": 0,
 
-\"description\": \"测试1 x 8. \",
+"description": "测试1 x 8. ",
 
-\"mid\": null,
+"mid": null,
 
-\"remark\": \"iPad 端收银界面\",
+"remark": "iPad 端收银界面",
 
-\"mname\": null,
+"mname": null,
 
-\"is\_deleted\": 0,
+"is\_deleted": 0,
 
-\"street\": \"\",
+"street": "",
 
-\"store\_name\": null,
+"store\_name": null,
 
-\"is\_deliver\_reminder\": 0,
+"is\_deliver\_reminder": 0,
 
-\"express\_number\": null,
+"express\_number": null,
 
-\"store\_id\": null,
+"store\_id": null,
 
-\"total\_price\": 8,
+"total\_price": 8,
 
-\"marketing\_description\": null,
+"marketing\_description": null,
 
-\"marketing\": null,
+"marketing": null,
 
-\"marketing\_id\": null,
+"marketing\_id": null,
 
-\"created\_date\": \"2018-07-18 11:14:34\",
+"created\_date": "2018-07-18 11:14:34",
 
-\"invoice\": 0
+"invoice": 0
 
 }
 
@@ -3231,161 +3231,161 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"trade\_number\": null,
+"trade\_number": null,
 
-\"type\": \"STORE\_ORDER\",
+"type": "STORE\_ORDER",
 
-\"express\_company\": null,
+"express\_company": null,
 
-\"cover\":
-\"http://120.79.77.207:8080/images/p/0ea3308197aaccd2635c4b7d31717537.jpeg\",
+"cover":
+"http://120.79.77.207:8080/images/p/0ea3308197aaccd2635c4b7d31717537.jpeg",
 
-\"store\_user\_name\": \"user123\",
+"store\_user\_name": "user123",
 
-\"express\_code\": null,
+"express\_code": null,
 
-\"province\": \"\",
+"province": "",
 
-\"delivery\_type\": \"SELF\_PICK\",
+"delivery\_type": "SELF\_PICK",
 
-\"id\": 1,
+"id": 1,
 
-\"previous\_status\": null,
+"previous\_status": null,
 
-\"delivered\_date\": null,
+"delivered\_date": null,
 
-\"order\_items\": \[
+"order\_items": \[
 
 {
 
-\"quantity\": 8,
+"quantity": 8,
 
-\"product\_specification\_id\": null,
+"product\_specification\_id": null,
 
-\"weight\": 111,
+"weight": 111,
 
-\"product\_specification\_name\": null,
+"product\_specification\_name": null,
 
-\"product\_name\": \"测试1\",
+"product\_name": "测试1",
 
-\"marketing\_description\": null,
+"marketing\_description": null,
 
-\"cover\":
-\"http://120.79.77.207:8080/images/p/0ea3308197aaccd2635c4b7d31717537.jpeg\",
+"cover":
+"http://120.79.77.207:8080/images/p/0ea3308197aaccd2635c4b7d31717537.jpeg",
 
-\"marketing\": null,
+"marketing": null,
 
-\"final\_price\": 8,
+"final\_price": 8,
 
-\"price\": 1,
+"price": 1,
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"marketing\_id\": null,
+"marketing\_id": null,
 
-\"id\": 1,
+"id": 1,
 
-\"bulk\": null,
+"bulk": null,
 
-\"order\_id\": 1,
+"order\_id": 1,
 
-\"partner\_level\_zone\": 1,
+"partner\_level\_zone": 1,
 
-\"barcode\": null,
+"barcode": null,
 
-\"store\_location\": null,
+"store\_location": null,
 
-\"status\": \"CREATED\",
+"status": "CREATED",
 
-\"cost\_price\": 1
+"cost\_price": 1
 
 }
 
 \],
 
-\"zip\": \"\",
+"zip": "",
 
-\"deal\_date\": null,
+"deal\_date": null,
 
-\"pay\_credit\": 0,
+"pay\_credit": 0,
 
-\"contact\_user\": \"\",
+"contact\_user": "",
 
-\"settled\": 0,
+"settled": 0,
 
-\"coupon\_info\": null,
+"coupon\_info": null,
 
-\"payment\_type\": \"STORE\",
+"payment\_type": "STORE",
 
-\"store\_user\_id\": \"2\",
+"store\_user\_id": "2",
 
-\"user\_id\": 2,
+"user\_id": 2,
 
-\"phone\": \"\",
+"phone": "",
 
-\"point\_exchange\_rate\": 100,
+"point\_exchange\_rate": 100,
 
-\"deliver\_date\": null,
+"deliver\_date": null,
 
-\"confirm\_date\": null,
+"confirm\_date": null,
 
-\"district\": \"\",
+"district": "",
 
-\"detail\": \"\",
+"detail": "",
 
-\"status\": \"CREATED\_PAY\_PENDING\",
+"status": "CREATED\_PAY\_PENDING",
 
-\"pay\_date\": null,
+"pay\_date": null,
 
-\"deliver\_order\_number\": null,
+"deliver\_order\_number": null,
 
-\"order\_customer\_service\": null,
+"order\_customer\_service": null,
 
-\"city\": \"\",
+"city": "",
 
-\"invoice\_title\": null,
+"invoice\_title": null,
 
-\"receiving\_time\": \"anytime\",
+"receiving\_time": "anytime",
 
-\"order\_number\": \"1807181114341472\",
+"order\_number": "1807181114341472",
 
-\"freight\": 0,
+"freight": 0,
 
-\"description\": \"测试1 x 8. \",
+"description": "测试1 x 8. ",
 
-\"mid\": null,
+"mid": null,
 
-\"remark\": \"iPad 端收银界面\",
+"remark": "iPad 端收银界面",
 
-\"mname\": null,
+"mname": null,
 
-\"is\_deleted\": 0,
+"is\_deleted": 0,
 
-\"street\": \"\",
+"street": "",
 
-\"store\_name\": null,
+"store\_name": null,
 
-\"is\_deliver\_reminder\": 0,
+"is\_deliver\_reminder": 0,
 
-\"express\_number\": null,
+"express\_number": null,
 
-\"store\_id\": null,
+"store\_id": null,
 
-\"total\_price\": 8,
+"total\_price": 8,
 
-\"marketing\_description\": null,
+"marketing\_description": null,
 
-\"marketing\": null,
+"marketing": null,
 
-\"marketing\_id\": null,
+"marketing\_id": null,
 
-\"created\_date\": \"2018-07-18 11:14:34\",
+"created\_date": "2018-07-18 11:14:34",
 
-\"invoice\": 0
+"invoice": 0
 
 }
 
@@ -3402,33 +3402,33 @@ Data:
 
 {
 
-\"store\_id\": \"1\", //required，店铺id
+"store\_id": "1", //required，店铺id
 
-\"store\_name\": \"总店\", // required，店铺名
+"store\_name": "总店", // required，店铺名
 
-//退货单分为\"有关联订单的退货单"和"没有关联订单的退货单"，换货单必须关联订单。因此对于没有关联订单的退货单，不需
+//退货单分为"有关联订单的退货单"和"没有关联订单的退货单"，换货单必须关联订单。因此对于没有关联订单的退货单，不需
 
 //传递order\_number，对于其他两种，则必须传递order\_number
 
-\"order\_number\": \"2342323432432\",
+"order\_number": "2342323432432",
 
-\"service\_type\": \"RETURN\", //required，REFUND-仅退款 RETURN-退货退款
+"service\_type": "RETURN", //required，REFUND-仅退款 RETURN-退货退款
 EXCHANGE-换货
 
-\"reason\": \"AFSFSF\", //required
+"reason": "AFSFSF", //required
 
-\"content\": \"afaf\", //optional
+"content": "afaf", //optional
 
-\"images\": \[\"http://host/a.jpg\", \"http://host/b.jgp\"\], //optional
+"images": \["http://host/a.jpg", "http://host/b.jgp"\], //optional
 
-\"returns\": \[ //退货项
+"returns": \[ //退货项
 
 {
 
-\"product\_id\": 130,
+"product\_id": 130,
 //required（无论是否提供product\_specification\_id，都要提供product\_id）
 
-\"product\_specification\_id\": 22, //optional
+"product\_specification\_id": 22, //optional
 
 // 1.对于需要关联订单的退货单，不需要传递quantity，会使用其对应的order
 item的quantity；
@@ -3440,7 +3440,7 @@ item的quantity；
 
 //都必须指定quantity
 
-\"quantity\": 3,
+"quantity": 3,
 
 //对于退货单的退货项，必须指定refund\_fee；
 
@@ -3448,17 +3448,17 @@ item的quantity；
 
 //"此换货单关联的订单对应的订单项的 price \* 传上来的退回数量" 决定
 
-\"refund\_fee\": 40
+"refund\_fee": 40
 
 }\],
 
-\"exchanges\": \[ //置换项
+"exchanges": \[ //置换项
 
 {
 
-\"product\_id\": 122, //required
+"product\_id": 122, //required
 
-\"quantity\": 2 //required
+"quantity": 2 //required
 
 //refund\_fee无需提供
 
@@ -3466,9 +3466,9 @@ item的quantity；
 
 {
 
-\"product\_id\": 130, //required
+"product\_id": 130, //required
 
-\"product\_specification\_id\": 22, //optional
+"product\_specification\_id": 22, //optional
 
 // 1.对于需要关联订单的退货单，不需要传递quantity，会使用其对应的order
 item的quantity；
@@ -3480,7 +3480,7 @@ item的quantity；
 
 //都必须指定quantity
 
-\"quantity\": 3, //required
+"quantity": 3, //required
 
 //refund\_fee无需提供
 
@@ -3492,9 +3492,9 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"message\": \"order.customer.service.created\"
+"message": "order.customer.service.created"
 
 }
 
@@ -3513,292 +3513,292 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"store\_id\": \"1\",
+"store\_id": "1",
 
-\"reason\": \"AFSFSF\",
+"reason": "AFSFSF",
 
-\"images\": \"\[\\\"http://host/a.jpg\\\",\\\"http://host/b.jgp\\\"\]\",
+"images": "\[\\"http://host/a.jpg\\",\\"http://host/b.jgp\\"\]",
 
-\"log\": \"\[{\\\"time\\\":\\\"2018-07-21
-02:38:10\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"afaf\\\"}\]\",
+"log": "\[{\\"time\\":\\"2018-07-21
+02:38:10\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"afaf\\"}\]",
 
-\"exchanges\": \[ //置换项（置换清单）（仅换货单有此项）
+"exchanges": \[ //置换项（置换清单）（仅换货单有此项）
 
 {
 
-\"quantity\": 2, //数量
+"quantity": 2, //数量
 
-\"product\_specification\_id\": null, //产品规格id
+"product\_specification\_id": null, //产品规格id
 
-\"weight\": 111, //重量
+"weight": 111, //重量
 
 //项类型（RETURN -
 退货项（退货单的项和换货单中的退货清单的项都属于此类型） EXCHANGE -
 置换项）
 
-\"type\": \"EXCHANGE\",
+"type": "EXCHANGE",
 
-\"product\_specification\_name\": null,
+"product\_specification\_name": null,
 
-\"order\_customer\_service\_id\": 3, //售后单id
+"order\_customer\_service\_id": 3, //售后单id
 
-\"product\_name\": \"水桶\", //产品名
+"product\_name": "水桶", //产品名
 
-\"marketing\_description\": null, //营销活动描述
+"marketing\_description": null, //营销活动描述
 
-\"cover\": \"/p/dbe108b7e5c0283013ebc956f2cc2f4b.jpg\",
+"cover": "/p/dbe108b7e5c0283013ebc956f2cc2f4b.jpg",
 
-\"marketing\": null,
+"marketing": null,
 
-\"final\_price\": 22, //总价值
+"final\_price": 22, //总价值
 
-\"price\": 11, //价格
+"price": 11, //价格
 
-\"refund\_fee\": null, //置换项没有退回金额，此处必为null
+"refund\_fee": null, //置换项没有退回金额，此处必为null
 
-\"product\_id\": 2, //产品id
+"product\_id": 2, //产品id
 
-\"marketing\_id\": null, //营销活动id
+"marketing\_id": null, //营销活动id
 
-\"id\": 6,
+"id": 6,
 
-\"cost\_price\": 1 //成本价
+"cost\_price": 1 //成本价
 
 }
 
 \],
 
-\"express\_company\": null,
+"express\_company": null,
 
-\"store\_user\_name\": \"Administrator\", //店员名
+"store\_user\_name": "Administrator", //店员名
 
-\"express\_code\": null, //快递单号
+"express\_code": null, //快递单号
 
-\"service\_type\": \"EXCHANGE\", //售后单类型（REFUND-仅退款
+"service\_type": "EXCHANGE", //售后单类型（REFUND-仅退款
 RETURN-退货退款 EXCHANGE-换货）
 
-\"store\_user\_id\": \"1\", //店员id
+"store\_user\_id": "1", //店员id
 
 //1.如果是退货单，此金额为此次退回应退回的金额。
 
 //2.如果是换货单，且退回项总价值大于置换项总价值，则有refund\_fee；若小于，则有supplementary\_fee
 
-\"refund\_fee\": 68, //退回金额
+"refund\_fee": 68, //退回金额
 
-\"supplementary\_fee\": null, //补交金额
+"supplementary\_fee": null, //补交金额
 
-\"store\_name\": \"总店\", //店铺名
+"store\_name": "总店", //店铺名
 
-\"returns\": \[ //退货清单
+"returns": \[ //退货清单
 
 {
 
-\"quantity\": 3,
+"quantity": 3,
 
-\"product\_specification\_id\": null,
+"product\_specification\_id": null,
 
-\"weight\": 0,
+"weight": 0,
 
 //项类型（RETURN -
 退货项（退货单的项和换货单中的退货清单的项都属于此类型） EXCHANGE -
 置换项）
 
-\"type\": \"RETURN\",
+"type": "RETURN",
 
-\"product\_specification\_name\": null,
+"product\_specification\_name": null,
 
-\"order\_customer\_service\_id\": 3,
+"order\_customer\_service\_id": 3,
 
-\"product\_name\": \"IPHONE\",
+"product\_name": "IPHONE",
 
-\"marketing\_description\": null,
+"marketing\_description": null,
 
-\"cover\": null,
+"cover": null,
 
-\"marketing\": null,
+"marketing": null,
 
-\"final\_price\": 90,
+"final\_price": 90,
 
-\"price\": 30,
+"price": 30,
 
-\"refund\_fee\": 90, //退回金额
+"refund\_fee": 90, //退回金额
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"marketing\_id\": null,
+"marketing\_id": null,
 
-\"id\": 5,
+"id": 5,
 
-\"cost\_price\": 0
+"cost\_price": 0
 
 }
 
 \],
 
-\"id\": 3,
+"id": 3,
 
-\"created\_date\": \"2018-07-21 14:38:13\",
+"created\_date": "2018-07-21 14:38:13",
 
-\"express\_number\": null,
+"express\_number": null,
 
-\"service\_number\": \"180721143813797Administrator\",
+"service\_number": "180721143813797Administrator",
 
-\"order\_id\": 1,
+"order\_id": 1,
 
-\"status\": \"CREATED\",
+"status": "CREATED",
 
-\"order\": {
+"order": {
 //该售后单所关联的订单（如果售后单没有关联订单，则order不存在）
 
-\"trade\_number\": null,
+"trade\_number": null,
 
-\"type\": \"ORDER\",
+"type": "ORDER",
 
-\"express\_company\": null,
+"express\_company": null,
 
-\"cover\": null,
+"cover": null,
 
-\"store\_user\_name\": null,
+"store\_user\_name": null,
 
-\"express\_code\": null,
+"express\_code": null,
 
-\"province\": \"广东\",
+"province": "广东",
 
-\"delivery\_type\": \"EXPRESS\",
+"delivery\_type": "EXPRESS",
 
-\"id\": 1,
+"id": 1,
 
-\"previous\_status\": \"DELIVERED\_CONFIRM\_PENDING\",
+"previous\_status": "DELIVERED\_CONFIRM\_PENDING",
 
-\"delivered\_date\": \"2018-07-20 12:58:40\",
+"delivered\_date": "2018-07-20 12:58:40",
 
-\"zip\": null,
+"zip": null,
 
-\"deal\_date\": null,
+"deal\_date": null,
 
-\"pay\_credit\": 0,
+"pay\_credit": 0,
 
-\"contact\_user\": \"admin\",
+"contact\_user": "admin",
 
-\"settled\": 0,
+"settled": 0,
 
-\"coupon\_info\": null,
+"coupon\_info": null,
 
-\"payment\_type\": \"WECHAT\",
+"payment\_type": "WECHAT",
 
-\"store\_user\_id\": null,
+"store\_user\_id": null,
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"phone\": \"111\",
+"phone": "111",
 
-\"point\_exchange\_rate\": 100,
+"point\_exchange\_rate": 100,
 
-\"deliver\_date\": \"2018-07-20 12:58:36\",
+"deliver\_date": "2018-07-20 12:58:36",
 
-\"confirm\_date\": \"2018-07-20 12:58:32\",
+"confirm\_date": "2018-07-20 12:58:32",
 
-\"district\": \"荔湾区\",
+"district": "荔湾区",
 
-\"detail\": null,
+"detail": null,
 
-\"status\": \"CANCELED\_RETURN\_PENDING\",
+"status": "CANCELED\_RETURN\_PENDING",
 
-\"pay\_date\": \"2018-07-21 12:58:23\",
+"pay\_date": "2018-07-21 12:58:23",
 
-\"deliver\_order\_number\": \"111\",
+"deliver\_order\_number": "111",
 
-\"city\": \"广州\",
+"city": "广州",
 
-\"invoice\_title\": null,
+"invoice\_title": null,
 
-\"receiving\_time\": null,
+"receiving\_time": null,
 
-\"order\_number\": \"17072614522001811012\",
+"order\_number": "17072614522001811012",
 
-\"freight\": 0,
+"freight": 0,
 
-\"description\": null,
+"description": null,
 
-\"mid\": null,
+"mid": null,
 
-\"remark\": null,
+"remark": null,
 
-\"mname\": null,
+"mname": null,
 
-\"is\_deleted\": 0,
+"is\_deleted": 0,
 
-\"street\": null,
+"street": null,
 
-\"store\_name\": null,
+"store\_name": null,
 
-\"is\_deliver\_reminder\": 0,
+"is\_deliver\_reminder": 0,
 
-\"express\_number\": null,
+"express\_number": null,
 
-\"store\_id\": null,
+"store\_id": null,
 
-\"total\_price\": 500,
+"total\_price": 500,
 
-\"marketing\_description\": null,
+"marketing\_description": null,
 
-\"marketing\": null,
+"marketing": null,
 
-\"marketing\_id\": null,
+"marketing\_id": null,
 
-\"created\_date\": \"2018-07-20 12:58:19\",
+"created\_date": "2018-07-20 12:58:19",
 
-\"invoice\": 0
+"invoice": 0
 
 },
 
-\"order\_items\": \[ ////该售后单所关联的订单的订单项
+"order\_items": \[ ////该售后单所关联的订单的订单项
 
 {
 
-\"quantity\": 3,
+"quantity": 3,
 
-\"product\_specification\_id\": null,
+"product\_specification\_id": null,
 
-\"weight\": 0,
+"weight": 0,
 
-\"product\_specification\_name\": null,
+"product\_specification\_name": null,
 
-\"product\_name\": \"IPHONE\",
+"product\_name": "IPHONE",
 
-\"marketing\_description\": null,
+"marketing\_description": null,
 
-\"cover\": null,
+"cover": null,
 
-\"marketing\": null,
+"marketing": null,
 
-\"final\_price\": 90,
+"final\_price": 90,
 
-\"price\": 30,
+"price": 30,
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"marketing\_id\": null,
+"marketing\_id": null,
 
-\"id\": 1,
+"id": 1,
 
-\"bulk\": 0,
+"bulk": 0,
 
-\"order\_id\": 1,
+"order\_id": 1,
 
-\"partner\_level\_zone\": null,
+"partner\_level\_zone": null,
 
-\"barcode\": null,
+"barcode": null,
 
-\"store\_location\": null,
+"store\_location": null,
 
-\"status\": \"CREATED\",
+"status": "CREATED",
 
-\"cost\_price\": 0
+"cost\_price": 0
 
 }
 
@@ -3823,25 +3823,25 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"totalPrice\": 14566, //订单总金额
+"totalPrice": 14566, //订单总金额
 
-\"delivering\": 0, // 配送中
+"delivering": 0, // 配送中
 
-\"total\": 6, //总订单数
+"total": 6, //总订单数
 
-\"handlePending\": 0, //待处理
+"handlePending": 0, //待处理
 
-\"cancled\": 0, //取消
+"cancled": 0, //取消
 
-\"closed\": 2, // 完成
+"closed": 2, // 完成
 
-\"pickPending\": 0, // 待取货
+"pickPending": 0, // 待取货
 
-\"deliverPending\": 1 //待配送
+"deliverPending": 1 //待配送
 
 }
 
@@ -3871,67 +3871,67 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"totalRow\": 1,
+"totalRow": 1,
 
-\"pageNumber\": 1,
+"pageNumber": 1,
 
-\"lastPage\": true,
+"lastPage": true,
 
-\"firstPage\": true,
+"firstPage": true,
 
-\"totalPage\": 1,
+"totalPage": 1,
 
-\"pageSize\": 30,
+"pageSize": 30,
 
-\"list\": \[
+"list": \[
 
 {
 
-\"store\_id\": \"1\", //门店id
+"store\_id": "1", //门店id
 
-\"reason\": \"AFSFSF\", //原因
+"reason": "AFSFSF", //原因
 
-\"images\": \"\[\\\"http://host/a.jpg\\\",\\\"http://host/b.jgp\\\"\]\",
+"images": "\[\\"http://host/a.jpg\\",\\"http://host/b.jgp\\"\]",
 
-\"log\": \"\[{\\\"time\\\":\\\"2018-07-21
-02:38:10\\\",\\\"user\\\":\\\"Administrator\\\",\\\"content\\\":\\\"afaf\\\"}\]\",
+"log": "\[{\\"time\\":\\"2018-07-21
+02:38:10\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"afaf\\"}\]",
 
-\"user\_name\": \"Administrator\", //订单用户id
+"user\_name": "Administrator", //订单用户id
 
-\"order\_number\": \"17072614522001811012\", //订单号
+"order\_number": "17072614522001811012", //订单号
 
-\"express\_company\": null, //快递公司
+"express\_company": null, //快递公司
 
-\"store\_user\_name\": \"Administrator\", //店员名
+"store\_user\_name": "Administrator", //店员名
 
-\"express\_code\": null,
+"express\_code": null,
 
-\"service\_type\": \"EXCHANGE\", //售后单类型（REFUND-仅退款
+"service\_type": "EXCHANGE", //售后单类型（REFUND-仅退款
 RETURN-退货退款 EXCHANGE-换货）
 
-\"store\_user\_id\": \"1\", //店员id
+"store\_user\_id": "1", //店员id
 
-\"refund\_fee\": 68, //退款金额
+"refund\_fee": 68, //退款金额
 
-\"supplementary\_fee\": null, //补交金额
+"supplementary\_fee": null, //补交金额
 
-\"store\_name\": \"总店\", //门店名称
+"store\_name": "总店", //门店名称
 
-\"id\": 3,
+"id": 3,
 
-\"created\_date\": \"2018-07-21 14:38:13\",
+"created\_date": "2018-07-21 14:38:13",
 
-\"express\_number\": null, //快递单号
+"express\_number": null, //快递单号
 
-\"service\_number\": \"180721143813797Administrator\", //售后单单号
+"service\_number": "180721143813797Administrator", //售后单单号
 
-\"order\_id\": 1,
+"order\_id": 1,
 
-\"status\": \"CREATED\"
+"status": "CREATED"
 
 }
 
@@ -3968,9 +3968,9 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"message\": \"order.delete.success\"
+"message": "order.delete.success"
 
 }
 
@@ -3987,7 +3987,7 @@ Data：
 
 {
 
-\"order\_number\": \"2343243242\"
+"order\_number": "2343243242"
 
 }
 
@@ -3995,14 +3995,14 @@ Return:
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"data\": {
+"data": {
 
-\"code\": \"wrwfafef\",
+"code": "wrwfafef",
 //分享code，用这个code去构建分享到朋友圈时的链接的参数。
 
-\"order\_number\": \"2343243242\"
+"order\_number": "2343243242"
 
 }
 
@@ -4019,23 +4019,23 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[
+"data": \[
 
 {
 
-\"name\": \"fasfa\",
+"name": "fasfa",
 
-\"id\": 1
+"id": 1
 
 },
 
 {
 
-\"name\": \"e34543kkk\",
+"name": "e34543kkk",
 
-\"id\": 2
+"id": 2
 
 }
 
@@ -4078,33 +4078,33 @@ Data:
 
 {
 
-\"order\_number\": \"2342323432432\", //订单号
+"order\_number": "2342323432432", //订单号
 
-\"service\_type\": \"RETURN\", //RETURN: 退货退款, REFUND: 仅退款，
+"service\_type": "RETURN", //RETURN: 退货退款, REFUND: 仅退款，
 EXCHANGE: 换货
 
-\"reason\": \"AFSFSF\", //原因
+"reason": "AFSFSF", //原因
 
-\"content\": \"不要了。\", //回复信息
+"content": "不要了。", //回复信息
 
-\"images\": \[\"http://localhost/image/a.jpg\",
-\"http://loalhost/image/b.jpg\"\],
+"images": \["http://localhost/image/a.jpg",
+"http://loalhost/image/b.jpg"\],
 
-\"returns\": \[ 退货产品
+"returns": \[ 退货产品
 
 {
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"quantity\": 2
+"quantity": 2
 
 },
 
 {
 
-\"product\_id\": 2,
+"product\_id": 2,
 
-\"quantity\": 2
+"quantity": 2
 
 }
 
@@ -4143,49 +4143,49 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"reason\": \"AFSFSF\",
+"reason": "AFSFSF",
 
-\"express\_code\": null,
+"express\_code": null,
 
-\"service\_type\": \"RETURN\",
+"service\_type": "RETURN",
 
-\"images\": \[
+"images": \[
 
-\"http://o9ixtumvv.bkt.clouddn.com/20160729173227596-Vo1I7nGC.png\",
+"http://o9ixtumvv.bkt.clouddn.com/20160729173227596-Vo1I7nGC.png",
 
-\"http://o9ixtumvv.bkt.clouddn.com/20160729173227596-Vo1I7nGC.png\"
+"http://o9ixtumvv.bkt.clouddn.com/20160729173227596-Vo1I7nGC.png"
 
 \],
 
-\"log\": \[
+"log": \[
 
 {
 
-\"time\": \"2016-07-29 05:39:19\",
+"time": "2016-07-29 05:39:19",
 
-\"user\": \"Administrator\",
+"user": "Administrator",
 
-\"content\": \"不要了。\"
+"content": "不要了。"
 
 }
 
 \],
 
-\"id\": 1,
+"id": 1,
 
-\"created\_date\": \"2016-07-29 17:39:19\",
+"created\_date": "2016-07-29 17:39:19",
 
-\"express\_number\": null,
+"express\_number": null,
 
-\"order\_id\": 1,
+"order\_id": 1,
 
-\"express\_company\": null,
+"express\_company": null,
 
-\"status\": \"CREATED\"
+"status": "CREATED"
 
 }
 
@@ -4208,11 +4208,11 @@ Data:
 
 {
 
-\"express\_company\": \"ABC\", //optional, 快递公司名称
+"express\_company": "ABC", //optional, 快递公司名称
 
-\"express\_number\": \"23234324\", //optional, 快递单号
+"express\_number": "23234324", //optional, 快递单号
 
-\"content\": \"anymessage\" //optional， 回复给平台的消息
+"content": "anymessage" //optional， 回复给平台的消息
 
 }
 
@@ -4242,11 +4242,11 @@ Data:
 
 {
 
-"order\_type\": \"Order\",
+"order\_type": "Order",
 
-\"order\_number\": \"12346\", //订单号
+"order\_number": "12346", //订单号
 
-\"type\": \"NATIVE\" //type必须是NATIVE
+"type": "NATIVE" //type必须是NATIVE
 
 }
 
@@ -4254,27 +4254,27 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"timeStamp\": \"1533188289\",
+"timeStamp": "1533188289",
 
-\"codeUrl\": \"weixin://wxpay/bizpayurl?pr=bJ1XIh4\",
+"codeUrl": "weixin://wxpay/bizpayurl?pr=bJ1XIh4",
 
-\"package\": \"prepay\_id=wx02133732079021563094f24c1615005248\",
+"package": "prepay\_id=wx02133732079021563094f24c1615005248",
 
-\"paySign\": \"7EEC46D61249DD469759CF598284A0DC\",
+"paySign": "7EEC46D61249DD469759CF598284A0DC",
 
-\"totalFee\": \"11\",
+"totalFee": "11",
 
-\"appId\": \"wx117676b671891683\",
+"appId": "wx117676b671891683",
 
-\"signType\": \"MD5\",
+"signType": "MD5",
 
-\"title\": \"DEMO\",
+"title": "DEMO",
 
-\"nonceStr\": \"1533188289855\"
+"nonceStr": "1533188289855"
 
 }
 
@@ -4296,7 +4296,7 @@ Data:
 
 {
 
-\"status\":\"CLOSED\_CONFIRMED\"
+"status":"CLOSED\_CONFIRMED"
 
 }
 
@@ -4304,9 +4304,9 @@ Return:
 
 {
 
-\"message\": \"order.updated\",
+"message": "order.updated",
 
-\"status\_code\": 0
+"status\_code": 0
 
 }
 
@@ -4314,9 +4314,9 @@ Error Return:
 
 {
 
-\"message\": \"order.status.transfer.error\",
+"message": "order.status.transfer.error",
 
-\"status\_code\": 1
+"status\_code": 1
 
 }
 
@@ -4355,82 +4355,82 @@ Return:
 
 {
 
-\"com\": \"baishiwuliu\",
+"com": "baishiwuliu",
 
-\"data\": \[{
+"data": \[{
 
-\"context\": \"镇江市\|签收\|镇江市【新句容】，百世邻里下蜀代理点
-已签收\",
+"context": "镇江市\|签收\|镇江市【新句容】，百世邻里下蜀代理点
+已签收",
 
-\"time\": \"2016-06-19 18:12:40\"
-
-}, {
-
-\"context\": \"镇江市\|派件\|镇江市【新句容】，【下蜀
-陈龙/18112812262】正在派件\",
-
-\"time\": \"2016-06-19 11:26:05\"
+"time": "2016-06-19 18:12:40"
 
 }, {
 
-\"context\": \"镇江市\|到件\|到镇江市【新句容】\",
+"context": "镇江市\|派件\|镇江市【新句容】，【下蜀
+陈龙/18112812262】正在派件",
 
-\"time\": \"2016-06-19 07:20:20\"
-
-}, {
-
-\"context\": \"南京市\|发件\|南京市【南京转运中心】，正发往【新句容】\",
-
-\"time\": \"2016-06-19 02:24:17\"
+"time": "2016-06-19 11:26:05"
 
 }, {
 
-\"context\": \"南京市\|到件\|到南京市【南京转运中心】\",
+"context": "镇江市\|到件\|到镇江市【新句容】",
 
-\"time\": \"2016-06-19 01:31:20\"
-
-}, {
-
-\"context\": \"广州市\|到件\|到广州市【广州转运中心】\",
-
-\"time\": \"2016-06-18 02:24:44\"
+"time": "2016-06-19 07:20:20"
 
 }, {
 
-\"context\":
-\"广州市\|发件\|广州市【广州白云石槎分部】，正发往【广州转运中心】\",
+"context": "南京市\|发件\|南京市【南京转运中心】，正发往【新句容】",
 
-\"time\": \"2016-06-18 01:12:42\"
-
-}, {
-
-\"context\":
-\"广州市\|收件\|广州市【广州白云石槎分部】，【田001/02036450972】已揽收\",
-
-\"time\": \"2016-06-17 18:45:46\"
+"time": "2016-06-19 02:24:17"
 
 }, {
 
-\"context\":
-\"广州市\|发件\|广州市【广州转运中心】，正发往【南京转运中心】\",
+"context": "南京市\|到件\|到南京市【南京转运中心】",
 
-\"time\": \"2016-06-10 04:13:25\"
+"time": "2016-06-19 01:31:20"
+
+}, {
+
+"context": "广州市\|到件\|到广州市【广州转运中心】",
+
+"time": "2016-06-18 02:24:44"
+
+}, {
+
+"context":
+"广州市\|发件\|广州市【广州白云石槎分部】，正发往【广州转运中心】",
+
+"time": "2016-06-18 01:12:42"
+
+}, {
+
+"context":
+"广州市\|收件\|广州市【广州白云石槎分部】，【田001/02036450972】已揽收",
+
+"time": "2016-06-17 18:45:46"
+
+}, {
+
+"context":
+"广州市\|发件\|广州市【广州转运中心】，正发往【南京转运中心】",
+
+"time": "2016-06-10 04:13:25"
 
 }\],
 
-\"comcontact\": \"400-8856-561\",
+"comcontact": "400-8856-561",
 
-\"succeed\": true,
+"succeed": true,
 
-\"nu\": \"70534708088780\",
+"nu": "70534708088780",
 
-\"company\": \"baishiwuliu\",
+"company": "baishiwuliu",
 
-\"state\": \"3\",
+"state": "3",
 
-\"message\": \"ok\",
+"message": "ok",
 
-\"status\": \"1\"
+"status": "1"
 
 }
 
@@ -4438,9 +4438,9 @@ Failure Return:
 
 {
 
-\"message\": \"cannot.find.express.info\",
+"message": "cannot.find.express.info",
 
-\"status\_code\": 1
+"status\_code": 1
 
 }
 
@@ -4455,91 +4455,91 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"created\_date\": \"2016-04-25 19:15:45\",
+"created\_date": "2016-04-25 19:15:45",
 
-\"id\": 3,
+"id": 3,
 
-\"cover\":
-\"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png\",
+"cover":
+"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
-\"price\": null,
+"price": null,
 //price正常情况是有的，如果为null，则表示出错了，对应两种出错原因：1.由于用户未配置默认配
 
 //送区域而不能计算价格；2.用户配置了默认配送区域，但对应的批发活动的区域价格定义中没有匹配
 
 //的，也不能计算价格
 
-\"msg\": \"尚未配置默认配送区域，将不能计算价格\", //如果price为
+"msg": "尚未配置默认配送区域，将不能计算价格", //如果price为
 
 //null，则会提供该msg域，提示错误信息，有两种错误信息，分别对应上述两种出错原因
 
-\"marketing\": \"WHOLESALE\", //营销活动 （WHOLESALE代表批发活动）
+"marketing": "WHOLESALE", //营销活动 （WHOLESALE代表批发活动）
 
-\"marketing\_id\": \"1\", //批发活动id
+"marketing\_id": "1", //批发活动id
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"fare\_id\": 1, //运费模版ID
+"fare\_id": 1, //运费模版ID
 
-\"product\_name\": \"超效洁净护理洗衣液2.5L【全国包邮】\",
+"product\_name": "超效洁净护理洗衣液2.5L【全国包邮】",
 
-\"quantity\": 1,
+"quantity": 1,
 
-\"user\_id\": 4,
+"user\_id": 4,
 
-\"product\_specification\_name\": \"a1\",//规格名称
+"product\_specification\_name": "a1",//规格名称
 
-\"product\_specification\_id\": 2 //规格ID，提交订单时用
+"product\_specification\_id": 2 //规格ID，提交订单时用
 
 },{
 
-\"created\_date\": \"2016-04-25 19:15:45\",
+"created\_date": "2016-04-25 19:15:45",
 
-\"id\": 3,
+"id": 3,
 
-\"cover\":
-\"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png\",
+"cover":
+"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
-\"price\": 34.80,
+"price": 34.80,
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"fare\_id\": 1, //运费模版ID
+"fare\_id": 1, //运费模版ID
 
-\"product\_name\": \"超效洁净护理洗衣液2.5L【全国包邮】\",
+"product\_name": "超效洁净护理洗衣液2.5L【全国包邮】",
 
-\"quantity\": 1,
+"quantity": 1,
 
-\"user\_id\": 4,
+"user\_id": 4,
 
-\"product\_specification\_name\": \"a1\",//规格名称
+"product\_specification\_name": "a1",//规格名称
 
-\"product\_specification\_id\": 2 //规格ID，提交订单时用
+"product\_specification\_id": 2 //规格ID，提交订单时用
 
 }, {
 
-\"created\_date\": \"2016-04-25 19:15:45\",
+"created\_date": "2016-04-25 19:15:45",
 
-\"id\": 4,
+"id": 4,
 
-\"cover\":
-\"http://112.74.26.228:8000/p/2b3edeb3c3ca2a12b06893cb12286710.png\",
+"cover":
+"http://112.74.26.228:8000/p/2b3edeb3c3ca2a12b06893cb12286710.png",
 
-\"price\": 69.60,
+"price": 69.60,
 
-\"product\_id\": 3,
+"product\_id": 3,
 
-\"fare\_id\": 1,
+"fare\_id": 1,
 
-\"product\_name\": \"超效洁净护理洗衣液2.5Lx2瓶【全国包邮】\",
+"product\_name": "超效洁净护理洗衣液2.5Lx2瓶【全国包邮】",
 
-\"quantity\": 1,
+"quantity": 1,
 
-\"user\_id\": 4
+"user\_id": 4
 
 }\]
 
@@ -4563,22 +4563,22 @@ Data:
 
 \[{
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"quantity\": 1,
+"quantity": 1,
 
-\"product\_specification\_id\": 1, //optional, 选择的产品规格ID
+"product\_specification\_id": 1, //optional, 选择的产品规格ID
 
-\"marketing\_id\": 1, //optional 营销活动id
+"marketing\_id": 1, //optional 营销活动id
 
-\"marketing\": \"WHOLESALE\" //optional 营销活动(一般是批发
+"marketing": "WHOLESALE" //optional 营销活动(一般是批发
 WHOLESALE,团购是直接下单的）
 
 }, { //非批发产品不需要提供 marketing\_id 和 marketing 字段
 
-\"product\_id\": 3,
+"product\_id": 3,
 
-\"quantity\": 1
+"quantity": 1
 
 }\]
 
@@ -4586,71 +4586,71 @@ Return 购物车列表:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"created\_date\": \"2016-04-25 19:15:45\",
+"created\_date": "2016-04-25 19:15:45",
 
-\"id\": 3,
+"id": 3,
 
-\"cover\":
-\"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png\",
+"cover":
+"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
-\"price\": 34.80,
+"price": 34.80,
 
-"weight\": 1000, // 重量
+"weight": 1000, // 重量
 
-\"bulk\": 1000, //体积
+"bulk": 1000, //体积
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"free\_shipping\": 1,
+"free\_shipping": 1,
 
-\"product\_name\": \"超效洁净护理洗衣液2.5L【全国包邮】\",
+"product\_name": "超效洁净护理洗衣液2.5L【全国包邮】",
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"quantity\": 1,
+"quantity": 1,
 
-\"product\_specification\_name\": \"a1\",//规格名称
+"product\_specification\_name": "a1",//规格名称
 
-\"user\_id\": 4,
+"user\_id": 4,
 
-\"marketing\_id\": 1,
+"marketing\_id": 1,
 
-\"marketing\": \"WHOLESALE\"
+"marketing": "WHOLESALE"
 
 }, {
 
-\"created\_date\": \"2016-04-25 19:15:45\",
+"created\_date": "2016-04-25 19:15:45",
 
-\"id\": 4,
+"id": 4,
 
-\"cover\":
-\"http://112.74.26.228:8000/p/2b3edeb3c3ca2a12b06893cb12286710.png\",
+"cover":
+"http://112.74.26.228:8000/p/2b3edeb3c3ca2a12b06893cb12286710.png",
 
-\"price\": 69.60,
+"price": 69.60,
 
-"weight\": 1000, // 重量
+"weight": 1000, // 重量
 
-\"bulk\": 1000, //体积
+"bulk": 1000, //体积
 
-\"product\_id\": 3,
+"product\_id": 3,
 
-\"free\_shipping\": 1,
+"free\_shipping": 1,
 
-\"product\_name\": \"超效洁净护理洗衣液2.5Lx2瓶【全国包邮】\",
+"product\_name": "超效洁净护理洗衣液2.5Lx2瓶【全国包邮】",
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"quantity\": 1,
+"quantity": 1,
 
-\"user\_id\": 4,
+"user\_id": 4,
 
-\"marketing\_id\": null
+"marketing\_id": null
 
-\"marketing\": null
+"marketing": null
 
 }\]
 
@@ -4669,9 +4669,9 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \"shopping\_cart.delete.success\"
+"data": "shopping\_cart.delete.success"
 
 }
 
@@ -4686,33 +4686,33 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"id\": 3,
+"id": 3,
 
-\"zip\": \"510000\",
+"zip": "510000",
 
-\"detail\": \"6F\",
+"detail": "6F",
 
-\"phone\": \"1380000000\",
+"phone": "1380000000",
 
-\"contact\_user\": \"Mr Huang\",
+"contact\_user": "Mr Huang",
 
-\"street\": \"jianzhong road\",
+"street": "jianzhong road",
 
-\"province\": \"GD\",
+"province": "GD",
 
-\"is\_default\": 1,
+"is\_default": 1,
 
-\"street\_number\": \"50\",
+"street\_number": "50",
 
-\"user\_id\": 4,
+"user\_id": 4,
 
-\"district\": \"Tiahne\",
+"district": "Tiahne",
 
-\"city\": \"GZ\"
+"city": "GZ"
 
 }\]
 
@@ -4729,25 +4729,25 @@ Data:
 
 {
 
-\"contact\_user\": \"Mr Huang\",
+"contact\_user": "Mr Huang",
 
-\"phone\": \"1380000000\",
+"phone": "1380000000",
 
-\"zip\": \"510000\",
+"zip": "510000",
 
-\"province\": \"GD\",
+"province": "GD",
 
-\"city\": \"GZ\",
+"city": "GZ",
 
-\"district\": \"Tiahne\",
+"district": "Tiahne",
 
-\"street\": \"jianzhong road\",
+"street": "jianzhong road",
 
-\"street\_number\": \"50\",
+"street\_number": "50",
 
-\"detail\": \"6F\",
+"detail": "6F",
 
-\"is\_default\": 1
+"is\_default": 1
 
 }
 
@@ -4755,9 +4755,9 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \"contact.saved\"
+"data": "contact.saved"
 
 }
 
@@ -4772,25 +4772,25 @@ Data:
 
 {
 
-\"contact\_user\": \"Mr Huang\",
+"contact\_user": "Mr Huang",
 
-\"phone\": \"1380000000\",
+"phone": "1380000000",
 
-\"zip\": \"510000\",
+"zip": "510000",
 
-\"province\": \"GD\",
+"province": "GD",
 
-\"city\": \"GZ\",
+"city": "GZ",
 
-\"district\": \"Tiahne\",
+"district": "Tiahne",
 
-\"street\": \"jianzhong road\",
+"street": "jianzhong road",
 
-\"street\_number\": \"50\",
+"street\_number": "50",
 
-\"detail\": \"6F\",
+"detail": "6F",
 
-\"is\_default\": 0
+"is\_default": 0
 
 }
 
@@ -4798,33 +4798,33 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"id\": 1,
+"id": 1,
 
-\"contact\_user\": \"Mr Huang\",
+"contact\_user": "Mr Huang",
 
-\"phone\": \"1380000000\",
+"phone": "1380000000",
 
-\"zip\": \"510000\",
+"zip": "510000",
 
-\"province\": \"GD\",
+"province": "GD",
 
-\"city\": \"GZ\",
+"city": "GZ",
 
-\"district\": \"Tiahne\",
+"district": "Tiahne",
 
-\"street\": \"jianzhong road\",
+"street": "jianzhong road",
 
-\"street\_number\": \"50\",
+"street\_number": "50",
 
-\"detail\": \"6F\"
+"detail": "6F"
 
-\"is\_default\": 0,
+"is\_default": 0,
 
-\"user\_id\": 1
+"user\_id": 1
 
 }
 
@@ -4843,9 +4843,9 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \"contact.deleted\"
+"data": "contact.deleted"
 
 }
 
@@ -4860,33 +4860,33 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"id\": 73,
+"id": 73,
 
-\"zip\": \"510000\",
+"zip": "510000",
 
-\"detail\": \"5F\",
+"detail": "5F",
 
-\"phone\": \"1380000000\",
+"phone": "1380000000",
 
-\"contact\_user\": \"Mr Huang\",
+"contact\_user": "Mr Huang",
 
-\"street\": \"jianzhong roadxxxxx\",
+"street": "jianzhong roadxxxxx",
 
-\"province\": \"广东省\",
+"province": "广东省",
 
-\"is\_default\": 1,
+"is\_default": 1,
 
-\"street\_number\": \"50\",
+"street\_number": "50",
 
-\"user\_id\": 4,
+"user\_id": 4,
 
-\"district\": \"天河区\",
+"district": "天河区",
 
-\"city\": \"广州市\"
+"city": "广州市"
 
 }
 
@@ -4903,9 +4903,9 @@ Return:
 
 {
 
-\"message\": \"contact.updated\",
+"message": "contact.updated",
 
-\"status\_code\": 0
+"status\_code": 0
 
 }
 
@@ -4917,19 +4917,19 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"code\": \"ff\",
+"code": "ff",
 
-\"name\": \"天天快递\",
+"name": "天天快递",
 
-\"id\": 2,
+"id": 2,
 
-\"is\_default\": 1,
+"is\_default": 1,
 
-\"enabled\": 1
+"enabled": 1
 
 }
 
@@ -4943,26 +4943,26 @@ Data:
 
 {
 
-\"delivery\_type\": \"EXPRESS\", //可选项：EXPRESS, SELF\_PICK, FLASH,
+"delivery\_type": "EXPRESS", //可选项：EXPRESS, SELF\_PICK, FLASH,
 默认EXPRESS
 
-\"province\": \"广东\",
+"province": "广东",
 
-\"city\": \"广州\",
+"city": "广州",
 
-\"data\":\[
+"data":\[
 
 {
 
-\"fare\_id\": 1,
+"fare\_id": 1,
 
-\"price\": 23.20,
+"price": 23.20,
 
-\"quantity\": 4,
+"quantity": 4,
 
-\"weight\": 500, //该产品的重量，从product可以拿到，单位是g
+"weight": 500, //该产品的重量，从product可以拿到，单位是g
 
-\"bulk\": 100 //该产品的体积， 可以忽略
+"bulk": 100 //该产品的体积， 可以忽略
 
 }
 
@@ -4974,15 +4974,15 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"carriage\": 4.00, //运费
+"carriage": 4.00, //运费
 
-\"message\": \"付同样的运费,还可以拼单0.30KG哦.\",
+"message": "付同样的运费,还可以拼单0.30KG哦.",
 
-\"delta\": -180.00
+"delta": -180.00
 //可忽略。距离满包邮的差额。注意：这是一个负数。只有是负数时才表示离满包邮有差额。
 
 }
@@ -5008,9 +5008,9 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"message\": \"ok\"
+"message": "ok"
 
 }
 
@@ -5020,9 +5020,9 @@ Return:
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"message\": \"超出购买限额, 限购2件, 你过去10天内已购买过1件. \"
+"message": "超出购买限额, 限购2件, 你过去10天内已购买过1件. "
 
 }
 
@@ -5039,21 +5039,21 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"id\": 1,
+"id": 1,
 
-\"bank\_name\": null,
+"bank\_name": null,
 
-\"owner\_name\": \"Mr.A\",
+"owner\_name": "Mr.A",
 
-\"account\": \"234234234324\",
+"account": "234234234324",
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"type\": \"ALIPAY\"
+"type": "ALIPAY"
 
 }\]
 
@@ -5082,13 +5082,13 @@ Data:
 
 {
 
-\"owner\_name\": \"Mr.A\",
+"owner\_name": "Mr.A",
 
-\"type\": \"ALIPAY\",
+"type": "ALIPAY",
 
-\"account\": \"234234234324\",
+"account": "234234234324",
 
-\"bank\_name\":\"中国工商银行科韵路支行\" //当type为BANK时需要
+"bank\_name":"中国工商银行科韵路支行" //当type为BANK时需要
 
 }
 
@@ -5096,9 +5096,9 @@ Return:
 
 {
 
-\"message\": \"withdraw.account.created\",
+"message": "withdraw.account.created",
 
-\"status\_code\": 0
+"status\_code": 0
 
 }
 
@@ -5117,9 +5117,9 @@ Return:
 
 {
 
-\"message\": \"withdraw.account.deleted\",
+"message": "withdraw.account.deleted",
 
-\"status\_code\": 0
+"status\_code": 0
 
 }
 
@@ -5134,59 +5134,59 @@ Success Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"total\_reward\": 8, //总提成
+"total\_reward": 8, //总提成
 
-\"balance\": 2, //可用余额
+"balance": 2, //可用余额
 
-\"is\_agent\": true, //是否是代理商
+"is\_agent": true, //是否是代理商
 
-\"is\_seller\": true, //是否是销售商
+"is\_seller": true, //是否是销售商
 
-\"is\_partner\": true, //是否是经销商
+"is\_partner": true, //是否是经销商
 
-\"is\_crown\": true, //是否皇冠
+"is\_crown": true, //是否皇冠
 
-\"is\_crown\_ship\_temp\": true,
+"is\_crown\_ship\_temp": true,
 //是否为临时皇冠，临时皇冠不能进入线下门店
 
-\"is\_physical\": true, //是否线下资格
+"is\_physical": true, //是否线下资格
 
-\"is\_copartner\": true, //是否合伙人
+"is\_copartner": true, //是否合伙人
 
-\"partner\_pool\_count\": 9, //合伙人池人数
+"partner\_pool\_count": 9, //合伙人池人数
 
-\"partner\_level\": { //如果不是经销商，那么就为null
+"partner\_level": { //如果不是经销商，那么就为null
 
-\"id\": 1,
+"id": 1,
 
-\"level\": 1, //表示该经销商的级别，1表示一星
+"level": 1, //表示该经销商的级别，1表示一星
 
-\"headcount\_quota\": 3,
+"headcount\_quota": 3,
 
-\"name\": \"一星经销商\"
+"name": "一星经销商"
 
 },
 
-\"next\_partner\_level\": { //如果没有下一级，那么就为null
+"next\_partner\_level": { //如果没有下一级，那么就为null
 
-\"id\": 2,
+"id": 2,
 
-\"level\": 2, //下一级别
+"level": 2, //下一级别
 
-\"headcount\_quota\": 3, //下一星的人数
+"headcount\_quota": 3, //下一星的人数
 
-\"name\": \"二星经销商\"
+"name": "二星经销商"
 
 },
 
 }，
 
-\"msg\":
-\"您现在是临时线下皇冠商，成为永久线下皇冠商需要在4小时内完成2000元的批发任务\"
+"msg":
+"您现在是临时线下皇冠商，成为永久线下皇冠商需要在4小时内完成2000元的批发任务"
 //如果是临时线下皇冠商，则会出现
 
 //此提示
@@ -5204,11 +5204,11 @@ Data:
 
 {
 
-\"withdraw\_type\": \"Wallet\", // optional, wallet为提现到零钱帐户
+"withdraw\_type": "Wallet", // optional, wallet为提现到零钱帐户
 
-\"withdraw\_account\_id\": 1, // optional, 账户ID
+"withdraw\_account\_id": 1, // optional, 账户ID
 
-\"withdraw\_cash\": 100.00 //提现金額
+"withdraw\_cash": 100.00 //提现金額
 
 }
 
@@ -5216,9 +5216,9 @@ Success Return:
 
 {
 
-\"message\": \"apply.success\",
+"message": "apply.success",
 
-\"status\_code\": 1
+"status\_code": 1
 
 }
 
@@ -5226,9 +5226,9 @@ Failure Return:
 
 {
 
-\"message\": \"apply.failure\",
+"message": "apply.failure",
 
-\"status\_code\": 1
+"status\_code": 1
 
 }
 
@@ -5267,35 +5267,35 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[
+"data": \[
 
 {
 
-\"id\": 2,
+"id": 2,
 
-\"apply\_time\": \"2016-06-16 13:23:39\",
+"apply\_time": "2016-06-16 13:23:39",
 
-\"bank\_name\": null,
+"bank\_name": null,
 
-\"account\_number\": \"oXauMwcMqGeV6zdHGL\_1CcmjlQUg\",
+"account\_number": "oXauMwcMqGeV6zdHGL\_1CcmjlQUg",
 
-\"status\": \"APPLYING\",
+"status": "APPLYING",
 
-\"name\": \"Jacky.D.H\",
+"name": "Jacky.D.H",
 
-\"cash\": 100,
+"cash": 100,
 
-\"owner\_id\": 62,
+"owner\_id": 62,
 
-\"complete\_time\": null,
+"complete\_time": null,
 
-\"reject\_time\": null,
+"reject\_time": null,
 
-\"account\_name\": \"Jacky.D.H\",
+"account\_name": "Jacky.D.H",
 
-\"account\_type\": \"WECHAT\"
+"account\_type": "WECHAT"
 
 }
 
@@ -5352,196 +5352,196 @@ resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"order\_item\_rewards\": \[
+"order\_item\_rewards": \[
 
 {
 
-\"reward\": 2,
+"reward": 2,
 
-\"created\_time\": \"2016-06-05 11:11:22\",
+"created\_time": "2016-06-05 11:11:22",
 
-\"level\": 1, //结合type一起使用，表示参与分成时的级别，比如type=SELLER,
+"level": 1, //结合type一起使用，表示参与分成时的级别，比如type=SELLER,
 level=1, 表示作为一级分销商参与分成
 
-\"owner\_id\": 1,
+"owner\_id": 1,
 
-\"order\_number\": \"1234567890\", //订单号
+"order\_number": "1234567890", //订单号
 
-\"order\_profit\": 20, //整个订单项的利润,页面不应显示出来
+"order\_profit": 20, //整个订单项的利润,页面不应显示出来
 
-\"settled\_time\": null,
+"settled\_time": null,
 
-\"type\": \"AGENT\", //分成的角色，AGENT：作为代理商分成
+"type": "AGENT", //分成的角色，AGENT：作为代理商分成
 
-\"percent\": 10, //分成比例，前端ignore，页面不应显示出来
+"percent": 10, //分成比例，前端ignore，页面不应显示出来
 
-\"withdrawn\_time\": null,
+"withdrawn\_time": null,
 
-\"product\_name\": \"A\", //产品名称
+"product\_name": "A", //产品名称
 
-\"product\_price\": 20.00, //产品价格
+"product\_price": 20.00, //产品价格
 
-\"product\_quantity\": 1, //产品数量
+"product\_quantity": 1, //产品数量
 
-\"order\_item\_id\": 1,
+"order\_item\_id": 1,
 
-\"cover\": \"/assets/img/find\_user.png\", //产品图片
+"cover": "/assets/img/find\_user.png", //产品图片
 
-\"name\": \"Administrator\",
+"name": "Administrator",
 
-\"id\": 4,
+"id": 4,
 
-\"state\": \"SETTLED\", //分成状态
+"state": "SETTLED", //分成状态
 
-\"order\_id\": 1,
+"order\_id": 1,
 
-\"payment\_type\": \"WECHAT\",
+"payment\_type": "WECHAT",
 
-\"point\_exchange\_rate\": 100
-
-},
-
-{
-
-\"reward\": 2,
-
-\"created\_time\": \"2016-06-05 11:11:22\",
-
-\"level\": 3,
-
-\"owner\_id\": 1,
-
-\"order\_number\": \"1234567890\",
-
-\"order\_profit\": 20,
-
-\"settled\_time\": null,
-
-\"type\": \"PARTNER\",
-
-\"percent\": null,
-
-\"withdrawn\_time\": null,
-
-\"product\_name\": \"A\",
-
-\"order\_item\_id\": 1,
-
-\"cover\": \"/assets/img/find\_user.png\",
-
-\"name\": \"Administrator\",
-
-\"id\": 3,
-
-\"state\": \"PENDING\_SETTLEMENT\",
-
-\"order\_id\": 1,
-
-\"payment\_type\": \"WECHAT\",
-
-\"point\_exchange\_rate\": 100
+"point\_exchange\_rate": 100
 
 },
 
 {
 
-\"reward\": 2,
+"reward": 2,
 
-\"created\_time\": \"2016-06-05 11:11:22\",
+"created\_time": "2016-06-05 11:11:22",
 
-\"level\": 1,
+"level": 3,
 
-\"owner\_id\": 1,
+"owner\_id": 1,
 
-\"order\_number\": \"1234567890\",
+"order\_number": "1234567890",
 
-\"order\_profit\": 20,
+"order\_profit": 20,
 
-\"settled\_time\": null,
+"settled\_time": null,
 
-\"type\": \"SELLER\",
+"type": "PARTNER",
 
-\"percent\": 10,
+"percent": null,
 
-\"withdrawn\_time\": null,
+"withdrawn\_time": null,
 
-\"product\_name\": \"A\",
+"product\_name": "A",
 
-\"order\_item\_id\": 1,
+"order\_item\_id": 1,
 
-\"cover\": \"/assets/img/find\_user.png\",
+"cover": "/assets/img/find\_user.png",
 
-\"name\": \"Administrator\",
+"name": "Administrator",
 
-\"id\": 2,
+"id": 3,
 
-\"state\": \"PENDING\_SETTLEMENT\",
+"state": "PENDING\_SETTLEMENT",
 
-\"order\_id\": 1,
+"order\_id": 1,
 
-\"payment\_type\": \"WECHAT\",
+"payment\_type": "WECHAT",
 
-\"point\_exchange\_rate\": 100
+"point\_exchange\_rate": 100
 
 },
 
 {
 
-\"reward\": 2,
+"reward": 2,
 
-\"created\_time\": \"2016-06-05 11:11:22\",
+"created\_time": "2016-06-05 11:11:22",
 
-\"level\": null,
+"level": 1,
 
-\"owner\_id\": 1,
+"owner\_id": 1,
 
-\"order\_number\": \"1234567890\",
+"order\_number": "1234567890",
 
-\"order\_profit\": 20,
+"order\_profit": 20,
 
-\"settled\_time\": null,
+"settled\_time": null,
 
-\"type\": \"SELF\",
+"type": "SELLER",
 
-\"percent\": 10,
+"percent": 10,
 
-\"withdrawn\_time\": null,
+"withdrawn\_time": null,
 
-\"product\_name\": \"A\",
+"product\_name": "A",
 
-\"order\_item\_id\": 1,
+"order\_item\_id": 1,
 
-\"cover\": \"/assets/img/find\_user.png\",
+"cover": "/assets/img/find\_user.png",
 
-\"name\": \"Administrator\",
+"name": "Administrator",
 
-\"id\": 1,
+"id": 2,
 
-\"state\": \"PENDING\_SETTLEMENT\",
+"state": "PENDING\_SETTLEMENT",
 
-\"order\_id\": 1,
+"order\_id": 1,
 
-\"payment\_type\": \"WECHAT\",
+"payment\_type": "WECHAT",
 
-\"point\_exchange\_rate\": 100
+"point\_exchange\_rate": 100
+
+},
+
+{
+
+"reward": 2,
+
+"created\_time": "2016-06-05 11:11:22",
+
+"level": null,
+
+"owner\_id": 1,
+
+"order\_number": "1234567890",
+
+"order\_profit": 20,
+
+"settled\_time": null,
+
+"type": "SELF",
+
+"percent": 10,
+
+"withdrawn\_time": null,
+
+"product\_name": "A",
+
+"order\_item\_id": 1,
+
+"cover": "/assets/img/find\_user.png",
+
+"name": "Administrator",
+
+"id": 1,
+
+"state": "PENDING\_SETTLEMENT",
+
+"order\_id": 1,
+
+"payment\_type": "WECHAT",
+
+"point\_exchange\_rate": 100
 
 }
 
 \],
 
-\"pending\_reward\": 6,
+"pending\_reward": 6,
 
-\"settled\_reward\": 2,
+"settled\_reward": 2,
 
-\"total\_order\_count\": 2,
+"total\_order\_count": 2,
 
-\"settled\_order\_count\": 1,
+"settled\_order\_count": 1,
 
-\"pending\_order\_count\": 1
+"pending\_order\_count": 1
 
 }
 
@@ -5566,9 +5566,9 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": 30.00
+"data": 30.00
 
 }
 
@@ -5585,15 +5585,15 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"result\": true,
+"result": true,
 
-\"levels\": \[2, 1, 0\], //各级的分销商总数
+"levels": \[2, 1, 0\], //各级的分销商总数
 
-\"max\_level\": 3 //三级分销
+"max\_level": 3 //三级分销
 
 }
 
@@ -5612,206 +5612,206 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"id\": 1,
+"id": 1,
 
-\"user\_name\": \"Administrator\",
+"user\_name": "Administrator",
 
-\"partner\_id\": null, //合伙人ID
+"partner\_id": null, //合伙人ID
 
-\"level\": 1,
+"level": 1,
 
-\"partner\_ship\": 1, //是否是合伙人
+"partner\_ship": 1, //是否是合伙人
 
-\"partner\_pool\_count\": 9, //合伙人池人数
+"partner\_pool\_count": 9, //合伙人池人数
 
-\"seller\_ship\_time\": \"2016-04-28 13:08:35\", //成为分销商时间
+"seller\_ship\_time": "2016-04-28 13:08:35", //成为分销商时间
 
-\"partner\_ship\_time\": \"2016-04-28 13:08:35\", //成为合伙人时间
+"partner\_ship\_time": "2016-04-28 13:08:35", //成为合伙人时间
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"seller\_ship\": 1, //是否是分销商
+"seller\_ship": 1, //是否是分销商
 
-\"parent\_id\": null,
+"parent\_id": null,
 
-\"followed\": 1, //是否关注公众号
+"followed": 1, //是否关注公众号
 
-\"follow\_time\": \"2016-05-06 12:00:00\", //关注时间
+"follow\_time": "2016-05-06 12:00:00", //关注时间
 
-\"unfollowed\_children\_count\": 0, //未关注的下级总数
+"unfollowed\_children\_count": 0, //未关注的下级总数
 
-\"followed\_children\_count\": 0, //已关注的下级总数
+"followed\_children\_count": 0, //已关注的下级总数
 
-\"agent\_ship\": 1, //是否是代理商
+"agent\_ship": 1, //是否是代理商
 
-\"partner\_level\": { //如果不是经销商，那么就为null
+"partner\_level": { //如果不是经销商，那么就为null
 
-\"id\": 1,
+"id": 1,
 
-\"level\": 1, //表示该经销商的级别，1表示一星
+"level": 1, //表示该经销商的级别，1表示一星
 
-\"headcount\_quota\": 3,
+"headcount\_quota": 3,
 
-\"name\": \"一星经销商\"
-
-},
-
-\"next\_partner\_level\": { //如果没有下一级，那么就为null
-
-\"id\": 2,
-
-\"level\": 2, //下一级别
-
-\"headcount\_quota\": 3, //下一星的人数
-
-\"name\": \"二星经销商\"
+"name": "一星经销商"
 
 },
 
-\"children\": \[{
+"next\_partner\_level": { //如果没有下一级，那么就为null
 
-\"seller\_ship\_time\": null,
+"id": 2,
 
-\"level\": 2, //没用，忽略
+"level": 2, //下一级别
 
-\"partner\_ship\_time\": null,
+"headcount\_quota": 3, //下一星的人数
 
-\"user\_name\": \"abc\", //用户名
+"name": "二星经销商"
 
-\"avatar\": null, //头像URL
+},
 
-\"sa\_level\": 1,
+"children": \[{
+
+"seller\_ship\_time": null,
+
+"level": 2, //没用，忽略
+
+"partner\_ship\_time": null,
+
+"user\_name": "abc", //用户名
+
+"avatar": null, //头像URL
+
+"sa\_level": 1,
 //属于该分销商的第几级分销商.只有type=all时才有这个属性。
 
-\"partner\_id\": null,
+"partner\_id": null,
 
-\"user\_id\": 3,
+"user\_id": 3,
 
-\"partner\_ship\": 0,
+"partner\_ship": 0,
 
-\"parent\_id\": 1,
+"parent\_id": 1,
 
-\"id\": 3,
+"id": 3,
 
-\"seller\_id\": 3,
+"seller\_id": 3,
 
-\"seller\_ship\": 0,
+"seller\_ship": 0,
 
-\"followed\": 1, //是否关注公众号
+"followed": 1, //是否关注公众号
 
-\"follow\_time\": \"2016-05-06 12:00:00\", //关注时间
+"follow\_time": "2016-05-06 12:00:00", //关注时间
 
-\"agent\_ship\": 1, //是否是代理商
+"agent\_ship": 1, //是否是代理商
 
-\"register\_date\": \"2018-10-11\", //注册时间
+"register\_date": "2018-10-11", //注册时间
 
-\"grade\": \"1\" // VIP系统的会员级别ID
-
-}, {
-
-\"seller\_ship\_time\": null,
-
-\"level\": 2,
-
-\"partner\_ship\_time\": null,
-
-\"user\_name\": \"xyz\",
-
-\"avatar\": null,
-
-\"sa\_level\": 1,
-
-\"partner\_id\": null,
-
-\"user\_id\": 9,
-
-\"partner\_ship\": 0,
-
-\"parent\_id\": 1,
-
-\"id\": 9,
-
-\"seller\_id\": 9,
-
-\"seller\_ship\": 0,
-
-\"followed\": 1, //是否关注公众号
-
-\"follow\_time\": \"2016-05-06 12:00:00\", //关注时间
-
-\"agent\_ship\": 0 //是否是代理商
+"grade": "1" // VIP系统的会员级别ID
 
 }, {
 
-\"seller\_ship\_time\": null,
+"seller\_ship\_time": null,
 
-\"level\": 3,
+"level": 2,
 
-\"partner\_ship\_time\": null,
+"partner\_ship\_time": null,
 
-\"user\_name\": \"a\",
+"user\_name": "xyz",
 
-\"avatar\": null,
+"avatar": null,
 
-\"sa\_level\": 2,
+"sa\_level": 1,
 
-\"partner\_id\": null,
+"partner\_id": null,
 
-\"user\_id\": 4,
+"user\_id": 9,
 
-\"partner\_ship\": 0,
+"partner\_ship": 0,
 
-\"parent\_id\": 3,
+"parent\_id": 1,
 
-\"id\": 4,
+"id": 9,
 
-\"seller\_id\": 4,
+"seller\_id": 9,
 
-\"seller\_ship\": 0,
+"seller\_ship": 0,
 
-\"followed\": 1, //是否关注公众号
+"followed": 1, //是否关注公众号
 
-\"follow\_time\": \"2016-05-06 12:00:00\", //关注时间
+"follow\_time": "2016-05-06 12:00:00", //关注时间
 
-\"agent\_ship\": 0 //是否是代理商
+"agent\_ship": 0 //是否是代理商
 
 }, {
 
-\"seller\_ship\_time\": null,
+"seller\_ship\_time": null,
 
-\"level\": 3,
+"level": 3,
 
-\"partner\_ship\_time\": null,
+"partner\_ship\_time": null,
 
-\"user\_name\": \"b\",
+"user\_name": "a",
 
-\"avatar\": null,
+"avatar": null,
 
-\"sa\_level\": 2,
+"sa\_level": 2,
 
-\"partner\_id\": null,
+"partner\_id": null,
 
-\"user\_id\": 5,
+"user\_id": 4,
 
-\"partner\_ship\": 0,
+"partner\_ship": 0,
 
-\"parent\_id\": 3,
+"parent\_id": 3,
 
-\"id\": 5,
+"id": 4,
 
-\"seller\_id\": 5,
+"seller\_id": 4,
 
-\"seller\_ship\": 0,
+"seller\_ship": 0,
 
-\"followed\": 1, //是否关注公众号
+"followed": 1, //是否关注公众号
 
-\"follow\_time\": \"2016-05-06 12:00:00\", //关注时间
+"follow\_time": "2016-05-06 12:00:00", //关注时间
 
-\"agent\_ship\": 1 //是否是代理商
+"agent\_ship": 0 //是否是代理商
+
+}, {
+
+"seller\_ship\_time": null,
+
+"level": 3,
+
+"partner\_ship\_time": null,
+
+"user\_name": "b",
+
+"avatar": null,
+
+"sa\_level": 2,
+
+"partner\_id": null,
+
+"user\_id": 5,
+
+"partner\_ship": 0,
+
+"parent\_id": 3,
+
+"id": 5,
+
+"seller\_id": 5,
+
+"seller\_ship": 0,
+
+"followed": 1, //是否关注公众号
+
+"follow\_time": "2016-05-06 12:00:00", //关注时间
+
+"agent\_ship": 1 //是否是代理商
 
 }\]
 
@@ -5832,87 +5832,87 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"id\": 2,
+"id": 2,
 
-\"user\_name\": \"a\",
+"user\_name": "a",
 
-\"partner\_id\": 1,
+"partner\_id": 1,
 
-\"level\": 2,
+"level": 2,
 
-\"partner\_ship\": 0,
+"partner\_ship": 0,
 
-\"seller\_ship\_time\": null,
+"seller\_ship\_time": null,
 
-\"partner\_ship\_time\": null,
+"partner\_ship\_time": null,
 
-\"followed\": 1, //是否关注公众号
+"followed": 1, //是否关注公众号
 
-\"follow\_time\": \"2016-05-06 12:00:00\", //关注时间
+"follow\_time": "2016-05-06 12:00:00", //关注时间
 
-\"children\": \[{
+"children": \[{
 
-\"id\": 4,
+"id": 4,
 
-\"user\_name\": \"a1\",
+"user\_name": "a1",
 
-\"partner\_id\": 1,
+"partner\_id": 1,
 
-\"level\": 3,
+"level": 3,
 
-\"partner\_ship\": 0,
+"partner\_ship": 0,
 
-\"seller\_ship\_time\": null,
+"seller\_ship\_time": null,
 
-\"partner\_ship\_time\": null,
+"partner\_ship\_time": null,
 
-\"user\_id\": 4,
+"user\_id": 4,
 
-\"seller\_ship\": 0,
+"seller\_ship": 0,
 
-\"parent\_id\": 2,
+"parent\_id": 2,
 
-\"followed\": 1, //是否关注公众号
+"followed": 1, //是否关注公众号
 
-\"follow\_time\": \"2016-05-06 12:00:00\" //关注时间
+"follow\_time": "2016-05-06 12:00:00" //关注时间
 
 }, {
 
-\"id\": 5,
+"id": 5,
 
-\"user\_name\": \"a2\",
+"user\_name": "a2",
 
-\"partner\_id\": 1,
+"partner\_id": 1,
 
-\"level\": 3,
+"level": 3,
 
-\"partner\_ship\": 0,
+"partner\_ship": 0,
 
-\"seller\_ship\_time\": null,
+"seller\_ship\_time": null,
 
-\"partner\_ship\_time\": null,
+"partner\_ship\_time": null,
 
-\"user\_id\": 5,
+"user\_id": 5,
 
-\"seller\_ship\": 0,
+"seller\_ship": 0,
 
-\"parent\_id\": 2,
+"parent\_id": 2,
 
-\"followed\": 1, //是否关注公众号
+"followed": 1, //是否关注公众号
 
-\"follow\_time\": \"2016-05-06 12:00:00\"//关注时间
+"follow\_time": "2016-05-06 12:00:00"//关注时间
 
 }\],
 
-\"user\_id\": 2,
+"user\_id": 2,
 
-\"seller\_ship\": 0,
+"seller\_ship": 0,
 
-\"parent\_id\": 1
+"parent\_id": 1
 
 }
 
@@ -5931,11 +5931,11 @@ Data:
 
 {
 
-\"real\_name\": \"Huang\",
+"real\_name": "Huang",
 
-\"phone\": \"1308888899\",
+"phone": "1308888899",
 
-\"type\": \"CROWN\" //申请类型，默认不填则为申请 分销商 资格。
+"type": "CROWN" //申请类型，默认不填则为申请 分销商 资格。
 CROWN为申请线下皇冠商资格。
 
 }
@@ -5944,17 +5944,17 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"seller\_ship\": 1
-
-}
+"seller\_ship": 1
 
 }
 
-77. **以扫码方式申请成为某皇冠商的\"线下经销商\"或\"线下皇冠商\"**
+}
+
+77. **以扫码方式申请成为某皇冠商的"线下经销商"或"线下皇冠商"**
 
 POST <http://112.74.26.228:10080/rest/physical_seller>
 
@@ -5975,20 +5975,20 @@ Req:
 
 {
 
-\"uid\": \"U00001\", //required,推荐人的UID
+"uid": "U00001", //required,推荐人的UID
 
-\"real\_name\": \"黄\", //required,申请人真实姓名，用于更新个人信息
+"real\_name": "黄", //required,申请人真实姓名，用于更新个人信息
 
-\"phone\": \"13800000000\", //required,申请人手机，用于更新个人信息
+"phone": "13800000000", //required,申请人手机，用于更新个人信息
 
-\"type\": \"CROWN\",
+"type": "CROWN",
 //optional，省略表示申请成为线下经销商，CROWN表示申请成为线下皇冠商
 
-\"province\": \"广东\", //required
+"province": "广东", //required
 
-\"city\": \"广州\", //required
+"city": "广州", //required
 
-\"district\": \"荔湾区\" //required
+"district": "荔湾区" //required
 
 }
 
@@ -5996,9 +5996,9 @@ Success Resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"message\": \"apply.success\"
+"message": "apply.success"
 
 }
 
@@ -6006,33 +6006,33 @@ Error Return:
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"message\": \"user.is.not.crownship\"
-
-}
-
-{
-
-\"status\_code\": 1,
-
-\"message\": \"invalid.user\"
+"message": "user.is.not.crownship"
 
 }
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"message\": \"invalid.phone\"
+"message": "invalid.user"
 
 }
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"message\": \"cannot.apply.yourself\"
+"message": "invalid.phone"
+
+}
+
+{
+
+"status\_code": 1,
+
+"message": "cannot.apply.yourself"
 
 }
 
@@ -6047,139 +6047,139 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"parent\_seller\_id\": null,
+"parent\_seller\_id": null,
 
-\"parent\": null,
+"parent": null,
 
-\"city\": null,
+"city": null,
 
-\"children\_count\": 2, //physical\_seller\_children\_count,
+"children\_count": 2, //physical\_seller\_children\_count,
 physical\_seller\_children 只有具
 
 //有皇冠商资格时才返回。
 
-\"user\_name\": \"Administrator\",
+"user\_name": "Administrator",
 
-\"total\_settled\_amount\": 0,
+"total\_settled\_amount": 0,
 
-\"avatar\": null,
+"avatar": null,
 
-\"uid\": \"U00000001\",
+"uid": "U00000001",
 
-\"province\": null,
+"province": null,
 
-\"total\_amount\": 0,
+"total\_amount": 0,
 
-\"children\": \[\], //星级经销商下线列表
+"children": \[\], //星级经销商下线列表
 
-\"crown\_children\": \[ //皇冠商下线列表（包含下级和下下级皇冠商）
+"crown\_children": \[ //皇冠商下线列表（包含下级和下下级皇冠商）
 
 {
 
-\"parent\_seller\_id\": 1,
+"parent\_seller\_id": 1,
 
-\"city\": null,
+"city": null,
 
-\"level\": 1, //1.下级皇冠商 2.下下级皇冠商
+"level": 1, //1.下级皇冠商 2.下下级皇冠商
 
-\"user\_name\": \"user123\",
+"user\_name": "user123",
 
-\"total\_settled\_amount\": 0,
+"total\_settled\_amount": 0,
 
-\"crown\_ship\": 1,
+"crown\_ship": 1,
 
-\"real\_name\": \"user123\",
+"real\_name": "user123",
 
-\"avatar\": null,
+"avatar": null,
 
-\"followed\": 1,
+"followed": 1,
 
-\"uid\": \"U011707251055190003\",
+"uid": "U011707251055190003",
 
-\"follow\_time\": null,
+"follow\_time": null,
 
-\"province\": null,
+"province": null,
 
-\"total\_amount\": 0,
+"total\_amount": 0,
 
-\"phone\": null,
+"phone": null,
 
-\"district\": null,
+"district": null,
 
-\"latest\_bonus\_date\": null,
+"latest\_bonus\_date": null,
 
-\"id\": 182,
+"id": 182,
 
-\"created\_date\": \"2017-09-19 10:59:06\",
+"created\_date": "2017-09-19 10:59:06",
 
-\"seller\_id\": 11014
+"seller\_id": 11014
 
 },
 
 {
 
-\"parent\_seller\_id\": 11014,
+"parent\_seller\_id": 11014,
 
-\"city\": null,
+"city": null,
 
-\"level\": 2,
+"level": 2,
 
-\"user\_name\": \"关应康\",
+"user\_name": "关应康",
 
-\"total\_settled\_amount\": 0,
+"total\_settled\_amount": 0,
 
-\"crown\_ship\": 1,
+"crown\_ship": 1,
 
-\"real\_name\": null,
+"real\_name": null,
 
-\"avatar\":
-\"http://wx.qlogo.cn/mmopen/vi\_32/AWrNt30IeSoibiaaicZafBbkw39icOzMibCfDSMhQH9uRYxRLQMzUp4hJBHtvYMZn9FwXMkpibM47C0OW94nJU0lyOjw/0\",
+"avatar":
+"http://wx.qlogo.cn/mmopen/vi\_32/AWrNt30IeSoibiaaicZafBbkw39icOzMibCfDSMhQH9uRYxRLQMzUp4hJBHtvYMZn9FwXMkpibM47C0OW94nJU0lyOjw/0",
 
-\"followed\": 1,
+"followed": 1,
 
-\"uid\": \"U011707271136230002\",
+"uid": "U011707271136230002",
 
-\"follow\_time\": null,
+"follow\_time": null,
 
-\"province\": null,
+"province": null,
 
-\"total\_amount\": 0,
+"total\_amount": 0,
 
-\"phone\": null,
+"phone": null,
 
-\"district\": null,
+"district": null,
 
-\"latest\_bonus\_date\": null,
+"latest\_bonus\_date": null,
 
-\"id\": 181,
+"id": 181,
 
-\"created\_date\": \"2017-09-19 10:58:36\",
+"created\_date": "2017-09-19 10:58:36",
 
-\"seller\_id\": 11019
+"seller\_id": 11019
 
 }
 
 \],
 
-\"district\": null,
+"district": null,
 
-\"crown\_children\_count\": 1,
+"crown\_children\_count": 1,
 //只有具有皇冠商资格时才返回。下级皇冠商数量
 
-\"crown\_children\_count\_lv2\": 1, // 只有具有皇冠商资格时才返回。
+"crown\_children\_count\_lv2": 1, // 只有具有皇冠商资格时才返回。
 下下级皇冠商数量
 
-\"latest\_bonus\_date\": null,
+"latest\_bonus\_date": null,
 
-\"id\": 179,
+"id": 179,
 
-\"created\_date\": \"2017-08-09 12:03:07\",
+"created\_date": "2017-08-09 12:03:07",
 
-\"seller\_id\": 1
+"seller\_id": 1
 
 }
 
@@ -6201,108 +6201,108 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[
+"data": \[
 
 {
 
-\"transferred\": 0, //是否已转积分系统
+"transferred": 0, //是否已转积分系统
 
-\"statistic\_month\": \"2017-09-01\", //统计月份
+"statistic\_month": "2017-09-01", //统计月份
 
-\"monthly\_amount\": 5600, //本月进货
+"monthly\_amount": 5600, //本月进货
 
-\"total\_settled\_amount\": 848, //累计总提成. 当有month参数时才返回该项
+"total\_settled\_amount": 848, //累计总提成. 当有month参数时才返回该项
 
-\"monthly\_settled\_amount\": 848, //提成金额
+"monthly\_settled\_amount": 848, //提成金额
 
-\"monthly\_expected\_settled\_amount\": 0, //上级期望提成（前端用不到）
+"monthly\_expected\_settled\_amount": 0, //上级期望提成（前端用不到）
 
-\"monthly\_expected\_settled\_amount\_lv2\": 0,
+"monthly\_expected\_settled\_amount\_lv2": 0,
 //上上级期望提成（前端用不到）
 
-\"my\_recommended\_sellers\": \[ //我的推荐线下经销商.
+"my\_recommended\_sellers": \[ //我的推荐线下经销商.
 当有month参数时才返回该项（包含两级，下级排前面，下下级排
 
 //后面）
 
 {
 
-\"transferred\": 0,
+"transferred": 0,
 
-\"level\": 1, //1.下级 2.下下级
+"level": 1, //1.下级 2.下下级
 
-\"user\_name\": \"user123\",
+"user\_name": "user123",
 
-\"statistic\_month\": \"2017-09-01\",
+"statistic\_month": "2017-09-01",
 
-\"monthly\_amount\": 3200,
+"monthly\_amount": 3200,
 
-\"avatar\": null,
+"avatar": null,
 
-\"monthly\_settled\_amount\": 960,
+"monthly\_settled\_amount": 960,
 
-\"monthly\_expected\_settled\_amount\_lv2\": 0,
+"monthly\_expected\_settled\_amount\_lv2": 0,
 
-\"uid\": \"U011707251055190003\",
+"uid": "U011707251055190003",
 
-\"transferred\_amount\": 0,
+"transferred\_amount": 0,
 
-\"monthly\_expected\_settled\_amount\": 728,
+"monthly\_expected\_settled\_amount": 728,
 
-\"settlement\_proportion\": 100,
+"settlement\_proportion": 100,
 
-\"id\": 192,
+"id": 192,
 
-\"seller\_id\": 11014
+"seller\_id": 11014
 
 },
 
 {
 
-\"transferred\": 0,
+"transferred": 0,
 
-\"level\": 2,
+"level": 2,
 
-\"user\_name\": \"关应康\",
+"user\_name": "关应康",
 
-\"statistic\_month\": \"2017-09-01\",
+"statistic\_month": "2017-09-01",
 
-\"monthly\_amount\": 6000,
+"monthly\_amount": 6000,
 
-\"avatar\":
-\"http://wx.qlogo.cn/mmopen/vi\_32/AWrNt30IeSoibiaaicZafBbkw39icOzMibCfDSMhQH9uRYxRLQMzUp4hJBHtvYMZn9FwXMkpibM47C0OW94nJU0lyOjw/0\",
+"avatar":
+"http://wx.qlogo.cn/mmopen/vi\_32/AWrNt30IeSoibiaaicZafBbkw39icOzMibCfDSMhQH9uRYxRLQMzUp4hJBHtvYMZn9FwXMkpibM47C0OW94nJU0lyOjw/0",
 
-\"monthly\_settled\_amount\": 0,
+"monthly\_settled\_amount": 0,
 
-\"monthly\_expected\_settled\_amount\_lv2\": 120,
+"monthly\_expected\_settled\_amount\_lv2": 120,
 
-\"uid\": \"U011707271136230002\",
+"uid": "U011707271136230002",
 
-\"transferred\_amount\": 0,
+"transferred\_amount": 0,
 
-\"monthly\_expected\_settled\_amount\": 960,
+"monthly\_expected\_settled\_amount": 960,
 
-\"settlement\_proportion\": 100,
+"settlement\_proportion": 100,
 
-\"id\": 191,
+"id": 191,
 
-\"seller\_id\": 11019
+"seller\_id": 11019
 
 }
 
 \],
 
-\"transferred\_amount\": 0,
+"transferred\_amount": 0,
 
-\"total\_amount\": 5600,
+"total\_amount": 5600,
 
-\"settlement\_proportion\": 100,
+"settlement\_proportion": 100,
 
-\"id\": 193,
+"id": 193,
 
-\"seller\_id\": 1
+"seller\_id": 1
 
 }
 
@@ -6331,257 +6331,257 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[
+"data": \[
 
 {
 
-\"amount\": 2600, //进货额
+"amount": 2600, //进货额
 
-\"transferred\": 0, //是否已转积分系统
+"transferred": 0, //是否已转积分系统
 
-\"pcd\_name\": \"广东\", //地区名称
+"pcd\_name": "广东", //地区名称
 
-\"bonus\": { //年终奖金
+"bonus": { //年终奖金
 
-\"settled\_amount\": 11969,
+"settled\_amount": 11969,
 
-\"amount\": 23938,
+"amount": 23938,
 
-\"transferred\": 0,
+"transferred": 0,
 
-\"transferred\_amount\": 0,
+"transferred\_amount": 0,
 
-\"statistic\_month\": \"2017-07-25\",
+"statistic\_month": "2017-07-25",
 
-\"pcd\_id\": 2147,
+"pcd\_id": 2147,
 
-\"year\_statistic\_amount\": 0, //奖金项没有"年累计订单额"
+"year\_statistic\_amount": 0, //奖金项没有"年累计订单额"
 
-\"settlement\_proportion\": 50,
+"settlement\_proportion": 50,
 
-\"id\": 19,
+"id": 19,
 
-\"end\_month\": \"2018-07-25\",
+"end\_month": "2018-07-25",
 //代表从statistic\_month到end\_month的年终奖金
 
-\"seller\_id\": 11014
+"seller\_id": 11014
 
 },
 
-\"statistic\_month\": \"2017-10-01\", //开始月份
+"statistic\_month": "2017-10-01", //开始月份
 
-\"pcd\_id\": 2147,
+"pcd\_id": 2147,
 
-\"year\_statistic\_amount\": 2600, //年累计订单额
+"year\_statistic\_amount": 2600, //年累计订单额
 
-\"settled\_amount\": 7.8, //提成额
+"settled\_amount": 7.8, //提成额
 
-\"transferred\_amount\": 0, //已转积分
+"transferred\_amount": 0, //已转积分
 
-\"agentPurchaseJournals\": \[ //根据产品，提成比例来汇总的订单明细
+"agentPurchaseJournals": \[ //根据产品，提成比例来汇总的订单明细
 
 {
 
-\"sum\_settled\_amount\": 6, //本月提成
+"sum\_settled\_amount": 6, //本月提成
 
-\"sum\_final\_price\": 2000, //进货金额
+"sum\_final\_price": 2000, //进货金额
 
-\"product\_id\": 149, //产品id
+"product\_id": 149, //产品id
 
-\"agent\_proportion\_percentage\": \"0.30\", //提成比例（0.30表示0.30%）
+"agent\_proportion\_percentage": "0.30", //提成比例（0.30表示0.30%）
 
-\"product\_name\": \"碧丽雅超效洁净手洗专用洗衣液1.25L\*10瓶/箱\"
+"product\_name": "碧丽雅超效洁净手洗专用洗衣液1.25L\*10瓶/箱"
 //产品名称
 
 },
 
 {
 
-\"sum\_settled\_amount\": 12,
+"sum\_settled\_amount": 12,
 
-\"sum\_final\_price\": 4000,
+"sum\_final\_price": 4000,
 
-\"product\_id\": 673,
+"product\_id": 673,
 
-\"agent\_proportion\_percentage\": \"0.30\",
+"agent\_proportion\_percentage": "0.30",
 
-\"product\_name\": \"十美优品净澈水润型沐浴露600ml\*4瓶/箱\"
+"product\_name": "十美优品净澈水润型沐浴露600ml\*4瓶/箱"
 
 },
 
 {
 
-\"sum\_settled\_amount\": 1.3,
+"sum\_settled\_amount": 1.3,
 
-\"sum\_final\_price\": 432,
+"sum\_final\_price": 432,
 
-\"product\_id\": 675,
+"product\_id": 675,
 
-\"agent\_proportion\_percentage\": \"0.30\",
+"agent\_proportion\_percentage": "0.30",
 
-\"product\_name\": \"十美优品滋养修护型护发素600ml\*4瓶/箱\"
+"product\_name": "十美优品滋养修护型护发素600ml\*4瓶/箱"
 
 }
 
 \],
 
-\"settlement\_proportion\": 0, //提成比例
+"settlement\_proportion": 0, //提成比例
 
-\"id\": 39,
+"id": 39,
 
-\"end\_month\": null, //结束月份
+"end\_month": null, //结束月份
 
-\"seller\_id\": 11014
-
-},
-
-{
-
-\"amount\": 2600,
-
-\"transferred\": 0,
-
-\"pcd\_name\": \"广东-广州\",
-
-\"bonus\": {
-
-\"settled\_amount\": 212.16,
-
-\"amount\": 10608,
-
-\"transferred\": 0,
-
-\"transferred\_amount\": 0,
-
-\"statistic\_month\": \"2017-07-25\",
-
-\"pcd\_id\": 2148,
-
-\"year\_statistic\_amount\": 0,
-
-\"settlement\_proportion\": 2,
-
-\"id\": 22,
-
-\"end\_month\": \"2018-07-25\",
-
-\"seller\_id\": 11014
-
-},
-
-\"statistic\_month\": \"2017-10-01\",
-
-\"pcd\_id\": 2148,
-
-\"year\_statistic\_amount\": 2600,
-
-\"settled\_amount\": 7.8,
-
-\"transferred\_amount\": 0,
-
-\"agentPurchaseJournals\": \[
-
-{
-
-\"order\_user\_id\": 11019,
-
-\"agent\_proportion\": 3,
-
-\"quantity\": 20,
-
-\"pcd\_name\": \"广州\",
-
-\"pcd\_id\": 2148,
-
-\"product\_specification\_name\": null,
-
-\"product\_name\": \"十美优品净澈水润型沐浴露600ml\*4瓶/箱\",
-
-\"order\_item\_id\": 5529,
-
-\"settled\_amount\": 4.8,
-
-\"order\_user\_name\": \"关应康\",
-
-\"final\_price\": 1600,
-
-\"price\": 80,
-
-\"product\_id\": 673,
-
-\"percentage\": 10,
-
-\"marketing\_name\": \"十美优品净澈水润型沐浴露600ml\*4瓶/箱\",
-
-\"marketing\_id\": 14,
-
-\"id\": 7,
-
-\"create\_date\": \"2017-10-09 11:21:34\",
-
-\"seller\_id\": 11014,
-
-\"product\_cover\":
-\"http://images.10mup.com/20170708154457918-gkpUE7r4.jpg\"
+"seller\_id": 11014
 
 },
 
 {
 
-\"order\_user\_id\": 11019,
+"amount": 2600,
 
-\"agent\_proportion\": 3,
+"transferred": 0,
 
-\"quantity\": 10,
+"pcd\_name": "广东-广州",
 
-\"pcd\_name\": \"广州\",
+"bonus": {
 
-\"pcd\_id\": 2148,
+"settled\_amount": 212.16,
 
-\"product\_specification\_name\": null,
+"amount": 10608,
 
-\"product\_name\": \"碧丽雅超效洁净手洗专用洗衣液1.25L\*10瓶/箱\",
+"transferred": 0,
 
-\"order\_item\_id\": 5530,
+"transferred\_amount": 0,
 
-\"settled\_amount\": 3,
+"statistic\_month": "2017-07-25",
 
-\"order\_user\_name\": \"关应康\",
+"pcd\_id": 2148,
 
-\"final\_price\": 1000,
+"year\_statistic\_amount": 0,
 
-\"price\": 100,
+"settlement\_proportion": 2,
 
-\"product\_id\": 149,
+"id": 22,
 
-\"percentage\": 10,
+"end\_month": "2018-07-25",
 
-\"marketing\_name\": \"碧丽雅超效洁净手洗专用洗衣液1.25L\*10瓶/箱\",
+"seller\_id": 11014
 
-\"marketing\_id\": 11,
+},
 
-\"id\": 8,
+"statistic\_month": "2017-10-01",
 
-\"create\_date\": \"2017-10-09 11:21:34\",
+"pcd\_id": 2148,
 
-\"seller\_id\": 11014,
+"year\_statistic\_amount": 2600,
 
-\"product\_cover\":
-\"http://images.10mup.com/20160914142106802-oFWNcqv1.jpg\"
+"settled\_amount": 7.8,
+
+"transferred\_amount": 0,
+
+"agentPurchaseJournals": \[
+
+{
+
+"order\_user\_id": 11019,
+
+"agent\_proportion": 3,
+
+"quantity": 20,
+
+"pcd\_name": "广州",
+
+"pcd\_id": 2148,
+
+"product\_specification\_name": null,
+
+"product\_name": "十美优品净澈水润型沐浴露600ml\*4瓶/箱",
+
+"order\_item\_id": 5529,
+
+"settled\_amount": 4.8,
+
+"order\_user\_name": "关应康",
+
+"final\_price": 1600,
+
+"price": 80,
+
+"product\_id": 673,
+
+"percentage": 10,
+
+"marketing\_name": "十美优品净澈水润型沐浴露600ml\*4瓶/箱",
+
+"marketing\_id": 14,
+
+"id": 7,
+
+"create\_date": "2017-10-09 11:21:34",
+
+"seller\_id": 11014,
+
+"product\_cover":
+"http://images.10mup.com/20170708154457918-gkpUE7r4.jpg"
+
+},
+
+{
+
+"order\_user\_id": 11019,
+
+"agent\_proportion": 3,
+
+"quantity": 10,
+
+"pcd\_name": "广州",
+
+"pcd\_id": 2148,
+
+"product\_specification\_name": null,
+
+"product\_name": "碧丽雅超效洁净手洗专用洗衣液1.25L\*10瓶/箱",
+
+"order\_item\_id": 5530,
+
+"settled\_amount": 3,
+
+"order\_user\_name": "关应康",
+
+"final\_price": 1000,
+
+"price": 100,
+
+"product\_id": 149,
+
+"percentage": 10,
+
+"marketing\_name": "碧丽雅超效洁净手洗专用洗衣液1.25L\*10瓶/箱",
+
+"marketing\_id": 11,
+
+"id": 8,
+
+"create\_date": "2017-10-09 11:21:34",
+
+"seller\_id": 11014,
+
+"product\_cover":
+"http://images.10mup.com/20160914142106802-oFWNcqv1.jpg"
 
 }
 
 \],
 
-\"settlement\_proportion\": 0,
+"settlement\_proportion": 0,
 
-\"id\": 42,
+"id": 42,
 
-\"end\_month\": null,
+"end\_month": null,
 
-\"seller\_id\": 11014
+"seller\_id": 11014
 
 }
 
@@ -6602,36 +6602,36 @@ eyJ0b2tlbiI6IjMxODhiZmUxMzM2ZjY0MGQ5ZmU3OTUxMDZkYTUzMjE5MDJlODAwZjAiLCJsb2dpbl9u
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[
+"data": \[
 
 {
 
-\"id\": 1,
+"id": 1,
 
-\"percentage\": 10, //奖金比例 （当min\_amount\<销售额\<=max\_amount
+"percentage": 10, //奖金比例 （当min\_amount\<销售额\<=max\_amount
 ，应用此percentage）
 
-\"min\_amount\": 0, //销售额下限
+"min\_amount": 0, //销售额下限
 
-\"max\_amount\": 1000, //销售额上限
+"max\_amount": 1000, //销售额上限
 
-\"pcd\_id\": 1
+"pcd\_id": 1
 
 },
 
 {
 
-\"id\": 2,
+"id": 2,
 
-\"percentage\": 20,
+"percentage": 20,
 
-\"min\_amount\": 1000,
+"min\_amount": 1000,
 
-\"max\_amount\": -1, //-1表示无上限
+"max\_amount": -1, //-1表示无上限
 
-\"pcd\_id\": 1
+"pcd\_id": 1
 
 }
 
@@ -6656,60 +6656,60 @@ Resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[
+"data": \[
 
 {
 
-\"order\_number\": \"123456xxx\", //订单号
+"order\_number": "123456xxx", //订单号
 
-\"created\_date\": \"2017-06-12 13:53:00\",
+"created\_date": "2017-06-12 13:53:00",
 
-\"amount\": 1000,
+"amount": 1000,
 //进货额（不是指该订单的进货额，而是该订单其中1个订单项的进货额）
 
-\"id\": 2,
+"id": 2,
 
-\"order\_item\_id\": 1, //订单项id
+"order\_item\_id": 1, //订单项id
 
-\"product\_name\": \"油条\", //产品名称
+"product\_name": "油条", //产品名称
 
-\"seller\_id\": 2, //被推荐人的seller\_id（即传过来的）
+"seller\_id": 2, //被推荐人的seller\_id（即传过来的）
 
-\"order\_id\": 1, //订单id
+"order\_id": 1, //订单id
 
-\"product\_settlement\_proportion\": 20, //产品提成比例
+"product\_settlement\_proportion": 20, //产品提成比例
 
-\"expected\_reward\": 30, //预期提成金额，不是真正的提成金额
+"expected\_reward": 30, //预期提成金额，不是真正的提成金额
 
-\"note\": null
+"note": null
 
 },
 
 {
 
-\"order\_number\": \"123456xxx\",
+"order\_number": "123456xxx",
 
-\"created\_date\": \"2017-06-12 13:53:20\",
+"created\_date": "2017-06-12 13:53:20",
 
-\"amount\": 3000,
+"amount": 3000,
 
-\"id\": 1,
+"id": 1,
 
-\"order\_item\_id\": 2,
+"order\_item\_id": 2,
 
-\"product\_name\": \"飞机\",
+"product\_name": "飞机",
 
-\"seller\_id\": 2,
+"seller\_id": 2,
 
-\"order\_id\": 1,
+"order\_id": 1,
 
-\"product\_settlement\_proportion\": 30,
+"product\_settlement\_proportion": 30,
 
-\"expected\_reward\": 50,
+"expected\_reward": 50,
 
-\"note\": null
+"note": null
 
 }
 
@@ -6728,55 +6728,55 @@ Resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[
+"data": \[
 
 {
 
-\"id\": 1,
+"id": 1,
 
-\"percentage\": 2, //分成比例（%）
+"percentage": 2, //分成比例（%）
 
-\"min\_amount\": 1000, //最小进货额
+"min\_amount": 1000, //最小进货额
 
-\"max\_amount\": 5000 //最大进货额
+"max\_amount": 5000 //最大进货额
 
 },
 
 {
 
-\"id\": 2,
+"id": 2,
 
-\"percentage\": 5,
+"percentage": 5,
 
-\"min\_amount\": 5001,
+"min\_amount": 5001,
 
-\"max\_amount\": 10000
-
-},
-
-{
-
-\"id\": 3,
-
-\"percentage\": 6,
-
-\"min\_amount\": 10001,
-
-\"max\_amount\": 50000
+"max\_amount": 10000
 
 },
 
 {
 
-\"id\": 4,
+"id": 3,
 
-\"percentage\": 8,
+"percentage": 6,
 
-\"min\_amount\": 50001,
+"min\_amount": 10001,
 
-\"max\_amount\": -1
+"max\_amount": 50000
+
+},
+
+{
+
+"id": 4,
+
+"percentage": 8,
+
+"min\_amount": 50001,
+
+"max\_amount": -1
 
 }
 
@@ -6800,23 +6800,23 @@ Resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"created\_date\": null,
+"created\_date": null,
 
-\"content\": \"\<p\>内容。。。。\</p\>\",
+"content": "\<p\>内容。。。。\</p\>",
 
-\"type\": \"CROWN\",
+"type": "CROWN",
 
-\"id\": 1,
+"id": 1,
 
-\"enabled\": 1, //是否启用
+"enabled": 1, //是否启用
 
-\"last\_modified\_date\": \"2017-06-23 12:26:50\", //最后一次的修改时间
+"last\_modified\_date": "2017-06-23 12:26:50", //最后一次的修改时间
 
-\"name\": \"皇冠需知\"
+"name": "皇冠需知"
 
 }
 
@@ -6833,11 +6833,11 @@ Data:
 
 {
 
-\"phone\": \"13900000001\",
+"phone": "13900000001",
 
-\"name\": \"黄小二\",
+"name": "黄小二",
 
-\"address\": \"广东广州荔湾区周门路16号\"
+"address": "广东广州荔湾区周门路16号"
 
 }
 
@@ -6845,9 +6845,9 @@ Success Resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"message\": \"ok\"
+"message": "ok"
 
 }
 
@@ -6855,9 +6855,9 @@ Failure Resp:
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"message\": \"already.copartner\"
+"message": "already.copartner"
 
 }
 
@@ -6872,45 +6872,45 @@ Success Resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"create\_time\": \"2018-08-23 11:52:14\",
+"create\_time": "2018-08-23 11:52:14",
 
-\"children\_count\": 1,
+"children\_count": 1,
 
-\"children\": \[
+"children": \[
 
 {
 
-\"uid\": \"U011808231159370001\",
+"uid": "U011808231159370001",
 
-\"follow\_time\": null,
+"follow\_time": null,
 
-\"create\_time\": \"2018-08-23 12:32:15\",
+"create\_time": "2018-08-23 12:32:15",
 
-\"phone\": \"13800000000\",
+"phone": "13800000000",
 
-\"user\_name\": \"13922112131\",
+"user\_name": "13922112131",
 
-\"real\_name\": \"黄\",
+"real\_name": "黄",
 
-\"avatar\": null,
+"avatar": null,
 
-\"followed\": 0,
+"followed": 0,
 
-\"seller\_id\": 3
+"seller\_id": 3
 
 }
 
 \],
 
-\"id\": 2,
+"id": 2,
 
-\"seller\_id\": 2,
+"seller\_id": 2,
 
-\"status\": \"NORMAL\"
+"status": "NORMAL"
 
 }
 
@@ -6920,9 +6920,9 @@ Failure Resp:
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"message\": \"not.a.copartner\"
+"message": "not.a.copartner"
 
 }
 
@@ -6937,87 +6937,87 @@ Success Resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"settlement\_proportion\": 4, //分成比例
+"settlement\_proportion": 4, //分成比例
 
-\"total\_settlement\_amount\": 0, //总分成
+"total\_settlement\_amount": 0, //总分成
 
-\"total\_amount\": 0, //总进货量
+"total\_amount": 0, //总进货量
 
-\"monthly\_amount\": 0, //当月进货量
+"monthly\_amount": 0, //当月进货量
 
-\"monthly\_settlement\_amount\": 0, //当月提成
+"monthly\_settlement\_amount": 0, //当月提成
 
-\"create\_time\": \"2018-08-23 11:52:14\",
+"create\_time": "2018-08-23 11:52:14",
 
-\"children\": \[
+"children": \[
 
 {
 
-\"seller\_ship\_time\": \"2018-08-23 11:59:37\",
+"seller\_ship\_time": "2018-08-23 11:59:37",
 
-\"create\_time\": \"2018-08-23 12:32:15\",
+"create\_time": "2018-08-23 12:32:15",
 
-\"level\": 1,
+"level": 1,
 
-\"partner\_ship\_time\": \"2018-08-23 12:32:15\",
+"partner\_ship\_time": "2018-08-23 12:32:15",
 
-\"crown\_id\": null,
+"crown\_id": null,
 
-\"user\_name\": \"13922112131\",
+"user\_name": "13922112131",
 
-\"crown\_ship\": 1,
+"crown\_ship": 1,
 
-\"crown\_apply\_failure\_times\": 0,
+"crown\_apply\_failure\_times": 0,
 
-\"real\_name\": \"黄\",
+"real\_name": "黄",
 
-\"avatar\": null,
+"avatar": null,
 
-\"followed\": 0,
+"followed": 0,
 
-\"uid\": \"U011808231159370001\",
+"uid": "U011808231159370001",
 
-\"follow\_time\": null,
+"follow\_time": null,
 
-\"crown\_ship\_temp\": 1,
+"crown\_ship\_temp": 1,
 
-\"partner\_id\": null,
+"partner\_id": null,
 
-\"user\_id\": 3,
+"user\_id": 3,
 
-\"partner\_ship\": 1,
+"partner\_ship": 1,
 
-\"crown\_ship\_time\": \"2018-08-23 12:32:55\",
+"crown\_ship\_time": "2018-08-23 12:32:55",
 
-\"phone\": \"13800000000\",
+"phone": "13800000000",
 
-\"parent\_id\": null,
+"parent\_id": null,
 
-\"id\": 3,
+"id": 3,
 
-\"seller\_ship\": 1,
+"seller\_ship": 1,
 
-\"seller\_id\": 3,
+"seller\_id": 3,
 
-\"partner\_level\_id\": 1,
+"partner\_level\_id": 1,
 
-\"monthly\_amount\": 0, //当月进货量
+"monthly\_amount": 0, //当月进货量
 
-\"monthly\_settlement\_amount\": 0 //当月提成
+"monthly\_settlement\_amount": 0 //当月提成
 
 }
 
 \],
 
-\"id\": 2,
+"id": 2,
 
-\"seller\_id\": 2,
+"seller\_id": 2,
 
-\"status\": \"NORMAL\"
+"status": "NORMAL"
 
 }
 
@@ -7034,17 +7034,17 @@ Success Resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[
+"data": \[
 
 {
 
-\"statistic\_month\": \"2018-02\",
+"statistic\_month": "2018-02",
 
-\"settled\_amount\": 100, //分成
+"settled\_amount": 100, //分成
 
-\"transferred\_amount\": 10000 //转积分
+"transferred\_amount": 10000 //转积分
 
 }
 
@@ -7065,19 +7065,19 @@ Success Resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[
+"data": \[
 
 {
 
-\"product\_name\": \"洗衣液\",
+"product\_name": "洗衣液",
 
-\"amount\": 100, //进货量
+"amount": 100, //进货量
 
-\"reward\": 10, //提成
+"reward": 10, //提成
 
-\"settlement\_proportion\": 10 //提成比例
+"settlement\_proportion": 10 //提成比例
 
 }
 
@@ -7098,47 +7098,47 @@ resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"id\": 1,
+"id": 1,
 
-\"point\": 1000,
+"point": 1000,
 
-\"description\": null,
+"description": null,
 
-\"name\": \"Level 1\"
-
-}, {
-
-\"id\": 2,
-
-\"point\": 2000,
-
-\"description\": null,
-
-\"name\": \"Level 2\"
+"name": "Level 1"
 
 }, {
 
-\"id\": 3,
+"id": 2,
 
-\"point\": 5000,
+"point": 2000,
 
-\"description\": null,
+"description": null,
 
-\"name\": \"Level 3\"
+"name": "Level 2"
 
 }, {
 
-\"id\": 4,
+"id": 3,
 
-\"point\": 10000,
+"point": 5000,
 
-\"description\": null,
+"description": null,
 
-\"name\": \"Level 4\"
+"name": "Level 3"
+
+}, {
+
+"id": 4,
+
+"point": 10000,
+
+"description": null,
+
+"name": "Level 4"
 
 }\]
 
@@ -7155,29 +7155,29 @@ resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"id\": 3,
+"id": 3,
 
-\"point\": 0,
+"point": 0,
 
-\"birthday\": null,
+"birthday": null,
 
-\"sex\": null,
+"sex": null,
 
-\"address\": null,
+"address": null,
 
-\"description\": null,
+"description": null,
 
-\"name\": \"abc\",
+"name": "abc",
 
-\"user\_id\": 4,
+"user\_id": 4,
 
-\"level\_id\": 1,
+"level\_id": 1,
 
-\"mobile\": null
+"mobile": null
 
 }
 
@@ -7194,17 +7194,17 @@ data:
 
 {
 
-\"birthday\": \"1999-10-10\",
+"birthday": "1999-10-10",
 
-\"sex\": 1,
+"sex": 1,
 
-\"address\": \"GZ liwan\",
+"address": "GZ liwan",
 
-\"description\": \"xxvv\",
+"description": "xxvv",
 
-\"name\": \"abc\",
+"name": "abc",
 
-\"mobile\": \"138000000\"
+"mobile": "138000000"
 
 }
 
@@ -7212,9 +7212,9 @@ resp:
 
 {
 
-\"message\": \"member.updated\",
+"message": "member.updated",
 
-\"status\_code\": 0
+"status\_code": 0
 
 }
 
@@ -7253,38 +7253,38 @@ resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"ACTIVATION\": 1,
+"ACTIVATION": 1,
 
-\"USED\": 0,
+"USED": 0,
 
-\"NON\_ACTIVATION\": 1,
+"NON\_ACTIVATION": 1,
 
-\"OVERDUE\": 0,
+"OVERDUE": 0,
 
-\"coupons\": \[
+"coupons": \[
 
 {
 
-\"code\": \"9e0f38da-8a05-4243-a338-c1d373b2943d\",
+"code": "9e0f38da-8a05-4243-a338-c1d373b2943d",
 
-\"discount\": 0,
+"discount": 0,
 
-\"description\": null,
+"description": null,
 
-\"type\": \"ORDER\",
+"type": "ORDER",
 
-\"display\_name\": \"a\",
+"display\_name": "a",
 
-\"cond\": \"
+"cond": "
 
-\<rule-set name=\\\"getFinalPrice\\\" \>
+\<rule-set name=\\"getFinalPrice\\" \>
 
-\<mvel-rule id=\\\"step1\\\" multipleTimes=\\\"false\\\"
-exclusive=\\\"true\\\" valid=\\\"true\\\"\>
+\<mvel-rule id=\\"step1\\" multipleTimes=\\"false\\"
+exclusive=\\"true\\" valid=\\"true\\"\>
 
 \<condition\>\<!\[CDATA\[true\]\]\>\</condition\>
 
@@ -7294,25 +7294,25 @@ exclusive=\\\"true\\\" valid=\\\"true\\\"\>
 
 \</rule-set\>
 
-\",
+",
 
-\"valid\_date\": \"2017-01-13 18:01:44\",
+"valid\_date": "2017-01-13 18:01:44",
 
-\"money\": 4,
+"money": 4,
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"name\": \"q\",
+"name": "q",
 
-\"id\": 1,
+"id": 1,
 
-\"created\_date\": \"2017-01-11 18:01:44\",
+"created\_date": "2017-01-11 18:01:44",
 
-\"attribute\": \"{\\\"source\\\":\\\"SYSTEM\\\"}\",
+"attribute": "{\\"source\\":\\"SYSTEM\\"}",
 
-\"auto\_give\": 0,
+"auto\_give": 0,
 
-\"status\": \"ACTIVATION\"
+"status": "ACTIVATION"
 
 }
 
@@ -7335,7 +7335,7 @@ Data:
 
 {
 
-\"code\": \"werwqerweqfaf\" //分享码
+"code": "werwqerweqfaf" //分享码
 
 }
 
@@ -7343,88 +7343,88 @@ Success resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"coupon\_taken\_records\": \[ //该分享被领取的记录
+"coupon\_taken\_records": \[ //该分享被领取的记录
 
 {
 
-\"share\_id\": 1,
+"share\_id": 1,
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"name\": \"Administrator\",
+"name": "Administrator",
 
-\"created\_date\": \"2016-11-28 10:43:08\",
+"created\_date": "2016-11-28 10:43:08",
 
-\"message\": \"又有券可用了。\",
+"message": "又有券可用了。",
 
-\"coupon\_value\": 6
+"coupon\_value": 6
 
 }
 
 \],
 
-\"coupons\": \[
+"coupons": \[
 //该用户领取的优惠券列表，对于第一次点击链接领取时才有这个属性。
 
 {
 
-\"code\": \"1982dbcf-442a-4111-923f-6b20b67eb31e\",
+"code": "1982dbcf-442a-4111-923f-6b20b67eb31e",
 
-\"description\": null,
+"description": null,
 
-\"type\": \"ORDER\",
+"type": "ORDER",
 
-\"display\_name\": \"式\",
+"display\_name": "式",
 
-\"valid\_date\": \"2016-12-01\",
+"valid\_date": "2016-12-01",
 
-\"money\": 4,
+"money": 4,
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"name\": \"aaaa\",
+"name": "aaaa",
 
-\"created\_date\": \"2016-11-28\",
+"created\_date": "2016-11-28",
 
-\"id\": 1,
+"id": 1,
 
-\"status\": \"ACTIVATION\"
+"status": "ACTIVATION"
 
 },
 
 {
 
-\"code\": \"0d0cf6c8-58c4-4df7-91e3-a14e74046b97\",
+"code": "0d0cf6c8-58c4-4df7-91e3-a14e74046b97",
 
-\"description\": null,
+"description": null,
 
-\"type\": \"ORDER\",
+"type": "ORDER",
 
-\"display\_name\": \"33\",
+"display\_name": "33",
 
-\"valid\_date\": \"2016-12-02\",
+"valid\_date": "2016-12-02",
 
-\"money\": 2,
+"money": 2,
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"name\": \"发啊发\",
+"name": "发啊发",
 
-\"created\_date\": \"2016-11-28\",
+"created\_date": "2016-11-28",
 
-\"id\": 2,
+"id": 2,
 
-\"status\": \"ACTIVATION\"
+"status": "ACTIVATION"
 
 }
 
 \],
 
-\"coupon\_value\": 6 //领取的优惠券价值
+"coupon\_value": 6 //领取的优惠券价值
 
 }
 
@@ -7447,7 +7447,7 @@ Data:
 
 {
 
-\"status\": \"ACTIVATION\"
+"status": "ACTIVATION"
 
 }
 
@@ -7455,9 +7455,9 @@ Failure Resp：
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"message\": \"user.must.be.followed\"
+"message": "user.must.be.followed"
 
 }
 
@@ -7465,9 +7465,9 @@ Success resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"message\": \"activate.success\"
+"message": "activate.success"
 
 }
 
@@ -7486,9 +7486,9 @@ Success resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"message\": \"delete.success\"
+"message": "delete.success"
 
 }
 
@@ -7516,35 +7516,35 @@ Success resp:
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"data\": {
+"data": {
 
-\"notify\": true, //需要弹出红包通知用户
+"notify": true, //需要弹出红包通知用户
 
-\"new\_user\": true, //是否是新注册用户
+"new\_user": true, //是否是新注册用户
 
-\"coupon\_count\": 2, //当notify为true时才返回
+"coupon\_count": 2, //当notify为true时才返回
 
-\"coupon\_value\": 34, //当notify为true时才返回
+"coupon\_value": 34, //当notify为true时才返回
 
-\"is\_user\_followed\": true, //用户是否关注公众号
+"is\_user\_followed": true, //用户是否关注公众号
 
-\"has\_unread\_coupon\": true, //表示用户有未读优惠券,
+"has\_unread\_coupon": true, //表示用户有未读优惠券,
 这时\'个人中心\'需要显示红点
 
-\"activation\_coupons\": \[
+"activation\_coupons": \[
 
 {
 
-\"id\": 1,
+"id": 1,
 
-\"name\": \"拼团免单券\",
+"name": "拼团免单券",
 
-\"type\": \"MARKETING\_PIECE\_GROUP\", //
+"type": "MARKETING\_PIECE\_GROUP", //
 类型为MARKETING\_PIECE\_GROUP表示拼团券
 
-\"status\": \"ACTIVATION\"
+"status": "ACTIVATION"
 
 }
 
@@ -7573,18 +7573,18 @@ Data:
 
 {
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"price\": 20
+"price": 20
 //该产品的总价格，注意：不是单价，比如买啦2件，那这里的值应该是单价＊2
 
 },
 
 {
 
-\"product\_id\": 2,
+"product\_id": 2,
 
-\"price\": 39.9
+"price": 39.9
 
 }
 
@@ -7596,37 +7596,37 @@ Return:
 
 {
 
-\"coupon\_id\": 1,
+"coupon\_id": 1,
 
-\"coupon\_name\": \"全单8折\",
+"coupon\_name": "全单8折",
 
-"valid\_date"："2016-11-30 11:11:11\", //有效时间
+"valid\_date"："2016-11-30 11:11:11", //有效时间
 
-\"final\_price\": 47.92 //这个订单使用这个优惠劵后的总价格
-
-},
-
-{
-
-\"coupon\_id\": 2,
-
-\"coupon\_name\": \"单品买立减8元\",
-
-"valid\_date"："2016-11-30 11:11:11\", //有效时间
-
-\"final\_price\": 51.9
+"final\_price": 47.92 //这个订单使用这个优惠劵后的总价格
 
 },
 
 {
 
-\"coupon\_id\": 3,
+"coupon\_id": 2,
 
-\"coupon\_name\": \"满50立减5元\",
+"coupon\_name": "单品买立减8元",
 
-"valid\_date"："2016-11-30 11:11:11\", //有效时间
+"valid\_date"："2016-11-30 11:11:11", //有效时间
 
-\"final\_price\": 55.9
+"final\_price": 51.9
+
+},
+
+{
+
+"coupon\_id": 3,
+
+"coupon\_name": "满50立减5元",
+
+"valid\_date"："2016-11-30 11:11:11", //有效时间
+
+"final\_price": 55.9
 
 }
 
@@ -7645,26 +7645,26 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[
+"data": \[
 
 {
 
-\"valid\_date\": \"2016-12-06 12:18:43\",
+"valid\_date": "2016-12-06 12:18:43",
 
-\"code\": \"e58a9055-f966-4b59-b36d-b8de66bbfc25\",
+"code": "e58a9055-f966-4b59-b36d-b8de66bbfc25",
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"order\_number\": \"12345\",
+"order\_number": "12345",
 
-\"share\_date\": \"2016-12-01 12:18:43\",
+"share\_date": "2016-12-01 12:18:43",
 
-\"link\":
-\"http://www.kequandian.net/app/app/coupon?share\_code=e58a9055-f966-4b59-b36d-b8de66bbfc25&invite\_code=a1b2c3\",
+"link":
+"http://www.kequandian.net/app/app/coupon?share\_code=e58a9055-f966-4b59-b36d-b8de66bbfc25&invite\_code=a1b2c3",
 
-\"id\": 1
+"id": 1
 
 }
 
@@ -7686,21 +7686,21 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"accumulative\_amount\": 0, //累计金额
+"accumulative\_amount": 0, //累计金额
 
-\"accumulative\_gift\_amount\": 0, //累计赠送
+"accumulative\_gift\_amount": 0, //累计赠送
 
-\"balance\": 0, //余额
+"balance": 0, //余额
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"gift\_balance\": 0, //赠送余额
+"gift\_balance": 0, //赠送余额
 
-\"id\": 1
+"id": 1
 
 }
 
@@ -7719,11 +7719,11 @@ Data:
 
 {
 
-"id\"; 1, // depoist package id
+"id"; 1, // depoist package id
 
-\"amount\": 121, //充值金额
+"amount": 121, //充值金额
 
-\"description\": \"xxyy\" //描述
+"description": "xxyy" //描述
 
 }
 
@@ -7735,23 +7735,23 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"created\_time\": \"2018-08-08\",
+"created\_time": "2018-08-08",
 
-\"wallet\_id\": 1,
+"wallet\_id": 1,
 
-\"amount\": 121,
+"amount": 121,
 
-\"description\": \"xxyy\",
+"description": "xxyy",
 
-\"id\": 1,
+"id": 1,
 
-\"gift\_amount\": 0,
+"gift\_amount": 0,
 
-\"status\": \"PAY\_PENDING\"
+"status": "PAY\_PENDING"
 
 }
 
@@ -7771,9 +7771,9 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[\]
+"data": \[\]
 
 }
 
@@ -7788,11 +7788,11 @@ Data:
 
 {
 
-\"orderType\": \"Order\",
+"orderType": "Order",
 
-\"orderNumber\": \"22334\",
+"orderNumber": "22334",
 
-\"password\": \"134545\" // 支付密码
+"password": "134545" // 支付密码
 
 }
 
@@ -7800,9 +7800,9 @@ Error Return:
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"message\": \"wallet.insufficient.balance\"
+"message": "wallet.insufficient.balance"
 
 }
 
@@ -7810,9 +7810,9 @@ Success Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"message\": \"ok\"
+"message": "ok"
 
 }
 
@@ -7831,13 +7831,13 @@ Data:
 
 {
 
-\"orderType\": \"Order\",
+"orderType": "Order",
 
-\"orderNumber\": \"22334\",
+"orderNumber": "22334",
 
-\"phone\": \"1308888888\",
+"phone": "1308888888",
 
-\"captcha\": \"2345\"
+"captcha": "2345"
 
 }
 
@@ -7845,9 +7845,9 @@ Error Return:
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"message\": \"wallet.insufficient.balance\"
+"message": "wallet.insufficient.balance"
 
 }
 
@@ -7855,9 +7855,9 @@ Success Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"message\": \"ok\"
+"message": "ok"
 
 }
 
@@ -7872,9 +7872,9 @@ Data:
 
 {
 
-\"oldPassword\": \"122222\", //旧密码，第一次设置密码不用这个字段
+"oldPassword": "122222", //旧密码，第一次设置密码不用这个字段
 
-\"password\": \"134545\" // 支付密码
+"password": "134545" // 支付密码
 
 }
 
@@ -7882,9 +7882,9 @@ Success Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"message\": \"ok\"
+"message": "ok"
 
 }
 
@@ -7899,7 +7899,7 @@ Data:
 
 {
 
-\"password\": \"134545\" // 支付密码
+"password": "134545" // 支付密码
 
 }
 
@@ -7907,9 +7907,9 @@ Success Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"message\": \"ok\"
+"message": "ok"
 
 }
 
@@ -7924,9 +7924,9 @@ Success Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": true
+"data": true
 
 }
 
@@ -7950,9 +7950,9 @@ Data:
 
 {
 
-\"phone\": \"1390000000\",
+"phone": "1390000000",
 
-\"couponTypeIds\": \[ 1, 2, 3 \]
+"couponTypeIds": \[ 1, 2, 3 \]
 
 }
 
@@ -7960,9 +7960,9 @@ REturn:
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"message\": \"ok\"
+"message": "ok"
 
 }
 
@@ -7988,32 +7988,32 @@ Resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"pageNumber\": 1,
+"pageNumber": 1,
 
-\"pageSize\": 30,
+"pageSize": 30,
 
-\"totalPage\": 1,
+"totalPage": 1,
 
-\"totalRow\": 1,
+"totalRow": 1,
 
-\"list\": \[{
+"list": \[{
 
-\"id\": 4, //拼团活动id
+"id": 4, //拼团活动id
 
-\"product\_id\": 1, //拼团活动所关联的产品id
+"product\_id": 1, //拼团活动所关联的产品id
 
-\"payment\_type\": \"POINT\|WECHAT\",
+"payment\_type": "POINT\|WECHAT",
 //该拼团活动支持的支付方式。(WECHAT微信支付 POINT 积分 若两
 
 //种都支持，则用"\|"分隔。如 WECHAT\|POINT）
 
-\"marketing\_name\": \"活动1\", //拼团活动名称
+"marketing\_name": "活动1", //拼团活动名称
 
-\"status\": \"ONSELL\", //拼团活动状态。INIT/ONSELL/OFFSELL/LOCK
+"status": "ONSELL", //拼团活动状态。INIT/ONSELL/OFFSELL/LOCK
 （LOCK不允许开团，但已开的团
 
 //仍然生效 （成员仍能加入已开的团） OFFSELL：不允许开团，已开的团若已
@@ -8022,58 +8022,58 @@ Resp:
 
 //间就退款）
 
-\"free\_shipping\": 0, //是否包邮。 default 1（0
+"free\_shipping": 0, //是否包邮。 default 1（0
 根据产品定义的邮费计算，1 包邮）
 
-\"suggested\_price\": 1000, //市场价（元）
+"suggested\_price": 1000, //市场价（元）
 
-\"sale\": 0, //已团件数
+"sale": 0, //已团件数
 
-\"min\_participator\_count\": 2, //最小成团人数，default 2
+"min\_participator\_count": 2, //最小成团人数，default 2
 
-\"duration\": 118800, //活动有效时间，单位秒。
+"duration": 118800, //活动有效时间，单位秒。
 
-\"cover\":
-\"http://o9ixtumvv.bkt.clouddn.com/20170510152514628-dssIB8U8.jpg\",
+"cover":
+"http://o9ixtumvv.bkt.clouddn.com/20170510152514628-dssIB8U8.jpg",
 //活动封面
 
-\"price\": 1134, //团购价（元）
+"price": 1134, //团购价（元）
 
-\"coupon\_usage\": 0, //优惠券使用。default 0（0 不能用优惠券；1
+"coupon\_usage": 0, //优惠券使用。default 0（0 不能用优惠券；1
 可以用专用优惠券；
 
 //2 可以用系统 优惠券）
 
-\"master\_free\": 1, //团长是否免单。default 0（0 非免单活动, 1
+"master\_free": 1, //团长是否免单。default 0（0 非免单活动, 1
 可以使用免单优惠券）
 
-\"description\": null //描述
+"description": null //描述
 
 }\],
 
-\"promoted\_master\": {
-//这是随机抽取出来的一位\"被推荐\"且\"已支付\"的团长
+"promoted\_master": {
+//这是随机抽取出来的一位"被推荐"且"已支付"的团长
 
-\"id\": 1,
+"id": 1,
 //团长id（当团员要入团时，需要指定要加入哪个团长的团，此时用到团长id）
 
-\"product\_id\": 1, //产品id
+"product\_id": 1, //产品id
 
-\"payment\_type\": \"POINT\|WECHAT\",
+"payment\_type": "POINT\|WECHAT",
 //该拼团活动支持的支付方式。(WECHAT微信支付 POINT 积分 若两
 
 //种都支持，则用"\|"分隔。如 WECHAT\|POINT）
 
-\"marketing\_name\": \"活动1\", //拼团活动名称
+"marketing\_name": "活动1", //拼团活动名称
 
-\"marketing\_short\_name\": \"活动1缩略名\",
+"marketing\_short\_name": "活动1缩略名",
 
-\"free\_shipping\": 0, //是否包邮。 default 1（0
+"free\_shipping": 0, //是否包邮。 default 1（0
 根据产品定义的邮费计算，1 包邮）
 
-\"suggested\_price\": 1000, //市场价（元）
+"suggested\_price": 1000, //市场价（元）
 
-\"piece\_group\_purchase\_status\": \"ONSELL\",
+"piece\_group\_purchase\_status": "ONSELL",
 //拼团活动状态。INIT/ONSELL/OFFSELL/LOCK
 
 //（LOCK 不允许开团，但已开的团仍然生效（成员仍
@@ -8084,51 +8084,51 @@ Resp:
 
 //开的团了），若拼团未成功，则到时间就退款）
 
-\"sale\": 0, //已团件数
+"sale": 0, //已团件数
 
-\"min\_participator\_count\": 2, //最小成团人数，default 2
+"min\_participator\_count": 2, //最小成团人数，default 2
 
-\"user\_name\": \"aaa\", //该团长的用户名
+"user\_name": "aaa", //该团长的用户名
 
-\"duration\": 118800, //活动有效时间，单位秒
+"duration": 118800, //活动有效时间，单位秒
 
-\"cover\":
-\"http://o9ixtumvv.bkt.clouddn.com/20170510152514628-dssIB8U8.jpg\",
+"cover":
+"http://o9ixtumvv.bkt.clouddn.com/20170510152514628-dssIB8U8.jpg",
 //活动封面
 
-\"price\": 1134, //团购价（元）
+"price": 1134, //团购价（元）
 
-\"coupon\_usage\": 0, //优惠券使用。default 0（0 不能用优惠券；1
+"coupon\_usage": 0, //优惠券使用。default 0（0 不能用优惠券；1
 可以用专用优惠券；
 
 //2 可以用系统 优惠券）
 
-\"master\_free\": 1, //团长是否免单。default 0（0 非免单活动, 1
+"master\_free": 1, //团长是否免单。default 0（0 非免单活动, 1
 可以使用免单优惠券）
 
-\"end\_time\": \"2017-05-12 09:52:28\", //结束时间
+"end\_time": "2017-05-12 09:52:28", //结束时间
 
-\"description\": null,
+"description": null,
 
-\"promoted\": 1, //推荐进入活动详情页方便其他用户参团, 0 不推荐, 1 推荐,
+"promoted": 1, //推荐进入活动详情页方便其他用户参团, 0 不推荐, 1 推荐,
 当免单开团的时候该团
 
 //为不推荐,需要团长自己拉人参团
 
-\"start\_time\": \"2017-05-12 09:49:49\", //开团时间
+"start\_time": "2017-05-12 09:49:49", //开团时间
 
-\"piece\_group\_purchase\_master\_status\": \"OPENING\",
+"piece\_group\_purchase\_master\_status": "OPENING",
 //拼团状态（OPENING正在开团/DEAL拼团
 
 //成功/FAIL拼团失败）
 
-\"member\_status\": \"PAID\", //该团长的支付状态（PAID/UNPAID/REFUND）
+"member\_status": "PAID", //该团长的支付状态（PAID/UNPAID/REFUND）
 
-\"piece\_group\_purchase\_id\": 4, //拼团活动id
+"piece\_group\_purchase\_id": 4, //拼团活动id
 
-\"user\_id\": 2, //该团长的user\_id
+"user\_id": 2, //该团长的user\_id
 
-\"user\_avatar\": null //该团长的头像
+"user\_avatar": null //该团长的头像
 
 }
 
@@ -8151,24 +8151,24 @@ Resp：
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"id\": 1,
+"id": 1,
 
-\"marketing\_name\": \"活动1\", //拼团活动名称
+"marketing\_name": "活动1", //拼团活动名称
 
-\"marketing\_short\_name\": \"活动1缩略名\",
+"marketing\_short\_name": "活动1缩略名",
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"payment\_type\": \"WECHAT\",
+"payment\_type": "WECHAT",
 //该拼团活动支持的支付方式。(WECHAT微信支付 POINT 积分 若两种都支持，
 
 //则用"\|"分隔。如 WECHAT\|POINT）
 
-\"status\": \"ONSELL\", //状态。INIT/ONSELL/OFFSELL/LOCK
+"status": "ONSELL", //状态。INIT/ONSELL/OFFSELL/LOCK
 （LOCK不允许开团，但已开的团仍然生效
 
 //（成员仍能加入已开的团） OFFSELL：不允许开
@@ -8176,154 +8176,154 @@ Resp：
 
 //继续生效（但成员不能再加入已开的团了），若拼团未成功，则到时间就退款）
 
-\"min\_participator\_count\": 2, //最小成团人数，default 2
+"min\_participator\_count": 2, //最小成团人数，default 2
 
-\"price\": 50.00, //团购价（元）
+"price": 50.00, //团购价（元）
 
-\"suggested\_price\": 233.00, //市场价（元）
+"suggested\_price": 233.00, //市场价（元）
 
-\"sale\": 0, //已团件数
+"sale": 0, //已团件数
 
-\"coupon\_usage\": 1, //优惠券使用。default 0（0 不能用优惠券；1
+"coupon\_usage": 1, //优惠券使用。default 0（0 不能用优惠券；1
 可以用专用优惠券；2 可以用系统优惠券）
 
-\"cover\":
-\"http://o9ixtumvv.bkt.clouddn.com/20170511111002449-3OUYLBt6.jpg\",
+"cover":
+"http://o9ixtumvv.bkt.clouddn.com/20170511111002449-3OUYLBt6.jpg",
 //活动封面
 
-\"duration\": 7200, //有效时间，单位秒。比如有效时间为
+"duration": 7200, //有效时间，单位秒。比如有效时间为
 3600秒，某用户在01:00:00开团，则该团的结束时间
 
 //为02:00:00
 
-\"free\_shipping\": 0, //是否包邮。 default 1（0
+"free\_shipping": 0, //是否包邮。 default 1（0
 根据产品定义的邮费计算，1 包邮）
 
-\"master\_free\": 1, //团长是否免单。default 0（0 非免单活动, 1
+"master\_free": 1, //团长是否免单。default 0（0 非免单活动, 1
 可以使用免单优惠券）
 
-\"description\": null,
+"description": null,
 
-\"product\": { //参考产品api的说明
+"product": { //参考产品api的说明
 
-\"free\_shipping\": 0,
+"free\_shipping": 0,
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"last\_modified\_date\": \"2017-05-11 11:09:40\",
+"last\_modified\_date": "2017-05-11 11:09:40",
 
-\"promoted\": 0,
+"promoted": 0,
 
-\"specifications\": \[\],
+"specifications": \[\],
 
-\"sales\": 0,
+"sales": 0,
 
-\"cover\":
-\"http://o9ixtumvv.bkt.clouddn.com/20170511110938953-VIdliaE0.jpg\",
+"cover":
+"http://o9ixtumvv.bkt.clouddn.com/20170511110938953-VIdliaE0.jpg",
 
-\"category\_id\": 1,
+"category\_id": 1,
 
-\"price\": 233.00,
+"price": 233.00,
 
-\"id\": 1,
+"id": 1,
 
-\"sort\_order\": 100,
+"sort\_order": 100,
 
-\"barcode\": null,
+"barcode": null,
 
-\"store\_location\": null,
+"store\_location": null,
 
-\"cost\_price\": 33.00,
+"cost\_price": 33.00,
 
-\"covers\":
-\[\"http://o9ixtumvv.bkt.clouddn.com/20170511110938953-VIdliaE0.jpg\"\],
+"covers":
+\["http://o9ixtumvv.bkt.clouddn.com/20170511110938953-VIdliaE0.jpg"\],
 
-\"weight\": 33,
+"weight": 33,
 
-\"stock\_balance\": 1000,
+"stock\_balance": 1000,
 
-\"brand\_id\": null,
+"brand\_id": null,
 
-\"unit\": \"件\",
+"unit": "件",
 
-\"suggested\_price\": 3333.00,
+"suggested\_price": 3333.00,
 
-\"name\": \"产品1\",
+"name": "产品1",
 
-\"short\_name\": \"缩略名1\",
+"short\_name": "缩略名1",
 
-\"created\_date\": \"2017-05-11 11:09:39\",
+"created\_date": "2017-05-11 11:09:39",
 
-\"fare\_id\": 1,
+"fare\_id": 1,
 
-\"bulk\": null,
+"bulk": null,
 
-\"partner\_level\_zone\": 1,
+"partner\_level\_zone": 1,
 
-\"view\_count\": 0,
+"view\_count": 0,
 
-\"status\": \"ONSELL\",
+"status": "ONSELL",
 
-\"description\": \"产品描述\"
+"description": "产品描述"
 
 },
 
-\"promoted\_masters\": \[{
-//这是由该拼团活动所有\"被推荐\"且\"已支付\"的团长组成的列表
+"promoted\_masters": \[{
+//这是由该拼团活动所有"被推荐"且"已支付"的团长组成的列表
 
-\"id\": 1,
+"id": 1,
 //团长id（当团员要入团时，需要指定要加入哪个团长的团，此时用到团长id）
 
-\"members\_count\": 2, //目前参团人数
+"members\_count": 2, //目前参团人数
 
-\"paid\_members\_count\": 1, //目前已支付人数
+"paid\_members\_count": 1, //目前已支付人数
 
-\"status\": \"OPENING\",
+"status": "OPENING",
 
-\"member\_status\": \"PAID\", //该团长的支付状态（PAID/UNPAID/REFUND）
+"member\_status": "PAID", //该团长的支付状态（PAID/UNPAID/REFUND）
 
-\"end\_time\": \"2017-05-12 20:52:25\", //结束时间
+"end\_time": "2017-05-12 20:52:25", //结束时间
 
-\"promoted\": 1, //推荐进入活动详情页方便其他用户参团, 0 不推荐, 1 推荐,
+"promoted": 1, //推荐进入活动详情页方便其他用户参团, 0 不推荐, 1 推荐,
 当免单开团的时候该团
 
 //为不推荐,需要团长自己拉人参团
 
-\"start\_time\": \"2017-05-12 18:08:44\", //开团时间
+"start\_time": "2017-05-12 18:08:44", //开团时间
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"user\_name\": \"张三\", //团长名
+"user\_name": "张三", //团长名
 
-\"user\_avatar\": null, //团长头像
+"user\_avatar": null, //团长头像
 
-\"piece\_group\_purchase\_id\": 1 //拼团活动id
+"piece\_group\_purchase\_id": 1 //拼团活动id
 
 },{
 
-\"id\": 2,
+"id": 2,
 
-\"members\_count\": 2, //目前参团人数
+"members\_count": 2, //目前参团人数
 
-\"paid\_members\_count\": 1, //目前已支付人数
+"paid\_members\_count": 1, //目前已支付人数
 
-\"status\": \"OPENING\",
+"status": "OPENING",
 
-\"member\_status\": \"PAID\", //该团长的支付状态（PAID/UNPAID/REFUND）
+"member\_status": "PAID", //该团长的支付状态（PAID/UNPAID/REFUND）
 
-\"end\_time\": \"2017-05-12 11:52:28\",
+"end\_time": "2017-05-12 11:52:28",
 
-\"promoted\": 1,
+"promoted": 1,
 
-\"start\_time\": \"2017-05-12 09:49:49\",
+"start\_time": "2017-05-12 09:49:49",
 
-\"user\_id\": 2,
+"user\_id": 2,
 
-\"user\_name\": \"张三\", //团长名
+"user\_name": "张三", //团长名
 
-\"user\_avatar\": null, //团长头像
+"user\_avatar": null, //团长头像
 
-\"piece\_group\_purchase\_id\": 1
+"piece\_group\_purchase\_id": 1
 
 }\]
 
@@ -8335,9 +8335,9 @@ Error Resp
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"message\": \"pieceGroupPurchase.not.found\"
+"message": "pieceGroupPurchase.not.found"
 
 }
 
@@ -8360,42 +8360,42 @@ Resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"pageNumber\": 1,
+"pageNumber": 1,
 
-\"pageSize\": 30,
+"pageSize": 30,
 
-\"totalPage\": 1,
+"totalPage": 1,
 
-\"totalRow\": 1,
+"totalRow": 1,
 
-\"list\": \[{
+"list": \[{
 
-\"order\_number\": \"order\_number1\",
+"order\_number": "order\_number1",
 
-\"total\_members\_count\": 2, //拼团成员总数
+"total\_members\_count": 2, //拼团成员总数
 
-\"paid\_members\_count\": 1, //已支付的成员总数
+"paid\_members\_count": 1, //已支付的成员总数
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"status\": \"PAID\", //支付状态（UNPAID未支付/PAID已支付/REFUND已退款）
+"status": "PAID", //支付状态（UNPAID未支付/PAID已支付/REFUND已退款）
 
-\"marketing\_name\": \"活动1\", //拼团活动名称
+"marketing\_name": "活动1", //拼团活动名称
 
-\"marketing\_short\_name\": \"活动1缩略名\",
+"marketing\_short\_name": "活动1缩略名",
 
-\"payment\_type\": \"POINT\" //该用户支付订单的方式
+"payment\_type": "POINT" //该用户支付订单的方式
 
-\"free\_shipping\": 0, //是否包邮。 default 1（0
+"free\_shipping": 0, //是否包邮。 default 1（0
 根据产品定义的邮费计算，1 包邮）
 
-\"suggested\_price\": 1000, //市场价（元）
+"suggested\_price": 1000, //市场价（元）
 
-\"piece\_group\_purchase\_status\": \"ONSELL\",
+"piece\_group\_purchase\_status": "ONSELL",
 //拼团活动状态。INIT/ONSELL/OFFSELL/LOCK （
 
 //LOCK不允许开团，但已开的团仍然生效（成员仍能加入已
@@ -8406,50 +8406,50 @@ Resp:
 
 //未成功，则到时间就退款）
 
-\"sale\": 0, //已团件数
+"sale": 0, //已团件数
 
-\"min\_participator\_count\": 2, //最小成团人数，default 2
+"min\_participator\_count": 2, //最小成团人数，default 2
 
-\"duration\": 118800, //有效时间，单位秒。比如有效时间为
+"duration": 118800, //有效时间，单位秒。比如有效时间为
 3600秒，某用户在01:00:00开团，则该团
 
 //的结束时间为02:00:00
 
-\"cover\":
-\"http://o9ixtumvv.bkt.clouddn.com/20170510152514628-dssIB8U8.jpg\",
+"cover":
+"http://o9ixtumvv.bkt.clouddn.com/20170510152514628-dssIB8U8.jpg",
 //活动封面
 
-\"price\": 1134, //团购价（元）
+"price": 1134, //团购价（元）
 
-\"coupon\_usage\": 0, //优惠券使用。default 0（0 不能用优惠券；1
+"coupon\_usage": 0, //优惠券使用。default 0（0 不能用优惠券；1
 可以用专用优惠券；2 可以用系
 
 //统优惠券）
 
-\"master\_free\": 1, //团长是否免单。default 0（0 非免单活动, 1
+"master\_free": 1, //团长是否免单。default 0（0 非免单活动, 1
 可以使用免单优惠券）
 
-\"end\_time\": \"2017-05-12 09:52:25\", //结束时间
+"end\_time": "2017-05-12 09:52:25", //结束时间
 
-\"description\": null,
+"description": null,
 
-\"promoted\": 1, //推荐进入活动详情页方便其他用户参团, 0 不推荐, 1 推荐,
+"promoted": 1, //推荐进入活动详情页方便其他用户参团, 0 不推荐, 1 推荐,
 当免单开团的时候该团
 
 //为不推荐,需要团长自己拉人参团
 
-\"start\_time\": \"2017-05-10 18:08:44\", //开团时间
+"start\_time": "2017-05-10 18:08:44", //开团时间
 
-\"piece\_group\_purchase\_master\_status\": \"OPENING\",
+"piece\_group\_purchase\_master\_status": "OPENING",
 //拼团状态（OPENING正在开团/DEAL拼团
 
 //成功/FAIL拼团失败）
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"piece\_group\_purchase\_id\": 4, //拼团活动id
+"piece\_group\_purchase\_id": 4, //拼团活动id
 
-\"created\_time\": \"2017-05-12 11:31:09\" //加入该拼团的时间
+"created\_time": "2017-05-12 11:31:09" //加入该拼团的时间
 
 }\]
 
@@ -8476,148 +8476,148 @@ Resp:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"id\": 1,
+"id": 1,
 
-\"marketing\_name\": \"活动1\",
+"marketing\_name": "活动1",
 
-\"marketing\_short\_name\": \"活动1缩略名\",
+"marketing\_short\_name": "活动1缩略名",
 
-\"payment\_type\": \"POINT\" //该用户支付订单的方式
+"payment\_type": "POINT" //该用户支付订单的方式
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"piece\_group\_purchase\_status\": \"ONSELL\",
+"piece\_group\_purchase\_status": "ONSELL",
 
-\"min\_participator\_count\": 2,
+"min\_participator\_count": 2,
 
-\"price\": 200.00,
+"price": 200.00,
 
-\"suggested\_price\": 233.00,
+"suggested\_price": 233.00,
 
-\"sale\": 50,
+"sale": 50,
 
-\"coupon\_usage\": 1,
+"coupon\_usage": 1,
 
-\"cover\":
-\"http://o9ixtumvv.bkt.clouddn.com/20170511111002449-3OUYLBt6.jpg\",
+"cover":
+"http://o9ixtumvv.bkt.clouddn.com/20170511111002449-3OUYLBt6.jpg",
 
-\"duration\": 7200,
+"duration": 7200,
 
-\"free\_shipping\": 0,
+"free\_shipping": 0,
 
-\"master\_free\": 1,
+"master\_free": 1,
 
-\"description\": \"描述1\",
+"description": "描述1",
 
-\"start\_time\": \"2017-05-11 12:22:57\",
+"start\_time": "2017-05-11 12:22:57",
 
-\"end\_time\": \"2017-05-25 12:22:59\",
+"end\_time": "2017-05-25 12:22:59",
 
-\"piece\_group\_purchase\_id\": 1,
+"piece\_group\_purchase\_id": 1,
 
-\"promoted\": 1,
+"promoted": 1,
 
-\"piece\_group\_purchase\_master\_status\": \"OPENING\",
+"piece\_group\_purchase\_master\_status": "OPENING",
 
-\"total\_members\_count\": 2,
+"total\_members\_count": 2,
 
-\"paid\_members\_count\": 1,
+"paid\_members\_count": 1,
 
-\"created\_time\": \"2017-05-10 17:05:07\",
+"created\_time": "2017-05-10 17:05:07",
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"order\_number\": \"order\_number1\",
+"order\_number": "order\_number1",
 
-\"piece\_group\_purchase\_member\_status\": \"PAID\",
+"piece\_group\_purchase\_member\_status": "PAID",
 
-\"order\": { //订单 请参考订单api
+"order": { //订单 请参考订单api
 
-\"detail\": null,
+"detail": null,
 
-\"phone\": \"13155555555\",
+"phone": "13155555555",
 
-\"is\_deliver\_reminder\": 0,
+"is\_deliver\_reminder": 0,
 
-\"contact\_user\": \"张三\",
+"contact\_user": "张三",
 
-\"remark\": \"备注1\",
+"remark": "备注1",
 
-\"invoice\": 0,
+"invoice": 0,
 
-\"street\": null,
+"street": null,
 
-\"trade\_number\": null,
+"trade\_number": null,
 
-\"express\_number\": null,
+"express\_number": null,
 
-\"deal\_date\": null,
+"deal\_date": null,
 
-\"express\_company\": null,
+"express\_company": null,
 
-\"city\": \"广州市\",
+"city": "广州市",
 
-\"id\": 1,
+"id": 1,
 
-\"cover\": null,
+"cover": null,
 
-\"confirm\_date\": null,
+"confirm\_date": null,
 
-\"description\": \"描述1\",
+"description": "描述1",
 
-\"province\": \"广东省\",
+"province": "广东省",
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"coupon\_info\": null,
+"coupon\_info": null,
 
-\"express\_code\": null,
+"express\_code": null,
 
-\"district\": \"荔湾区\",
+"district": "荔湾区",
 
-\"deliver\_date\": null,
+"deliver\_date": null,
 
-\"delivered\_date\": null,
+"delivered\_date": null,
 
-\"created\_date\": \"2017-06-05 15:01:13\",
+"created\_date": "2017-06-05 15:01:13",
 
-\"order\_number\": \"xxx\",
+"order\_number": "xxx",
 
-\"zip\": null,
+"zip": null,
 
-\"point\_exchange\_rate\": 100,
+"point\_exchange\_rate": 100,
 
-\"marketing\": null,
+"marketing": null,
 
-\"status\": \"DELIVERING\",
+"status": "DELIVERING",
 
-\"invoice\_title\": null,
+"invoice\_title": null,
 
-\"marketing\_description\": null,
+"marketing\_description": null,
 
-\"receiving\_time\": null,
+"receiving\_time": null,
 
-\"deliver\_order\_number\": null,
+"deliver\_order\_number": null,
 
-\"total\_price\": 1000,
+"total\_price": 1000,
 
-\"previous\_status\": null,
+"previous\_status": null,
 
-\"is\_deleted\": 0,
+"is\_deleted": 0,
 
-\"marketing\_id\": null,
+"marketing\_id": null,
 
-\"settled\": 0,
+"settled": 0,
 
-\"freight\": 500,
+"freight": 500,
 
-\"pay\_date\": \"2017-06-05 15:01:15\",
+"pay\_date": "2017-06-05 15:01:15",
 
-\"payment\_type\": \"POINT\"
+"payment\_type": "POINT"
 
 },
 
@@ -8629,9 +8629,9 @@ Error Resp 1：
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"message\": \"pieceGroupPurchase.not.found\"
+"message": "pieceGroupPurchase.not.found"
 
 }
 
@@ -8639,9 +8639,9 @@ Error Resp 1：
 
 {
 
-\"status\_code\": 1,
+"status\_code": 1,
 
-\"message\": \"not.your.pieceGroupPurchase\"
+"message": "not.your.pieceGroupPurchase"
 
 }
 
@@ -8658,23 +8658,23 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"id\": 1, //团长id
+"id": 1, //团长id
 
-\"user\_id\": 1, //团长的user id
+"user\_id": 1, //团长的user id
 
-\"piece\_group\_purchase\_id\": 1, //拼团活动id
+"piece\_group\_purchase\_id": 1, //拼团活动id
 
-\"start\_time\": \"2017-05-27 09:28:19\", //创团时间
+"start\_time": "2017-05-27 09:28:19", //创团时间
 
-\"end\_time\": \"2017-05-28 09:28:21\", //结束时间
+"end\_time": "2017-05-28 09:28:21", //结束时间
 
-\"promoted\": 1, //是否为推荐团长
+"promoted": 1, //是否为推荐团长
 
-\"piece\_group\_purchase\_status\": \"ONSELL\",
+"piece\_group\_purchase\_status": "ONSELL",
 //状态。INIT/ONSELL/OFFSELL/LOCK （LOCK不允许开团，但已开的团仍
 
 //然生效（成员仍能加入已开的团） OFFSELL：不允许开 团，已开的团
@@ -8683,110 +8683,110 @@ Return:
 
 //则到时间就退款）
 
-\"piece\_group\_purchase\_master\_status\": \"OPENING\",
+"piece\_group\_purchase\_master\_status": "OPENING",
 //拼团状态（OPENING正在开团/DEAL拼团成功/FAIL拼团失败）
 
-\"marketing\_name\": \"活动1\", //拼团活动名称
+"marketing\_name": "活动1", //拼团活动名称
 
-\"marketing\_short\_name\": \"活动1缩略名\",
+"marketing\_short\_name": "活动1缩略名",
 
-\"min\_participator\_count\": 2, //最小成团人数，default 2
+"min\_participator\_count": 2, //最小成团人数，default 2
 
-\"price\": 800, //团购价（元）
+"price": 800, //团购价（元）
 
-\"suggested\_price\": 1000, //市场价（元）
+"suggested\_price": 1000, //市场价（元）
 
-\"sale\": 0, //已团件数
+"sale": 0, //已团件数
 
-\"coupon\_usage\": 0, //优惠券使用。default 0（0 不能用优惠券；1
+"coupon\_usage": 0, //优惠券使用。default 0（0 不能用优惠券；1
 可以用专用优惠券；2 可以用系统优惠券）
 
-\"cover\":
-\"http://o9ixtumvv.bkt.clouddn.com/20170526143343912-37RImHeW.jpg\",
+"cover":
+"http://o9ixtumvv.bkt.clouddn.com/20170526143343912-37RImHeW.jpg",
 //活动封面
 
-\"duration\": 7200, //有效时间，单位秒。比如有效时间为
+"duration": 7200, //有效时间，单位秒。比如有效时间为
 3600秒，某用户在01:00:00开团，则该团的结束时间
 
 //为02:00:00
 
-\"free\_shipping\": 1, //是否包邮。 default 1（0
+"free\_shipping": 1, //是否包邮。 default 1（0
 根据产品定义的邮费计算，1 包邮）
 
-\"payment\_type\": \"WECHAT\",
+"payment\_type": "WECHAT",
 //该拼团活动支持的支付方式。(WECHAT微信支付 POINT 积分 若两种都支持，
 
 //则用"\|"分隔。如 WECHAT\|POINT）
 
-\"master\_free\": 1, //团长是否免单。default 0（0 非免单活动, 1
+"master\_free": 1, //团长是否免单。default 0（0 非免单活动, 1
 可以使用免单优惠券）
 
-\"description\": null,
+"description": null,
 
-\"product\": { //参考产品api的说明
+"product": { //参考产品api的说明
 
-\"weight\": 10,
+"weight": 10,
 
-\"partner\_level\_zone\": 1,
+"partner\_level\_zone": 1,
 
-\"stock\_balance\": 1000,
+"stock\_balance": 1000,
 
-\"fare\_id\": 1,
+"fare\_id": 1,
 
-\"id\": 1,
+"id": 1,
 
-\"cover\":
-\"http://o9ixtumvv.bkt.clouddn.com/20170526142339324-YHykFlst.jpg\",
+"cover":
+"http://o9ixtumvv.bkt.clouddn.com/20170526142339324-YHykFlst.jpg",
 
-\"sales\": 0,
+"sales": 0,
 
-\"promoted\": 0,
+"promoted": 0,
 
-\"name\": \"产品1\",
+"name": "产品1",
 
-\"created\_date\": \"2017-05-26 14:23:40\",
+"created\_date": "2017-05-26 14:23:40",
 
-\"cost\_price\": 500,
+"cost\_price": 500,
 
-\"status\": \"ONSELL\",
+"status": "ONSELL",
 
-\"free\_shipping\": 0,
+"free\_shipping": 0,
 
-\"brand\_id\": null,
+"brand\_id": null,
 
-\"category\_id\": 1,
+"category\_id": 1,
 
-\"suggested\_price\": 2000,
+"suggested\_price": 2000,
 
-\"barcode\": null,
+"barcode": null,
 
-\"short\_name\": \"缩略名1\",
+"short\_name": "缩略名1",
 
-\"bulk\": null,
+"bulk": null,
 
-\"specifications\": \[\],
+"specifications": \[\],
 
-\"unit\": \"个\",
+"unit": "个",
 
-\"last\_modified\_date\": \"2017-05-26 14:23:42\",
+"last\_modified\_date": "2017-05-26 14:23:42",
 
-\"price\": 1000,
+"price": 1000,
 
-\"covers\": \[
+"covers": \[
 
-\"http://o9ixtumvv.bkt.clouddn.com/20170526142339324-YHykFlst.jpg\"
+"http://o9ixtumvv.bkt.clouddn.com/20170526142339324-YHykFlst.jpg"
 
 \],
 
-\"freight\": 0,
+"freight": 0,
 
-\"store\_location\": null,
+"store\_location": null,
 
-\"sort\_order\": 100,
+"sort\_order": 100,
 
-\"view\_count\": 0,
+"view\_count": 0,
 
-\"description\": \"产品描述\"
+"description": "产品描述"
 
 }
 
@@ -8813,26 +8813,26 @@ Data:
 
 {
 
-//这两个是 \"新建订单api\" 新增的域
+//这两个是 "新建订单api" 新增的域
 
-\"marketing\": \"PIECE-GROUP\", //required。开团必须是PIECE-GROUP
+"marketing": "PIECE-GROUP", //required。开团必须是PIECE-GROUP
 
-\"order\_items\": \[
+"order\_items": \[
 
 {
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"product\_specification\_id\": 1,
+"product\_specification\_id": 1,
 
-\"quantity\": 2,
+"quantity": 2,
 
-\"marketing\_id\": 1, //required。拼团活动的ID,
+"marketing\_id": 1, //required。拼团活动的ID,
 即piece\_group\_purchase的id
 
 }
 
-\...其他需要提供的域同\"新建订单api\"
+\...其他需要提供的域同"新建订单api"
 
 }
 
@@ -8857,27 +8857,27 @@ Data:
 
 {
 
-//这两个是 \"新建订单api\" 新增的域
+//这两个是 "新建订单api" 新增的域
 
-\"marketing\": \"PIECE-GROUP-JOINT\", //required。参团必须是
+"marketing": "PIECE-GROUP-JOINT", //required。参团必须是
 PIECE-GROUP-JOINT
 
-\"order\_items\": \[
+"order\_items": \[
 
 {
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"product\_specification\_id\": 1,
+"product\_specification\_id": 1,
 
-\"quantity\": 2,
+"quantity": 2,
 
-\"marketing\_id\": 1, //required。所参加拼团的团长ID,
+"marketing\_id": 1, //required。所参加拼团的团长ID,
 即piece\_group\_purchase\_master的id
 
 }
 
-\...其他需要提供的域同\"新建订单api\"
+\...其他需要提供的域同"新建订单api"
 
 }
 
@@ -8894,57 +8894,57 @@ Returns:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"contact\": { //用户默认配送地区
+"contact": { //用户默认配送地区
 
-\"id\": 1,
+"id": 1,
 
-\"zip\": null,
+"zip": null,
 
-\"detail\": null,
+"detail": null,
 
-\"phone\": \"1234567\",
+"phone": "1234567",
 
-\"contact\_user\": \"张三\",
+"contact\_user": "张三",
 
-\"street\": null,
+"street": null,
 
-\"province\": \"广东\",
+"province": "广东",
 
-\"is\_default\": 1,
+"is\_default": 1,
 
-\"street\_number\": null,
+"street\_number": null,
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"district\": \"荔湾区\",
+"district": "荔湾区",
 
-\"city\": \"广州\"
-
-},
-
-\"categories\": \[
-
-{
-
-\"id\": 2,
-
-\"name\": \"批发类别2\", //类别名
-
-\"sort\_order\": 5 //排序，小的在前面
+"city": "广州"
 
 },
 
+"categories": \[
+
 {
 
-\"id\": 1,
+"id": 2,
 
-\"name\": \"批发类别1\",
+"name": "批发类别2", //类别名
 
-\"sort\_order\": 100
+"sort\_order": 5 //排序，小的在前面
+
+},
+
+{
+
+"id": 1,
+
+"name": "批发类别1",
+
+"sort\_order": 100
 
 }
 
@@ -8971,174 +8971,174 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"totalRow\": 1,
+"totalRow": 1,
 
-\"pageNumber\": 1,
+"pageNumber": 1,
 
-\"firstPage\": true,
+"firstPage": true,
 
-\"lastPage\": true,
+"lastPage": true,
 
-\"totalPage\": 1,
+"totalPage": 1,
 
-\"pageSize\": 10,
+"pageSize": 10,
 
-\"list\": \[{
+"list": \[{
 
-\"category\_id\": 1,
+"category\_id": 1,
 
-\"cover\":
-\"http://o9ixtumvv.bkt.clouddn.com/20170525151147892-Koka1giH.jpg\",//批发活动封面
+"cover":
+"http://o9ixtumvv.bkt.clouddn.com/20170525151147892-Koka1giH.jpg",//批发活动封面
 
-\"sale\": 0, //已售个数
+"sale": 0, //已售个数
 
-\"product\": { //参考产品api
+"product": { //参考产品api
 
-\"free\_shipping\": 0,
+"free\_shipping": 0,
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"last\_modified\_date\": \"2017-05-25 15:09:29\",
+"last\_modified\_date": "2017-05-25 15:09:29",
 
-\"promoted\": 0,
+"promoted": 0,
 
-\"specifications\": \[{ //产品规格列表
+"specifications": \[{ //产品规格列表
 
-\"price\": 10000.00,
+"price": 10000.00,
 
-\"suggested\_price\": 20000.00,
+"suggested\_price": 20000.00,
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"name\": \"红色\",
+"name": "红色",
 
-\"weight\": 20,
+"weight": 20,
 
-\"id\": 1,
+"id": 1,
 
-\"bulk\": 0,
+"bulk": 0,
 
-\"stock\_balance\": 1000,
+"stock\_balance": 1000,
 
-\"cost\_price\": 100.00
+"cost\_price": 100.00
 
 }, {
 
-\"price\": 3000.00,
+"price": 3000.00,
 
-\"suggested\_price\": 10000.00,
+"suggested\_price": 10000.00,
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"name\": \"银色\",
+"name": "银色",
 
-\"weight\": 10,
+"weight": 10,
 
-\"id\": 2,
+"id": 2,
 
-\"bulk\": 0,
+"bulk": 0,
 
-\"stock\_balance\": 1000,
+"stock\_balance": 1000,
 
-\"cost\_price\": 100.00
+"cost\_price": 100.00
 
 }\],
 
-\"sales\": 0,
+"sales": 0,
 
-\"cover\":
-\"http://o9ixtumvv.bkt.clouddn.com/20170525103606389-6Vu95yiR.jpg\", //
+"cover":
+"http://o9ixtumvv.bkt.clouddn.com/20170525103606389-6Vu95yiR.jpg", //
 
 //产品默认的封面图
 
-\"price\": 1000.00,
+"price": 1000.00,
 
-\"id\": 1,
+"id": 1,
 
-\"sort\_order\": 100,
+"sort\_order": 100,
 
-\"barcode\": null,
+"barcode": null,
 
-\"store\_location\": null,
+"store\_location": null,
 
-\"cost\_price\": 10.00,
+"cost\_price": 10.00,
 
-\"covers\":
-\[\"http://o9ixtumvv.bkt.clouddn.com/20170525153019061-qsQ1cWAF.jpg\",
+"covers":
+\["http://o9ixtumvv.bkt.clouddn.com/20170525153019061-qsQ1cWAF.jpg",
 
-\"http://o9ixtumvv.bkt.clouddn.com/20170525153019363-kLyFRGJS.jpg\"
+"http://o9ixtumvv.bkt.clouddn.com/20170525153019363-kLyFRGJS.jpg"
 
 \], //产品的封面图列表
 
-\"weight\": 200,
+"weight": 200,
 
-\"stock\_balance\": 1000,
+"stock\_balance": 1000,
 
-\"brand\_id\": null,
+"brand\_id": null,
 
-\"unit\": \"台\",
+"unit": "台",
 
-\"suggested\_price\": 2000.00,
+"suggested\_price": 2000.00,
 
-\"name\": \"诺基亚\",
+"name": "诺基亚",
 
-\"short\_name\": \"诺基亚缩略名\",
+"short\_name": "诺基亚缩略名",
 
-\"created\_date\": \"2017-05-25 10:36:06\",
+"created\_date": "2017-05-25 10:36:06",
 
-\"fare\_id\": 1,
+"fare\_id": 1,
 
-\"bulk\": null,
+"bulk": null,
 
-\"partner\_level\_zone\": 1,
+"partner\_level\_zone": 1,
 
-\"view\_count\": 0,
+"view\_count": 0,
 
-\"status\": \"ONSELL\"
-
-},
-
-\"pricing\": { //与用户默认配送地区相匹配的价格项
-
-\"suggested\_retail\_price\": 22,
-
-\"region\": \"辽宁\",
-
-\"id\": 8,
-
-\"enabled\": 1,
-
-\"price\": 11,
-
-\"is\_default\": 0,
-
-\"wholesale\_id\": 1,
-
-\"suggested\_wholesale\_price\": 44
+"status": "ONSELL"
 
 },
 
-\"product\_id\": 1, //产品id
+"pricing": { //与用户默认配送地区相匹配的价格项
 
-\"marketing\_name\": \"批发1\", //批发活动名称
+"suggested\_retail\_price": 22,
 
-\"marketing\_short\_name\": \"活动1缩略名\",
+"region": "辽宁",
 
-\"description\": \"机会难得！！！\", //描述
+"id": 8,
 
-\"id\": 1,
+"enabled": 1,
 
-\"status\": \"ONSELL\" //状态。INIT/ONSELL/OFFSELL
+"price": 11,
 
-\"settlement\_proportion\": 30, //分成比例
+"is\_default": 0,
 
-\"agent\_proportion\": 20, //代理分成比例
+"wholesale\_id": 1,
 
-\"unit\": 件 //单位
+"suggested\_wholesale\_price": 44
+
+},
+
+"product\_id": 1, //产品id
+
+"marketing\_name": "批发1", //批发活动名称
+
+"marketing\_short\_name": "活动1缩略名",
+
+"description": "机会难得！！！", //描述
+
+"id": 1,
+
+"status": "ONSELL" //状态。INIT/ONSELL/OFFSELL
+
+"settlement\_proportion": 30, //分成比例
+
+"agent\_proportion": 20, //代理分成比例
+
+"unit": 件 //单位
 
 }\]
 
@@ -9163,19 +9163,19 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"category\_id\": 1,
+"category\_id": 1,
 
-\"cover\":
-\"http://o9ixtumvv.bkt.clouddn.com/20170525151147892-Koka1giH.jpg\",
+"cover":
+"http://o9ixtumvv.bkt.clouddn.com/20170525151147892-Koka1giH.jpg",
 //批发活动封面
 
-\"sale\": 0, //已售个数
+"sale": 0, //已售个数
 
-\"pricings\": \[{ //价格列表。不同地区的批发价格不同。
+"pricings": \[{ //价格列表。不同地区的批发价格不同。
 
 //1.is\_default为1的价格项表示该价格适合于所有地区（不含专门设置的地区）
 
@@ -9196,188 +9196,188 @@ pricings的返回结果为空数组\[\]，则表示
 
 // 所有地区都不配送。
 
-\"region\": null,
+"region": null,
 
-\"id\": 47,
+"id": 47,
 
-\"price\": 900,
+"price": 900,
 
-\"is\_default\": 1,
+"is\_default": 1,
 
-\"enabled\": 1,
+"enabled": 1,
 
-\"wholesale\_id\": 1,
+"wholesale\_id": 1,
 
-\"suggested\_retail\_price\": 1000,
+"suggested\_retail\_price": 1000,
 
-\"suggested\_whole\_price\": 800,
+"suggested\_whole\_price": 800,
 
 },{
 
-\"region\": \"江苏-苏州\|江苏-南通\",
+"region": "江苏-苏州\|江苏-南通",
 
-\"id\": 48,
+"id": 48,
 
-\"price\": 1100,
+"price": 1100,
 
-\"is\_default\": 0,
+"is\_default": 0,
 
-\"enabled\": 0,
+"enabled": 0,
 
-\"wholesale\_id\": 1,
+"wholesale\_id": 1,
 
-\"suggested\_retail\_price\": 850, //产品在该地区的线下建议零售价
+"suggested\_retail\_price": 850, //产品在该地区的线下建议零售价
 
-\"suggested\_whole\_price\": 800 //产品在该地区的星级经销价
+"suggested\_whole\_price": 800 //产品在该地区的星级经销价
 
 }\],
 
-\"product\": { //参考产品api
+"product": { //参考产品api
 
-\"free\_shipping\": 0,
+"free\_shipping": 0,
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"last\_modified\_date\": \"2017-05-25 15:30:19\",
+"last\_modified\_date": "2017-05-25 15:30:19",
 
-\"promoted\": 0,
+"promoted": 0,
 
-\"specifications\": \[{
+"specifications": \[{
 
-\"price\": 10000.00,
+"price": 10000.00,
 
-\"suggested\_price\": 20000.00,
+"suggested\_price": 20000.00,
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"name\": \"红色\",
+"name": "红色",
 
-\"weight\": 20,
+"weight": 20,
 
-\"id\": 1,
+"id": 1,
 
-\"bulk\": 0,
+"bulk": 0,
 
-\"stock\_balance\": 1000,
+"stock\_balance": 1000,
 
-\"cost\_price\": 100.00
+"cost\_price": 100.00
 
 }, {
 
-\"price\": 3000.00,
+"price": 3000.00,
 
-\"suggested\_price\": 10000.00,
+"suggested\_price": 10000.00,
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"name\": \"银色\",
+"name": "银色",
 
-\"weight\": 10,
+"weight": 10,
 
-\"id\": 2,
+"id": 2,
 
-\"bulk\": 0,
+"bulk": 0,
 
-\"stock\_balance\": 1000,
+"stock\_balance": 1000,
 
-\"cost\_price\": 100.00
+"cost\_price": 100.00
 
 }\],
 
-\"sales\": 0,
+"sales": 0,
 
-\"cover\":
-\"http://o9ixtumvv.bkt.clouddn.com/20170525153019061-qsQ1cWAF.jpg\",
+"cover":
+"http://o9ixtumvv.bkt.clouddn.com/20170525153019061-qsQ1cWAF.jpg",
 
-\"category\_id\": 1,
+"category\_id": 1,
 
-\"price\": 1000.00,
+"price": 1000.00,
 
-\"id\": 1,
+"id": 1,
 
-\"sort\_order\": 100,
+"sort\_order": 100,
 
-\"barcode\": null,
+"barcode": null,
 
-\"store\_location\": null,
+"store\_location": null,
 
-\"cost\_price\": 10.00,
+"cost\_price": 10.00,
 
-\"covers\":
-\[\"http://o9ixtumvv.bkt.clouddn.com/20170525153019061-qsQ1cWAF.jpg\",
-\"http://o9ixtumvv.bkt.clouddn.com/20170525153019363-kLyFRGJS.jpg\"\],
+"covers":
+\["http://o9ixtumvv.bkt.clouddn.com/20170525153019061-qsQ1cWAF.jpg",
+"http://o9ixtumvv.bkt.clouddn.com/20170525153019363-kLyFRGJS.jpg"\],
 
-\"weight\": 200,
+"weight": 200,
 
-\"stock\_balance\": 1000,
+"stock\_balance": 1000,
 
-\"brand\_id\": null,
+"brand\_id": null,
 
-\"unit\": \"台\",
+"unit": "台",
 
-\"suggested\_price\": 2000.00,
+"suggested\_price": 2000.00,
 
-\"name\": \"诺基亚\",
+"name": "诺基亚",
 
-\"short\_name\": \"诺基亚缩略名\",
+"short\_name": "诺基亚缩略名",
 
-\"created\_date\": \"2017-05-25 10:36:06\",
+"created\_date": "2017-05-25 10:36:06",
 
-\"fare\_id\": 1,
+"fare\_id": 1,
 
-\"bulk\": null,
+"bulk": null,
 
-\"partner\_level\_zone\": 1,
+"partner\_level\_zone": 1,
 
-\"view\_count\": 0,
+"view\_count": 0,
 
-\"status\": \"ONSELL\"
-
-},
-
-\"pricing\": { //与用户默认配送地区相匹配的价格项
-
-\"suggested\_retail\_price\": 22,
-
-\"region\": \"辽宁\",
-
-\"id\": 8,
-
-\"enabled\": 1,
-
-\"price\": 11,
-
-\"is\_default\": 0,
-
-\"wholesale\_id\": 1,
-
-\"suggested\_wholesale\_price\": 44
+"status": "ONSELL"
 
 },
 
-\"product\_id\": 1, //产品id
+"pricing": { //与用户默认配送地区相匹配的价格项
 
-\"marketing\_name\": \"批发1\", //批发活动名称
+"suggested\_retail\_price": 22,
 
-\"marketing\_short\_name\": \"批发1缩略名\",
+"region": "辽宁",
 
-\"description\": \"\<p\>机会难得！！！\<br/\>\</p\>\", //描述
+"id": 8,
 
-\"id\": 1, //活动id
+"enabled": 1,
 
-\"status\": \"ONSELL\" //活动状态（INIT/ONSELL/OFFSELL）,
+"price": 11,
 
-\"settlement\_proportion\": 30, //分成比例
+"is\_default": 0,
 
-\"agent\_proportion\": 44, //代理分成比例
+"wholesale\_id": 1,
 
-\"proportionLv1\": 24, //下级线下皇冠批发产品时的分成比例 =
+"suggested\_wholesale\_price": 44
+
+},
+
+"product\_id": 1, //产品id
+
+"marketing\_name": "批发1", //批发活动名称
+
+"marketing\_short\_name": "批发1缩略名",
+
+"description": "\<p\>机会难得！！！\<br/\>\</p\>", //描述
+
+"id": 1, //活动id
+
+"status": "ONSELL" //活动状态（INIT/ONSELL/OFFSELL）,
+
+"settlement\_proportion": 30, //分成比例
+
+"agent\_proportion": 44, //代理分成比例
+
+"proportionLv1": 24, //下级线下皇冠批发产品时的分成比例 =
 分成比例\*下级线下皇冠分成比例
 
-\"proportionLv2\": 6, //下下级线下皇冠批发产品时的分成比例 =
+"proportionLv2": 6, //下下级线下皇冠批发产品时的分成比例 =
 分成比例\*下下级线下皇冠分成比例
 
-\"unit\": 件 //单位
+"unit": 件 //单位
 
 }
 
@@ -9402,25 +9402,25 @@ Data:
 
 {
 
-//这两个是 \"新建订单api\" 新增的域
+//这两个是 "新建订单api" 新增的域
 
-\"marketing\": \"WHOLESALE\", //required。新建批发订单必须是WHOLESALE
+"marketing": "WHOLESALE", //required。新建批发订单必须是WHOLESALE
 
-\"order\_items\": \[
+"order\_items": \[
 
 {
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"product\_specification\_id\": 1,
+"product\_specification\_id": 1,
 
-\"quantity\": 2,
+"quantity": 2,
 
-\"marketing\_id\": 1, //required。批发活动的ID, 即wholesale的id
+"marketing\_id": 1, //required。批发活动的ID, 即wholesale的id
 
 }
 
-\...其他需要提供的域同\"新建订单api\"
+\...其他需要提供的域同"新建订单api"
 
 }
 
@@ -9437,42 +9437,42 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[
+"data": \[
 
 {
 
-\"short\_note\": \"洗发水试用\",
+"short\_note": "洗发水试用",
 
-\"note\": null,
+"note": null,
 
-\"end\_time\": null,
+"end\_time": null,
 
-\"shipping\_type\": 0,
+"shipping\_type": 0,
 
-\"index\": 100,
+"index": 100,
 
-\"version\": 1,
+"version": 1,
 
-\"enabled\": 1,
+"enabled": 1,
 
-\"cover\":
-\"http://o9ixtumvv.bkt.clouddn.com/20180709182906045-hyEDbt5L.jpeg\",
+"cover":
+"http://o9ixtumvv.bkt.clouddn.com/20180709182906045-hyEDbt5L.jpeg",
 
-\"start\_time\": null,
+"start\_time": null,
 
-\"payment\_type\": null,
+"payment\_type": null,
 
-\"price\": 0,
+"price": 0,
 
-\"product\_id\": 335,
+"product\_id": 335,
 
-\"name\": \"洗发水试用-免费\",
+"name": "洗发水试用-免费",
 
-\"id\": 1,
+"id": 1,
 
-\"partaken\": true //已经参加过
+"partaken": true //已经参加过
 
 }
 
@@ -9491,148 +9491,148 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"short\_note\": \"洗发水试用\",
+"short\_note": "洗发水试用",
 
-\"note\": null,
+"note": null,
 
-\"product\": {
+"product": {
 
-\"free\_shipping\": 0,
+"free\_shipping": 0,
 
-\"freight\": 0,
+"freight": 0,
 
-\"last\_modified\_date\": \"2016-12-22 10:10:36\",
+"last\_modified\_date": "2016-12-22 10:10:36",
 
-\"mid\": null,
+"mid": null,
 
-\"promoted\": 1,
+"promoted": 1,
 
-\"sales\": 9,
+"sales": 9,
 
-\"cover\": \"http://images.10mup.com/20161104102243958-v499XJvA.jpg\",
+"cover": "http://images.10mup.com/20161104102243958-v499XJvA.jpg",
 
-\"category\_id\": 83,
+"category\_id": 83,
 
-\"price\": 12.9,
+"price": 12.9,
 
-\"sku\_name\": null,
+"sku\_name": null,
 
-\"id\": 335,
+"id": 335,
 
-\"sort\_order\": 1,
+"sort\_order": 1,
 
-\"barcode\": \"6903148126660\",
+"barcode": "6903148126660",
 
-\"store\_location\": null,
+"store\_location": null,
 
-\"cost\_price\": 10.21,
+"cost\_price": 10.21,
 
-\"weight\": 500,
+"weight": 500,
 
-\"sku\_id\": null,
+"sku\_id": null,
 
-\"stock\_balance\": 13,
+"stock\_balance": 13,
 
-\"brand\_id\": null,
+"brand\_id": null,
 
-\"unit\": \"瓶\",
+"unit": "瓶",
 
-\"suggested\_price\": 20,
+"suggested\_price": 20,
 
-\"name\": \"REJOICE飘柔家庭护理芦荟长效止痒滋润洗发露400ML\",
+"name": "REJOICE飘柔家庭护理芦荟长效止痒滋润洗发露400ML",
 
-\"bar\_code\": null,
+"bar\_code": null,
 
-\"short\_name\": \"止痒滋润洗发露\",
+"short\_name": "止痒滋润洗发露",
 
-\"created\_date\": \"2016-10-07 14:11:51\",
+"created\_date": "2016-10-07 14:11:51",
 
-\"fare\_id\": 4,
+"fare\_id": 4,
 
-\"bulk\": 0,
+"bulk": 0,
 
-\"partner\_level\_zone\": 1,
+"partner\_level\_zone": 1,
 
-\"sku\_code\": null,
+"sku\_code": null,
 
-\"view\_count\": 2172,
+"view\_count": 2172,
 
-\"status\": \"ONSELL\"
-
-},
-
-\"end\_time\": null,
-
-\"shipping\_type\": 0,
-
-\"index\": 100,
-
-\"version\": 2,
-
-\"enabled\": 1,
-
-\"cover\":
-\"http://o9ixtumvv.bkt.clouddn.com/20180709182906045-hyEDbt5L.jpeg\",
-
-\"start\_time\": null,
-
-\"payment\_type\": null,
-
-\"price\": 0,
-
-\"product\_id\": 335,
-
-\"name\": \"洗发水试用-免费\",
-
-\"id\": 1,
-
-\"partaken\": true,
-
-\"covers\": \[
-
-{
-
-\"product\_id\": 335,
-
-\"id\": 1298,
-
-\"type\": 0,
-
-\"sort\_order\": 1,
-
-\"url\": \"http://images.10mup.com/20161104102243958-v499XJvA.jpg\"
+"status": "ONSELL"
 
 },
 
+"end\_time": null,
+
+"shipping\_type": 0,
+
+"index": 100,
+
+"version": 2,
+
+"enabled": 1,
+
+"cover":
+"http://o9ixtumvv.bkt.clouddn.com/20180709182906045-hyEDbt5L.jpeg",
+
+"start\_time": null,
+
+"payment\_type": null,
+
+"price": 0,
+
+"product\_id": 335,
+
+"name": "洗发水试用-免费",
+
+"id": 1,
+
+"partaken": true,
+
+"covers": \[
+
 {
 
-\"product\_id\": 335,
+"product\_id": 335,
 
-\"id\": 1299,
+"id": 1298,
 
-\"type\": 0,
+"type": 0,
 
-\"sort\_order\": 2,
+"sort\_order": 1,
 
-\"url\": \"http://images.10mup.com/20161104102242227-T17IgsG8.jpg\"
+"url": "http://images.10mup.com/20161104102243958-v499XJvA.jpg"
 
 },
 
 {
 
-\"product\_id\": 335,
+"product\_id": 335,
 
-\"id\": 1300,
+"id": 1299,
 
-\"type\": 0,
+"type": 0,
 
-\"sort\_order\": 3,
+"sort\_order": 2,
 
-\"url\": \"http://images.10mup.com/20161104102241687-lfedAC1r.jpg\"
+"url": "http://images.10mup.com/20161104102242227-T17IgsG8.jpg"
+
+},
+
+{
+
+"product\_id": 335,
+
+"id": 1300,
+
+"type": 0,
+
+"sort\_order": 3,
+
+"url": "http://images.10mup.com/20161104102241687-lfedAC1r.jpg"
 
 }
 
@@ -9653,25 +9653,25 @@ Data:
 
 {
 
-//这两个是 \"新建订单api\" 新增的域
+//这两个是 "新建订单api" 新增的域
 
-\"marketing\": \"TRIAL\", //required。新建试用装订单必须是TRIAL
+"marketing": "TRIAL", //required。新建试用装订单必须是TRIAL
 
-\"order\_items\": \[
+"order\_items": \[
 
 {
 
-\"product\_id\": 1, // 该试用装的产品ID
+"product\_id": 1, // 该试用装的产品ID
 
-\"product\_specification\_id\": 1, //规格号，如果有就带上
+"product\_specification\_id": 1, //规格号，如果有就带上
 
-\"quantity\": 1, //数量，必须是1
+"quantity": 1, //数量，必须是1
 
-\"marketing\_id\": 1, //required。批发活动的ID, 即trial的id
+"marketing\_id": 1, //required。批发活动的ID, 即trial的id
 
 }
 
-\...其他需要提供的域同\"新建订单api\"
+\...其他需要提供的域同"新建订单api"
 
 }
 
@@ -9702,50 +9702,50 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"totalRow\": 1,
+"totalRow": 1,
 
-\"pageNumber\": 1,
+"pageNumber": 1,
 
-\"lastPage\": true,
+"lastPage": true,
 
-\"firstPage\": true,
+"firstPage": true,
 
-\"totalPage\": 1,
+"totalPage": 1,
 
-\"pageSize\": 30,
+"pageSize": 30,
 
-\"list\": \[
+"list": \[
 
 {
 
-\"cover\":
-\"http://o9ixtumvv.bkt.clouddn.com/20180709182906045-hyEDbt5L.jpeg\",
+"cover":
+"http://o9ixtumvv.bkt.clouddn.com/20180709182906045-hyEDbt5L.jpeg",
 
-\"trial\_id\": 1,
+"trial\_id": 1,
 
-\"created\_time\": \"2018-08-06 17:27:21\",
+"created\_time": "2018-08-06 17:27:21",
 
-\"note\": null,
+"note": null,
 
-\"user\_id\": 11080,
+"user\_id": 11080,
 
-\"order\_number\": \"18080617272155711080\",
+"order\_number": "18080617272155711080",
 
-\"shipping\_type\": 0,
+"shipping\_type": 0,
 
-\"name\": \"洗发水试用-免费\",
+"name": "洗发水试用-免费",
 
-\"id\": 1,
+"id": 1,
 
-\"order\_id\": 3288,
+"order\_id": 3288,
 
-\"version\": 1,
+"version": 1,
 
-\"status\": \"AUDITING\"
+"status": "AUDITING"
 
 }
 
@@ -9768,13 +9768,13 @@ Data:
 
 {
 
-\"content\": \"建议门槛更低些，可以让更多人参与。\", //必选
+"content": "建议门槛更低些，可以让更多人参与。", //必选
 
-\"images\": \[ //可选
+"images": \[ //可选
 
-\"http://image.url\",
+"http://image.url",
 
-\"http://image2.url\"
+"http://image2.url"
 
 \]
 
@@ -9784,9 +9784,9 @@ Return:
 
 {
 
-\"message\": \"feedback.created\",
+"message": "feedback.created",
 
-\"status\_code\": 0
+"status\_code": 0
 
 }
 
@@ -9794,9 +9794,9 @@ Error Return:
 
 {
 
-\"message\": \"invalid.input.json\",
+"message": "invalid.input.json",
 
-\"status\_code\": 1
+"status\_code": 1
 
 }
 
@@ -9811,19 +9811,19 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"id\": 1,
+"id": 1,
 
-\"name\": \"FN\"
+"name": "FN"
 
 }, {
 
-\"id\": 2,
+"id": 2,
 
-\"name\": \"UI\"
+"name": "UI"
 
 }\]
 
@@ -9848,21 +9848,21 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"created\_date\": \"2016-05-16 12:52:15\",
+"created\_date": "2016-05-16 12:52:15",
 
-\"content\": \"分销拥金可提现时间是订单关闭后一天。\",
+"content": "分销拥金可提现时间是订单关闭后一天。",
 
-\"id\": 1,
+"id": 1,
 
-\"last\_modified\_date\": \"2016-05-16 12:52:15\",
+"last\_modified\_date": "2016-05-16 12:52:15",
 
-\"title\": \"分销拥金可提现时间\",
+"title": "分销拥金可提现时间",
 
-\"type\_id\": 1
+"type\_id": 1
 
 }\]
 
@@ -9876,15 +9876,15 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"content\": null,
+"content": null,
 
-\"id\": 1,
+"id": 1,
 
-\"image\": \"http://host:port/images/a.jpg\"
+"image": "http://host:port/images/a.jpg"
 
 }
 
@@ -9900,39 +9900,39 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"id\": 1,
+"id": 1,
 
-\"name\": \"头位广告\",
+"name": "头位广告",
 
-\"ads\": \[{
+"ads": \[{
 
-\"id\": 1,
+"id": 1,
 
-\"enabled\": 1,
+"enabled": 1,
 
-\"name\": \"a\",
+"name": "a",
 
-\"group\_id\": 1,
+"group\_id": 1,
 
-\"image\": \"/ad/7ce3c3f9662b92b759ecb8f523070631.jpg\",
+"image": "/ad/7ce3c3f9662b92b759ecb8f523070631.jpg",
 
-\"type\": \"a\",
+"type": "a",
 
-\"target\_url\": \"http://localhost:9990\"
+"target\_url": "http://localhost:9990"
 
 }\]
 
 }, {
 
-\"id\": 2,
+"id": 2,
 
-\"name\": \"首页banner\",
+"name": "首页banner",
 
-\"ads\": \[\]
+"ads": \[\]
 
 }\]
 
@@ -9946,23 +9946,23 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"id\": 1,
+"id": 1,
 
-\"enabled\": 1,
+"enabled": 1,
 
-\"name\": \"a\",
+"name": "a",
 
-\"group\_id\": 1,
+"group\_id": 1,
 
-\"image\": \"/ad/7ce3c3f9662b92b759ecb8f523070631.jpg\",
+"image": "/ad/7ce3c3f9662b92b759ecb8f523070631.jpg",
 
-\"type\": \"a\",
+"type": "a",
 
-\"target\_url\": \"http://localhost:9990\"
+"target\_url": "http://localhost:9990"
 
 }\]
 
@@ -9978,31 +9978,31 @@ Return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[
+"data": \[
 
 {
 
-\"number\": \"234234\", //QQ号
+"number": "234234", //QQ号
 
-\"name\": \"AAA\",
+"name": "AAA",
 
-\"id\": 1,
+"id": 1,
 
-\"enabled\": 1
+"enabled": 1
 
 },
 
 {
 
-\"number\": \"2342\",
+"number": "2342",
 
-\"name\": \"BBB\",
+"name": "BBB",
 
-\"id\": 2,
+"id": 2,
 
-\"enabled\": 1
+"enabled": 1
 
 }
 
@@ -10029,10 +10029,10 @@ return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\":
-\"http://112.74.26.228:8000/upload/2016-06-30/20160630113427-00803.jpg\"
+"data":
+"http://112.74.26.228:8000/upload/2016-06-30/20160630113427-00803.jpg"
 
 }
 
@@ -10051,30 +10051,30 @@ return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[
+"data": \[
 
 {
 
-\"file\_name\": \"e39936cbc10f49cef1316342a3938fec.png\",
+"file\_name": "e39936cbc10f49cef1316342a3938fec.png",
 
-\"original\_file\_name\":
-\"20180427-231841-把祷告事项从应用内分享到微信群\~显示错误.png\",
+"original\_file\_name":
+"20180427-231841-把祷告事项从应用内分享到微信群\~显示错误.png",
 
-\"url\":
-\"https://www.kequandian.net/upload/2018-05-30/e39936cbc10f49cef1316342a3938fec.png\"
+"url":
+"https://www.kequandian.net/upload/2018-05-30/e39936cbc10f49cef1316342a3938fec.png"
 
 },
 
 {
 
-\"file\_name\": \"ba87f98c1028d55f5978fca64a6bce29.jpeg\",
+"file\_name": "ba87f98c1028d55f5978fca64a6bce29.jpeg",
 
-\"original\_file\_name\": \"20161104133328890-xfTkpZAK.jpeg\",
+"original\_file\_name": "20161104133328890-xfTkpZAK.jpeg",
 
-\"url\":
-\"https://www.kequandian.net/upload/2018-05-30/ba87f98c1028d55f5978fca64a6bce29.jpeg\"
+"url":
+"https://www.kequandian.net/upload/2018-05-30/ba87f98c1028d55f5978fca64a6bce29.jpeg"
 
 }
 
@@ -10095,31 +10095,31 @@ return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[
+"data": \[
 
 {
 
-\"name\": \"fdsf\",
+"name": "fdsf",
 
-\"id\": 33,
+"id": 33,
 
-\"created\_date\": \"2016-10-17 15:49:40\",
+"created\_date": "2016-10-17 15:49:40",
 
-\"content\": \"safas afds afadsfas\"
+"content": "safas afds afadsfas"
 
 },
 
 {
 
-\"name\": \"fdsfsd\",
+"name": "fdsfsd",
 
-\"id\": 34,
+"id": 34,
 
-\"created\_date\": \"2016-10-17 15:51:08\",
+"created\_date": "2016-10-17 15:51:08",
 
-\"content\": \"sfdsfds\"
+"content": "sfdsfds"
 
 }
 
@@ -10140,9 +10140,9 @@ return:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \"https://www.muaskin.com/wx\"
+"data": "https://www.muaskin.com/wx"
 
 }
 
@@ -10167,55 +10167,55 @@ Return：
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"id\": 1,
+"id": 1,
 
-\"user\_id\": 1,
+"user\_id": 1,
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"collect\_date\": \"2016-05-18 16:52:15\",
+"collect\_date": "2016-05-18 16:52:15",
 
-\"category\_id\": 1,
+"category\_id": 1,
 
-\"name\": p1,
+"name": p1,
 
-\"cover\": imag/xx.png,
+"cover": imag/xx.png,
 
-\"brand\": ,
+"brand": ,
 
-\"origin\":,
+"origin":,
 
-\"stock\_balance\":,
+"stock\_balance":,
 
-\"sales\":,
+"sales":,
 
-\"description\":,
+"description":,
 
-\"status\":,
+"status":,
 
-\"created\_date\":,
+"created\_date":,
 
-\"last\_modified\_date\":,
+"last\_modified\_date":,
 
-\"unit\":,
+"unit":,
 
-\"price\":,
+"price":,
 
-\"cost\_price\":,
+"cost\_price":,
 
-\"suggested\_price\":,
+"suggested\_price":,
 
-\"promoted\":,
+"promoted":,
 
-\"freight\":,
+"freight":,
 
-\"free\_shipping\":,
+"free\_shipping":,
 
-\"sort\_order\":;
+"sort\_order":;
 
 }\]
 
@@ -10234,7 +10234,7 @@ Data:
 
 {
 
-\"product\_id\": 1
+"product\_id": 1
 
 }
 
@@ -10242,9 +10242,9 @@ Return：
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"message\": \"product.favorite.created\",
+"message": "product.favorite.created",
 
 }
 
@@ -10252,9 +10252,9 @@ Error Return:
 
 {
 
-\"message\": \"invalid.input.json\",
+"message": "invalid.input.json",
 
-\"status\_code\": 1
+"status\_code": 1
 
 }
 
@@ -10275,9 +10275,9 @@ Return：
 
 {
 
-\"message\": \"product.favorite.deleted\",
+"message": "product.favorite.deleted",
 
-\"status\_code\": 0
+"status\_code": 0
 
 }
 
@@ -10285,9 +10285,9 @@ Error Return:
 
 {
 
-\"message\": \"no.such.product.favorite\",
+"message": "no.such.product.favorite",
 
-\"status\_code\": 1
+"status\_code": 1
 
 }
 
@@ -10306,43 +10306,43 @@ Return：
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"id\": 3,
+"id": 3,
 
-\"enabled\": 1,
+"enabled": 1,
 
-\"name\": \"百世快递\",
+"name": "百世快递",
 
-\"is\_default\": 1,
+"is\_default": 1,
 
-\"code\": \"baishiwuliu\"
-
-}, {
-
-\"id\": 1,
-
-\"enabled\": 1,
-
-\"name\": \"天天快递\",
-
-\"is\_default\": 0,
-
-\"code\": \"tiantian\"
+"code": "baishiwuliu"
 
 }, {
 
-\"id\": 2,
+"id": 1,
 
-\"enabled\": 1,
+"enabled": 1,
 
-\"name\": \"万象物流\",
+"name": "天天快递",
 
-\"is\_default\": 0,
+"is\_default": 0,
 
-\"code\": \"wanxiangwuliu\"
+"code": "tiantian"
+
+}, {
+
+"id": 2,
+
+"enabled": 1,
+
+"name": "万象物流",
+
+"is\_default": 0,
+
+"code": "wanxiangwuliu"
 
 }\]
 
@@ -10373,375 +10373,375 @@ Return：
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": \[{
+"data": \[{
 
-\"detail\": \"和平区 89652号\",
+"detail": "和平区 89652号",
 
-\"phone\": \"13652698536\",
+"phone": "13652698536",
 
-\"is\_deliver\_reminder\": 1,
+"is\_deliver\_reminder": 1,
 
-\"contact\_user\": \"huang\",
+"contact\_user": "huang",
 
-\"remark\": null,
+"remark": null,
 
-\"invoice\": 0,
+"invoice": 0,
 
-\"street\": null,
+"street": null,
 
-\"trade\_number\": \"TEST1467273404816\",
+"trade\_number": "TEST1467273404816",
 
-\"express\_number\": null,
+"express\_number": null,
 
-\"deal\_date\": null,
+"deal\_date": null,
 
-\"express\_company\": null,
+"express\_company": null,
 
-\"city\": \"天津\",
+"city": "天津",
 
-\"id\": 299,
+"id": 299,
 
-\"cover\":
-\"http://112.74.26.228:8000/p/c45bb9fda6d985a3be40b40bdb693bb0.jpg\",
+"cover":
+"http://112.74.26.228:8000/p/c45bb9fda6d985a3be40b40bdb693bb0.jpg",
 
-\"confirm\_date\": null,
+"confirm\_date": null,
 
-\"description\": \"超效洁净护理洗衣液2.5L【运费10元】 x 1. \",
+"description": "超效洁净护理洗衣液2.5L【运费10元】 x 1. ",
 
-\"province\": \"天津\",
+"province": "天津",
 
-\"user\_id\": 2,
+"user\_id": 2,
 
-\"express\_code\": null,
+"express\_code": null,
 
-\"district\": \"和平区\",
+"district": "和平区",
 
-\"deliver\_date\": null,
+"deliver\_date": null,
 
-\"delivered\_date\": null,
+"delivered\_date": null,
 
-\"created\_date\": \"2016-06-30 15:55:40\",
+"created\_date": "2016-06-30 15:55:40",
 
-\"order\_number\": \"2016063015554024000000201\",
+"order\_number": "2016063015554024000000201",
 
-\"zip\": null,
+"zip": null,
 
-\"status\": \"CONFIRMED\_DELIVER\_PENDING\",
+"status": "CONFIRMED\_DELIVER\_PENDING",
 
-\"invoice\_title\": null,
+"invoice\_title": null,
 
-\"receiving\_time\": null,
+"receiving\_time": null,
 
-\"deliver\_order\_number\": null,
+"deliver\_order\_number": null,
 
-\"total\_price\": 44.80,
+"total\_price": 44.80,
 
-\"previous\_status\": null,
+"previous\_status": null,
 
-\"settled\": 0,
+"settled": 0,
 
-\"freight\": 10.00,
+"freight": 10.00,
 
-\"pay\_date\": \"2016-06-30 15:56:44\",
+"pay\_date": "2016-06-30 15:56:44",
 
-\"payment\_type\": \"WECHAT\",
+"payment\_type": "WECHAT",
 
-\"order\_items\": \[{
+"order\_items": \[{
 
-\"quantity\": 12,
+"quantity": 12,
 
-\"product\_specification\_id\": null,
+"product\_specification\_id": null,
 
-\"weight\": 22,
+"weight": 22,
 
-\"product\_specification\_name\": null,
+"product\_specification\_name": null,
 
-\"product\_name\": \"a\",
+"product\_name": "a",
 
-\"cover\": \"/p/b06260c587244e867209a5ba374a16ed.jpeg\",
+"cover": "/p/b06260c587244e867209a5ba374a16ed.jpeg",
 
-\"final\_price\": 132.00,
+"final\_price": 132.00,
 
-\"price\": 11.00,
+"price": 11.00,
 
-\"product\_id\": 1,
+"product\_id": 1,
 
-\"id\": 3,
+"id": 3,
 
-\"bulk\": null,
+"bulk": null,
 
-\"order\_id\": 2,
+"order\_id": 2,
 
-\"partner\_level\_zone\": 1,
+"partner\_level\_zone": 1,
 
-\"barcode\": null,
+"barcode": null,
 
-\"store\_location\": null,
+"store\_location": null,
 
-\"status\": \"CREATED\",
+"status": "CREATED",
 
-\"cost\_price\": 1.00
+"cost\_price": 1.00
 
 }, {
 
-\"quantity\": 21,
+"quantity": 21,
 
-\"product\_specification\_id\": 1,
+"product\_specification\_id": 1,
 
-\"weight\": 32,
+"weight": 32,
 
-\"product\_specification\_name\": \"sfsf\",
+"product\_specification\_name": "sfsf",
 
-\"product\_name\": \"b\",
+"product\_name": "b",
 
-\"cover\": \"/p/39df6836637605a5c86e8aec6ac8a43d.jpeg\",
+"cover": "/p/39df6836637605a5c86e8aec6ac8a43d.jpeg",
 
-\"final\_price\": 693.00,
+"final\_price": 693.00,
 
-\"price\": 33.00,
+"price": 33.00,
 
-\"product\_id\": 2,
+"product\_id": 2,
 
-\"id\": 4,
+"id": 4,
 
-\"bulk\": null,
+"bulk": null,
 
-\"order\_id\": 2,
+"order\_id": 2,
 
-\"partner\_level\_zone\": 1,
+"partner\_level\_zone": 1,
 
-\"barcode\": null,
+"barcode": null,
 
-\"store\_location\": null,
+"store\_location": null,
 
-\"status\": \"CREATED\",
+"status": "CREATED",
 
-\"cost\_price\": 22.00
+"cost\_price": 22.00
 
 }\]
 
 }, {
 
-\"detail\": \"同德乡田心西路富新大厦202\",
+"detail": "同德乡田心西路富新大厦202",
 
-\"phone\": \"13430377263\",
+"phone": "13430377263",
 
-\"is\_deliver\_reminder\": 1,
+"is\_deliver\_reminder": 1,
 
-\"contact\_user\": \"邓棋云\",
+"contact\_user": "邓棋云",
 
-\"remark\": null,
+"remark": null,
 
-\"invoice\": 0,
+"invoice": 0,
 
-\"street\": null,
+"street": null,
 
-\"trade\_number\": \"TEST1469777476820\",
+"trade\_number": "TEST1469777476820",
 
-\"express\_number\": null,
+"express\_number": null,
 
-\"deal\_date\": null,
+"deal\_date": null,
 
-\"express\_company\": null,
+"express\_company": null,
 
-\"city\": \"广州\",
+"city": "广州",
 
-\"id\": 478,
+"id": 478,
 
-\"cover\": \"http://images.10mup.com/20160722155600409-t2lJM6oT.jpg\",
+"cover": "http://images.10mup.com/20160722155600409-t2lJM6oT.jpg",
 
-\"confirm\_date\": null,
+"confirm\_date": null,
 
-\"description\":
-\"亮白增艳护理洗衣液2.5L【全国包邮（甘肃、宁夏、新疆、西藏、青海、内蒙古除外）】法国香薰
-x 1. \",
+"description":
+"亮白增艳护理洗衣液2.5L【全国包邮（甘肃、宁夏、新疆、西藏、青海、内蒙古除外）】法国香薰
+x 1. ",
 
-\"province\": \"广东\",
+"province": "广东",
 
-\"user\_id\": 210,
+"user\_id": 210,
 
-\"express\_code\": null,
+"express\_code": null,
 
-\"district\": \"白云区\",
+"district": "白云区",
 
-\"deliver\_date\": null,
+"deliver\_date": null,
 
-\"created\_date\": \"2016-07-29 15:30:30\",
+"created\_date": "2016-07-29 15:30:30",
 
-\"order\_number\": \"160729153030841210\",
+"order\_number": "160729153030841210",
 
-\"zip\": null,
+"zip": null,
 
-\"status\": \"CONFIRMED\_DELIVER\_PENDING\",
+"status": "CONFIRMED\_DELIVER\_PENDING",
 
-\"invoice\_title\": null,
+"invoice\_title": null,
 
-\"receiving\_time\": null,
+"receiving\_time": null,
 
-\"deliver\_order\_number\": null,
+"deliver\_order\_number": null,
 
-\"total\_price\": 38.80,
+"total\_price": 38.80,
 
-\"previous\_status\": null,
+"previous\_status": null,
 
-\"settled\": 0,
+"settled": 0,
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"pay\_date\": \"2016-07-29 15:31:16\",
+"pay\_date": "2016-07-29 15:31:16",
 
-\"payment\_type\": \"WECHAT\",
+"payment\_type": "WECHAT",
 
-\"order\_items\": \[\]
+"order\_items": \[\]
 
 }, {
 
-\"detail\": \"西槎路田心西路\",
+"detail": "西槎路田心西路",
 
-\"phone\": \"13822222291\",
+"phone": "13822222291",
 
-\"is\_deliver\_reminder\": 1,
+"is\_deliver\_reminder": 1,
 
-\"contact\_user\": \"肖生\",
+"contact\_user": "肖生",
 
-\"remark\": null,
+"remark": null,
 
-\"invoice\": 0,
+"invoice": 0,
 
-\"street\": null,
+"street": null,
 
-\"trade\_number\": \"TEST1471255826887\",
+"trade\_number": "TEST1471255826887",
 
-\"express\_number\": null,
+"express\_number": null,
 
-\"deal\_date\": null,
+"deal\_date": null,
 
-\"express\_company\": null,
+"express\_company": null,
 
-\"city\": \"广州\",
+"city": "广州",
 
-\"id\": 497,
+"id": 497,
 
-\"cover\": \"http://images.10mup.com/20160723174322764-pmKT58D2.jpg\",
+"cover": "http://images.10mup.com/20160723174322764-pmKT58D2.jpg",
 
-\"confirm\_date\": null,
+"confirm\_date": null,
 
-\"description\": \"纳爱斯柠檬绿茶牙膏天然柠檬绿茶口腔清洁160gX3支 x 1.
-\",
+"description": "纳爱斯柠檬绿茶牙膏天然柠檬绿茶口腔清洁160gX3支 x 1.
+",
 
-\"province\": \"广东\",
+"province": "广东",
 
-\"user\_id\": 205,
+"user\_id": 205,
 
-\"express\_code\": null,
+"express\_code": null,
 
-\"district\": \"白云区\",
+"district": "白云区",
 
-\"deliver\_date\": null,
+"deliver\_date": null,
 
-\"created\_date\": \"2016-08-15 18:09:13\",
+"created\_date": "2016-08-15 18:09:13",
 
-\"order\_number\": \"160815180913014205\",
+"order\_number": "160815180913014205",
 
-\"zip\": null,
+"zip": null,
 
-\"status\": \"CONFIRMED\_DELIVER\_PENDING\",
+"status": "CONFIRMED\_DELIVER\_PENDING",
 
-\"invoice\_title\": null,
+"invoice\_title": null,
 
-\"receiving\_time\": null,
+"receiving\_time": null,
 
-\"deliver\_order\_number\": null,
+"deliver\_order\_number": null,
 
-\"total\_price\": 19.83,
+"total\_price": 19.83,
 
-\"previous\_status\": null,
+"previous\_status": null,
 
-\"settled\": 0,
+"settled": 0,
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"pay\_date\": \"2016-08-15 18:10:26\",
+"pay\_date": "2016-08-15 18:10:26",
 
-\"payment\_type\": \"WECHAT\",
+"payment\_type": "WECHAT",
 
-\"order\_items\": \[\]
+"order\_items": \[\]
 
 }, {
 
-\"detail\": \"西槎路田心西路\",
+"detail": "西槎路田心西路",
 
-\"phone\": \"13822222291\",
+"phone": "13822222291",
 
-\"is\_deliver\_reminder\": 1,
+"is\_deliver\_reminder": 1,
 
-\"contact\_user\": \"肖生\",
+"contact\_user": "肖生",
 
-\"remark\": null,
+"remark": null,
 
-\"invoice\": 0,
+"invoice": 0,
 
-\"street\": null,
+"street": null,
 
-\"trade\_number\": \"TEST1471363956667\",
+"trade\_number": "TEST1471363956667",
 
-\"express\_number\": null,
+"express\_number": null,
 
-\"deal\_date\": null,
+"deal\_date": null,
 
-\"express\_company\": null,
+"express\_company": null,
 
-\"city\": \"广州\",
+"city": "广州",
 
-\"id\": 504,
+"id": 504,
 
-\"cover\": \"http://images.10mup.com/20160722155600409-t2lJM6oT.jpg\",
+"cover": "http://images.10mup.com/20160722155600409-t2lJM6oT.jpg",
 
-\"confirm\_date\": null,
+"confirm\_date": null,
 
-\"description\":
-\"亮白增艳护理洗衣液2.5L【全国包邮（甘肃、宁夏、新疆、西藏、青海、内蒙古除外）】薰衣草
-x 1. \",
+"description":
+"亮白增艳护理洗衣液2.5L【全国包邮（甘肃、宁夏、新疆、西藏、青海、内蒙古除外）】薰衣草
+x 1. ",
 
-\"province\": \"广东\",
+"province": "广东",
 
-\"user\_id\": 205,
+"user\_id": 205,
 
-\"express\_code\": null,
+"express\_code": null,
 
-\"district\": \"白云区\",
+"district": "白云区",
 
-\"deliver\_date\": null,
+"deliver\_date": null,
 
-\"created\_date\": \"2016-08-17 00:11:38\",
+"created\_date": "2016-08-17 00:11:38",
 
-\"order\_number\": \"160817001138232205\",
+"order\_number": "160817001138232205",
 
-\"zip\": null,
+"zip": null,
 
-\"status\": \"CONFIRMED\_DELIVER\_PENDING\",
+"status": "CONFIRMED\_DELIVER\_PENDING",
 
-\"invoice\_title\": null,
+"invoice\_title": null,
 
-\"receiving\_time\": null,
+"receiving\_time": null,
 
-\"deliver\_order\_number\": null,
+"deliver\_order\_number": null,
 
-\"total\_price\": 38.80,
+"total\_price": 38.80,
 
-\"previous\_status\": null,
+"previous\_status": null,
 
-\"settled\": 0,
+"settled": 0,
 
-\"freight\": 0.00,
+"freight": 0.00,
 
-\"pay\_date\": \"2016-08-17 00:12:36\",
+"pay\_date": "2016-08-17 00:12:36",
 
-\"payment\_type\": \"WECHAT\",
+"payment\_type": "WECHAT",
 
-\"order\_items\": \[\]
+"order\_items": \[\]
 
 }\]
 
@@ -10760,11 +10760,11 @@ Data:
 
 \[{
 
-\"order\_number\": \"23432432432\",
+"order\_number": "23432432432",
 
-\"express\_id\": 2,
+"express\_id": 2,
 
-\"express\_number\": \"23423432432\"
+"express\_number": "23423432432"
 
 }\]
 
@@ -10772,9 +10772,9 @@ Return:
 
 {
 
-\"message\": \"order.delivered\",
+"message": "order.delivered",
 
-\"status\_code\": 0
+"status\_code": 0
 
 }
 
@@ -10791,7 +10791,7 @@ Data:
 
 \[{
 
-\"order\_number\": \"23432432432\"
+"order\_number": "23432432432"
 
 }\]
 
@@ -10799,9 +10799,9 @@ Return:
 
 {
 
-\"message\": \"order.delivered\",
+"message": "order.delivered",
 
-\"status\_code\": 0
+"status\_code": 0
 
 }
 
@@ -10815,12 +10815,12 @@ Data:
 
 {
 
-\"order\_number\": \"1234\", //账单号
+"order\_number": "1234", //账单号
 
-\"order\_type\": \"Order\", //账单类型，订单：Order, 钱包充值： Wallet,
+"order\_type": "Order", //账单类型，订单：Order, 钱包充值： Wallet,
 预约： Appointment
 
-\"type\": \"QRCODE\" // QRCODE： PAD端生成支付宝二维码， APP：
+"type": "QRCODE" // QRCODE： PAD端生成支付宝二维码， APP：
 移动应用调起支付宝支付
 
 }
@@ -10833,15 +10833,15 @@ Response:
 
 {
 
-\"status\_code\": 0,
+"status\_code": 0,
 
-\"data\": {
+"data": {
 
-\"qr\_code\": \"https://qr.alipay.com/bax01098eimzy9vigelm00c7\" //
+"qr\_code": "https://qr.alipay.com/bax01098eimzy9vigelm00c7" //
 type是QRCODE时返回
 
-\"order\_string\":
-\"alipay\_sdk=alipay-sdk-java-3.4.27.ALL&app\_id=2016092200567241&biz\_content=%7B%22body%22%3A%22DEMO%22%2C%22out\_trade\_no%22%3A%221234%22%2C%22subject%22%3A%22DEMO%22%2C%22timeout\_express%22%3A%2230m%22%2C%22total\_amount%22%3A%2211.1%22%7D&charset=utf-8&format=json&method=alipay.trade.app.pay&notify\_url=%2Frest%2Fpub%2Fali%2Fpay\_notify&sign=JP1AxixqyWqz8n4CRNAvkhysh8dCH86fV6oMkftLzRdyZqWIQIHW%2FHWhnwHgw4Xfj4lkwoJFPVCi1pYw0Ef0zFE5PVFBRaABLFQcX3sRB4pO6UDrXvo%2BR8vqFTrnuYwXCS91VxKlU4Fj%2FMa94ZJ4eUtm62qvyqS9wbyGTEaVy9vddjSiEgPS8fAch9V3qNobNYFGC7Mfhi8BjHX1zgONQusR75DnqH4DOywdmarzZFHrtlVBeQg1gI89dyeiLZOthiZ0jsBHxmS4jNxkiw%2BRF7Sr8HDyKV9Ubd0po6rdLsInHtVivom6hVKjzvM1kJkltXIpUZ39jiTTD6iaUy%2B9Bw%3D%3D&sign\_type=RSA2&timestamp=2018-11-05+18%3A25%3A16&version=1.0\"
+"order\_string":
+"alipay\_sdk=alipay-sdk-java-3.4.27.ALL&app\_id=2016092200567241&biz\_content=%7B%22body%22%3A%22DEMO%22%2C%22out\_trade\_no%22%3A%221234%22%2C%22subject%22%3A%22DEMO%22%2C%22timeout\_express%22%3A%2230m%22%2C%22total\_amount%22%3A%2211.1%22%7D&charset=utf-8&format=json&method=alipay.trade.app.pay&notify\_url=%2Frest%2Fpub%2Fali%2Fpay\_notify&sign=JP1AxixqyWqz8n4CRNAvkhysh8dCH86fV6oMkftLzRdyZqWIQIHW%2FHWhnwHgw4Xfj4lkwoJFPVCi1pYw0Ef0zFE5PVFBRaABLFQcX3sRB4pO6UDrXvo%2BR8vqFTrnuYwXCS91VxKlU4Fj%2FMa94ZJ4eUtm62qvyqS9wbyGTEaVy9vddjSiEgPS8fAch9V3qNobNYFGC7Mfhi8BjHX1zgONQusR75DnqH4DOywdmarzZFHrtlVBeQg1gI89dyeiLZOthiZ0jsBHxmS4jNxkiw%2BRF7Sr8HDyKV9Ubd0po6rdLsInHtVivom6hVKjzvM1kJkltXIpUZ39jiTTD6iaUy%2B9Bw%3D%3D&sign\_type=RSA2&timestamp=2018-11-05+18%3A25%3A16&version=1.0"
 //type是 APP 时返回
 
 }
