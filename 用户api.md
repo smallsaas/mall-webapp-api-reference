@@ -1,7 +1,7 @@
 ## 用户API
 
 ### 注册
-  POST <http://112.74.26.228:10080/rest/register
+  POST http://112.74.26.228:10080/rest/register
 
   可使用用户名/手机 注册。 使用手机时，验证码是必选的。
   获取验证码的API见下面。
@@ -27,7 +27,7 @@
 
 ### 获取手机验证码
 
-POST <http://112.74.26.228:10080/rest/pub/sms
+POST http://112.74.26.228:10080/rest/pub/sms
 
 会发送短信到填写的手机上。
 
@@ -50,7 +50,7 @@ Return:
 
 ### 验证手机验证码
 
-POST <http://112.74.26.228:10080/rest/pub/sms_verify
+POST http://112.74.26.228:10080/rest/pub/sms_verify
 ```json
 {
   "phone": "13800000001",
@@ -67,7 +67,7 @@ Return:
 
 ### 登录
 
-POST <http://112.74.26.228:10080/rest/login>
+POST http://112.74.26.228:10080/rest/login>
 
 可以根据需要组合，如:
 
@@ -98,7 +98,7 @@ Successful Return:
 
 ### 登出系统
 
-GET <http://112.74.26.228:10080/rest/logout>
+GET http://112.74.26.228:10080/rest/logout>
 
 Header: Authorization: token
 
@@ -112,7 +112,7 @@ Successful Return:
 
 ### 修改密码
 
-POST <http://112.74.26.228:10080/rest/password>
+POST http://112.74.26.228:10080/rest/password>
 
 Header: Authorization: token
 
@@ -140,7 +140,7 @@ Failure Return:
 
 ### 忘记密码
 
-POST <http://112.74.26.228:10080/rest/pub/forget_password>
+POST http://112.74.26.228:10080/rest/pub/forget_password>
 
 Header: Authorization: token
 
@@ -169,7 +169,7 @@ Failure Return:
 
 ### 绑定手机
 
-POST <http://112.74.26.228:10080/rest/phone>
+POST http://112.74.26.228:10080/rest/phone>
 
 Header: Authorization: token
 
@@ -197,7 +197,7 @@ Failure Return:
 
 ### 移动应用的微信登录
 
-POST <http://112.74.26.228:10080/rest/login_wxapp>
+POST http://112.74.26.228:10080/rest/login_wxapp>
 
 Param： code - app调起微信授权返回的code。
 
@@ -231,7 +231,7 @@ Failure Return:
 ```
 ### 小程序登录
 
-POST <http://112.74.26.228:10080/rest/login_wxa>
+POST http://112.74.26.228:10080/rest/login_wxa>
 
 进入小程序时先调用这个接口，如果返回 错误码 user.not.found，
 则弹出注册界面，让用户输入 手机/短信验证码，调用 /rest/register_wxa
@@ -269,7 +269,7 @@ Failure Return:
 ```
 ### 小程序注册
 
-POST <http://112.74.26.228:10080/rest/register_wxa>
+POST http://112.74.26.228:10080/rest/register_wxa>
 
 Param： 
 
@@ -306,7 +306,7 @@ Failure Return:
 ```
 ### 查看个人Profile
 
-GET <http://112.74.26.228:10080/rest/profile>
+GET http://112.74.26.228:10080/rest/profile>
 
 Header: Authorization: token
 
@@ -365,7 +365,7 @@ Return:
 ```
 ### 更新个人Profile
 
-POST <http://112.74.26.228:10080/rest/profile>
+POST http://112.74.26.228:10080/rest/profile>
 
 Header: Authorization: token
 
@@ -390,7 +390,7 @@ Return:
 ```
 ### 根据userID列表查看用户头像等信息
 
-POST <http://112.74.26.228:10080/rest/pub/user_info>
+POST http://112.74.26.228:10080/rest/pub/user_info>
 
 data:
 ```json
@@ -425,7 +425,7 @@ Return:
 
 ### 省市区数据
 
-GET <http://112.74.26.228:10080/rest/pcd?all=true&province=>广东&city=广州
+GET http://112.74.26.228:10080/rest/pcd?all=true&province=>广东&city=广州
 
 Para:
 
