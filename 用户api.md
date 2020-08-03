@@ -5,32 +5,33 @@
   可使用用户名/手机 注册。 使用手机时，验证码是必选的。
   获取验证码的API见下面。
 ```json
+
  {
-    
- "username": "abc",
-
- "password": "abc",
-
- "phone": "13800000001",
-
- "captcha": "123456",
-
- "invite_code": "xfaEfw" --optional
-
+   
+   "username": "abc",
+   
+   "password": "abc",
+   
+   "phone": "13800000001",
+   
+   "captcha": "123456",
+   
+   "invite_code": "xfaEfw"  ; ptional
+   
  }
 
  Successful Return:
-
+ 
  {
-
- "message": "register.success",
-
- "status_code": 0
-
+   
+   "message": "register.success",
+   
+   "status_code": 0
+   
  }
 ```
 
-2.  **获取手机验证码**
+### 获取手机验证码
 
 POST <http://112.74.26.228:10080/rest/pub/sms>
 
