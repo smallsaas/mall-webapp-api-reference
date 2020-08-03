@@ -270,7 +270,9 @@ Failure Return:
 
 POST <http://112.74.26.228:10080/rest/register_wxa>
 
-Param： phone - 手机号
+Param： 
+
+phone - 手机号
 
 openid - login API返回的openid
 
@@ -307,24 +309,43 @@ GET <http://112.74.26.228:10080/rest/profile>
 
 Header: Authorization: token
 
+parm:
+
+birthday - 生日
+
+inviter_name - 邀请者名字
+
+invitation_code - 我的邀请码
+
+invitation_qrcode_url - 邀请码二维码图片url
+
+invitation_qrcode - 我的邀请码URL
+
+inviter_id - 邀请者ID
+
+sex - 性别： 0 保密， 1 男， 2 女
+
+avatar - 头像,默认使用微信的头像
+
+followed - 是否关注公众号， 0 关注， 1 未关注
+
+follow_time - 关注时间
+
 Return:
 ```json
 {
   "status_code": 0,
   "data": {
     "uid": "U00000069",
-    "birthday": "1999-01-22", //生日
-    "inviter_name": null, //邀请者名字
-    "invitation_code": "ff705d15b67bba191f84943e4972d08a", //我的邀请码
+    "birthday": "1999-01-22", 
+    "inviter_name": null, 
+    "invitation_code": "ff705d15b67bba191f84943e4972d08a", 
     "invitation_qrcode_url": "http://host/image/abc.png",
-    //邀请码二维码图片url
-    "invitation_qrcode":
-    "http://www.kequandian.net/app/app?invite_code=ff705d15b67bba191f84943e4972d08a",
-    //我的邀请码URL
-    "inviter_id": null, //邀请者ID
-    "sex": 2, //性别： 0 保密， 1 男， 2 女
+    "invitation_qrcode": "http://www.kequandian.net/app/app?invite_code=ff705d15b67bba191f84943e4972d08a",
+    "inviter_id": null, 
+    "sex": 2, 
     "register_date": "2016-06-07 13:27:17",
-    "avatar": null,//头像,默认使用微信的头像
+    "avatar": null,
     "last_login_date": "2016-06-07 13:28:07",
     "login_name": "abc",
     "weixin": "abc",
@@ -336,312 +357,185 @@ Return:
     "id": 2,
     "email": "h\@a.com",
     "status": "NORMAL",
-    "followed": 0, //是否关注公众号， 0 关注， 1 未关注
-    "follow_time": "2016-06-04 21:00:00" //关注时间
+    "followed": 0, 
+    "follow_time": "2016-06-04 21:00:00" 
   }
 }
 ```
-13. **更新个人Profile**
+### 更新个人Profile
 
 POST <http://112.74.26.228:10080/rest/profile>
 
-Header: Authorization:
-eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0=
+Header: Authorization: token
 
 DATA:
-
+```json
 {
-
-"phone": "1390000000",
-
-"sex": 2,
-
-"details": "sffffaaaa",
-
-"birthday": "1999/01/22",
-
-"email": "h\@a.com",
-
-"name": "axxvv",
-
-"real_name": "Huang"
-
+  "phone": "1390000000",
+  "sex": 2,
+  "details": "sffffaaaa",
+  "birthday": "1999/01/22",
+  "email": "h\@a.com",
+  "name": "axxvv",
+  "real_name": "Huang"
 }
-
+```
 Return:
-
+```json
 {
-
-"status_code": 0,
-
-"message": "profile.updated"
-
+  "status_code": 0,
+  "message": "profile.updated"
 }
-
-14. **根据userID列表查看用户头像等信息**
+```
+### 根据userID列表查看用户头像等信息
 
 POST <http://112.74.26.228:10080/rest/pub/user_info>
 
 data:
-
+```json
 { "ids": [ 1, 2, 4 ] }
-
+```
 Return:
-
+```json
 {
-
-"status_code": 0,
-
-"data": [
-
-{
-
-"sex": 0,
-
-"name": "Administrator",
-
-"id": 1,
-
-"avatar": "http://abc.com/1.jpg"
-
-},
-
-{
-
-"sex": 0,
-
-"name": "Administrator2",
-
-"id": 2,
-
-"avatar": null
-
-},
-
-{
-
-"sex": 0,
-
-"name": "Administrator4",
-
-"id": 4,
-
-"avatar": null
-
+  "status_code": 0,
+  "data": [
+    {
+      "sex": 0,
+      "name": "Administrator",
+      "id": 1,
+      "avatar": "http://abc.com/1.jpg"
+    },
+    {
+      "sex": 0,
+      "name": "Administrator2",
+      "id": 2,
+      "avatar": null
+    },
+    {
+      "sex": 0,
+      "name": "Administrator4",
+      "id": 4,
+      "avatar": null
+    }
+  ]
 }
+```
 
-]
-
-}
-
-15. **省市区数据**
+### 省市区数据
 
 GET <http://112.74.26.228:10080/rest/pcd?all=true&province=>广东&city=广州
 
 Para:
 
-1.  all - optinal, 一次性返回所有的数据
+all - optinal, 一次性返回所有的数据
 
-2.  province - optional, 返回该省下面所有的城市。
+province - optional, 返回该省下面所有的城市。
 
-3.  city - optional, 返回该市下面所有的区。
+city - optional, 返回该市下面所有的区。
 
-4.  不带任何参数，则返回所有的省。
+不带任何参数，则返回所有的省。
 
-Header: Authorization:
-eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0=
+Header: Authorization: token
 
 Return:
-
+```json
 {
-
-"status_code": 0,
-
-"data": [{
-
-"id": 30,
-
-"name": "广东",
-
-"type": "p",
-
-"parent_id": null
-
-}, {
-
-"id": 35,
-
-"name": "上海",
-
-"type": "p",
-
-"parent_id": null
-
-}]
-
+  "status_code": 0,
+  "data": [{
+    "id": 30,
+    "name": "广东",
+    "type": "p",
+    "parent_id": null
+  }, {
+    "id": 35,
+    "name": "上海",
+    "type": "p",
+    "parent_id": null
+  }]
 }
-
+```
 有all参数时，return:
-
+```json
 {
-
-"status_code": 0,
-
-"data": [{
-
-"id": 2183,
-
-"area_list": [{
-
-"id": 2184,
-
-"area_list": [{
-
-"id": 2185,
-
-"name": "越秀区",
-
-"type": "d",
-
-"parent_id": 2184
-
-}, {
-
-"id": 2186,
-
-"name": "荔湾区",
-
-"type": "d",
-
-"parent_id": 2184
-
-}, {
-
-"id": 2187,
-
-"name": "海珠区",
-
-"type": "d",
-
-"parent_id": 2184
-
-}, {
-
-"id": 2188,
-
-"name": "天河区",
-
-"type": "d",
-
-"parent_id": 2184
-
-}, {
-
-"id": 2189,
-
-"name": "白云区",
-
-"type": "d",
-
-"parent_id": 2184
-
-}, {
-
-"id": 2190,
-
-"name": "黄埔区",
-
-"type": "d",
-
-"parent_id": 2184
-
-}, {
-
-"id": 2191,
-
-"name": "番禺区",
-
-"type": "d",
-
-"parent_id": 2184
-
-}, {
-
-"id": 2192,
-
-"name": "花都区",
-
-"type": "d",
-
-"parent_id": 2184
-
-}, {
-
-"id": 2193,
-
-"name": "南沙区",
-
-"type": "d",
-
-"parent_id": 2184
-
-}, {
-
-"id": 2194,
-
-"name": "萝岗区",
-
-"type": "d",
-
-"parent_id": 2184
-
-}, {
-
-"id": 2195,
-
-"name": "增城市",
-
-"type": "d",
-
-"parent_id": 2184
-
-}, {
-
-"id": 2196,
-
-"name": "从化市",
-
-"type": "d",
-
-"parent_id": 2184
-
-}, {
-
-"id": 2197,
-
-"name": "其他",
-
-"type": "d",
-
-"parent_id": 2184
-
-}],
-
-"name": "广州",
-
-"type": "c",
-
-"parent_id": 2183
-
-}],
-
-"name": "广东",
-
-"type": "p",
-
-"parent_id": null
-
-}]
-
+  "status_code": 0,
+  "data": [{
+    "id": 2183,
+    "area_list": [{
+    "id": 2184,
+    "area_list": [{
+    "id": 2185,
+    "name": "越秀区",
+    "type": "d",
+    "parent_id": 2184
+  }, {
+    "id": 2186,
+    "name": "荔湾区",
+    "type": "d",
+    "parent_id": 2184
+  }, {
+    "id": 2187,
+    "name": "海珠区",
+    "type": "d",
+    "parent_id": 2184
+  }, {
+    "id": 2188,
+    "name": "天河区",
+    "type": "d",
+    "parent_id": 2184
+  }, {
+    "id": 2189,
+    "name": "白云区",
+    "type": "d",
+    "parent_id": 2184
+  }, {
+    "id": 2190,
+    "name": "黄埔区",
+    "type": "d",
+    "parent_id": 2184
+  }, {
+    "id": 2191,
+    "name": "番禺区",
+    "type": "d",
+    "parent_id": 2184
+  }, {
+    "id": 2192,
+    "name": "花都区",
+    "type": "d",
+    "parent_id": 2184
+  }, {
+    "id": 2193,
+    "name": "南沙区",
+    "type": "d",
+    "parent_id": 2184
+  }, {
+    "id": 2194,
+    "name": "萝岗区",
+    "type": "d",
+    "parent_id": 2184
+  }, {
+    "id": 2195,
+    "name": "增城市",
+    "type": "d",
+    "parent_id": 2184
+  }, {
+    "id": 2196,
+    "name": "从化市",
+    "type": "d",
+    "parent_id": 2184
+  }, {
+    "id": 2197,
+    "name": "其他",
+    "type": "d",
+    "parent_id": 2184
+  }],
+    "name": "广州",
+    "type": "c",
+    "parent_id": 2183
+  }],
+    "name": "广东",
+    "type": "p",
+    "parent_id": null
+  }]
 }
-
+```
