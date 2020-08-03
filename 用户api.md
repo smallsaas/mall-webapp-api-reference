@@ -5,6 +5,9 @@
   可使用用户名/手机 注册。 使用手机时，验证码是必选的。
   获取验证码的API见下面。
   
+  optional:
+      invite_code
+  
 ```json
 
  {
