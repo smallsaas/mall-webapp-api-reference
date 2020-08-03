@@ -5,8 +5,7 @@
   可使用用户名/手机 注册。 使用手机时，验证码是必选的。
   获取验证码的API见下面。
   
-  optional:
-      invite_code
+  optional: invite_code
   
 ```json
 
@@ -15,7 +14,7 @@
    "password": "abc",
    "phone": "13800000001",
    "captcha": "123456",
-   "invite_code": "xfaEfw" //optional
+   "invite_code": "xfaEfw" 
  }
 
  Successful Return:
@@ -31,10 +30,13 @@
 POST <http://112.74.26.228:10080/rest/pub/sms
 
 会发送短信到填写的手机上。
+
+name: 指定不同的名字，可以拿到相应模版的消息
+
 ```json
 {
   "phone": "13800000001",
-  "name": "verify" //指定不同的名字，可以拿到相应模版的消息
+  "name": "verify"
 }
 
 Return:
@@ -88,8 +90,7 @@ Successful Return:
 {
   "status_code": 0,
   "data": {
-    "access_token":
-    "eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0="
+    "access_token": "eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0="
   }
 }
 ```
@@ -98,7 +99,7 @@ Successful Return:
 
 GET <http://112.74.26.228:10080/rest/logout>
 
-Header: Authorization
+Header: Authorization token
 
 Successful Return:
 ```json
@@ -112,7 +113,7 @@ Successful Return:
 
 POST <http://112.74.26.228:10080/rest/password>
 
-Header: Authorization
+Header: Authorization token
 
 Data:
 ```json
@@ -140,7 +141,7 @@ Failure Return:
 
 POST <http://112.74.26.228:10080/rest/pub/forget_password>
 
-Header: Authorization
+Header: Authorization token
 
 Data:
 ```json
@@ -169,46 +170,31 @@ Failure Return:
 
 POST <http://112.74.26.228:10080/rest/phone>
 
-Header: Authorization:
-eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0=
+Header: Authorization token
 
 Data:
-
+```json
 {
-
-"phone": "13800000001",
-
-"captcha": "123456"
-
+  "phone": "13800000001",
+  "captcha": "123456"
 }
 
 Successful Return:
 
 {
-
-"message": "phone.updated",
-
-"status_code": 0
-
+  "message": "phone.updated",
+  "status_code": 0
 }
 
 Failure Return:
 
 {
-
-"message": "captcha.invalid",
-
-"status_code": 1
-
+  "message": "captcha.invalid",
+  "status_code": 1
 }
+```
 
-窗体顶端
-
-编辑
-
-窗体底端
-
-9.  **移动应用的微信登录**
+### 移动应用的微信登录
 
 POST <http://112.74.26.228:10080/rest/login_wxapp>
 
@@ -217,46 +203,29 @@ Param： code - app调起微信授权返回的code。
 Data:
 
 {
-
-"code": "abcdefg"
-
+  "code": "abcdefg"
 }
 
 Successful Return:
 
 {
-
-"status_code": 0,
-
-"data": {
-
-"access_token":
-"eyJsb2dpbl9uYW1lIjoiMTM5MjIxMTIxMzAiLCJ0b2tlbiI6ImNlODM5M2NlNDQ0ZTViMTA5YzMyOWU4N2UyNjg4Yzk0ZDFjYzY4MzIifQ==",
-
-"openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w",
-
-"unionid": "o-nTCtw8c18ZTyOmzgSNjhbbJ67c"
-
-}
-
+  "status_code": 0,
+  "data": {
+    "access_token": "eyJsb2dpbl9uYW1lIjoiMTM5MjIxMTIxMzAiLCJ0b2tlbiI6ImNlODM5M2NlNDQ0ZTViMTA5YzMyOWU4N2UyNjg4Yzk0ZDFjYzY4MzIifQ==",
+    "openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w",
+    "unionid": "o-nTCtw8c18ZTyOmzgSNjhbbJ67c"
+  }
 }
 
 Failure Return:
 
 {
-
-"status_code": 1,
-
-"data": {
-
-"openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w",
-
-"unionid": "o-nTCtw8c18ZTyOmzgSNjhbbJ67c"
-
-},
-
-"message": "user.not.found"
-
+  "status_code": 1,
+  "data": {
+    "openid": "o0_gg0X2M7gnHmJUm71JzaKSYg8w",
+    "unionid": "o-nTCtw8c18ZTyOmzgSNjhbbJ67c"
+  },
+  "message": "user.not.found"
 }
 
 10. **小程序登录**
