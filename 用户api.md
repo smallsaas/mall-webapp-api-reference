@@ -66,7 +66,9 @@ POST <http://112.74.26.228:10080/rest/login>
 可以根据需要组合，如:
 
   username + password,
+  
   phone + password,
+  
   phone + captcha
 
 验证码获取API见上面。
