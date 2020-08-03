@@ -15,7 +15,7 @@
 
  "captcha": "123456",
 
- "invite\_code": "xfaEfw" //optional
+ "invite_code": "xfaEfw" --optional
 
  }
 
