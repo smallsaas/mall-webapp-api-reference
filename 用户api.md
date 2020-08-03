@@ -1,12 +1,10 @@
 ### 用户API
 
-  POST <http://112.74.26.228:10080/rest/register>
+  POST <http://112.74.26.228:10080/rest/register
 
   可使用用户名/手机 注册。 使用手机时，验证码是必选的。
   获取验证码的API见下面。
   
-  optional: 
-    invite_code
 ```json
 
  {
@@ -14,7 +12,7 @@
    "password": "abc",
    "phone": "13800000001",
    "captcha": "123456",
-   "invite_code": "xfaEfw" 
+   "invite_code": "xfaEfw" //optional
  }
 
  Successful Return:
@@ -27,7 +25,7 @@
 
 ### 获取手机验证码
 
-POST <http://112.74.26.228:10080/rest/pub/sms>
+POST <http://112.74.26.228:10080/rest/pub/sms
 
 会发送短信到填写的手机上。
 ```json
@@ -44,167 +42,123 @@ Return:
 }
 ```
 
-3.  **验证手机验证码**
+### 验证手机验证码
 
-POST <http://112.74.26.228:10080/rest/pub/sms_verify>
-
+POST <http://112.74.26.228:10080/rest/pub/sms_verify
+```json
 {
-
-"phone": "13800000001",
-
-"captcha": "1234"
-
+  "phone": "13800000001",
+  "captcha": "1234"
 }
 
 Return:
 
 {
-
-"message": "ok",
-
-"status_code": 0
-
+  "message": "ok",
+  "status_code": 0
 }
+```
 
-4.  **登录**
+### 登录
 
 POST <http://112.74.26.228:10080/rest/login>
 
 可以根据需要组合，如:
 
-username + password,
-
-phone + password,
-
-phone + captcha
+  username + password,
+  phone + password,
+  phone + captcha
 
 验证码获取API见上面。
-
+```json
 {
-
-"username": "abc",
-
-"password": "abc",
-
-"phone": "13800000001",
-
-"captcha": "134556"
-
+  "username": "abc",
+  "password": "abc",
+  "phone": "13800000001",
+  "captcha": "134556"
 }
 
 Successful Return:
 
 {
-
-"status_code": 0,
-
-"data": {
-
-"access_token":
-"eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0="
-
+  "status_code": 0,
+  "data": {
+    "access_token":
+    "eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0="
+  }
 }
+```
 
-}
-
-5.  **登出系统**
+### 登出系统
 
 GET <http://112.74.26.228:10080/rest/logout>
 
-Header: Authorization:
-eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0=
+Header: Authorization
 
 Successful Return:
-
+```json
 {
-
-"message": "logout.success",
-
-"status_code": 0
-
+  "message": "logout.success",
+  "status_code": 0
 }
+```
 
-6.  **修改密码**
+### 修改密码
 
 POST <http://112.74.26.228:10080/rest/password>
 
-Header: Authorization:
-eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0=
+Header: Authorization
 
 Data:
-
+```json
 {
-
-"old_password": "abcdefg",
-
-"new_password": "123456"
-
+  "old_password": "abcdefg",
+  "new_password": "123456"
 }
 
 Successful Return:
 
 {
-
-"message": "password.changed",
-
-"status_code": 0
-
+  "message": "password.changed",
+  "status_code": 0
 }
 
 Failure Return:
 
 {
-
-"message": "incorrect.old.password",
-
-"status_code": 1
-
+  "message": "incorrect.old.password",
+  "status_code": 1
 }
+```
 
-窗体顶端
-
-编辑
-
-窗体底端
-
-7.  **忘记密码**
+### 忘记密码
 
 POST <http://112.74.26.228:10080/rest/pub/forget_password>
 
-Header: Authorization:
-eyJ0b2tlbiI6IjU2MDlhMGJhOTBhZmFhMzI4NWZkZDk1ZjcxMTAyNjlmOGZmMGFiZDkiLCJsb2dpbl9uYW1lIjoiYWJjIn0=
+Header: Authorization
 
 Data:
-
+```json
 {
-
-"phone": "13800000001",
-
-"captcha": "134566",
-
-"password": "123456"
-
+  "phone": "13800000001",
+  "captcha": "134566",
+  "password": "123456"
 }
 
 Successful Return:
 
 {
-
-"message": "password.reset",
-
-"status_code": 0
-
+  "message": "password.reset",
+  "status_code": 0
 }
 
 Failure Return:
 
 {
-
-"message": "invalid.captcha",
-
-"status_code": 1
-
+  "message": "invalid.captcha",
+  "status_code": 1
 }
+```
 
 8.  **绑定手机**
 
