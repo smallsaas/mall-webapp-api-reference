@@ -1,1726 +1,619 @@
-## 商城API
+## 订单API
 
-### 获取商城全局配置项
+### 订单状态说明
 
-GET https://mall.smallsaas.cn/rest/global_config
+ - CREATED_PAY_PENDING － 待支付
 
-Return:
-```json
-{
-	"status_code": 0,
-	"data": {
-	"point_exchange_rate": 100,
-	"auto_select_coupon": false,
-	"drawing_condition": 100
-	}
-}
-```
+ - CLOSED_PAY_TIMEOUT － 支付超时关闭
 
-### 获取产品类别列表
+ - CLOSED_CANCELED － 已取消
 
-GET https://mall.smallsaas.cn/rest/product_category?promoted=true 
+ - PAID_CONFIRM_PENDING － 已支付
 
-Param:
+ - CONFIRMED_DELIVER_PENDING － 待发货
 
- - is_show_products - 点击类别时是否进入该类别下第1个产品的详情页（1 是 0 否）
+ - DELIVERING － 发货中
 
- - weight - 重量，单位克
+ - DELIVERED_CONFIRM_PENDING－ 已发货
 
- - bulk - 体积
+ - CANCELED_RETURN_PENDING － 待退货
 
- - promoted - optional, 如果指定该参数，则在一级类别下面返回类别该类别 products（包括它子类别）下的推荐产品列表。
+ - CLOSED_CONFIRMED － 已确认收货
 
-Return:
-```json
-{
-	"status_code": 0,
-	"data": [{
-		"id": 1,
-			"cover": null,
-			"sub_categories": [{
-			"id": 2,
-			"cover":"https://mall.smallsaas.cn/p/fb61f7180cb48a0d1bcff2a4edab9780.png",
-			"sub_categories": [],
-			"description": null,
-			"name": "瓶装2.5L",
-			"parent_id": 1
-		}, {
-			"id": 5,
-			"cover":"https://mall.smallsaas.cn/p/aa92d03568a42607011ca55815d48368.png",
-			"sub_categories": [],
-			"description": null,
-			"name": "旅行装(袋)",
-			"parent_id": 1
-		}],
-			"description": null,
-			"name": "超效洁净",
-			"parent_id": null,
-			"is_show_products": 1,
-			"products": [{ 
-				"free_shipping": 0,
-				"freight": 0.00,
-				"last_modified_date": "2016-10-10 19:51:55",
-				"promoted": 1,
-				"stock_balance": 1000,
-				"sales": 0,
-				"cover":"http://o9ixtumvv.bkt.clouddn.com/20161010195121988-gFvkrsAZ.jpeg",
-				"unit": "a",
-				"category_id": 3,
-				"price": 33.00,
-				"suggested_price": 33.00,
-				"name": "aaaa",
-				"short_name": "aa",
-				"id": 1,
-				"created_date": "2016-10-10 19:51:23",
-				"fare_id": 1,
-				"sort_order": 100,
-				"partner_level_zone": 1,
-				"barcode": null,
-				"view_count": 0,
-				"store_location": null,
-				"status": "ONSELL",
-				"cost_price": 33.00,
-				"weight": 500, 
-				"bulk": 100 
-			}]
-		}, {
-			"id": 3,
-			"cover": null,
-			"sub_categories": [],
-			"description": null,
-			"name": "亮白增艳",
-			"parent_id": null
-		}, {
-		"id": 4,
-		"cover": null,
-		"sub_categories": [],
-		"description": null,
-		"name": "活氧清洁剂",
-		"parent_id": null
-	}]
-}
-```
+ - CANCELED_REFUND_PENDING － 待退款
 
-### 获取某类别下的产品列表
+ - CLOSED_REFUNDED － 已退款
 
-只列出 ONSELL 状态的产品
+ - CONFIRMED_PICK_PENDING － 待取货
 
-GET https://mall.smallsaas.cn/rest/product_category/id?pageNumber=1&pageSize=50&orderByDesc=view_count&orderBy=price&orderBy=sales&promoted=true
-
-Param:
-
- - id - 类别ID，如果指定-1 则返回所有产品
-
- - is_show_products - 点击类别时是否进入该类别下第1个产品的详情页（1 是 0 否）
-
- - weight - 重量, 单位克
-
- - bulk - 体积
-
- - pageNumber - 当前页，默认1
-
- - pageSize - 每页记录数，默认50
-
- - orderBy - 排序列。如果同时指定了超过1个orderBy，则前者优先于后者
-
- - orderByDesc - 倒序排序列。如果同时指定了orderBy和orderByDesc，则orderBy优先于orderByDesc；
-
- - orderBy and orderByDesc 可以用的值有： view_count : 人气， price: 价格， sales: 销量
-
- - promoted - optional, 如果指定该参数，则分页查询该类别下的推荐产品。
-
-Data:
-```json
-{
-	"status_code": 0,
-	"data": {
-		"id": 2,
-		"cover":"https://mall.smallsaas.cn/p/fb61f7180cb48a0d1bcff2a4edab9780.png",
-		"description": null,
-		"name": "瓶装2.5L",
-		"is_show_products": 1,
-		"products": [{
-			"created_date": "2016-04-22 09:30:53",
-			"cost_price": 20.00,
-			"status": "ONSELL",
-			"free_shipping": 1,
-			"origin": "广东",
-			"suggested_price": 50.00,
-			"category_id": 2,
-			"stock_balance": 10000,
-			"id": 1,
-			"unit": "件",
-			"cover":"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
-			"last_modified_date": "2016-04-23 12:27:59",
-			"price": 34.80,
-			"category_name": "瓶装2.5L",
-			"promoted": 1,
-			"sales": 0,
-			"name": "超效洁净护理洗衣液2.5L【全国包邮】",
-			"freight": 0.00,
-			"brand": "大地",
-			"sort_order": 100,
-			"weight": 500, 
-			"bulk": 200 
-		}, {
-			"created_date": "2016-04-22 11:16:14",
-			"cost_price": 70.00,
-			"status": "ONSELL",
-			"free_shipping": 1,
-			"origin": "广州",
-			"suggested_price": 88.00,
-			"category_id": 2,
-			"stock_balance": 600,
-			"id": 3,
-			"unit": "件",
-			"cover":"https://mall.smallsaas.cn/p/2b3edeb3c3ca2a12b06893cb12286710.png",
-			"last_modified_date": "2016-04-22 14:22:04",
-			"price": 69.60,
-			"category_name": "瓶装2.5L",
-			"promoted": 0,
-			"sales": 0,
-			"name": "超效洁净护理洗衣液2.5Lx2瓶【全国包邮】",
-			"freight": 0.00,
-			"brand": "大陆",
-			"sort_order": 100,
-			"weight": 500, 
-			"bulk": 200 
-		}],
-		"parent_id": 1
-	}
-}
-```
-
-### 产品热门关键字
-
-GET https://mall.smallsaas.cn/rest/product_hit_word 
-
-return:
-```json
-{
-	"status_code": 0,
-	"data": [{
-		"id": 1,
-		"hit": 0,
-		"name": "皂液"
-	}]
-}
-```
-
-### 产品搜索
-
-GET https://mall.smallsaas.cn/rest/product_search?pageNumber=1&pageSize=20&name=abc&barCode=234234&orderByDesc=view_count&orderBy=price&orderBy=sales 
-
-Param: 
-
- - pageNumber - 当前页，默认1
-
- - pageSize - 每页记录数，默认50
-
- - name - 产品名称
-
- - weight - 重量, 单位克
-
- - bulk - 体积
-
- - barCode - 条形码
-
- - orderBy - 排序列
-
- - orderByDesc - 倒序排序列
-
- - orderBy and orderByDesc 可以用的值有： view_count: 人气， price: 价格， sales: 销量
-
-Data:
-```json
-{
-	"status_code": 0,
-	"data":[{
-		"created_date": "2016-04-22 09:30:53",
-		"cost_price": 20.00,
-		"status": "ONSELL",
-		"free_shipping": 1,
-		"origin": "广东",
-		"suggested_price": 50.00,
-		"category_id": 2,
-		"stock_balance": 10000,
-		"id": 1,
-		"unit": "件",
-		"cover":"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
-		"last_modified_date": "2016-04-23 12:27:59",
-		"price": 34.80,
-		"category_name": "瓶装2.5L",
-		"promoted": 1,
-		"sales": 0,
-		"name": "超效洁净护理洗衣液2.5L【全国包邮】",
-		"short_name": "aa",
-		"freight": 0.00,
-		"brand": "大地",
-		"sort_order": 100,
-		"weight": 500,
-		"bulk": 200 
-	}, {
-		"created_date": "2016-04-22 11:16:14",
-		"cost_price": 70.00,
-		"status": "ONSELL",
-		"free_shipping": 1,
-		"origin": "广州",
-		"suggested_price": 88.00,
-		"category_id": 2,
-		"stock_balance": 600,
-		"id": 3,
-		"unit": "件",
-		"cover":"https://mall.smallsaas.cn/p/2b3edeb3c3ca2a12b06893cb12286710.png",
-		"last_modified_date": "2016-04-22 14:22:04",
-		"price": 69.60,
-		"category_name": "瓶装2.5L",
-		"promoted": 0,
-		"sales": 0,
-		"name": "超效洁净护理洗衣液2.5Lx2瓶【全国包邮】",
-		"freight": 0.00,
-		"brand": "大陆",
-		"sort_order": 100,
-		"weight": 500, 
-		"bulk": 200 
-	}]
-}
-```
-
-### 获取所有产品列表
-
-只列出 ONSELL 状态的产品
-
-GET https://mall.smallsaas.cn/rest/product?all=true 
-
-参数： all - true 时查询所有产品列表。其他参数会忽略。
-
-{
-
-"status_code": 0,
-
-"data": [{
-
-"created_date": "2016-04-22 09:30:53",
-
-"cost_price": 20.00,
-
-"status": "ONSELL",
-
-"free_shipping": 1,
-
-"origin": "广东",
-
-"suggested_price": 50.00,
-
-"category_id": 2,
-
-"stock_balance": 10000,
-
-"id": 1,
-
-"unit": "件",
-
-"cover":
-"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
-
-"last_modified_date": "2016-04-23 12:27:59",
-
-"price": 34.80,
-
-"category_name": "瓶装2.5L",
-
-"promoted": 1,
-
-"sales": 0,
-
-"name": "超效洁净护理洗衣液2.5L【全国包邮】",
-
-"freight": 0.00,
-
-"brand": "大地",
-
-"sort_order": 100,
-
-"weight": 500, //重量， 单位克
-
-"bulk": 200, //体积
-
-"allow_coupon": 0, //是否可以使用优惠券 0:不可以， 1:可以用
-
-"credit": 0, // 可用积分数量
-
-}]
-
-}
-
-23. **获取推荐产品列表**
-
-只列出 ONSELL 状态的产品
-
-GET https://mall.smallsaas.cn/rest/product?pageNumber=1&pageSize=50&zone=1 
-
-Para:
-
-pageNumber - optional, 当前页，默认1
-
-pageSize - optional, 每页记录数，默认50
-
-zone - optional, 零元区／精品区／特价区
-查询。如果不带这个参数，那么就查推荐产品。 零元区 1， 精品区 2， 特价区
-3
-
-orderBy - 排序列
-
-orderByDesc - 倒序排序列
-
-orderBy and orderByDesc 可以用的值有： view_count : 人气， price :
-价格， sales : 销量
-
-{
-
-"status_code": 0,
-
-"data": [{
-
-"created_date": "2016-04-22 09:30:53",
-
-"cost_price": 20.00,
-
-"status": "ONSELL",
-
-"free_shipping": 1,
-
-"origin": "广东",
-
-"suggested_price": 50.00,
-
-"category_id": 2,
-
-"stock_balance": 10000,
-
-"id": 1,
-
-"unit": "件",
-
-"cover":
-"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
-
-"last_modified_date": "2016-04-23 12:27:59",
-
-"price": 34.80,
-
-"category_name": "瓶装2.5L",
-
-"promoted": 1,
-
-"sales": 0,
-
-"name": "超效洁净护理洗衣液2.5L【全国包邮】",
-
-"freight": 0.00,
-
-"brand": "大地",
-
-"sort_order": 100,
-
-"weight": 500, //重量， 单位克
-
-"bulk": 200 //体积
-
-}]
-
-}
-
-24. **查看产品详情**
-
-GET https://mall.smallsaas.cn/rest/product/id 
-
-{
-
-"status_code": 0,
-
-"data": {
-
-"created_date": "2016-04-22 09:30:53",
-
-"cost_price": 20.00,
-
-"status": "ONSELL",
-
-"free_shipping": 1,
-
-"origin": "广东",
-
-"suggested_price": 50.00,
-
-"category_id": 2,
-
-"stock_balance": 10000,
-
-"id": 1,
-
-"unit": "件",
-
-"cover":
-"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
-
-"last_modified_date": "2016-04-23 18:26:39",
-
-"price": 34.80,
-
-"promoted": 1,
-
-"sales": 0,
-
-"description": "\<h1\>超优惠\<br/\>\</h1\>\<p\>\<img
-src=\\"/upload/upload/image/20160601/1464767352927011775.png\\"
-title=\\"1464767352927011775.png\\"
-alt=\\"logo.png\\"/\>\</p\>\<p\>\<br/\>\</p\>",
-
-"name": "超效洁净护理洗衣液2.5L【全国包邮】",
-
-"freight": 0.00,
-
-"images": [],
-
-"brand": "大地",
-
-"sort_order": 100,
-
-"weight": 500, //重量， 单位克
-
-"bulk": 200, //体积
-
-"properties": [{
-
-"value_type": "STRING",
-
-"product_id": 1,
-
-"id": 1,
-
-"property_value": "a1",
-
-"display_name": "a1",
-
-"property_id": 1
-
-}, {
-
-"value_type": "STRING",
-
-"product_id": 1,
-
-"id": 2,
-
-"property_value": "a2",
-
-"display_name": "a2",
-
-"property_id": 2
-
-}],
-
-"covers": [{
-
-"product_id": 1,
-
-"id": 1,
-
-"type": 0,
-
-"url":
-"http://localhost:9990/p/6255a9dd831b89aa92ec1df49054603a.jpeg"
-
-}, {
-
-"product_id": 1,
-
-"id": 2,
-
-"type": 0,
-
-"url":
-"http://localhost:9990/p/3b316bb6c6b939eb64c36d047a6c9d6e.jpg"
-
-}],
-
-"specifications":
-[{//产品规格，当购买产品时，弹出来的框提供的选择项。加入购物车和购买时需要把选择的项提交给后台，具体参考购物车和下单api的要求
-
-"price": 140, //售价
-
-"suggested_price": 140,
-
-"product_id": 1,
-
-"name": "a2", //规格名称
-
-"id": 1,
-
-"stock_balance": 1000, //库存
-
-"cost_price": 100,
-
-"weight": 500, //重量， 单位克
-
-"bulk": 200 //体积
-
-}, {
-
-"price": 120,
-
-"suggested_price": 130,
-
-"product_id": 1,
-
-"name": "a1",
-
-"id": 2,
-
-"stock_balance": 1000,
-
-"cost_price": 90,
-
-"weight": 500, //重量， 单位克
-
-"bulk": 200 //体积
-
-}],
-
-"fare_template": {
-
-"is_incl_postage_by_if": 0, // 1 条件包邮
-
-"dispatch_time": "24",
-
-"is_incl_postage": 1, // 1 包邮
-
-"name": "包邮",
-
-"title": "［省钱优惠］",
-
-"content": "满3KG更省钱哦。",
-
-"shop_addr": "广东-广州",
-
-"last_modified_date": "2016-08-31 10:56:16",
-
-"id": 1,
-
-"valuation_model": 0,
-
-"incl_postage_provisoes": [{ //条件包邮
-
-"amount": 100.00, // 满100包邮
-
-"bulk_no": null,
-
-"carry_way": 0,
-
-"id": 2,
-
-"fare_id": 2,
-
-"region": null,
-
-"type": 3,
-
-"piece_no": null,
-
-"weight_no": null
-
-}],
-
-"carry_modes": [{
-
-"second_piece": 1,
-
-"second_amount": 0.00,
-
-"first_bulk": null,
-
-"carry_way": 0,
-
-"is_default": 0,
-
-"first_piece": 1,
-
-"first_weight": null,
-
-"second_bulk": null,
-
-"second_weight": null,
-
-"id": 3,
-
-"fare_id": 2,
-
-"region": "广东-广州\|广东-深圳", //这些地区的使用这个运费
-
-"first_amount": 8.00
-
-}, {
-
-"second_piece": 1,
-
-"second_amount": 0.00, //续费
-
-"first_bulk": null,
-
-"carry_way": 0,
-
-"is_default": 1, //没有满足地区，使用这个默认运费
-
-"first_piece": 1,
-
-"first_weight": null,
-
-"second_bulk": null,
-
-"second_weight": null,
-
-"id": 2,
-
-"fare_id": 2,
-
-"region": null,
-
-"first_amount": 10.00 //首费
-
-}],
-
-},
-
-"purchase_strategy": {
-
-"id": 1,
-
-"name": "关注公众号且限购1件",
-
-"description": "请先关注公众号，关注后可以购买1件。"
-
-}
-
-}
-
-}
-
-25. **订单状态说明**
-
-CREATED_PAY_PENDING － 待支付
-
-CLOSED_PAY_TIMEOUT － 支付超时关闭
-
-CLOSED_CANCELED － 已取消
-
-PAID_CONFIRM_PENDING － 已支付
-
-CONFIRMED_DELIVER_PENDING － 待发货
-
-DELIVERING － 发货中
-
-DELIVERED_CONFIRM_PENDING－ 已发货
-
-CANCELED_RETURN_PENDING － 待退货
-
-CLOSED_CONFIRMED － 已确认收货
-
-CANCELED_REFUND_PENDING － 待退款
-
-CLOSED_REFUNDED － 已退款
-
-CONFIRMED_PICK_PENDING - 待取货
-
-26. **我的订单列表**
+### 我的订单列表
 
 GET https://mall.smallsaas.cn/rest/order?pageNumber=1&pageSize=20&status=CREATED_PAY_PENDDING 
 
-Para:
+Param:
 
-pageNumber - 页数，可空，默认1
+ - pageNumber: 页数，可空，默认1
 
-pageSize - 每页记录数，可空，默认50
+ - pageSize - 每页记录数，可空，默认50
 
-status - 订单状态, optional
+ - status: 订单状态, optional
 
-Header: Authorization:
-eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
+Header: Authorization: token
+
+Describe:
+
+ - pay_expiry_time: 待支付订单支付的超时时间
 
 Return:
-
+```json
 {
-
-"status_code": 0,
-
-"data": [{
-
-"user_id": 1,
-
-"phone": "1380000000",
-
-"contact_user": "Mr Huang",
-
-"province": "GD",
-
-"city": "GZ",
-
-"district": "Tiahne",
-
-"street": "jianzhong road",
-
-"detail": "6F",
-
-"trade_number": null,
-
-"deal_date": null,
-
-"express_number": "1232323",
-
-"express_code": "24234",
-
-"express_company": "abc",
-
-"coupon_info": null,
-
-"zip": "510000",
-
-"id": 3,
-
-"cover":
-"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
-
-"confirm_date": null,
-
-"description": "超效洁净护理洗衣液2.5L【全国包邮】 x 1. ",
-
-"deliver_date": null,
-
-"created_date": "2016-04-26 10:27:56",
-
-"order_number": "0000000101461637676506360",
-
-"status": "CREATED_PAY_PENDING",
-
-"remark": null,
-
-"invoice": 1,
-
-"invoice_title": "ABC company",
-
-"receiving_time": "anytime",
-
-"deliver_order_number": null,
-
-"total_price": 34.80,
-
-"user_name": "Administrator",
-
-"freight": 0.00,
-
-"pay_date": null,
-
-"payment_type": "ALIPAY",
-
-"point_exchange_rate": 100,
-
-"pay_expiry_time": "2018-08-20 17:53:01",//
-待支付订单支付的超时时间
-
-"order_items": [
-
-{
-
-"quantity": 2,
-
-"product_specification_id": null,
-
-"weight": 500,
-
-"product_specification_name": null,
-
-"product_name": "REJOICE飘柔家庭护理芦荟长效止痒滋润洗发露400ML",
-
-"marketing_description": null,
-
-"cover": "http://images.10mup.com/20161104102243958-v499XJvA.jpg",
-
-"marketing": null,
-
-"final_price": 25.8,
-
-"price": 12.9,
-
-"product_id": 335,
-
-"marketing_id": null,
-
-"id": 5920,
-
-"bulk": 0,
-
-"order_id": 3290,
-
-"partner_level_zone": 1,
-
-"barcode": "6903148126660",
-
-"store_location": null,
-
-"status": "CREATED",
-
-"cost_price": 10.21
-
+	"status_code": 0,
+	"data": [{
+		"user_id": 1,
+		"phone": "1380000000",
+		"contact_user": "Mr Huang",
+		"province": "GD",
+		"city": "GZ",
+		"district": "Tiahne",
+		"street": "jianzhong road",
+		"detail": "6F",
+		"trade_number": null,
+		"deal_date": null,
+		"express_number": "1232323",
+		"express_code": "24234",
+		"express_company": "abc",
+		"coupon_info": null,
+		"zip": "510000",
+		"id": 3,
+		"cover":"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+		"confirm_date": null,
+		"description": "超效洁净护理洗衣液2.5L【全国包邮】 x 1. ",
+		"deliver_date": null,
+		"created_date": "2016-04-26 10:27:56",
+		"order_number": "0000000101461637676506360",
+		"status": "CREATED_PAY_PENDING",
+		"remark": null,
+		"invoice": 1,
+		"invoice_title": "ABC company",
+		"receiving_time": "anytime",
+		"deliver_order_number": null,
+		"total_price": 34.80,
+		"user_name": "Administrator",
+		"freight": 0.00,
+		"pay_date": null,
+		"payment_type": "ALIPAY",
+		"point_exchange_rate": 100,
+		"pay_expiry_time": "2018-08-20 17:53:01",
+		"order_items": [{
+			"quantity": 2,
+			"product_specification_id": null,
+			"weight": 500,
+			"product_specification_name": null,
+			"product_name": "REJOICE飘柔家庭护理芦荟长效止痒滋润洗发露400ML",
+			"marketing_description": null,
+			"cover": "http://images.10mup.com/20161104102243958-v499XJvA.jpg",
+			"marketing": null,
+			"final_price": 25.8,
+			"price": 12.9,
+			"product_id": 335,
+			"marketing_id": null,
+			"id": 5920,
+			"bulk": 0,
+			"order_id": 3290,
+			"partner_level_zone": 1,
+			"barcode": "6903148126660",
+			"store_location": null,
+			"status": "CREATED",
+			"cost_price": 10.21
+		}]
+	}]
 }
+```
 
-]
-
-}]
-
-}
-
-27. **我的退货退款订单列表**
+### 我的退货退款订单列表
 
 GET https://mall.smallsaas.cn/rest/refund_order?pageNumber=1&pageSize=20 
 
-Para:
+Param:
 
-pageNumber - 页数，可空，默认1
+ - pageNumber: 页数，可空，默认1
 
-pageSize - 每页记录数，可空，默认50
+ - pageSize: 每页记录数，可空，默认50
 
-Header: Authorization:
-eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
+Header: Authorization: token
+
+Describe:
+
+ - order_customer_service: 售后单信息
 
 Return:
-
+```json
 {
-
-"status_code": 0,
-
-"data": [
-
-{
-
-"trade_number": "test_trade_num",
-
-"pay_date": "2016-12-14 13:42:33",
-
-"deliver_order_number": null,
-
-"order_customer_service": { //售后单信息
-
-"reason": "AFSFSF",
-
-"express_code": null,
-
-"service_type": "REFUND",
-
-"images": "[]",
-
-"log": "[{\\"time\\":\\"2016-12-14
-01:42:47\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"afaf\\"}]",
-
-"refund_fee": null, //退款金额
-
-"id": 5,
-
-"created_date": "2016-12-14 13:42:47",
-
-"express_number": null,
-
-"order_id": 5,
-
-"express_company": null,
-
-"status": "CREATED"
-
-},
-
-"city": "GZ",
-
-"invoice_title": "ABC company",
-
-"receiving_time": "anytime",
-
-"user_name": "Administrator",
-
-"order_number": "1612141342218661",
-
-"freight": 0,
-
-"description": "aaaa x 2. ",
-
-"remark": null,
-
-"express_company": null,
-
-"cover": "/p/7fe63684ff08bb7cb6414742232776ac.jpeg",
-
-"express_code": null,
-
-"is_deleted": 0,
-
-"province": "GD",
-
-"street": "jianzhong road",
-
-"is_deliver_reminder": 0,
-
-"id": 5,
-
-"express_number": null,
-
-"previous_status": "CONFIRMED_DELIVER_PENDING",
-
-"delivered_date": null,
-
-"zip": "510000",
-
-"deal_date": null,
-
-"total_price": 66,
-
-"contact_user": "Mr Huang",
-
-"settled": 0,
-
-"coupon_info": null,
-
-"payment_type": "WECHAT",
-
-"user_id": 1,
-
-"phone": "1380000000",
-
-"point_exchange_rate": 100,
-
-"deliver_date": null,
-
-"confirm_date": "2016-12-14 13:42:33",
-
-"district": "Tiahne",
-
-"created_date": "2016-12-14 13:42:21",
-
-"invoice": 1,
-
-"detail": "6F",
-
-"status": "CANCELED_REFUND_PENDING"
-
-},
-
-{
-
-"trade_number": "test_trade_num",
-
-"pay_date": "2016-12-14 11:35:54",
-
-"deliver_order_number": null,
-
-"order_customer_service": {
-
-"reason": "rrr",
-
-"express_code": null,
-
-"service_type": "RETURN",
-
-"images": "[]",
-
-"log": "[{\\"time\\":\\"2016-12-14
-11:36:32\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"yyy\\"},{\\"time\\":\\"2016-12-14
-11:36:56\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"ok\\"},{\\"time\\":\\"2016-12-14
-11:37:00\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"同意\\"},{\\"time\\":\\"2016-12-14
-11:38:07\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"退货收到确认\\"},{\\"time\\":\\"2016-12-14
-01:10:24\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"退款失败,
-请稍后重试\\"},{\\"time\\":\\"2016-12-14
-01:11:08\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"已完成退款\\"}]",
-
-"refund_fee": 66,
-
-"id": 4,
-
-"created_date": "2016-12-14 11:36:32",
-
-"express_number": null,
-
-"order_id": 4,
-
-"express_company": null,
-
-"status": "REFUNDED"
-
-},
-
-"city": "GZ",
-
-"invoice_title": "ABC company",
-
-"receiving_time": "anytime",
-
-"user_name": "Administrator",
-
-"order_number": "1612141135416631",
-
-"freight": 0,
-
-"description": "aaaa x 2. ",
-
-"remark": null,
-
-"express_company": "afa",
-
-"cover": "/p/7fe63684ff08bb7cb6414742232776ac.jpeg",
-
-"express_code": "afsd",
-
-"is_deleted": 0,
-
-"province": "GD",
-
-"street": "jianzhong road",
-
-"is_deliver_reminder": 0,
-
-"id": 4,
-
-"express_number": "rwrwe4",
-
-"previous_status": "DELIVERED_CONFIRM_PENDING",
-
-"delivered_date": "2016-12-14 11:36:05",
-
-"zip": "510000",
-
-"deal_date": null,
-
-"total_price": 66,
-
-"contact_user": "Mr Huang",
-
-"settled": 0,
-
-"coupon_info": null,
-
-"payment_type": "WECHAT",
-
-"user_id": 1,
-
-"phone": "1380000000",
-
-"point_exchange_rate": 100,
-
-"deliver_date": "2016-12-14 11:36:03",
-
-"confirm_date": "2016-12-14 11:35:54",
-
-"district": "Tiahne",
-
-"created_date": "2016-12-14 11:35:41",
-
-"invoice": 1,
-
-"detail": "6F",
-
-"status": "CLOSED_REFUNDED"
-
-},
-
-{
-
-"trade_number": "test_trade_num",
-
-"pay_date": "2016-12-14 11:27:23",
-
-"deliver_order_number": null,
-
-"order_customer_service": {
-
-"reason": "AFSFSF",
-
-"express_code": null,
-
-"service_type": "REFUND",
-
-"images": "[]",
-
-"log": "[{\\"time\\":\\"2016-12-14
-11:27:52\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"afaf\\"},{\\"time\\":\\"2016-12-14
-11:31:17\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"ok\\"},{\\"time\\":\\"2016-12-14
-11:31:19\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"同意\\"},{\\"time\\":\\"2016-12-14
-11:32:14\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"更新退款金额为
-58 元\\"},{\\"time\\":\\"2016-12-14
-11:33:08\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"已完成退款\\"}]",
-
-"refund_fee": 58,
-
-"id": 3,
-
-"created_date": "2016-12-14 11:27:52",
-
-"express_number": null,
-
-"order_id": 3,
-
-"express_company": null,
-
-"status": "REFUNDED"
-
-},
-
-"city": "GZ",
-
-"invoice_title": "ABC company",
-
-"receiving_time": "anytime",
-
-"user_name": "Administrator",
-
-"order_number": "1612141127143691",
-
-"freight": 0,
-
-"description": "aaaa x 2. ",
-
-"remark": null,
-
-"express_company": null,
-
-"cover": "/p/7fe63684ff08bb7cb6414742232776ac.jpeg",
-
-"express_code": null,
-
-"is_deleted": 0,
-
-"province": "GD",
-
-"street": "jianzhong road",
-
-"is_deliver_reminder": 0,
-
-"id": 3,
-
-"express_number": null,
-
-"previous_status": "CONFIRMED_DELIVER_PENDING",
-
-"delivered_date": null,
-
-"zip": "510000",
-
-"deal_date": null,
-
-"total_price": 66,
-
-"contact_user": "Mr Huang",
-
-"settled": 0,
-
-"coupon_info": null,
-
-"payment_type": "WECHAT",
-
-"user_id": 1,
-
-"phone": "1380000000",
-
-"point_exchange_rate": 100,
-
-"deliver_date": null,
-
-"confirm_date": "2016-12-14 11:27:23",
-
-"district": "Tiahne",
-
-"created_date": "2016-12-14 11:27:14",
-
-"invoice": 1,
-
-"detail": "6F",
-
-"status": "CLOSED_REFUNDED"
-
-},
-
-{
-
-"trade_number": "test_trade_num",
-
-"pay_date": "2016-12-13 15:35:06",
-
-"deliver_order_number": null,
-
-"order_customer_service": {
-
-"reason": "AFSFSF",
-
-"express_code": null,
-
-"service_type": "RETURN",
-
-"images": "[]",
-
-"log": "[{\\"time\\":\\"2016-12-13
-03:35:30\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"afaf\\"},{\\"time\\":\\"2016-12-13
-03:35:38\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"afd\\"},{\\"time\\":\\"2016-12-13
-03:35:46\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"同意\\"},{\\"time\\":\\"2016-12-13
-03:35:51\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"退货收到确认\\"},{\\"time\\":\\"2016-12-13
-03:35:55\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"更新退款金额为
-60 元\\"},{\\"time\\":\\"2016-12-13
-03:37:12\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"更新退款金额为
-61 元\\"},{\\"time\\":\\"2016-12-13
-03:48:57\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"a\\"},{\\"time\\":\\"2016-12-13
-03:52:01\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"com.jfeat.order.exception.RefundOrderException:
-order.refund.failure\\"},{\\"time\\":\\"2016-12-13
-03:52:55\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"java.lang.RuntimeException:
-com.jfeat.order.exception.RefundOrderException:
-order.refund.failure\\"},{\\"time\\":\\"2016-12-13
-04:00:49\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"com.jfeat.order.exception.RefundOrderException:
-order.refund.failure\\"},{\\"time\\":\\"2016-12-13
-04:11:29\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"fsdas\\"},{\\"time\\":\\"2016-12-13
-04:11:36\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"更新退款金额为
-60 元\\"},{\\"time\\":\\"2016-12-13
-04:11:41\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"退款失败,
-请稍后重试\\"},{\\"time\\":\\"2016-12-13
-05:18:40\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"退款失败,
-请稍后重试\\"},{\\"time\\":\\"2016-12-14
-11:26:17\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"已完成退款\\"}]",
-
-"refund_fee": 60,
-
-"id": 2,
-
-"created_date": "2016-12-13 15:35:30",
-
-"express_number": null,
-
-"order_id": 2,
-
-"express_company": null,
-
-"status": "REFUNDED"
-
-},
-
-"city": "GZ",
-
-"invoice_title": "ABC company",
-
-"receiving_time": "anytime",
-
-"user_name": "Administrator",
-
-"order_number": "1612131532015531",
-
-"freight": 0,
-
-"description": "aaaa x 2. ",
-
-"remark": "afafafafafafa",
-
-"express_company": "afa",
-
-"cover": "/p/7fe63684ff08bb7cb6414742232776ac.jpeg",
-
-"express_code": "afsd",
-
-"is_deleted": 0,
-
-"province": "GD",
-
-"street": "jianzhong road",
-
-"is_deliver_reminder": 0,
-
-"id": 2,
-
-"express_number": "234",
-
-"previous_status": "DELIVERED_CONFIRM_PENDING",
-
-"delivered_date": "2016-12-13 15:35:16",
-
-"zip": "510000",
-
-"deal_date": null,
-
-"total_price": 66,
-
-"contact_user": "Mr Huang",
-
-"settled": 0,
-
-"coupon_info": null,
-
-"payment_type": "WECHAT",
-
-"user_id": 1,
-
-"phone": "1380000000",
-
-"point_exchange_rate": 100,
-
-"deliver_date": "2016-12-13 15:35:14",
-
-"confirm_date": "2016-12-13 15:35:06",
-
-"district": "Tiahne",
-
-"created_date": "2016-12-13 15:32:01",
-
-"invoice": 1,
-
-"detail": "6F",
-
-"status": "CLOSED_REFUNDED"
-
-},
-
-{
-
-"trade_number": "test_trade_num",
-
-"pay_date": "2016-12-13 14:01:47",
-
-"deliver_order_number": null,
-
-"order_customer_service": {
-
-"reason": "AFSFSF",
-
-"express_code": null,
-
-"service_type": "RETURN",
-
-"images": "[]",
-
-"log": "[{\\"time\\":\\"2016-12-13
-02:03:26\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"afaf\\"},{\\"time\\":\\"2016-12-13
-02:03:41\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"同意\\"},{\\"time\\":\\"2016-12-13
-02:03:44\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"退货收到确认\\"},{\\"time\\":\\"2016-12-13
-02:12:38\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"更新退款金额为
-{0} 元\\"},{\\"time\\":\\"2016-12-13
-02:13:42\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"更新退款金额为
-62 元\\"},{\\"time\\":\\"2016-12-13
-02:17:23\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"\\"},{\\"time\\":\\"2016-12-13
-02:24:43\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"更新退款金额为
-61 元\\"},{\\"time\\":\\"2016-12-13
-02:33:33\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"\\"},{\\"time\\":\\"2016-12-13
-02:34:49\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"更新退款金额为
-60 元\\"},{\\"time\\":\\"2016-12-13
-02:35:04\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"已完成退款\\"}]",
-
-"refund_fee": 60,
-
-"id": 1,
-
-"created_date": "2016-12-13 14:03:26",
-
-"express_number": null,
-
-"order_id": 1,
-
-"express_company": null,
-
-"status": "REFUNDED"
-
-},
-
-"city": "GZ",
-
-"invoice_title": "ABC company",
-
-"receiving_time": "anytime",
-
-"user_name": "Administrator",
-
-"order_number": "1612131401365671",
-
-"freight": 0,
-
-"description": "aaaa x 2. ",
-
-"remark": null,
-
-"express_company": "afa",
-
-"cover": "/p/7fe63684ff08bb7cb6414742232776ac.jpeg",
-
-"express_code": "afsd",
-
-"is_deleted": 0,
-
-"province": "GD",
-
-"street": "jianzhong road",
-
-"is_deliver_reminder": 0,
-
-"id": 1,
-
-"express_number": "324242",
-
-"previous_status": "DELIVERED_CONFIRM_PENDING",
-
-"delivered_date": "2016-12-13 14:02:41",
-
-"zip": "510000",
-
-"deal_date": null,
-
-"total_price": 66,
-
-"contact_user": "Mr Huang",
-
-"settled": 0,
-
-"coupon_info": null,
-
-"payment_type": "WECHAT",
-
-"user_id": 1,
-
-"phone": "1380000000",
-
-"point_exchange_rate": 100,
-
-"deliver_date": "2016-12-13 14:02:15",
-
-"confirm_date": "2016-12-13 14:01:47",
-
-"district": "Tiahne",
-
-"created_date": "2016-12-13 14:01:36",
-
-"invoice": 1,
-
-"detail": "6F",
-
-"status": "CLOSED_REFUNDED"
-
+	"status_code": 0,
+	"data": [{
+		"trade_number": "test_trade_num",
+		"pay_date": "2016-12-14 13:42:33",
+		"deliver_order_number": null,
+		"order_customer_service": { 
+			"reason": "AFSFSF",
+			"express_code": null,
+			"service_type": "REFUND",
+			"images": "[]",
+			"log": "[{\"time\":\"2016-12-14 01:42:47\",\"user\":\"Administrator\",\"content\":\"afaf\"}]",
+			"refund_fee": null, //退款金额
+			"id": 5,
+			"created_date": "2016-12-14 13:42:47",
+			"express_number": null,
+			"order_id": 5,
+			"express_company": null,
+			"status": "CREATED"
+		},
+		"city": "GZ",
+		"invoice_title": "ABC company",
+		"receiving_time": "anytime",
+		"user_name": "Administrator",
+		"order_number": "1612141342218661",
+		"freight": 0,
+		"description": "aaaa x 2. ",
+		"remark": null,
+		"express_company": null,
+		"cover": "/p/7fe63684ff08bb7cb6414742232776ac.jpeg",
+		"express_code": null,
+		"is_deleted": 0,
+		"province": "GD",
+		"street": "jianzhong road",
+		"is_deliver_reminder": 0,
+		"id": 5,
+		"express_number": null,
+		"previous_status": "CONFIRMED_DELIVER_PENDING",
+		"delivered_date": null,
+		"zip": "510000",
+		"deal_date": null,
+		"total_price": 66,
+		"contact_user": "Mr Huang",
+		"settled": 0,
+		"coupon_info": null,
+		"payment_type": "WECHAT",
+		"user_id": 1,
+		"phone": "1380000000",
+		"point_exchange_rate": 100,
+		"deliver_date": null,
+		"confirm_date": "2016-12-14 13:42:33",
+		"district": "Tiahne",
+		"created_date": "2016-12-14 13:42:21",
+		"invoice": 1,
+		"detail": "6F",
+		"status": "CANCELED_REFUND_PENDING"
+	},{
+		"trade_number": "test_trade_num",
+		"pay_date": "2016-12-14 11:35:54",
+		"deliver_order_number": null,
+		"order_customer_service": {
+			"reason": "rrr",
+			"express_code": null,
+			"service_type": "RETURN",
+			"images": "[]",
+			"log": "[{\"time\":\"2016-12-14
+				11:36:32\",\"user\":\"Administrator\",\"content\":\"yyy\"},{\"time\":\"2016-12-14
+				11:36:56\",\"user\":\"Administrator\",\"content\":\"ok\"},{\"time\":\"2016-12-14
+				11:37:00\",\"user\":\"Administrator\",\"content\":\"同意\"},{\"time\":\"2016-12-14
+				11:38:07\",\"user\":\"Administrator\",\"content\":\"退货收到确认\"},{\"time\":\"2016-12-14
+				01:10:24\",\"user\":\"Administrator\",\"content\":\"退款失败,
+				请稍后重试\"},{\"time\":\"2016-12-14
+				01:11:08\",\"user\":\"Administrator\",\"content\":\"已完成退款\"}]",
+			"refund_fee": 66,
+			"id": 4,
+			"created_date": "2016-12-14 11:36:32",
+			"express_number": null,
+			"order_id": 4,
+			"express_company": null,
+			"status": "REFUNDED"
+		},
+		"city": "GZ",
+		"invoice_title": "ABC company",
+		"receiving_time": "anytime",
+		"user_name": "Administrator",
+		"order_number": "1612141135416631",
+		"freight": 0,
+		"description": "aaaa x 2. ",
+		"remark": null,
+		"express_company": "afa",
+		"cover": "/p/7fe63684ff08bb7cb6414742232776ac.jpeg",
+		"express_code": "afsd",
+		"is_deleted": 0,
+		"province": "GD",
+		"street": "jianzhong road",
+		"is_deliver_reminder": 0,
+		"id": 4,
+		"express_number": "rwrwe4",
+		"previous_status": "DELIVERED_CONFIRM_PENDING",
+		"delivered_date": "2016-12-14 11:36:05",
+		"zip": "510000",
+		"deal_date": null,
+		"total_price": 66,
+		"contact_user": "Mr Huang",
+		"settled": 0,
+		"coupon_info": null,
+		"payment_type": "WECHAT",
+		"user_id": 1,
+		"phone": "1380000000",
+		"point_exchange_rate": 100,
+		"deliver_date": "2016-12-14 11:36:03",
+		"confirm_date": "2016-12-14 11:35:54",
+		"district": "Tiahne",
+		"created_date": "2016-12-14 11:35:41",
+		"invoice": 1,
+		"detail": "6F",
+		"status": "CLOSED_REFUNDED"
+	},{
+		"trade_number": "test_trade_num",
+		"pay_date": "2016-12-14 11:27:23",
+		"deliver_order_number": null,
+		"order_customer_service": {
+			"reason": "AFSFSF",
+			"express_code": null,
+			"service_type": "REFUND",
+			"images": "[]",
+			"log": "[{\"time\":\"2016-12-14
+				11:27:52\",\"user\":\"Administrator\",\"content\":\"afaf\"},{\"time\":\"2016-12-14
+				11:31:17\",\"user\":\"Administrator\",\"content\":\"ok\"},{\"time\":\"2016-12-14
+				11:31:19\",\"user\":\"Administrator\",\"content\":\"同意\"},{\"time\":\"2016-12-14
+				11:32:14\",\"user\":\"Administrator\",\"content\":\"更新退款金额为
+				58 元\"},{\"time\":\"2016-12-14
+				11:33:08\",\"user\":\"Administrator\",\"content\":\"已完成退款\"}]",
+			"refund_fee": 58,
+			"id": 3,
+			"created_date": "2016-12-14 11:27:52",
+			"express_number": null,
+			"order_id": 3,
+			"express_company": null,
+			"status": "REFUNDED"
+		},
+		"city": "GZ",
+		"invoice_title": "ABC company",
+		"receiving_time": "anytime",
+		"user_name": "Administrator",
+		"order_number": "1612141127143691",
+		"freight": 0,
+		"description": "aaaa x 2. ",
+		"remark": null,
+		"express_company": null,
+		"cover": "/p/7fe63684ff08bb7cb6414742232776ac.jpeg",
+		"express_code": null,
+		"is_deleted": 0,
+		"province": "GD",
+		"street": "jianzhong road",
+		"is_deliver_reminder": 0,
+		"id": 3,
+		"express_number": null,
+		"previous_status": "CONFIRMED_DELIVER_PENDING",
+		"delivered_date": null,
+		"zip": "510000",
+		"deal_date": null,
+		"total_price": 66,
+		"contact_user": "Mr Huang",
+		"settled": 0,
+		"coupon_info": null,
+		"payment_type": "WECHAT",
+		"user_id": 1,
+		"phone": "1380000000",
+		"point_exchange_rate": 100,
+		"deliver_date": null,
+		"confirm_date": "2016-12-14 11:27:23",
+		"district": "Tiahne",
+		"created_date": "2016-12-14 11:27:14",
+		"invoice": 1,
+		"detail": "6F",
+		"status": "CLOSED_REFUNDED"
+	},{
+		"trade_number": "test_trade_num",
+		"pay_date": "2016-12-13 15:35:06",
+		"deliver_order_number": null,
+		"order_customer_service": {
+			"reason": "AFSFSF",
+			"express_code": null,
+			"service_type": "RETURN",
+			"images": "[]",
+			"log": "[{\"time\":\"2016-12-13
+				03:35:30\",\"user\":\"Administrator\",\"content\":\"afaf\"},{\"time\":\"2016-12-13
+				03:35:38\",\"user\":\"Administrator\",\"content\":\"afd\"},{\"time\":\"2016-12-13
+				03:35:46\",\"user\":\"Administrator\",\"content\":\"同意\"},{\"time\":\"2016-12-13
+				03:35:51\",\"user\":\"Administrator\",\"content\":\"退货收到确认\"},{\"time\":\"2016-12-13
+				03:35:55\",\"user\":\"Administrator\",\"content\":\"更新退款金额为
+				60 元\"},{\"time\":\"2016-12-13
+				03:37:12\",\"user\":\"Administrator\",\"content\":\"更新退款金额为
+				61 元\"},{\"time\":\"2016-12-13
+				03:48:57\",\"user\":\"Administrator\",\"content\":\"a\"},{\"time\":\"2016-12-13
+				03:52:01\",\"user\":\"Administrator\",\"content\":\"com.jfeat.order.exception.RefundOrderException:
+				order.refund.failure\"},{\"time\":\"2016-12-13
+				03:52:55\",\"user\":\"Administrator\",\"content\":\"java.lang.RuntimeException:
+				com.jfeat.order.exception.RefundOrderException:
+				order.refund.failure\"},{\"time\":\"2016-12-13
+				04:00:49\",\"user\":\"Administrator\",\"content\":\"com.jfeat.order.exception.RefundOrderException:
+				order.refund.failure\"},{\"time\":\"2016-12-13
+				04:11:29\",\"user\":\"Administrator\",\"content\":\"fsdas\"},{\"time\":\"2016-12-13
+				04:11:36\",\"user\":\"Administrator\",\"content\":\"更新退款金额为
+				60 元\"},{\"time\":\"2016-12-13
+				04:11:41\",\"user\":\"Administrator\",\"content\":\"退款失败,
+				请稍后重试\"},{\"time\":\"2016-12-13
+				05:18:40\",\"user\":\"Administrator\",\"content\":\"退款失败,
+				请稍后重试\"},{\"time\":\"2016-12-14
+				11:26:17\",\"user\":\"Administrator\",\"content\":\"已完成退款\"}]",
+			"refund_fee": 60,
+			"id": 2,
+			"created_date": "2016-12-13 15:35:30",
+			"express_number": null,
+			"order_id": 2,
+			"express_company": null,
+			"status": "REFUNDED"
+		},
+		"city": "GZ",
+		"invoice_title": "ABC company",
+		"receiving_time": "anytime",
+		"user_name": "Administrator",
+		"order_number": "1612131532015531",
+		"freight": 0,
+		"description": "aaaa x 2. ",
+		"remark": "afafafafafafa",
+		"express_company": "afa",
+		"cover": "/p/7fe63684ff08bb7cb6414742232776ac.jpeg",
+		"express_code": "afsd",
+		"is_deleted": 0,
+		"province": "GD",
+		"street": "jianzhong road",
+		"is_deliver_reminder": 0,
+		"id": 2,
+		"express_number": "234",
+		"previous_status": "DELIVERED_CONFIRM_PENDING",
+		"delivered_date": "2016-12-13 15:35:16",
+		"zip": "510000",
+		"deal_date": null,
+		"total_price": 66,
+		"contact_user": "Mr Huang",
+		"settled": 0,
+		"coupon_info": null,
+		"payment_type": "WECHAT",
+		"user_id": 1,
+		"phone": "1380000000",
+		"point_exchange_rate": 100,
+		"deliver_date": "2016-12-13 15:35:14",
+		"confirm_date": "2016-12-13 15:35:06",
+		"district": "Tiahne",
+		"created_date": "2016-12-13 15:32:01",
+		"invoice": 1,
+		"detail": "6F",
+		"status": "CLOSED_REFUNDED"
+	},{
+		"trade_number": "test_trade_num",
+		"pay_date": "2016-12-13 14:01:47",
+		"deliver_order_number": null,
+		"order_customer_service": {
+			"reason": "AFSFSF",
+			"express_code": null,
+			"service_type": "RETURN",
+			"images": "[]",
+			"log": "[{\"time\":\"2016-12-13
+				02:03:26\",\"user\":\"Administrator\",\"content\":\"afaf\"},{\"time\":\"2016-12-13
+				02:03:41\",\"user\":\"Administrator\",\"content\":\"同意\"},{\"time\":\"2016-12-13
+				02:03:44\",\"user\":\"Administrator\",\"content\":\"退货收到确认\"},{\"time\":\"2016-12-13
+				02:12:38\",\"user\":\"Administrator\",\"content\":\"更新退款金额为
+				{0} 元\"},{\"time\":\"2016-12-13
+				02:13:42\",\"user\":\"Administrator\",\"content\":\"更新退款金额为
+				62 元\"},{\"time\":\"2016-12-13
+				02:17:23\",\"user\":\"Administrator\",\"content\":\"\"},{\"time\":\"2016-12-13
+				02:24:43\",\"user\":\"Administrator\",\"content\":\"更新退款金额为
+				61 元\"},{\"time\":\"2016-12-13
+				02:33:33\",\"user\":\"Administrator\",\"content\":\"\"},{\"time\":\"2016-12-13
+				02:34:49\",\"user\":\"Administrator\",\"content\":\"更新退款金额为
+				60 元\"},{\"time\":\"2016-12-13
+				02:35:04\",\"user\":\"Administrator\",\"content\":\"已完成退款\"}]",
+			"refund_fee": 60,
+			"id": 1,
+			"created_date": "2016-12-13 14:03:26",
+			"express_number": null,
+			"order_id": 1,
+			"express_company": null,
+			"status": "REFUNDED"
+		},
+		"city": "GZ",
+		"invoice_title": "ABC company",
+		"receiving_time": "anytime",
+		"user_name": "Administrator",
+		"order_number": "1612131401365671",
+		"freight": 0,
+		"description": "aaaa x 2. ",
+		"remark": null,
+		"express_company": "afa",
+		"cover": "/p/7fe63684ff08bb7cb6414742232776ac.jpeg",
+		"express_code": "afsd",
+		"is_deleted": 0,
+		"province": "GD",
+		"street": "jianzhong road",
+		"is_deliver_reminder": 0,
+		"id": 1,
+		"express_number": "324242",
+		"previous_status": "DELIVERED_CONFIRM_PENDING",
+		"delivered_date": "2016-12-13 14:02:41",
+		"zip": "510000",
+		"deal_date": null,
+		"total_price": 66,
+		"contact_user": "Mr Huang",
+		"settled": 0,
+		"coupon_info": null,
+		"payment_type": "WECHAT",
+		"user_id": 1,
+		"phone": "1380000000",
+		"point_exchange_rate": 100,
+		"deliver_date": "2016-12-13 14:02:15",
+		"confirm_date": "2016-12-13 14:01:47",
+		"district": "Tiahne",
+		"created_date": "2016-12-13 14:01:36",
+		"invoice": 1,
+		"detail": "6F",
+		"status": "CLOSED_REFUNDED"
+	}]
 }
+```
 
-]
+### 我的订单详情
 
-}
+GET https://mall.smallsaas.cn/rest/order/{orderNumber}
 
-28. **我的订单详情**
+Param: 
 
-GET https://mall.smallsaas.cn/rest/order/0000000401456137520088034 
+ - orderNumber: 订单号
 
-Query Para: Order Number - 订单号
+Header: Authorization: token
 
-Header: Authorization:
-eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
+Describe:
+
+ - deal_date: 收货成交时间
+
+ - confirm_date: 平台确认时间
 
 Return:
-
+```json
 {
-
-"status_code": 0,
-
-"data": {
-
-"detail": "6F",
-
-"phone": "1380000000",
-
-"contact_user": "Mr Huang",
-
-"remark": null,
-
-"invoice": 1,
-
-"street": "jianzhong road",
-
-"trade_number": null,
-
-"deal_date": null, //收货成交时间
-
-"city": "GZ",
-
-"id": 3,
-
-"cover":
-"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
-
-"confirm_date": null, //平台确认时间
-
-"description": "超效洁净护理洗衣液2.5L【全国包邮】 x 1. ",
-
-"province": "GD",
-
-"order_items": [{
-
-"id": 5,
-
-"cover":
-"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
-
-"price": 34.80,
-
-"cost_price": 20.00,
-
-"final_price": 34.80,
-
-"product_id": 1,
-
-"status": "CREATED",
-
-"product_name": "超效洁净护理洗衣液2.5L【全国包邮】",
-
-"quantity": 1,
-
-"order_id": 3,
-
-"product_specification_id": 2,
-
-"product_specification_name": "a1" //用户选择的规格
-
-}],
-
-"user_id": 1,
-
-"district": "Tiahne",
-
-"deliver_date": null, //开始发货时间
-
-"delivered_date": null, //完成发货时间
-
-"created_date": "2016-04-26 10:27:56", //创建时间
-
-"order_number": "0000000101461637676506360",
-
-"zip": "510000",
-
-"status": "CREATED_PAY_PENDING",
-
-"invoice_title": "ABC company",
-
-"receiving_time": "anytime",
-
-"deliver_order_number": null,
-
-"total_price": 34.80,
-
-"freight": 0.00,
-
-"pay_date": null, //支付时间
-
-"payment_type": "ALIPAY",
-
-"point_exchange_rate": 100, //积分支付时的兑换率
-
-"pay_expiry_time": "2018-08-20 17:53:01",//
-待支付订单支付的超时时间
-
-"order_customer_service": {
-
-"reason": "afaf", //退货原因
-
-"express_code": null,
-
-"service_type": "RETURN", //售后类型： RETURN－退货退款，
-REFUND－仅退款
-
-"id": 1,
-
-"created_date": "2016-06-16 13:57:12",
-
-"express_number": "23234324", //快递单号
-
-"order_id": 1,
-
-"express_company": "ABC" //快递公司名
-
+	"status_code": 0,
+	"data": {
+		"detail": "6F",
+		"phone": "1380000000",
+		"contact_user": "Mr Huang",
+		"remark": null,
+		"invoice": 1,
+		"street": "jianzhong road",
+		"trade_number": null,
+		"deal_date": null, 
+		"city": "GZ",
+		"id": 3,
+		"cover":"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+		"confirm_date": null, 
+		"description": "超效洁净护理洗衣液2.5L【全国包邮】 x 1. ",
+		"province": "GD",
+		"order_items": [{
+		"id": 5,
+		"cover":"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+		"price": 34.80,
+		"cost_price": 20.00,
+		"final_price": 34.80,
+		"product_id": 1,
+		"status": "CREATED",
+		"product_name": "超效洁净护理洗衣液2.5L【全国包邮】",
+		"quantity": 1,
+		"order_id": 3,
+		"product_specification_id": 2,
+		"product_specification_name": "a1" //用户选择的规格
+		}],
+		"user_id": 1,
+		"district": "Tiahne",
+		"deliver_date": null, //开始发货时间
+		"delivered_date": null, //完成发货时间
+		"created_date": "2016-04-26 10:27:56", //创建时间
+		"order_number": "0000000101461637676506360",
+		"zip": "510000",
+		"status": "CREATED_PAY_PENDING",
+		"invoice_title": "ABC company",
+		"receiving_time": "anytime",
+		"deliver_order_number": null,
+		"total_price": 34.80,
+		"freight": 0.00,
+		"pay_date": null, //支付时间
+		"payment_type": "ALIPAY",
+		"point_exchange_rate": 100, //积分支付时的兑换率
+		"pay_expiry_time": "2018-08-20 17:53:01",//待支付订单支付的超时时间
+		"order_customer_service": {
+			"reason": "afaf", //退货原因
+			"express_code": null,
+			"service_type": "RETURN", //售后类型： RETURN－退货退款，REFUND－仅退款
+			"id": 1,
+			"created_date": "2016-06-16 13:57:12",
+			"express_number": "23234324", //快递单号
+			"order_id": 1,
+			"express_company": "ABC" //快递公司名
+		}
+	}
 }
-
-}
-
-}
+```
 
 Error Return:
-
+```json
 {
-
-"message": "invalid.order.id",
-
-"status_code": 1
-
+	"message": "invalid.order.id",
+	"status_code": 1
 }
+```
 
-29. **我的订单数量统计**
+### 我的订单数量统计
 
 GET https://mall.smallsaas.cn/rest/order_count 
 
-Header: Authorization:
-eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
+Header: Authorization: token
+
+Describe:
+
+ - total: 总订单
+
+ - payPending: 待支付
+
+ - delivering: 待发货
+
+ - delivered: 待收货
+
+ - commentPending: 待评价
 
 Return:
-
+```json
 {
-
-"status_code": 0,
-
-"data" {
-
-"total": 12, // 总订单
-
-"payPending": 2, //待支付
-
-"delivering": 4, //待发货
-
-"delivered": 2, //待收货
-
-"commentPending": 2 //待评价
-
+	"status_code": 0,
+	"data" {
+		"total": 12, 
+		"payPending": 2, 
+		"delivering": 4, 
+		"delivered": 2, 
+		"commentPending": 2 
+	}
 }
+```
 
-}
+### 提醒发货
 
-30. **提醒发货**
+GET https://mall.smallsaas.cn/rest/order_deliver_reminder/{orderNumber} 
 
-GET https://mall.smallsaas.cn/rest/order_deliver_reminder/0000000401456137520088034 
+Param: 
+ - orderNumber: 订单号
 
-Query Para: Order Number - 订单号
-
-Header: Authorization:
-eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
+Header: Authorization: token
 
 Return:
-
+···json
 {
-
-"message": "order.deliver.reminded",
-
-"status_code": 0
-
+	"message": "order.deliver.reminded",
+	"status_code": 0
 }
+```
 
-31. **订单评价**
+### 订单评价
 
-PUT https://mall.smallsaas.cn/rest/order_comment/0000000401456137520088034 
+PUT https://mall.smallsaas.cn/rest/order_comment/{orderNumber}
 
-Query Para: Order Number - 订单号
+Param: 
 
-Header: Authorization:
-eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
+ - orderNumber: 订单号
+
+Header: Authorization: token
 
 Data:
-
+```json
 { "comment_id": "12345" }
+```
 
 Return:
-
+```json
 {
-
-"message": "ok",
-
-"status_code": 0
-
+	"message": "ok",
+	"status_code": 0
 }
+```
 
 32. **新建订单**
 
@@ -1730,11 +623,11 @@ POST https://mall.smallsaas.cn/rest/order 
 
 到支付宝支付时，把order-number的值赋给out_trade_no进行支付。
 
-微信支付 - WECHAT
+微信支付: WECHAT
 
-积分支付 - POINT
+积分支付: POINT
 
-钱包支付 - WALLET
+钱包支付: WALLET
 
 /\*\*
 
@@ -2552,10 +1445,10 @@ Return:
 
 "reason": "AFSFSF",
 
-"images": "[\\"http://host/a.jpg\\",\\"http://host/b.jgp\\"]",
+"images": "[\"http://host/a.jpg\",\"http://host/b.jgp\"]",
 
-"log": "[{\\"time\\":\\"2018-07-21
-02:38:10\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"afaf\\"}]",
+"log": "[{\"time\":\"2018-07-21
+02:38:10\",\"user\":\"Administrator\",\"content\":\"afaf\"}]",
 
 "exchanges": [ //置换项（置换清单）（仅换货单有此项）
 
@@ -2848,7 +1741,7 @@ eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9u
 
 Param:
 
-storeId - 门店的ID
+storeId: 门店的ID
 
 Return:
 
@@ -2926,10 +1819,10 @@ Return:
 
 "reason": "AFSFSF", //原因
 
-"images": "[\\"http://host/a.jpg\\",\\"http://host/b.jgp\\"]",
+"images": "[\"http://host/a.jpg\",\"http://host/b.jgp\"]",
 
-"log": "[{\\"time\\":\\"2018-07-21
-02:38:10\\",\\"user\\":\\"Administrator\\",\\"content\\":\\"afaf\\"}]",
+"log": "[{\"time\":\"2018-07-21
+02:38:10\",\"user\":\"Administrator\",\"content\":\"afaf\"}]",
 
 "user_name": "Administrator", //订单用户id
 
@@ -3154,21 +2047,21 @@ Parameter: id
 
 售后单状态说明：
 
-CREATED - 待处理
+CREATED: 待处理
 
-HANDLING - 处理中
+HANDLING: 处理中
 
-RETURN_PENDING - 等待货品寄回
+RETURN_PENDING: 等待货品寄回
 
-DELIVING - 换货中
+DELIVING: 换货中
 
-REFUND_PENDING - 待退款
+REFUND_PENDING: 待退款
 
-REFUNDED - 已退款
+REFUNDED: 已退款
 
-CANCELED - 已取消
+CANCELED: 已取消
 
-EXCHANGED - 已换货
+EXCHANGED: 已换货
 
 Return:
 
@@ -3357,7 +2250,7 @@ GET https://mall.smallsaas.cn/rest/express_info?order_number=000000010145577056
 
 parameter:
 
-order_number - ORDER-NUMBER
+order_number: ORDER-NUMBER
 
 Header: Authorization:
 eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -3584,7 +2477,7 @@ POST https://mall.smallsaas.cn/rest/shopping_cart?increase=false 
 
 parameter:
 
-increase - optional, default true.
+increase: optional, default true.
 如果为true则累加购物车数量，为false则替换数量。
 
 Header: Authorization:
@@ -4024,9 +2917,9 @@ GET https://mall.smallsaas.cn/rest/product_purchase_strategy?productId=234&quan
 
 parameter:
 
-productId - 产品ID
+productId: 产品ID
 
-quantity - 购买数量
+quantity: 购买数量
 
 Header: Authorization:
 eyJ0b2tlbiI6IjQzN2NhZjRiYjQxOWZhZGEwZDgwYmFmMTEzYjY0OGNlMzdiM2NmYWQiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -4140,7 +3033,7 @@ eyJ0b2tlbiI6IjQzN2NhZjRiYjQxOWZhZGEwZDgwYmFmMTEzYjY0OGNlMzdiM2NmYWQiLCJsb2dpbl9u
 
 Parameter:
 
-id - 账户ID
+id: 账户ID
 
 Return:
 
@@ -4267,13 +3160,13 @@ GET https://mall.smallsaas.cn/rest/reward_cash 
 
 Parameters:
 
-page_number - optional, 页码，default 1;
+page_number: optional, 页码，default 1;
 
-page_size - optional, 每页记录数，default 30;
+page_size: optional, 每页记录数，default 30;
 
-start_date - optional, 开始时间， default 上个月;
+start_date: optional, 开始时间， default 上个月;
 
-end_date - optional, 结束时间， default 今天。
+end_date: optional, 结束时间， default 今天。
 
 Header: Authorization:
 eyJ0b2tlbiI6IjQzN2NhZjRiYjQxOWZhZGEwZDgwYmFmMTEzYjY0OGNlMzdiM2NmYWQiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -4341,13 +3234,13 @@ eyJ0b2tlbiI6IjMxODhiZmUxMzM2ZjY0MGQ5ZmU3OTUxMDZkYTUzMjE5MDJlODAwZjAiLCJsb2dpbl9u
 
 查询参数:
 
-page_number - optional, 页数
+page_number: optional, 页数
 
-page_size - optional, 每页记录数
+page_size: optional, 每页记录数
 
-start_date - optional, 开始时间
+start_date: optional, 开始时间
 
-end_date - optional, 结束时间
+end_date: optional, 结束时间
 
 默认查当月的数据。
 
@@ -4585,11 +3478,11 @@ eyJ0b2tlbiI6IjMxODhiZmUxMzM2ZjY0MGQ5ZmU3OTUxMDZkYTUzMjE5MDJlODAwZjAiLCJsb2dpbl9u
 
 查询参数:
 
--   id - integer,required, 产品ID
+-   id: integer,required, 产品ID
 
--   marketingType - string, optional, 营销活动类型，如拼团为PIECE-GROUP
+-   marketingType: string, optional, 营销活动类型，如拼团为PIECE-GROUP
 
--   marketingId - integer, optinal, 营销活动ID
+-   marketingId: integer, optinal, 营销活动ID
 
 Return:
 
@@ -4855,7 +3748,7 @@ GET https://mall.smallsaas.cn/rest/seller/seller_id 
 Header: Authorization:
 eyJ0b2tlbiI6IjMxODhiZmUxMzM2ZjY0MGQ5ZmU3OTUxMDZkYTUzMjE5MDJlODAwZjAiLCJsb2dpbl9uYW1lIjoiMTIzIn0=
 
-Parameter: seller_id - 下级分销商ID
+Parameter: seller_id: 下级分销商ID
 
 Return:
 
@@ -5220,7 +4113,7 @@ GET https://mall.smallsaas.cn/rest/physical_purchase_summary?month=2017-06 
 
 Parameter:
 
-month - optional,
+month: optional,
 要查询的月份，格式yyyy-MM,如果不传该参数，则返回所有月份的记录，用于'结算记录'UI。如果传了参数，则返回该月的明细，用于'我的推荐'UI。
 
 Header: Authorization:
@@ -5345,7 +4238,7 @@ GET https://mall.smallsaas.cn/rest/agent_summary?month=2017-08 
 
 Parameter:
 
-month - optional,
+month: optional,
 要查询的月份，格式yyyy-MM,如果不传该参数，则返回所有月份的记录，用于'结算记录'UI。如果传了参数，则返回该月的明细。
 
 Header: Authorization:

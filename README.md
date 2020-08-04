@@ -21,9 +21,9 @@ Return:
 {
 	"status_code": 0,
 	"data": {
-	"point_exchange_rate": 100,
-	"auto_select_coupon": false,
-	"drawing_condition": 100
+		"point_exchange_rate": 100,
+		"auto_select_coupon": false,
+		"drawing_condition": 100
 	}
 }
 ```

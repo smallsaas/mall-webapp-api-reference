@@ -543,78 +543,79 @@ Error Return:
 }
 ```
 
-29. **我的订单数量统计**
+### 我的订单数量统计
 
 GET https://mall.smallsaas.cn/rest/order_count 
 
-Header: Authorization:
-eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
+Header: Authorization: token
+
+Describe:
+
+ - total: 总订单
+
+ - payPending: 待支付
+
+ - delivering: 待发货
+
+ - delivered: 待收货
+
+ - commentPending: 待评价
 
 Return:
-
+```json
 {
-
-"status_code": 0,
-
-"data" {
-
-"total": 12, // 总订单
-
-"payPending": 2, //待支付
-
-"delivering": 4, //待发货
-
-"delivered": 2, //待收货
-
-"commentPending": 2 //待评价
-
+	"status_code": 0,
+	"data" {
+		"total": 12, 
+		"payPending": 2, 
+		"delivering": 4, 
+		"delivered": 2, 
+		"commentPending": 2 
+	}
 }
+```
 
-}
+### 提醒发货
 
-30. **提醒发货**
+GET https://mall.smallsaas.cn/rest/order_deliver_reminder/{orderNumber} 
 
-GET https://mall.smallsaas.cn/rest/order_deliver_reminder/0000000401456137520088034 
+Param: 
+ - orderNumber: 订单号
 
-Query Para: Order Number: 订单号
-
-Header: Authorization:
-eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
+Header: Authorization: token
 
 Return:
-
+···json
 {
-
-"message": "order.deliver.reminded",
-
-"status_code": 0
-
+	"message": "order.deliver.reminded",
+	"status_code": 0
 }
+```
 
-31. **订单评价**
+### 订单评价
 
-PUT https://mall.smallsaas.cn/rest/order_comment/0000000401456137520088034 
+PUT https://mall.smallsaas.cn/rest/order_comment/{orderNumber}
 
-Query Para: Order Number: 订单号
+Param: 
 
-Header: Authorization:
-eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
+ - orderNumber: 订单号
+
+Header: Authorization: token
 
 Data:
-
+```json
 { "comment_id": "12345" }
+```
 
 Return:
-
+```json
 {
-
-"message": "ok",
-
-"status_code": 0
-
+	"message": "ok",
+	"status_code": 0
 }
+```
 
-32. **新建订单**
+### 新建订单
 
 POST https://mall.smallsaas.cn/rest/order 
 
