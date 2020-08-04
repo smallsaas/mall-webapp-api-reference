@@ -125,6 +125,8 @@ Header: Authorization: token
 Describe:
 
  - order_customer_service: 售后单信息
+ 
+ - refund_fee: 退款金额
 
 Return:
 ```json
@@ -140,7 +142,7 @@ Return:
 			"service_type": "REFUND",
 			"images": "[]",
 			"log": "[{\"time\":\"2016-12-14 01:42:47\",\"user\":\"Administrator\",\"content\":\"afaf\"}]",
-			"refund_fee": null, //退款金额
+			"refund_fee": null, 
 			"id": 5,
 			"created_date": "2016-12-14 13:42:47",
 			"express_number": null,
@@ -472,7 +474,7 @@ Describe:
  - confirm_date: 平台确认时间
 
 Return:
-```json
+```
 {
 	"status_code": 0,
 	"data": {
@@ -812,25 +814,20 @@ Header: Authorization: token
 > 注：不关联店铺的订单，店员是看不到的。比如上面介绍的本来是关联了一个店铺，但后来被店员拒绝的订单，拒绝之后，该订单就不关联此店铺了，需要由平台自行重新指定这个订单关联的店铺。
 
 Data:
-
+```
 {
-
-"store_id": "123", //required，店铺id
-
-"action": "complete" //required, （complete-完成 cancel-取消
-accept-受理 reject-拒绝 delivering-开始配送）
-
+	"store_id": "123", //required，店铺id
+	"action": "complete" //required, （complete-完成 cancel-取消 accept-受理 reject-拒绝 delivering-开始配送）
 }
+```
 
 Return:
-
+```
 {
-
-"status_code": 0,
-
-"message": "更新订单成功"
-
+	"status_code": 0,
+	"message": "更新订单成功"
 }
+```
 
 35. **店员查看门店订单列表（线上，线下订单都在这里查看）**
 
