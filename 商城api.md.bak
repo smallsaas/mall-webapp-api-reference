@@ -190,23 +190,33 @@ promoted - optional, 如果指定该参数，则分页查询该类别下的推�
 }
 ```
 
-### 产品热门关键字
+20. **产品热门关键字**
 
 GET http://112.74.26.228:10080/rest/product_hit_word 
 
 return:
-```json
-{
-	"status_code": 0,
-	"data": [{
-		"id": 1,
-		"hit": 0,
-		"name": "皂液"
-	}]
-}
-```
 
-### 产品搜索
+{
+
+"status_code": 0,
+
+"data": [
+
+{
+
+"id": 1,
+
+"hit": 0,
+
+"name": "皂液"
+
+}
+
+]
+
+}
+
+21. **产品搜索**
 
 GET http://112.74.26.228:10080/rest/product_search?pageNumber=1&pageSize=20&name=abc&barCode=234234&orderByDesc=view_count&orderBy=price&orderBy=sales 
 
