@@ -649,298 +649,167 @@ public enum Origin {
 Header: Authorization: token
 
 Data:
-```json
+```
 {
+	//配送方式：
+	//1. EXPRESS-快递（默认，当不传此参数或传递null时会使用此方式）
+	//2. SELF_PICK-自提（当使用此方式时，必须同时指定store_id和store_name）
+	//3. FLASH-极速送达（当使用此方式时，必须同时指定store_id和store_name)
+	//SELF_PICK和FLASH方式的线上订单，需要店员登录ipad端处理
+	"delivery_type": null,
 
-//配送方式：
+	//订单来源
+	//optional。default OTHER
+	//WPA（Wechat public account)-微信公众号 MINI-PROGRAM-小程序
+	APP-手机应用程序 OTHER-其他
 
-//1.EXPRESS-快递（默认，当不传此参数或传递null时会使用此方式）
-
-//2.
-SELF_PICK-自提（当使用此方式时，必须同时指定store_id和store_name）
-
-//3.FLASH-极速送达（当使用此方式时，必须同时指定store_id和store_name)
-
-//SELF_PICK和FLASH方式的线上订单，需要店员登录ipad端处理
-
-"delivery_type": null,
-
-//订单来源
-
-//optional。default OTHER
-
-//WPA（Wechat public account)-微信公众号 MINI-PROGRAM-小程序
-APP-手机应用程序 OTHER-其他
-
-"origin": "APP",
-
-"pay_credit": 120, //使用积分抵扣
-
-"store_id": "123", //门店id
-
-"store_name": "门店1", //门店名
-
-"payment_type": "WECHAT",
-
-"remark": null,
-
-"receiving_time": "anytime", //收货时间
-
-"invoice": 1, //是否开发票
-
-"invoice_title": "ABC company", //发票抬头
-
-"contact": {
-
-"contact_user": "Mr Huang",
-
-"phone": "1380000000",
-
-"zip": "510000",
-
-"province": "GD",
-
-"city": "GZ",
-
-"district": "Tiahne",
-
-"street": "jianzhong road",
-
-"detail": "6F"
-
+	"origin": "APP",
+	"pay_credit": 120, //使用积分抵扣
+	"store_id": "123", //门店id
+	"store_name": "门店1", //门店名
+	"payment_type": "WECHAT",
+	"remark": null,
+	"receiving_time": "anytime", //收货时间
+	"invoice": 1, //是否开发票
+	"invoice_title": "ABC company", //发票抬头
+	"contact": {
+	"contact_user": "Mr Huang",
+	"phone": "1380000000",
+	"zip": "510000",
+	"province": "GD",
+	"city": "GZ",
+	"district": "Tiahne",
+	"street": "jianzhong road",
+	"detail": "6F"
 },
-
 "order_items": [{
-
-"product_id": 1,
-
-"quantity": 2,
-
-"product_specification_id": 1 //optional，
-用户选择的产品规格，如果没有则不需要这个项
-
-}]
-
+	"product_id": 1,
+	"quantity": 2,
+	"product_specification_id": 1 //optional，用户选择的产品规格，如果没有则不需要这个项
+	}]
 }
+```
 
 Return:
-
+```
 {
-
-"status_code": 0,
-
-"data": {
-
-"created_date": "2016-04-25",
-
-"order_number": "0000000101461584134091428",
-
-"status": "CREATED_PAY_PENDING",
-
-"remark": null,
-
-"total_price": 290.00,
-
-"id": 2,
-
-"cover":
-"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
-
-"description": "p1 x 2. ",
-
-"freight": 0.00,
-
-"province": "GD",
-
-"city": "GZ",
-
-"district": "LW",
-
-"street": "AX",
-
-"detail": null,
-
-"zip": "510000",
-
-"phone": "1390000000",
-
-"contact_user": "ABC",
-
-"receiving_time": "anytime",
-
-"invoice": 1,
-
-"invoice_title": "ABC company",
-
-"order_items": [{
-
-"id": 1,
-
-"cover":
-"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
-
-"price": 145.00,
-
-"final_price": 290.00,
-
-"cost_price": 0.00,
-
-"product_id": 1,
-
-"status": "CREATED",
-
-"product_name": "p1",
-
-"quantity": 2,
-
-"order_id": 2，
-
-"product_specification_id": 2,
-
-"product_specification_name": "a1" //用户选择的产品规格
-
-}],
-
-"user_id": 1,
-
-"payment_type": null
-
+	"status_code": 0,
+	"data": {
+		"created_date": "2016-04-25",
+		"order_number": "0000000101461584134091428",
+		"status": "CREATED_PAY_PENDING",
+		"remark": null,
+		"total_price": 290.00,
+		"id": 2,
+		"cover": "https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+		"description": "p1 x 2. ",
+		"freight": 0.00,
+		"province": "GD",
+		"city": "GZ",
+		"district": "LW",
+		"street": "AX",
+		"detail": null,
+		"zip": "510000",
+		"phone": "1390000000",
+		"contact_user": "ABC",
+		"receiving_time": "anytime",
+		"invoice": 1,
+		"invoice_title": "ABC company",
+		"order_items": [{
+			"id": 1,
+			"cover": "https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+			"price": 145.00,
+			"final_price": 290.00,
+			"cost_price": 0.00,
+			"product_id": 1,
+			"status": "CREATED",
+			"product_name": "p1",
+			"quantity": 2,
+			"order_id": 2，
+			"product_specification_id": 2,
+			"product_specification_name": "a1" //用户选择的产品规格
+		}],
+		"user_id": 1,
+		"payment_type": null
+	}
 }
+```
 
-}
-
-33. **店员新建订单**
+### 店员新建订单
 
 POST https://mall.smallsaas.cn/rest/store/order 
 
-Header: Authorization:
-eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
+Header: Authorization: token
 
 Data:
-
+```
 {
-
-//以下两个字段是店员新建订单api额外需要提供的
-
-"store_id": 123, //required 店铺id
-
-"store_name": "龙门客栈", //required 店铺名称
-
-//其他需要提供的域同"新建订单api"
-
-"payment_type": "WECHAT",
-
-// 使用积分抵扣
-
-"pay_credit": 120,
-
-//订单来源
-
-//optional。default OTHER
-
-//WPA（Wechat public account)-微信公众号 MINI-PROGRAM-小程序
-APP-手机应用程序 OTHER-其他
-
-"origin": "APP",
-
-"remark": null,
-
-"receiving_time": "anytime", //收货时间
-
-"invoice": 1, //是否开发票
-
-"invoice_title": "ABC company", //发票抬头
-
-"contact": {
-
-"contact_user": "Mr Huang",
-
-"phone": "1380000000",
-
-"zip": "510000",
-
-"province": "GD",
-
-"city": "GZ",
-
-"district": "Tiahne",
-
-"street": "jianzhong road",
-
-"detail": "6F"
-
+	//以下两个字段是店员新建订单api额外需要提供的
+	"store_id": 123, //required 店铺id
+	"store_name": "龙门客栈", //required 店铺名称
+	//其他需要提供的域同"新建订单api"
+	"payment_type": "WECHAT",
+	// 使用积分抵扣
+	"pay_credit": 120,
+	//订单来源
+	//optional。default OTHER
+	//WPA（Wechat public account)-微信公众号 MINI-PROGRAM-小程序 APP-手机应用程序 OTHER-其他
+	"origin": "APP",
+	"remark": null,
+	"receiving_time": "anytime", //收货时间
+	"invoice": 1, //是否开发票
+	"invoice_title": "ABC company", //发票抬头
+	"contact": {
+	"contact_user": "Mr Huang",
+	"phone": "1380000000",
+	"zip": "510000",
+	"province": "GD",
+	"city": "GZ",
+	"district": "Tiahne",
+	"street": "jianzhong road",
+	"detail": "6F"
 },
-
-"order_items": [
-
-{
-
-"product_id": 1, //required, 产品id
-
-"product_specification_id": 1, //optional,产品规格id
-
-"quantity": 2 //数量
-
+"order_items": [{
+	"product_id": 1, //required, 产品id
+	"product_specification_id": 1, //optional,产品规格id
+	"quantity": 2 //数量
 }]
-
-}
+```
 
 Return: 同"新建订单api"
 
-34. **店员更新订单状态**
+### 店员更新订单状态
 
 PUT https://mall.smallsaas.cn/rest/store/order/order-number
 
-Header: Authorization:
-eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
+Header: Authorization: token
 
-注：店员操作的订单有两种：
+> 注：店员操作的订单有两种：
 
 1.线下订单。
-
-收银员调用 \`店员创建订单API\`
-下单，此API下单后会立刻返回此订单的信息，此订单的状态为"未支付"，配送方式为"自提"。
-
-稍后收银员收到钱之后，认为交易完成了，可以执行"完成(complete)"操作
-来完成交易。
-
-当然客户可以随时取消交易，此时收银员需执行 "取消(cancel)"操作。
+> 收银员调用 \`店员创建订单API\` 下单，此API下单后会立刻返回此订单的信息，此订单的状态为"未支付"，配送方式为"自提"。
+> 稍后收银员收到钱之后，认为交易完成了，可以执行"完成(complete)"操作来完成交易。
+>当然客户可以随时取消交易，此时收银员需执行 "取消(cancel)"操作。
 
 2.终端用户下的线上订单。这种订单又可分为3种：
+> 1. 配送方式为"快递"的订单。这种是以前的方式。
+> 2. 配送方式为"自提"的订单（delivery_type:SELF_PICK)。这种方式的订单在下单时就指定了门店自提，即订单是关联一个店铺的。
 
-（1）配送方式为"快递"的订单。这种是以前的方式。
+> 对于这种订单，终端用户在下单并支付之后，订单的状态为"已支付待确认"（即待处理），此时店员可以在ipad端对此订单执行
+> "受理(accept)"操作,只能受理，受理后会关联结算店员，订单状态变为CONFIRMED_PICK_PENDING 待取货。
+> "受理(accept)"后的自提单(订单状态是CONFIRMED_PICK_PENDING)，如果用户上门取货了，店员可以"完成(complete)"此订单。
 
-（2）配送方式为"自提"的订单（delivery_type:
-SELF_PICK)。这种方式的订单在下单时就指定了门店自提，即订单是关联一个店铺的。
+> 3. 配送方式为"极速送达"的订单（delivery_type:FLASH)。这种方式的订单在下单时就指定了极速送达（可能是用门店相关的物流系统），即订单也是关联一个店铺的。
 
-对于这种订单，终端用户在下单并支付之后，订单的状态为"已支付待确认"（即待处理），此时店员可以在ipad端对此订单执行
+> 对于这种订单，终端用户在下单并支付之后，订单的状态为"已支付待确认"（即待处理），此时店员可以在ipad端对此订单执行"受理(accept)"/"拒绝(reject)"操作。
+> 拒绝通常是店员发现该店铺没货或其他原因导致本店铺不能处理该订单，这种情况下，api收到拒绝操作的请求，会把该订单所关联的店铺清空，好让平台可以指定其他
+> 门店来处理此订单。
 
-"受理(accept)"操作,只能受理，受理后会关联结算店员，订单状态变为
-CONFIRMED_PICK_PENDING 待取货。
+> "受理(accept)"后的极速送达单处于待配送状态，如果店铺开始配送了，可以执行"开始配送delivering"操作。
 
-"受理(accept)"后的自提单
-(订单状态是CONFIRMED_PICK_PENDING)，如果用户上门取货了，店员可以"完成(complete)"此订单。
+> 开始配送的订单，在店铺把货物送达客户，店员就执行"完成(complete)"来完成订单，不需终端用户自己按完成。
 
-（3）配送方式为"极速送达"的订单（delivery_type:
-FLASH)。这种方式的订单在下单时就指定了极速送达（可能是用门店相关的物流系统），即订单也是关联一个店铺
-
-的。
-
-对于这种订单，终端用户在下单并支付之后，订单的状态为"已支付待确认"（即待处理），此时店员可以在ipad端对此订单执行
-
-"受理(accept)"/"拒绝(reject)"操作。
-
-拒绝通常是店员发现该店铺没货或其他原因导致本店铺不能处理该订单，这种情况下，api收到拒绝操作的请求，会把该订单所关联的店
-
-铺清空，好让平台可以指定其他门店来处理此订单。
-
-"受理(accept)"后的极速送达单处于待配送状态，如果店铺开始配送了，可以执行"开始配送delivering"操作。
-
-开始配送的订单，在店铺把货物送达客户，店员就执行"完成(complete)"来完成订单，不需终端用户自己按完成。
-
-注：不关联店铺的订单，店员是看不到的。比如上面介绍的本来是关联了一个店铺，但后来被店员拒绝的订单，拒绝之后，该订单就不关联此店
-
-铺了，需要由平台自行重新指定这个订单关联的店铺。
+> 注：不关联店铺的订单，店员是看不到的。比如上面介绍的本来是关联了一个店铺，但后来被店员拒绝的订单，拒绝之后，该订单就不关联此店铺了，需要由平台自行重新指定这个订单关联的店铺。
 
 Data:
 
