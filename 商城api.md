@@ -2,7 +2,7 @@
 
 ### 获取商城全局配置项
 
-GET http://112.74.26.228:10080/rest/global_config
+GET https://mall.smallsaas.cn/rest/global_config
 
 Return:
 ```json
@@ -18,18 +18,17 @@ Return:
 
 ### 获取产品类别列表
 
-GET http://112.74.26.228:10080/rest/product_category?promoted=true 
+GET https://mall.smallsaas.cn/rest/product_category?promoted=true 
 
-Parameter:
+Param:
 
-is_show_products - 点击类别时是否进入该类别下第1个产品的详情页（1 是 0 否）
+ - is_show_products - 点击类别时是否进入该类别下第1个产品的详情页（1 是 0 否）
 
-weight - 重量，单位克
+ - weight - 重量，单位克
 
-bulk - 体积
+ - bulk - 体积
 
-promoted - optional,
-如果指定该参数，则在一级类别下面返回类别该类别 products（包括它子类别）下的推荐产品列表。
+ - promoted - optional, 如果指定该参数，则在一级类别下面返回类别该类别 products（包括它子类别）下的推荐产品列表。
 
 Return:
 ```json
@@ -40,14 +39,14 @@ Return:
 			"cover": null,
 			"sub_categories": [{
 			"id": 2,
-			"cover":"http://112.74.26.228:8000/p/fb61f7180cb48a0d1bcff2a4edab9780.png",
+			"cover":"https://mall.smallsaas.cn/p/fb61f7180cb48a0d1bcff2a4edab9780.png",
 			"sub_categories": [],
 			"description": null,
 			"name": "瓶装2.5L",
 			"parent_id": 1
 		}, {
 			"id": 5,
-			"cover":"http://112.74.26.228:8000/p/aa92d03568a42607011ca55815d48368.png",
+			"cover":"https://mall.smallsaas.cn/p/aa92d03568a42607011ca55815d48368.png",
 			"sub_categories": [],
 			"description": null,
 			"name": "旅行装(袋)",
@@ -106,35 +105,37 @@ Return:
 
 只列出 ONSELL 状态的产品
 
-GET http://112.74.26.228:10080/rest/product_category/id?pageNumber=1&pageSize=50&orderByDesc=view_count&orderBy=price&orderBy=sales&promoted=true
+GET https://mall.smallsaas.cn/rest/product_category/id?pageNumber=1&pageSize=50&orderByDesc=view_count&orderBy=price&orderBy=sales&promoted=true
 
-para:
+Param:
 
-id - 类别ID，如果指定-1 则返回所有产品
+ - id - 类别ID，如果指定-1 则返回所有产品
 
-is_show_products - 点击类别时是否进入该类别下第1个产品的详情页（1 是 0 否）
+ - is_show_products - 点击类别时是否进入该类别下第1个产品的详情页（1 是 0 否）
 
-weight - 重量， 单位克
+ - weight - 重量, 单位克
 
-bulk - 体积
+ - bulk - 体积
 
-pageNumber - 当前页，默认1
+ - pageNumber - 当前页，默认1
 
-pageSize - 每页记录数，默认50
+ - pageSize - 每页记录数，默认50
 
-orderBy - 排序列。如果同时指定了超过1个orderBy，则前者优先于后者
+ - orderBy - 排序列。如果同时指定了超过1个orderBy，则前者优先于后者
 
-orderByDesc - 倒序排序列。如果同时指定了orderBy和orderByDesc，则orderBy优先于orderByDesc；
+ - orderByDesc - 倒序排序列。如果同时指定了orderBy和orderByDesc，则orderBy优先于orderByDesc；
 
-orderBy and orderByDesc 可以用的值有： view_count : 人气， price: 价格， sales: 销量
+ - orderBy and orderByDesc 可以用的值有： view_count : 人气， price: 价格， sales: 销量
 
-promoted - optional, 如果指定该参数，则分页查询该类别下的推荐产品。
+ - promoted - optional, 如果指定该参数，则分页查询该类别下的推荐产品。
+
+Data:
 ```json
 {
 	"status_code": 0,
 	"data": {
 		"id": 2,
-		"cover":"http://112.74.26.228:8000/p/fb61f7180cb48a0d1bcff2a4edab9780.png",
+		"cover":"https://mall.smallsaas.cn/p/fb61f7180cb48a0d1bcff2a4edab9780.png",
 		"description": null,
 		"name": "瓶装2.5L",
 		"is_show_products": 1,
@@ -149,7 +150,7 @@ promoted - optional, 如果指定该参数，则分页查询该类别下的推�
 			"stock_balance": 10000,
 			"id": 1,
 			"unit": "件",
-			"cover":"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+			"cover":"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 			"last_modified_date": "2016-04-23 12:27:59",
 			"price": 34.80,
 			"category_name": "瓶装2.5L",
@@ -172,7 +173,7 @@ promoted - optional, 如果指定该参数，则分页查询该类别下的推�
 			"stock_balance": 600,
 			"id": 3,
 			"unit": "件",
-			"cover":"http://112.74.26.228:8000/p/2b3edeb3c3ca2a12b06893cb12286710.png",
+			"cover":"https://mall.smallsaas.cn/p/2b3edeb3c3ca2a12b06893cb12286710.png",
 			"last_modified_date": "2016-04-22 14:22:04",
 			"price": 69.60,
 			"category_name": "瓶装2.5L",
@@ -192,7 +193,7 @@ promoted - optional, 如果指定该参数，则分页查询该类别下的推�
 
 ### 产品热门关键字
 
-GET http://112.74.26.228:10080/rest/product_hit_word 
+GET https://mall.smallsaas.cn/rest/product_hit_word 
 
 return:
 ```json
@@ -208,136 +209,88 @@ return:
 
 ### 产品搜索
 
-GET http://112.74.26.228:10080/rest/product_search?pageNumber=1&pageSize=20&name=abc&barCode=234234&orderByDesc=view_count&orderBy=price&orderBy=sales 
+GET https://mall.smallsaas.cn/rest/product_search?pageNumber=1&pageSize=20&name=abc&barCode=234234&orderByDesc=view_count&orderBy=price&orderBy=sales 
 
-para: pageNumber - 当前页，默认1
+Param: 
 
-pageSize - 每页记录数，默认50
+ - pageNumber - 当前页，默认1
 
-name - 产品名称
+ - pageSize - 每页记录数，默认50
 
-barCode - 条形码
+ - name - 产品名称
 
-orderBy - 排序列
+ - weight - 重量, 单位克
 
-orderByDesc - 倒序排序列
+ - bulk - 体积
 
-orderBy and orderByDesc 可以用的值有： view_count : 人气， price :
-价格， sales : 销量
+ - barCode - 条形码
 
+ - orderBy - 排序列
+
+ - orderByDesc - 倒序排序列
+
+ - orderBy and orderByDesc 可以用的值有： view_count: 人气， price: 价格， sales: 销量
+
+Data:
+```json
 {
-
-"status_code": 0,
-
-"data":[
-
-{
-
-"created_date": "2016-04-22 09:30:53",
-
-"cost_price": 20.00,
-
-"status": "ONSELL",
-
-"free_shipping": 1,
-
-"origin": "广东",
-
-"suggested_price": 50.00,
-
-"category_id": 2,
-
-"stock_balance": 10000,
-
-"id": 1,
-
-"unit": "件",
-
-"cover":
-"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
-
-"last_modified_date": "2016-04-23 12:27:59",
-
-"price": 34.80,
-
-"category_name": "瓶装2.5L",
-
-"promoted": 1,
-
-"sales": 0,
-
-"name": "超效洁净护理洗衣液2.5L【全国包邮】",
-
-"short_name": "aa",
-
-"freight": 0.00,
-
-"brand": "大地",
-
-"sort_order": 100,
-
-"weight": 500, //重量， 单位克
-
-"bulk": 200 //体积
-
-}, {
-
-"created_date": "2016-04-22 11:16:14",
-
-"cost_price": 70.00,
-
-"status": "ONSELL",
-
-"free_shipping": 1,
-
-"origin": "广州",
-
-"suggested_price": 88.00,
-
-"category_id": 2,
-
-"stock_balance": 600,
-
-"id": 3,
-
-"unit": "件",
-
-"cover":
-"http://112.74.26.228:8000/p/2b3edeb3c3ca2a12b06893cb12286710.png",
-
-"last_modified_date": "2016-04-22 14:22:04",
-
-"price": 69.60,
-
-"category_name": "瓶装2.5L",
-
-"promoted": 0,
-
-"sales": 0,
-
-"name": "超效洁净护理洗衣液2.5Lx2瓶【全国包邮】",
-
-"freight": 0.00,
-
-"brand": "大陆",
-
-"sort_order": 100,
-
-"weight": 500, //重量， 单位克
-
-"bulk": 200 //体积
-
+	"status_code": 0,
+	"data":[{
+		"created_date": "2016-04-22 09:30:53",
+		"cost_price": 20.00,
+		"status": "ONSELL",
+		"free_shipping": 1,
+		"origin": "广东",
+		"suggested_price": 50.00,
+		"category_id": 2,
+		"stock_balance": 10000,
+		"id": 1,
+		"unit": "件",
+		"cover":"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+		"last_modified_date": "2016-04-23 12:27:59",
+		"price": 34.80,
+		"category_name": "瓶装2.5L",
+		"promoted": 1,
+		"sales": 0,
+		"name": "超效洁净护理洗衣液2.5L【全国包邮】",
+		"short_name": "aa",
+		"freight": 0.00,
+		"brand": "大地",
+		"sort_order": 100,
+		"weight": 500,
+		"bulk": 200 
+	}, {
+		"created_date": "2016-04-22 11:16:14",
+		"cost_price": 70.00,
+		"status": "ONSELL",
+		"free_shipping": 1,
+		"origin": "广州",
+		"suggested_price": 88.00,
+		"category_id": 2,
+		"stock_balance": 600,
+		"id": 3,
+		"unit": "件",
+		"cover":"https://mall.smallsaas.cn/p/2b3edeb3c3ca2a12b06893cb12286710.png",
+		"last_modified_date": "2016-04-22 14:22:04",
+		"price": 69.60,
+		"category_name": "瓶装2.5L",
+		"promoted": 0,
+		"sales": 0,
+		"name": "超效洁净护理洗衣液2.5Lx2瓶【全国包邮】",
+		"freight": 0.00,
+		"brand": "大陆",
+		"sort_order": 100,
+		"weight": 500, 
+		"bulk": 200 
+	}]
 }
+```
 
-]
-
-}
-
-22. **获取所有产品列表**
+### 获取所有产品列表
 
 只列出 ONSELL 状态的产品
 
-GET http://112.74.26.228:10080/rest/product?all=true 
+GET https://mall.smallsaas.cn/rest/product?all=true 
 
 参数： all - true 时查询所有产品列表。其他参数会忽略。
 
@@ -368,7 +321,7 @@ GET http://112.74.26.228:10080/rest/product?all=true 
 "unit": "件",
 
 "cover":
-"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
 "last_modified_date": "2016-04-23 12:27:59",
 
@@ -404,7 +357,7 @@ GET http://112.74.26.228:10080/rest/product?all=true 
 
 只列出 ONSELL 状态的产品
 
-GET http://112.74.26.228:10080/rest/product?pageNumber=1&pageSize=50&zone=1 
+GET https://mall.smallsaas.cn/rest/product?pageNumber=1&pageSize=50&zone=1 
 
 Para:
 
@@ -450,7 +403,7 @@ orderBy and orderByDesc 可以用的值有： view_count : 人气， price :
 "unit": "件",
 
 "cover":
-"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
 "last_modified_date": "2016-04-23 12:27:59",
 
@@ -480,7 +433,7 @@ orderBy and orderByDesc 可以用的值有： view_count : 人气， price :
 
 24. **查看产品详情**
 
-GET http://112.74.26.228:10080/rest/product/id 
+GET https://mall.smallsaas.cn/rest/product/id 
 
 {
 
@@ -509,7 +462,7 @@ GET http://112.74.26.228:10080/rest/product/id 
 "unit": "件",
 
 "cover":
-"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
 "last_modified_date": "2016-04-23 18:26:39",
 
@@ -781,7 +734,7 @@ CONFIRMED_PICK_PENDING - 待取货
 
 26. **我的订单列表**
 
-GET http://112.74.26.228:10080/rest/order?pageNumber=1&pageSize=20&status=CREATED_PAY_PENDDING 
+GET https://mall.smallsaas.cn/rest/order?pageNumber=1&pageSize=20&status=CREATED_PAY_PENDDING 
 
 Para:
 
@@ -835,7 +788,7 @@ Return:
 "id": 3,
 
 "cover":
-"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
 "confirm_date": null,
 
@@ -928,7 +881,7 @@ Return:
 
 27. **我的退货退款订单列表**
 
-GET http://112.74.26.228:10080/rest/refund_order?pageNumber=1&pageSize=20 
+GET https://mall.smallsaas.cn/rest/refund_order?pageNumber=1&pageSize=20 
 
 Para:
 
@@ -1555,7 +1508,7 @@ order.refund.failure\\"},{\\"time\\":\\"2016-12-13
 
 28. **我的订单详情**
 
-GET http://112.74.26.228:10080/rest/order/0000000401456137520088034 
+GET https://mall.smallsaas.cn/rest/order/0000000401456137520088034 
 
 Query Para: Order Number - 订单号
 
@@ -1591,7 +1544,7 @@ Return:
 "id": 3,
 
 "cover":
-"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
 "confirm_date": null, //平台确认时间
 
@@ -1604,7 +1557,7 @@ Return:
 "id": 5,
 
 "cover":
-"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
 "price": 34.80,
 
@@ -1700,7 +1653,7 @@ Error Return:
 
 29. **我的订单数量统计**
 
-GET http://112.74.26.228:10080/rest/order_count 
+GET https://mall.smallsaas.cn/rest/order_count 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -1729,7 +1682,7 @@ Return:
 
 30. **提醒发货**
 
-GET http://112.74.26.228:10080/rest/order_deliver_reminder/0000000401456137520088034 
+GET https://mall.smallsaas.cn/rest/order_deliver_reminder/0000000401456137520088034 
 
 Query Para: Order Number - 订单号
 
@@ -1748,7 +1701,7 @@ Return:
 
 31. **订单评价**
 
-PUT http://112.74.26.228:10080/rest/order_comment/0000000401456137520088034 
+PUT https://mall.smallsaas.cn/rest/order_comment/0000000401456137520088034 
 
 Query Para: Order Number - 订单号
 
@@ -1771,7 +1724,7 @@ Return:
 
 32. **新建订单**
 
-POST http://112.74.26.228:10080/rest/order 
+POST https://mall.smallsaas.cn/rest/order 
 
 参考 下单前计算优惠信息 api 返回的优惠券，选择一个优惠劵进行下单。
 
@@ -1910,7 +1863,7 @@ Return:
 "id": 2,
 
 "cover":
-"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
 "description": "p1 x 2. ",
 
@@ -1943,7 +1896,7 @@ Return:
 "id": 1,
 
 "cover":
-"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
 "price": 145.00,
 
@@ -1977,7 +1930,7 @@ Return:
 
 33. **店员新建订单**
 
-POST http://112.74.26.228:10080/rest/store/order 
+POST https://mall.smallsaas.cn/rest/store/order 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -2055,7 +2008,7 @@ Return: 同"新建订单api"
 
 34. **店员更新订单状态**
 
-PUT http://112.74.26.228:10080/rest/store/order/order-number
+PUT https://mall.smallsaas.cn/rest/store/order/order-number
 
 Header: Authorization:
 eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -2131,7 +2084,7 @@ Return:
 
 35. **店员查看门店订单列表（线上，线下订单都在这里查看）**
 
-GET http://112.74.26.228:10080/rest/store/order?pageNumber=1&pageSize=30&storeId=xxx&type=STORE_ORDER&status=CREATED_PAY_PENDING&status=PAID_CONFIRM_PENDING&contactUser=zhangsan&phone=111111&orderNumber=aaa&startTime=2018-05-01&endTime=2018-05-20 
+GET https://mall.smallsaas.cn/rest/store/order?pageNumber=1&pageSize=30&storeId=xxx&type=STORE_ORDER&status=CREATED_PAY_PENDING&status=PAID_CONFIRM_PENDING&contactUser=zhangsan&phone=111111&orderNumber=aaa&startTime=2018-05-01&endTime=2018-05-20 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -2300,7 +2253,7 @@ Return:
 
 36. **店员查看门店订单详情**
 
-GET http://112.74.26.228:10080/rest/store/order/order-number
+GET https://mall.smallsaas.cn/rest/store/order/order-number
 
 Header: Authorization:
 eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -2471,7 +2424,7 @@ Return:
 
 37. **店员新建售后单**
 
-POST http://112.74.26.228:10080/rest/store/order_customer_service 
+POST https://mall.smallsaas.cn/rest/store/order_customer_service 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -2578,7 +2531,7 @@ Return:
 
 38. **店员查看单个售后单**
 
-GET http://112.74.26.228:10080/rest/store/order_customer_service/service_number
+GET https://mall.smallsaas.cn/rest/store/order_customer_service/service_number
 
 Para:
 
@@ -2888,7 +2841,7 @@ RETURN-退货退款 EXCHANGE-换货）
 
 39. **店员查看订单数量统计**
 
-GET http://112.74.26.228:10080/rest/store/order_count?storeId=1 
+GET https://mall.smallsaas.cn/rest/store/order_count?storeId=1 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -2927,7 +2880,7 @@ Return:
 
 40. **店员查看售后单列表**
 
-GET http://112.74.26.228:10080/rest/store/order_customer_service?pageNumber=1&pageSize=30& 
+GET https://mall.smallsaas.cn/rest/store/order_customer_service?pageNumber=1&pageSize=30& 
 
 storeId=123&serviceType=RETURN&serviceNumber=1234&startTime=2018-01-01&endTime=2018-02-02
 
@@ -3021,7 +2974,7 @@ RETURN-退货退款 EXCHANGE-换货）
 
 41. **删除订单**
 
-DELETE http://112.74.26.228:10080/rest/order/order-number
+DELETE https://mall.smallsaas.cn/rest/order/order-number
 
 注意：
 
@@ -3054,7 +3007,7 @@ Return:
 
 42. **分享订单拿优惠券**
 
-POST http://112.74.26.228:10080/rest/order_share
+POST https://mall.smallsaas.cn/rest/order_share
 
 只有CLOSED_CONFIRMED的订单才可以分享。
 
@@ -3088,7 +3041,7 @@ Return:
 
 43. **查看售后原因列表**
 
-GET http://112.74.26.228:10080/rest/customer_service_type
+GET https://mall.smallsaas.cn/rest/customer_service_type
 
 Header: Authorization:
 eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -3123,7 +3076,7 @@ Return:
 
 44. **新建售后单**
 
-POST http://112.74.26.228:10080/rest/order_customer_service
+POST https://mall.smallsaas.cn/rest/order_customer_service
 
 订单到达 DELIVERED_CONFIRM_PENDING (待收货） 可以发起退货申请
 
@@ -3192,7 +3145,7 @@ EXCHANGE: 换货
 
 45. **查看售后单**
 
-GET http://112.74.26.228:10080/rest/order_customer_service/:id
+GET https://mall.smallsaas.cn/rest/order_customer_service/:id
 
 Header: Authorization:
 eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -3271,7 +3224,7 @@ Return:
 
 46. **更新售后单**
 
-PUT http://112.74.26.228:10080/rest/order_customer_service/:id
+PUT https://mall.smallsaas.cn/rest/order_customer_service/:id
 
 对申请退货的订单更新物流信息.
 
@@ -3307,7 +3260,7 @@ GET http://www.kequandian.net/app/payment/wpay/order-number
 
 48. **微信支付码生成**
 
-POST http://112.74.26.228:10080/rest/wx/push_order
+POST https://mall.smallsaas.cn/rest/wx/push_order
 
 Header: Authorization:
 eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -3360,7 +3313,7 @@ Return:
 
 49. **确认订单**
 
-PUT http://112.74.26.228:10080/rest/order/0000000101455770560193531 
+PUT https://mall.smallsaas.cn/rest/order/0000000101455770560193531 
 
 用户收货后确认订单。订单当前状态是 DELIVERED_CONFIRM_PENDING
 时才可以确认。
@@ -3400,7 +3353,7 @@ Error Return:
 
 50. **查看订单物流信息**
 
-GET http://112.74.26.228:10080/rest/express_info?order_number=0000000101455770560193531 
+GET https://mall.smallsaas.cn/rest/express_info?order_number=0000000101455770560193531 
 
 parameter:
 
@@ -3524,7 +3477,7 @@ Failure Return:
 
 51. **购物车列表**
 
-GET http://112.74.26.228:10080/rest/shopping_cart 
+GET https://mall.smallsaas.cn/rest/shopping_cart 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -3542,7 +3495,7 @@ Return:
 "id": 3,
 
 "cover":
-"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
 "price": null,
 //price正常情况是有的，如果为null，则表示出错了，对应两种出错原因：1.由于用户未配置默认配
@@ -3580,7 +3533,7 @@ Return:
 "id": 3,
 
 "cover":
-"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
 "price": 34.80,
 
@@ -3605,7 +3558,7 @@ Return:
 "id": 4,
 
 "cover":
-"http://112.74.26.228:8000/p/2b3edeb3c3ca2a12b06893cb12286710.png",
+"https://mall.smallsaas.cn/p/2b3edeb3c3ca2a12b06893cb12286710.png",
 
 "price": 69.60,
 
@@ -3625,7 +3578,7 @@ Return:
 
 52. **添加到购物车**
 
-POST http://112.74.26.228:10080/rest/shopping_cart?increase=false 
+POST https://mall.smallsaas.cn/rest/shopping_cart?increase=false 
 
 如果已存在，则更新，如果quantity是0，则删除。
 
@@ -3673,7 +3626,7 @@ Return 购物车列表:
 "id": 3,
 
 "cover":
-"http://112.74.26.228:8000/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
+"https://mall.smallsaas.cn/p/516c02b5e8ceb745b6dd61b6e77b3e17.png",
 
 "price": 34.80,
 
@@ -3706,7 +3659,7 @@ Return 购物车列表:
 "id": 4,
 
 "cover":
-"http://112.74.26.228:8000/p/2b3edeb3c3ca2a12b06893cb12286710.png",
+"https://mall.smallsaas.cn/p/2b3edeb3c3ca2a12b06893cb12286710.png",
 
 "price": 69.60,
 
@@ -3738,7 +3691,7 @@ Return 购物车列表:
 
 清空购物车
 
-DELETE http://112.74.26.228:10080/rest/shopping_cart 
+DELETE https://mall.smallsaas.cn/rest/shopping_cart 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -3755,7 +3708,7 @@ Return:
 
 54. **我的地址列表**
 
-GET http://112.74.26.228:10080/rest/contact 
+GET https://mall.smallsaas.cn/rest/contact 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjQzN2NhZjRiYjQxOWZhZGEwZDgwYmFmMTEzYjY0OGNlMzdiM2NmYWQiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -3798,7 +3751,7 @@ Return:
 
 55. **添加新地址**
 
-POST http://112.74.26.228:10080/rest/contact 
+POST https://mall.smallsaas.cn/rest/contact 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjQzN2NhZjRiYjQxOWZhZGEwZDgwYmFmMTEzYjY0OGNlMzdiM2NmYWQiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -3841,7 +3794,7 @@ Return:
 
 56. **更新地址**
 
-PUT http://112.74.26.228:10080/rest/contact/id 
+PUT https://mall.smallsaas.cn/rest/contact/id 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjQzN2NhZjRiYjQxOWZhZGEwZDgwYmFmMTEzYjY0OGNlMzdiM2NmYWQiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -3910,7 +3863,7 @@ Return:
 
 57. **删除地址**
 
-DELETE http://112.74.26.228:10080/rest/contact/id 
+DELETE https://mall.smallsaas.cn/rest/contact/id 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjQzN2NhZjRiYjQxOWZhZGEwZDgwYmFmMTEzYjY0OGNlMzdiM2NmYWQiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -3927,7 +3880,7 @@ Return:
 
 58. **得到默认地址**
 
-GET http://112.74.26.228:10080/rest/default_contact 
+GET https://mall.smallsaas.cn/rest/default_contact 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjQzN2NhZjRiYjQxOWZhZGEwZDgwYmFmMTEzYjY0OGNlMzdiM2NmYWQiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -3970,7 +3923,7 @@ Return:
 
 59. **更新默认地址**
 
-PUT http://112.74.26.228:10080/rest/default_contact/id 
+PUT https://mall.smallsaas.cn/rest/default_contact/id 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjQzN2NhZjRiYjQxOWZhZGEwZDgwYmFmMTEzYjY0OGNlMzdiM2NmYWQiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -3987,7 +3940,7 @@ Return:
 
 60. **默认快递**
 
-GET http://112.74.26.228:10080/rest/default_express 
+GET https://mall.smallsaas.cn/rest/default_express 
 
 Return:
 
@@ -4013,7 +3966,7 @@ Return:
 
 61. **运费计算**
 
-POST http://112.74.26.228:10080/rest/product_carriage 
+POST https://mall.smallsaas.cn/rest/product_carriage 
 
 Data:
 
@@ -4067,7 +4020,7 @@ Return:
 
 62. **查询产品限购**
 
-GET http://112.74.26.228:10080/rest/product_purchase_strategy?productId=234&quantity=2 
+GET https://mall.smallsaas.cn/rest/product_purchase_strategy?productId=234&quantity=2 
 
 parameter:
 
@@ -4106,7 +4059,7 @@ Return:
 
 64. **查看提现账号信息**
 
-GET http://112.74.26.228:10080/rest/withdraw_account 
+GET https://mall.smallsaas.cn/rest/withdraw_account 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjQzN2NhZjRiYjQxOWZhZGEwZDgwYmFmMTEzYjY0OGNlMzdiM2NmYWQiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -4137,7 +4090,7 @@ Return:
 
 65. **添加提现账号信息**
 
-POST http://112.74.26.228:10080/rest/withdraw_account 
+POST https://mall.smallsaas.cn/rest/withdraw_account 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjQzN2NhZjRiYjQxOWZhZGEwZDgwYmFmMTEzYjY0OGNlMzdiM2NmYWQiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -4180,7 +4133,7 @@ Return:
 
 66. **删除提现账号信息**
 
-DELETE http://112.74.26.228:10080/rest/withdraw_account/id 
+DELETE https://mall.smallsaas.cn/rest/withdraw_account/id 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjQzN2NhZjRiYjQxOWZhZGEwZDgwYmFmMTEzYjY0OGNlMzdiM2NmYWQiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -4201,7 +4154,7 @@ Return:
 
 67. **查看余额**
 
-GET http://112.74.26.228:10080/rest/owner_balance 
+GET https://mall.smallsaas.cn/rest/owner_balance 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjQzN2NhZjRiYjQxOWZhZGEwZDgwYmFmMTEzYjY0OGNlMzdiM2NmYWQiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -4271,7 +4224,7 @@ Success Return:
 
 68. **申请提现**
 
-POST http://112.74.26.228:10080/rest/owner_balance 
+POST https://mall.smallsaas.cn/rest/owner_balance 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjQzN2NhZjRiYjQxOWZhZGEwZDgwYmFmMTEzYjY0OGNlMzdiM2NmYWQiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
@@ -4310,7 +4263,7 @@ Failure Return:
 
 69. **查看提现历史记录**
 
-GET http://112.74.26.228:10080/rest/reward_cash 
+GET https://mall.smallsaas.cn/rest/reward_cash 
 
 Parameters:
 
@@ -4381,7 +4334,7 @@ Return:
 
 70. **查看分成订单汇总信息**
 
-GET http://112.74.26.228:10080/rest/order_item_reward 
+GET https://mall.smallsaas.cn/rest/order_item_reward 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjMxODhiZmUxMzM2ZjY0MGQ5ZmU3OTUxMDZkYTUzMjE5MDJlODAwZjAiLCJsb2dpbl9uYW1lIjoiMTIzIn0=
@@ -4625,7 +4578,7 @@ level=1, 表示作为一级分销商参与分成
 
 71. **查看产品分成**
 
-GET http://112.74.26.228:10080/rest/product_settlement?id=product-id&marketingType=type&marketingId=id
+GET https://mall.smallsaas.cn/rest/product_settlement?id=product-id&marketingType=type&marketingId=id
 
 Header: Authorization:
 eyJ0b2tlbiI6IjMxODhiZmUxMzM2ZjY0MGQ5ZmU3OTUxMDZkYTUzMjE5MDJlODAwZjAiLCJsb2dpbl9uYW1lIjoiMTIzIn0=
@@ -4652,7 +4605,7 @@ Return:
 
 73. **我的分销商层次信息**
 
-GET http://112.74.26.228:10080/rest/seller_level 
+GET https://mall.smallsaas.cn/rest/seller_level 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjMxODhiZmUxMzM2ZjY0MGQ5ZmU3OTUxMDZkYTUzMjE5MDJlODAwZjAiLCJsb2dpbl9uYW1lIjoiMTIzIn0=
@@ -4677,7 +4630,7 @@ Return:
 
 74. **我的分销商信息**
 
-GET http://112.74.26.228:10080/rest/seller 
+GET https://mall.smallsaas.cn/rest/seller 
 
 返回下一级的朋友
 
@@ -4897,7 +4850,7 @@ Return:
 
 75. **下级分销商信息**
 
-GET http://112.74.26.228:10080/rest/seller/seller_id 
+GET https://mall.smallsaas.cn/rest/seller/seller_id 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjMxODhiZmUxMzM2ZjY0MGQ5ZmU3OTUxMDZkYTUzMjE5MDJlODAwZjAiLCJsb2dpbl9uYW1lIjoiMTIzIn0=
@@ -4996,7 +4949,7 @@ Return:
 
 76. **申请成为分销商**
 
-POST http://112.74.26.228:10080/rest/seller 
+POST https://mall.smallsaas.cn/rest/seller 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjMxODhiZmUxMzM2ZjY0MGQ5ZmU3OTUxMDZkYTUzMjE5MDJlODAwZjAiLCJsb2dpbl9uYW1lIjoiMTIzIn0=
@@ -5032,7 +4985,7 @@ Return:
 
 77. **以扫码方式申请成为某皇冠商的"线下经销商"或"线下皇冠商"**
 
-POST http://112.74.26.228:10080/rest/physical_seller 
+POST https://mall.smallsaas.cn/rest/physical_seller 
 
 成为皇冠商前提：以扫码方式申请成为皇冠商的开关已经打开
 
@@ -5114,7 +5067,7 @@ Error Return:
 
 78. **线下经销商查看线下信息**
 
-GET http://112.74.26.228:10080/rest/physical_seller 
+GET https://mall.smallsaas.cn/rest/physical_seller 
 
 Header: Authorization:
 eyJ0b2tlbiI6IjMxODhiZmUxMzM2ZjY0MGQ5ZmU3OTUxMDZkYTUzMjE5MDJlODAwZjAiLCJsb2dpbl9uYW1lIjoiMTIzIn0=
@@ -5263,7 +5216,7 @@ physical_seller_children 只有具
 
 79. **线下皇冠商查看进货结算明细**
 
-GET http://112.74.26.228:10080/rest/physical_purchase_summary?month=2017-06 
+GET https://mall.smallsaas.cn/rest/physical_purchase_summary?month=2017-06 
 
 Parameter:
 
@@ -5388,7 +5341,7 @@ Return:
 
 80. **线下代理商查看进货结算明细**
 
-GET http://112.74.26.228:10080/rest/agent_summary?month=2017-08 
+GET https://mall.smallsaas.cn/rest/agent_summary?month=2017-08 
 
 Parameter:
 
@@ -5667,7 +5620,7 @@ Return:
 
 81. **线下代理商查看年终奖励对照表**
 
-GET http://112.74.26.228:10080/rest/physical_agent_bonus?pcd_id=1 
+GET https://mall.smallsaas.cn/rest/physical_agent_bonus?pcd_id=1 
 
 Paras:
 
@@ -5717,4 +5670,4 @@ eyJ0b2tlbiI6IjMxODhiZmUxMzM2ZjY0MGQ5ZmU3OTUxMDZkYTUzMjE5MDJlODAwZjAiLCJsb2dpbl9u
 
 82. **线下皇冠商查看被推荐人的进货明细列表**
 
-GET http://112.74.26.228:10080/rest/physical_
+GET https://mall.smallsaas.cn/rest/physical_

@@ -6,10 +6,11 @@
   可使用用户名/手机 注册。 使用手机时，验证码是必选的。
   获取验证码的API见下面。
   
-  param:
+  Param:
 
-   - optional: invite_code
+   - invite_code: optional
   
+  Data:
 ```json
  {
    "username": "abc",
@@ -33,10 +34,11 @@ POST https://mall.smallsaas.cn/rest/pub/sms
 
 会发送短信到填写的手机上。
 
-param:
+Param:
 
- - name: 指定不同的名字，可以拿到相应模版的消息
+ - name: 指定不同的名字, 可以拿到相应模版的消息
 
+Data:
 ```json
 {
   "phone": "13800000001",
@@ -55,6 +57,8 @@ Return:
 ### 验证手机验证码
 
 POST https://mall.smallsaas.cn/rest/pub/sms_verify
+
+Data:
 ```json
 {
   "phone": "13800000001",
@@ -82,6 +86,8 @@ POST https://mall.smallsaas.cn/rest/login>
   phone + captcha
 
 验证码获取API见上面。
+
+Data:
 ```json
 {
   "username": "abc",
@@ -203,7 +209,8 @@ Failure Return:
 
 POST https://mall.smallsaas.cn/rest/login_wxapp>
 
-param： 
+Param： 
+
  - code: app调起微信授权返回的code。
 
 Data:
@@ -244,6 +251,7 @@ POST https://mall.smallsaas.cn/rest/login_wxa>
 接口进行注册。
 
 Param： 
+
  - code: 小程序的wx.login返回的code。
 
 Data:
@@ -281,11 +289,11 @@ POST https://mall.smallsaas.cn/rest/register_wxa>
 
 Param： 
 
-phone - 手机号
+ - phone: 手机号
 
-openid - login API返回的openid
+ - openid: login API返回的openid
 
-captcha - 短信验证码
+ - captcha: 短信验证码
 
 Data:
 ```json
@@ -319,27 +327,27 @@ GET https://mall.smallsaas.cn/rest/profile
 
 Header: Authorization: token
 
-parm:
+Param:
 
- - birthday - 生日
+ - birthday: 生日
 
- - inviter_name - 邀请者名字
+ - inviter_name: 邀请者名字
 
- - invitation_code - 我的邀请码
+ - invitation_code: 我的邀请码
 
- - invitation_qrcode_url - 邀请码二维码图片url
+ - invitation_qrcode_url: 邀请码二维码图片url
 
- - invitation_qrcode - 我的邀请码URL
+ - invitation_qrcode: 我的邀请码URL
 
- - inviter_id - 邀请者ID
+ - inviter_id: 邀请者ID
 
- - sex - 性别： 0 保密， 1 男， 2 女
+ - sex: 性别： 0 保密， 1 男， 2 女
 
- - avatar - 头像,默认使用微信的头像
+ - avatar: 头像,默认使用微信的头像
 
- - followed - 是否关注公众号， 0 关注， 1 未关注
+ - followed: 是否关注公众号， 0 关注， 1 未关注
 
- - follow_time - 关注时间
+ - follow_time: 关注时间
 
 Return:
 ```json
@@ -402,7 +410,7 @@ Return:
 
 POST https://mall.smallsaas.cn/rest/pub/user_info
 
-data:
+Data:
 ```json
 { "ids": [ 1, 2, 4 ] }
 ```
@@ -437,13 +445,13 @@ Return:
 
 GET https://mall.smallsaas.cn/rest/pcd?all=true&province=广东&city=广州
 
-Para:
+Param:
 
- - all - optinal, 一次性返回所有的数据
+ - all" optinal, 一次性返回所有的数据
 
- - province - optional, 返回该省下面所有的城市。
+ - province" optional, 返回该省下面所有的城市。
 
- - city - optional, 返回该市下面所有的区。
+ - city" optional, 返回该市下面所有的区。
 
 不带任何参数，则返回所有的省。
 
