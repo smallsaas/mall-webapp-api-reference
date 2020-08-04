@@ -585,7 +585,7 @@ Param:
 Header: Authorization: token
 
 Return:
-···json
+```json
 {
 	"message": "order.deliver.reminded",
 	"status_code": 0
@@ -629,39 +629,27 @@ POST https://mall.smallsaas.cn/rest/order 
 
 钱包支付: WALLET
 
-/\*\*
-
-\* 订单来源
-
-\*/
-
+```
+/**
+ * 订单来源
+ */
 public enum Origin {
-
-//微信公众号(Wechat public account)
-
-WPA,
-
-//小程序
-
-MINI_PROGRAM,
-
-//手机应用程序
-
-APP_ANDROID,
-
-APP_IOS,
-
-//其他
-
-OTHER
-
+	//微信公众号(Wechat public account)
+	WPA,
+	//小程序
+	MINI_PROGRAM,
+	//手机应用程序
+	APP_ANDROID,
+	APP_IOS,
+	//其他
+	OTHER
 }
+```
 
-Header: Authorization:
-eyJ0b2tlbiI6IjczYmI2MWFjNmRlN2E0NDVlOGI4MzNmZjlkYWJlYjI4NTBhMzg0NmMiLCJsb2dpbl9uYW1lIjoiYWRtaW4ifQ==
+Header: Authorization: token
 
 Data:
-
+```json
 {
 
 //配送方式：
