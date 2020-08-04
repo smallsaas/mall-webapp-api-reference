@@ -75,7 +75,7 @@ Return:
 
 ### 登录
 
-POST https://mall.smallsaas.cn/rest/login>
+POST https://mall.smallsaas.cn/rest/login
 
 可以根据需要组合，如:
 
@@ -108,7 +108,7 @@ Successful Return:
 
 ### 登出系统
 
-GET https://mall.smallsaas.cn/rest/logout>
+GET https://mall.smallsaas.cn/rest/logout
 
 Header: Authorization: token
 
@@ -122,7 +122,7 @@ Successful Return:
 
 ### 修改密码
 
-POST https://mall.smallsaas.cn/rest/password>
+POST https://mall.smallsaas.cn/rest/password
 
 Header: Authorization: token
 
@@ -150,7 +150,7 @@ Failure Return:
 
 ### 忘记密码
 
-POST https://mall.smallsaas.cn/rest/pub/forget_password>
+POST https://mall.smallsaas.cn/rest/pub/forget_password
 
 Header: Authorization: token
 
@@ -373,7 +373,7 @@ Return:
     "real_name": "Huang",
     "details": "sffffaaaa",
     "id": 2,
-    "email": "h\@a.com",
+    "email": "h@a.com",
     "status": "NORMAL",
     "followed": 0, 
     "follow_time": "2016-06-04 21:00:00" 
@@ -394,7 +394,7 @@ DATA:
   "sex": 2,
   "details": "sffffaaaa",
   "birthday": "1999/01/22",
-  "email": "h\@a.com",
+  "email": "h@a.com",
   "name": "axxvv",
   "real_name": "Huang"
 }
