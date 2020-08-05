@@ -125,6 +125,8 @@ Header: Authorization: token
 Describe:
 
  - order_customer_service: 售后单信息
+ 
+ - refund_fee: 退款金额
 
 Return:
 ```json
@@ -139,8 +141,13 @@ Return:
 			"express_code": null,
 			"service_type": "REFUND",
 			"images": "[]",
+<<<<<<< HEAD
 			"log": "[{"time":"2016-12-14 01:42:47","user":"Administrator","content":"afaf"}]",
 			"refund_fee": null, //退款金额
+=======
+			"log": "[{\"time\":\"2016-12-14 01:42:47\",\"user\":\"Administrator\",\"content\":\"afaf\"}]",
+			"refund_fee": null, 
+>>>>>>> 091425facf329f1aa3788d584cea161edce71057
 			"id": 5,
 			"created_date": "2016-12-14 13:42:47",
 			"express_number": null,
@@ -472,7 +479,7 @@ Describe:
  - confirm_date: 平台确认时间
 
 Return:
-```json
+```
 {
 	"status_code": 0,
 	"data": {
@@ -565,7 +572,7 @@ Return:
 ```json
 {
 	"status_code": 0,
-	"data" {
+	"data": {
 		"total": 12, 
 		"payPending": 2, 
 		"delivering": 4, 
