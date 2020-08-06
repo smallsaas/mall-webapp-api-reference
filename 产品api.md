@@ -438,7 +438,7 @@ Describe:
  - is_default: 没有满足地区，使用这个默认运费
 
 Retrun:
-```json
+```
 {
 	"status_code": 0,
 	"data": {
@@ -457,7 +457,7 @@ Retrun:
 		"price": 34.80,
 		"promoted": 1,
 		"sales": 0,
-		"description": "\<h1\>超优惠\<br/\>\</h1\>\<p\>\<img src=\\"/upload/upload/image/20160601/1464767352927011775.png\\" title=\\"1464767352927011775.png\\" alt=\\"logo.png\\"/\>\</p\>\<p\>\<br/\>\</p\>",
+		"description": "<h1>超优惠<br/><h1\><p\><img src="/upload/upload/image/20160601/1464767352927011775.png" title="1464767352927011775.png" alt="logo.png"\><p\><p><br\></p>",
 		"name": "超效洁净护理洗衣液2.5L【全国包邮】",
 		"freight": 0.00,
 		"images": [],
