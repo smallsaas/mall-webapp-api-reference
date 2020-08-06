@@ -447,13 +447,13 @@ GET https://mall.smallsaas.cn/rest/pcd?all=true&province=广东&city=广州
 
 Param:
 
- - all" optinal, 一次性返回所有的数据
+ - all: optinal, 一次性返回所有的数据
 
- - province" optional, 返回该省下面所有的城市。
+ - province: optional, 返回该省下面所有的城市。
 
- - city" optional, 返回该市下面所有的区。
+ - city: optional, 返回该市下面所有的区。
 
-不带任何参数，则返回所有的省。
+> 不带任何参数，则返回所有的省。
 
 Header: Authorization: token
 
