@@ -1,4 +1,5 @@
 ## 用户API
+> [人脸识别登录](https://github.com/shiguanghuxian/face-login-wx)
 
 ### 注册
   POST https://mall.smallsaas.cn/rest/register
